@@ -1,0 +1,33 @@
+{% if page.sidebar == "home_sidebar" %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
+
+{% elsif page.sidebar == "android_sidebar" %}
+{% assign sidebar = site.data.sidebars.android_sidebar.entries %}
+
+{% elsif page.sidebar == "ios_sidebar" %}
+{% assign sidebar = site.data.sidebars.ios_sidebar.entries %}
+
+{% elsif page.sidebar == "mydoc_sidebar" %}
+{% assign sidebar = site.data.sidebars.mydoc_sidebar.entries %}
+
+{% else %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
+{% endif %}
+
+
+
+{% comment %}
+sidebar configuration for print files
+{% endcomment %}
+
+{% if site.product == "mydoc" %}
+{% assign sidebar_pdf = site.data.sidebars.mydoc_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "android" %}
+{% assign sidebar_pdf = site.data.sidebars.android_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "ios" %}
+{% assign sidebar_pdf = site.data.sidebars.ios_sidebar.entries %}
+{% endif %}

@@ -1,0 +1,100 @@
+entries:
+- title: sidebar
+  product: HALO SDK Documentation
+  version: 2.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Home and status
+      url: /android_home.html
+      output: web
+      type: web
+
+    - title: Getting started
+      url: /android_getting_started.html
+      output: web, pdf
+      type: web, pdf
+
+    - title: Supported features
+      url: /android_supported_features.html
+      output: web, pdf
+
+    - title: Support
+      url: /android_support.html
+      output: web, pdf
+
+  - title: Halo Core API
+    output: web, pdf
+    folderitems:
+
+    - title: Halo Installer Options
+      url: /android_core_installer_options.html
+      output: web, pdf
+
+      subfolders:
+      - title: Android gradle plugin
+        output: web, pdf
+        subfolderitems:
+
+        - title: Getting Started
+          url: /android_core_gradle_plugin_started.html
+          output: web, pdf
+
+        - title: Gradle Plugin Options
+          url: /android_core_gradle_plugin_options.html
+          output: web, pdf
+    
+    - title: Halo Core API
+      url: /android_halo_core.html
+      output: web, pdf
+
+    - title: Manager API
+      url: /android_core_manager_api.html
+      output: web, pdf
+  
+    - title: Media Cloudinary API
+      url: /android_core_cloudinary.html
+      output: web, pdf
+
+    - title: Custom Middleware Requests
+      url: /android_core_custom_middleware_request.html
+      output: web, pdf
+
+    - title: Offline Support
+      url: /android_core_offline_support.html
+      output: web, pdf
+
+    - title: Change server environment
+      url: /android_core_environment.html
+      output: web, pdf
+
+    - title: Enable debug mode
+      url: /android_core_debug.html
+      output: web, pdf
+
+  - title: Release Notes
+    output: web
+    folderitems:
+
+    - title: 2.0.0 Release notes
+      url: /android_release_notes_200.html
+      output: web
+    - title: 1.4.0 Release notes
+      url: /android_release_notes_140.html
+      output: web
