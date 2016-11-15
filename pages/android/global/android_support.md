@@ -1,5 +1,5 @@
 ---
-title: Android SDK - Team support
+title: Android SDK - Team Support
 keywords: android, support
 last_updated: November 14, 2016
 tags: [getting_started]

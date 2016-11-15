@@ -1,4 +1,13 @@
-# Custom Modules: Make a request
+---
+title: Android SDK - Custom Middleware Requests
+keywords: android, middleware, requests, custom module
+last_updated: November 15, 2016
+tags: [core]
+sidebar: android_sidebar
+toc: false
+permalink: android_core_custom_middleware_request.html
+folder: android
+---
 
 It is likely that you want to create a custom module and add its functionalities to HALO. You can do it using HALO by adding his module endpoint into the administration console. Use the help on the CMS to make sure you configure it properly.
 

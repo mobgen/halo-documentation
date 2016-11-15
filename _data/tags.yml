@@ -1,6 +1,7 @@
 allowed-tags:
   - getting_started
   - changelog
+  - core
   - content_types
   - navigation
   - formatting

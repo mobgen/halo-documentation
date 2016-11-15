@@ -1,8 +1,8 @@
 ---
-title: "Getting started pages"
-tagName: getting_started
+title: "HALO Core pages"
+tagName: core
 search: exclude
-permalink: tag_getting_started.html
+permalink: tag_core.html
 sidebar: home_sidebar
 folder: tags
 ---

@@ -21,17 +21,17 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Home and status
+    - title: Home & Status
       url: /android_home.html
       output: web
       type: web
 
-    - title: Getting started
+    - title: Getting Started
       url: /android_getting_started.html
       output: web, pdf
       type: web, pdf
 
-    - title: Supported features
+    - title: Supported Features
       url: /android_supported_features.html
       output: web, pdf
 
@@ -48,7 +48,7 @@ entries:
       output: web, pdf
 
       subfolders:
-      - title: Android gradle plugin
+      - title: Android Gradle Plugin
         output: web, pdf
         subfolderitems:
 
@@ -80,11 +80,11 @@ entries:
       url: /android_core_offline_support.html
       output: web, pdf
 
-    - title: Change server environment
+    - title: Change Server Environment
       url: /android_core_environment.html
       output: web, pdf
 
-    - title: Enable debug mode
+    - title: Enable Debug Mode
       url: /android_core_debug.html
       output: web, pdf
 
@@ -92,9 +92,9 @@ entries:
     output: web
     folderitems:
 
-    - title: 2.0.0 Release notes
+    - title: 2.0.0 Release Notes
       url: /android_release_notes_200.html
       output: web
-    - title: 1.4.0 Release notes
+    - title: 1.4.0 Release Notes
       url: /android_release_notes_140.html
       output: web

@@ -34,21 +34,21 @@ If you're using an HTML file, you can also use the `highlight` command with Liqu
 
 {% raw %}
 <pre>
-{% highlight ruby %}
+
     def foo
       puts 'foo'
     end
-{% endhighlight %}
+
 </pre>
 {% endraw %}
 
 It renders the same:
 
-{% highlight ruby %}
+
     def foo
       puts 'foo'
     end
-{% endhighlight %}
+
 
 
 The theme has syntax highlighting specified in the configuration file as follows:

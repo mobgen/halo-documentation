@@ -1,4 +1,13 @@
-# Debug: enable debug mode
+---
+title: Android SDK - Enable Debug Mode
+keywords: android, debug, log, tool
+last_updated: November 15, 2016
+tags: [core]
+sidebar: android_sidebar
+toc: false
+permalink: android_core_debug.html
+folder: android
+---
 
 HALO supports a debugging mode that allows you to see many information of what is going on behind the scenes. To enable this mode you have to add it in the installer instance.
 

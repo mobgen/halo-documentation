@@ -1,5 +1,5 @@
 ---
-title: Android SDK - Supported features
+title: Android SDK - Supported Features
 keywords: android, features, characteristics
 last_updated: November 10, 2016
 tags: [getting_started]

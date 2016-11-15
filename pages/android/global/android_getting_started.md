@@ -1,5 +1,5 @@
 ---
-title: Android SDK - Getting started
+title: Android SDK - Getting Started
 keywords: android, getting started, start, how to
 last_updated: November 10, 2016
 tags: [getting_started]
@@ -20,7 +20,7 @@ Open the build.gradle of the project root and add the plugin to the classpath:
 ```groovy
 buildscript {
     dependencies {
-          classpath 'com.mobgen.halo.android:halo-plugin:{{version}}'
+          classpath 'com.mobgen.halo.android:halo-plugin:{version}'
     }
 }
 ```

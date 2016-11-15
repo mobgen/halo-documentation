@@ -1,4 +1,13 @@
-# Offline support guide
+---
+title: Android SDK - Offline support
+keywords: android, offline, content, core, database, strategy, request
+last_updated: November 15, 2016
+tags: [core]
+sidebar: android_sidebar
+toc: false
+permalink: android_core_offline_support.html
+folder: android
+---
 
 The SDK supports an offline database that caches the responses for many requests and provides some cached data when the device is offline or cannot stablish a connection.
 

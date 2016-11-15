@@ -65,7 +65,7 @@ Create pages inside your new tooltips collection (that is, inside the \_tooltips
 
 Here's an example:
 
-{% highlight yaml %}
+
 {% raw %}```liquid
 ---
 id: basketball
@@ -74,7 +74,7 @@ product: mydoc
 
 {{site.data.definitions.basketball}}{% endraw %}
 ```
-{% endhighlight %}
+
 
 
 You need to create a separate page for each tooltip you want to deliver.  
