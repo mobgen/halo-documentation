@@ -1,4 +1,15 @@
-# HALO Presenter SDK
+---
+title: Android SDK - Presenter SDK Overview
+keywords: android, presenter, UI, user experience, helper
+last_updated: November 15, 2016
+tags: [getting_started, ui]
+sidebar: android_sidebar
+permalink: android_presenter_overview.html
+folder: android
+---
+
+
+[![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Presenter/images/download.svg)](https://bintray.com/halo-mobgen/maven/HALO-Presenter/_latestVersion)
 
 This library is intended to help an application to implement and attach the presenter lifecycle with the Activity or Fragment one. It provides a default implementation of the presenter called ```EmptyPresenter``` if you want to have an activity without a real presenter.
 

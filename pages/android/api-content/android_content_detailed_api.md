@@ -11,6 +11,7 @@ folder: android
 Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.
 
 ## Search
+
 With the search query you can request some instances from the HALO Backend based on some query parameters. See the Search query section for all the available params.
 
 ```java
@@ -21,42 +22,47 @@ api.search(Data.NETWORK_AND_STORAGE, query)
 ```
 
 ### Search Query
+
 The ```SearchQuery``` object supports many params to help in the search task. To create a new instance of the ```SearchQuery``` you have to use the ```Builder``` pattern by calling ```SearchQuery.builder()```. The build object is parcelable and so you can send it across activities if needed.
 
 Here you can find the full list of options you can chain into the ```SearchQuery```:
 
-- **moduleName**: requests a module by its name. You must owe it and it must be available for client applications.
-- **moduleIds**: the list of module ids to request.
-- **instanceIds**: the list of instance ids to request.
-- **pickFields**: filters the values returned from the api, so it will not send more information than the needed by the application.
-- **segmentMode**: specifies how the segmentation should work against the tags. It can take two values: ```PARTIAL_MATCH```or  ```TOTAL_MATCH```. Partial match checks if there is at least one tag in the content provided while total match ensures the content retrieved contains all the tags provided.
-- **tags**: segmentation tags to apply to this content. This param is related to the segmentMode one since it selects and segments the content based on those tags.
-- **setDevice**: applies all the tags from the current device and matches the segment mode to PARTIAL_MATCH if no mode was set. Refer to the segmentMode param.
-- **segmentWithDevice**: applies automatically the current device in the core to the search specified.
-- **populateAll**: if there are fields with relations, they are populated.
-- **populate**: a list of the fields that should be populated.
-- **beginSearch/end**: syntax declaration to make custom queries inside the content info. For example, if we have instances in halo with two fields, name and amount, we would be able to filter the searched instances based in both values.
-- **beginMetaSearch/end**: it has the same concept as the search but allows the user to filter based on meta-data of the instance, such as the updated time or the instance name.
-- **searchTag**: tag name that will be used as an id for offline caching. This allows to override previous search data tagging them. It is useful for searches that include timestamps, since those searches would generate much more content than the needed for offline.
-- **locale**: the locale specified for localized fields. If no locale is provided an object with all the locales will be provided for the given field.
-- **ttl**: time that the content should remain available offline.
-- **pagination**: indicates which page and which limit should be requested to get the instances.
-- **onePage**: allows to make a request with a single page. It is equivalent to make the request without pagination but provides the information as if you did it in a single page. The priority of this param is higher than the pagination one.
+| Search param | Explanation |
+|--------------|-------------|
+| **moduleName** | requests a module by its name. You must owe it and it must be available for client applications. |
+| **moduleIds** | the list of module ids to request. |
+| **instanceIds** | the list of instance ids to request. |
+| **pickFields** | filters the values returned from the api, so it will not send more information than the needed by the application. |
+| **segmentMode** | specifies how the segmentation should work against the tags. It can take two values: ```PARTIAL_MATCH```or  ```TOTAL_MATCH```. Partial match checks if there is at least one tag in the content provided while total match ensures the content retrieved contains all the tags provided. |
+| **tags** | segmentation tags to apply to this content. This param is related to the segmentMode one since it selects and segments the content based on those tags. |
+| **setDevice** | applies all the tags from the current device and matches the segment mode to ```PARTIAL_MATCH``` if no mode was set. Refer to the segmentMode param. |
+| **segmentWithDevice** | applies automatically the current device in the core to the search specified. |
+| **populateAll** | if there are fields with relations, they are populated. |
+| **populate** | a list of the fields that should be populated. |
+| **beginSearch/end** | syntax declaration to make custom queries inside the content info. For example, if we have instances in halo with two fields, name and amount, we would be able to filter the searched instances based in both values. |
+| **beginMetaSearch/end** | it has the same concept as the search but allows the user to filter based on metadata of the instance, such as the updated time or the instance name. |
+| **searchTag** | tag name that will be used as an id for offline caching. This allows to override previous search data tagging them. It is useful for searches that include timestamps, since those searches would generate much more content than the needed for offline. |
+| **locale** | the locale specified for localized fields. If no locale is provided an object with all the locales will be provided for the given field. |
+| **ttl** | time that the content should remain available offline. |
+| **pagination** | indicates which page and which limit should be requested to get the instances. |
+| **onePage** | allows to make a request with a single page. It is equivalent to make the request without pagination but provides the information as if you did it in a single page. The priority of this param is higher than the pagination one. |
 
 In the beginSearch/end and beginMetaSearch/end parameters there are many query parameters supported. Here you have an index on how to use them and an example.
 
-- **and**: adds a condition to make both expression work together with an and condition.
-- **or**: adds a contition to make both expressions work together with an or condition.
-- **in**: check if the field has the values provided inside it.
-- **nin**: ensures the field has not the values inside.
-- **eq**: checks fields that are equals to the given value.
-- **neq**: checks the fields are not equals to the given value.
-- **lt**: checks the value is less than the provided value.
-- **lte**: checks the value is less than or equals the provided value.
-- **gt**: checks the value is greater than the provided value.
-- **gte**: checks the value is greater than or equals the provided value.
-- **beginGroup**: begins a parenthesis group.
-- **endGroup**: ends a parenthesis group.
+| Search condition | Explanation |
+|--------------|-------------|
+| **and** | Adds a condition to make both expression work together with an and condition. |
+| **or** | Adds a contition to make both expressions work together with an or condition. |
+| **in** | Check if the field has the values provided inside it. |
+| **nin** | Ensures the field has not the values inside. |
+| **eq** | Checks fields that are equals to the given value. |
+| **neq** | Checks the fields are not equals to the given value. |
+| **lt** | Checks the value is less than the provided value. |
+| **lte** | Checks the value is less than or equals the provided value. |
+| **gt** | Checks the value is greater than the provided value. |
+| **gte** | Checks the value is greater than or equals the provided value. |
+| **beginGroup** | Begins a parenthesis group. |
+| **endGroup** | Ends a parenthesis group. |
 
 **Custom search sample**
 
@@ -86,12 +92,16 @@ The search supports 3 modes to select the source where the content comes from:
 ### Data parsing
 When you call the ```api.search``` method you are not actually doing the request, it provides you an object that can be further configured to bring the data in the format you expect. In this case you have 3 different options:
 
-- **asRaw()**: provides a cursor you can parse by your own. Usually this will not be used unless you need some sort of performance critical task in a list.
-- **asContent()**: provides a ```HaloContentInstance``` list. This can be useful if you need to check also the metadata. To parse it to a custom class you can use the following operation on each instance:
+- **```asRaw()```**: provides a cursor you can parse by your own. Usually this will not be used unless you need some sort of performance critical task in a list.
+- **```asContent()```**: provides a ```HaloContentInstance``` list. This can be useful if you need to check also the metadata. To parse it to a custom class you can use the following operation on each instance:
+
 ```java
 HaloContentHelper.from(instance, MyCustomClass.class, halo.framework().parser());
 ```
-- **asContent(Class<T> clazz)**: this is the typical configuration you will need. Just pass your custom class to the content parameter and it will parse the list for you directly from the json received. Also the class must be annotated with ```@JsonObject``` and the fields with ```@JsonField```. Refer to [LoganSquare documentation](https://github.com/bluelinelabs/LoganSquare) for more details.
+
+- **```asContent(Class<T> clazz)```**: this is the typical configuration you will need. Just pass your custom class to the content parameter and it will parse the list for you directly from the json received. Also the class must be annotated with ```@JsonObject``` and the fields with ```@JsonField```. Refer to [LoganSquare documentation](https://github.com/bluelinelabs/LoganSquare) for more details.
+
+{% include important.html content="Remember that to make the class available for parsing you need to use the correct annotations. See the [content parsing section](#content-parsing)." %}
 
 ## Sync
 When a given module has so many items that handling them takes too much time or you want to have some content available in the background for the user, synchronization can make that work for you.

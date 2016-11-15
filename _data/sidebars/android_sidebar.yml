@@ -33,11 +33,11 @@ entries:
 
     - title: Supported Features
       url: /android_supported_features.html
-      output: web, pdf
+      output: web
 
     - title: Support
       url: /android_support.html
-      output: web, pdf
+      output: web
 
   - title: Halo Core API
     output: web, pdf
@@ -107,6 +107,10 @@ entries:
     - title: Overview
       url: /android_notifications_overview.html
       output: web, pdf
+
+    - title: Detailed APIs
+      url: /android_notifications_detailed_api.html
+      output: web, pdf
   
   - title: Halo Translations API
     output: web, pdf
@@ -122,6 +126,14 @@ entries:
 
     - title: Overview
       url: /android_social_overview.html
+      output: web, pdf
+
+  - title: Halo Presenter API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_presenter_overview.html
       output: web, pdf
 
   - title: Release Notes

@@ -8,6 +8,8 @@ permalink: android_content_overview.html
 folder: android
 ---
 
+[![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Content/images/download.svg) ](https://bintray.com/halo-mobgen/maven/HALO-Content/_latestVersion)
+
 ## Add dependency
 
 In the HALO plugin add the following to enable the content sdk.
@@ -31,6 +33,9 @@ The HALO Content SDK allows the user to retrieve instances from the HALO Backend
 
 * Search
 * Sync
+
+{% include tip.html content="Use the search method to get conent when you want to get some concrete elements, segmented data or certain information." %}
+{% include tip.html content="Use the sync method if you prefer to download the whole module to use if offline. It is better for performance than search." %}
 
 Creating an instance of the Content API is really simple once you have your HALO running. Just write the following line:
 
@@ -94,6 +99,6 @@ contentApi.getSyncInstances("my module name")
 	.execute(callback);
 ```
 
-{% include note.html content="Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed." %}
+{% include note.html content="Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](./android_content_detailed_api.html#content-parsing)." %}
 
 If you want to go in deep into this module, please refer to [the detailed documentation](./android_content_detailed_api.html).

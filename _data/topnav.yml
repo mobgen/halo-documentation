@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: News
-      url: /news
+      url: /news.html
 
 #Topnav dropdowns
 topnav_dropdowns:
@@ -12,11 +12,9 @@ topnav_dropdowns:
   folders:
     - title: Native SDKs
       folderitems:
-        - title: MyDoc
-          url: /mydoc_introduction.html
+        - title: HALO CMS
+          external_url: https://halo.mobgen.com
         - title: HALO Android SDK
           url: /android_home.html
         - title: HALO iOS SDK
           url: /p1_landing_page.html
-        - title: CMS Home Page
-          external_url: https://halo.mobgen.com

@@ -1,4 +1,14 @@
-# Halo Translations SDK
+---
+title: Android SDK - Translations SDK Overview
+keywords: android, translations, sync, content, module, localized text, localization
+last_updated: November 15, 2016
+tags: [getting_started, content]
+sidebar: android_sidebar
+permalink: android_translations_overview.html
+folder: android
+---
+
+[![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Translations/images/download.svg) ](https://bintray.com/halo-mobgen/maven/HALO-Translations/_latestVersion)
 
 ## What is it for?
 
@@ -11,6 +21,7 @@ Texts are synchronized based on the changes of the CMS, so if one text is remove
 ## Setup the lib
 
 You can setup the translations using the HALO plugin:
+
 ```groovy
 halo {
     services {
@@ -31,7 +42,7 @@ To make this work with HALO you will need to configure the module in the followi
 - Create as a manager two fields for this module, *one as a text* and a *second as a localized text*.
 - Create some instances for this module with some localized texts.
 
-![halo-translations.png](../images/halo-key-value-tutorial.png)
+![halo-translations.png](./images/halo-key-value-tutorial.png)
 
 
 To create the Android Application translations instance you will have to do the following:
@@ -62,7 +73,11 @@ Once the instance is created you can load the text as Strings or using a direct 
 
 ```java
 translationsInstance.textOn(textView, keyName);
+```
+
 or
+
+```java
 mTranslationApi.getTextAsync(keyName, new TextReadyListener() {
     @Override
     public void onTextReady(@Nullable String key, @Nullable String text) {
@@ -71,23 +86,25 @@ mTranslationApi.getTextAsync(keyName, new TextReadyListener() {
 });
 ```
 
-You can also use one of the following methods to interact with the translations api:
+You can also use one of the following methods to interact with the translations api.
 
-- ```cancel```: Cancels the query done to sync the process.
-- ```changeLocale```: Changes the locale in the current instance with another removing the previous translations and loading the new ones again.
-- ```clearCallbacks```: Clears the pending callbacks.
-- ```clearTranslations```: Clears the in memory translations. The ones in the database will remain.
-- ```clearCachedTranslations```: Clears the in database and in memory translations.
-- ```clearAll```: Clears callbacks and in mememory translations.
-- ```getAllTranslations```: Provides a list of all the texts in the in memory map.
-- ```getInMemoryTranslations```: Provides a map copy for the items in memory.
-- ```getDefaultText```: Get the default text for the given key.
-- ```getText```: Gets the in memory text for the given key.
-- ```getTextAsync```: Gets the text as an async process to make sure it is loaded when it is provided.
-- ```textOn```: Assigns a text on a text view when it is ready. It internally used the ```setTextAsync```.
-- ```load```: Loads asynchronously and sync the pending texts.
-- ```isLoading```: Tells if the plugin is still syncing the data.
-- ```locale```: Provides the current locale configured.
-- ```moduleName```: Provides the module name for this translations instance.
-- ```setErrorListener```: Listen for possibly errors.
-- ```removeLoadCallback```: Removes a loading callback in case you are in a context dependent environment.
+| Method name | Explanation |
+|-------------|-------------|
+| ```cancel``` | Cancels the query done to sync the process. |
+| ```changeLocale``` | Changes the locale in the current instance with another removing the previous translations and loading the new ones again. |
+| ```clearCallbacks``` | Clears the pending callbacks. |
+| ```clearTranslations``` | Clears the in memory translations. The ones in the database will remain. |
+| ```clearCachedTranslations``` | Clears the in database and in memory translations. |
+| ```clearAll``` | Clears callbacks and in mememory translations. |
+| ```getAllTranslations``` | Provides a list of all the texts in the in memory map. |
+| ```getInMemoryTranslations``` | Provides a map copy for the items in memory. |
+| ```getDefaultText``` | Get the default text for the given key. |
+| ```getText``` | Gets the in memory text for the given key. |
+| ```getTextAsync``` | Gets the text as an async process to make sure it is loaded when it is provided. |
+| ```textOn``` | Assigns a text on a text view when it is ready. It internally used the ```setTextAsync```. |
+| ```load``` | Loads asynchronously and sync the pending texts. |
+| ```isLoading``` | Tells if the plugin is still syncing the data. |
+| ```locale``` | Provides the current locale configured. |
+| ```moduleName``` | Provides the module name for this translations instance. |
+| ```setErrorListener``` | Listen for possibly errors. |
+| ```removeLoadCallback``` | Removes a loading callback in case you are in a context dependent environment. |

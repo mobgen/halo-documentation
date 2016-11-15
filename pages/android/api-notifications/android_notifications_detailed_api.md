@@ -1,10 +1,18 @@
-# Halo Content SDK: Detailed documentation
+---
+title: Android SDK - Notifications SDK Detailed APIs
+keywords: android, notifications, decorator, firebase, gcm, messages, cloud
+last_updated: November 14, 2016
+tags: [notifications]
+sidebar: android_sidebar
+permalink: android_notifications_detailed_api.html
+folder: android
+---
 
 ## Enable notifications
 
 The notification system is built in in the SDK based on the FCM framework (Firebase Cloud Messages), which is the default system to receive notifications in the Android OS.
 
-> Since FCM uses the Google Play Services framework, HALO cannot receive notifications in those mobile phones that does not support the Google Play Store with Play services.
+{% include warning.html content="Since FCM uses the Google Play Services framework, HALO cannot receive notifications in those mobile phones that does not support the Google Play Store with Play services." %}
 
 Based on the HALO backend you can send many data in the notifications and segment depending on the segmentation of the users present in the system. In this guide we will show you how to enable the notifications on the SDK and how to handle some custom actions on those notifications.
 
@@ -21,7 +29,7 @@ First of all we need to create a FCM project in the [Firebase Console](https://c
 7. There select cloud messaging.
 8. Write down the server key. It looks like 'AIzaSyAtN64Y0**********-*************'
 
-![Configure FCM](../images/fcm-instructions.gif)
+![Configure FCM](/images/fcm-instructions.gif)
 
 ## Step 2. Add the Server key to HALO
 Take the Server API Key obtained in the previous step and put it in the administration console of HALO.:
@@ -32,7 +40,8 @@ Take the Server API Key obtained in the previous step and put it in the administ
 4. Update the app filling the **Android key** field with your server key.
 
 ## Step 3. Enable the notifications in the SDK
-To enable the notifications inside your app you have to add the [HALO plugin](../../wiki-sdk/2-gradle/GradlePluginStarted). Once done, in your **HALO properties closure** enable the notifications service. Take the following code of a build.gradle as an example.
+To enable the notifications inside your app you have to add the [HALO plugin](/android_core_gradle_plugin_started). Once done, in your **HALO properties closure** enable the notifications service. Take the following code of a build.gradle as an example.
+
 ```groovy
 halo {
     ...
@@ -48,11 +57,13 @@ Take the file obtained in the Step 1 of this tutorial and place it in the root o
 
 ## React to a notification
 
-In HALO we support two different notification types. **Normal notifications** and **silent notifications**. Normal notifications includes the UI that shows the user a notification was received, while silent notifications only notify you in a callback to perform some background work.  
+In HALO we support two different notification types. **Normal notifications** and **silent notifications**. Normal notifications includes the UI that shows the user a notification was received, while silent notifications only notify you in a callback to perform some background work.
+
 With this silent notifications the SDK will not display any UI but also will not perform any action. As a developer you have to put an entry point so we can send you the information received. In this guide we tell you how to do it. Follow the instructions below to add a listener.
 
 ### 1. Create the listener
 This instance will receive the notifications for those notifications that will be listened with the ```HaloNotificationListener```. Here you can check an example:
+
 ```java
 public class NotificationReceiver implements HaloNotificationListener {
 
@@ -65,6 +76,7 @@ public class NotificationReceiver implements HaloNotificationListener {
 
 ### 2. Attach this listener to HALO
 You can attach the listener to listen **not silent**, **silent** or **all** notifications:
+
 ```java
 notificationsApi.listenAllNotifications(new NotificationReceiver()); // All
 notificationsApi.listenNotSilentNotifications(new NotificationReceiver()); //Not silent
@@ -116,6 +128,7 @@ public class CustomIconDecorator extends HaloNotificationDecorator {
 
 ### 2. Add decorator to HALO
 If you want to add this decorator to the notification service you can do it while in the install process of HALO:
+
 ```java
 notificationsApi.setNotificationDecorator(new CustomIconDecorator());
 ```
@@ -123,6 +136,7 @@ notificationsApi.setNotificationDecorator(new CustomIconDecorator());
 As it is a Decorator, you can always chain as many decorators as you want by calling the method ```NotificationDecorator#chain(builder, bundle)```.
 
 This also can be used for example to execute an intent when the user clicks on the notification, and you are allowed to chain multiple decorators in the following way:
+
 ```java
 new PendingIntentDecorator(context, new CustomIconDecorator());
 ```
