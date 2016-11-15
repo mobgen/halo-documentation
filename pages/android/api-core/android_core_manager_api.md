@@ -17,7 +17,7 @@ In this guide you will find an explanation of the api available methods. To crea
 Halo.core().manager();
 ```
 
-| Function                       | Functionality                                                                                                                                                      |
+| Method name                    | Functionality                                                                                                                                                      |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | storage                        | Provides the current storage api                                                                                                                                   |
 | getModules                     | Provides the modules that belongs to the current application. You can decide if this request supports offline and also in which thread this request should be done |

@@ -88,6 +88,42 @@ entries:
       url: /android_core_debug.html
       output: web, pdf
 
+  - title: Halo Content API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_content_overview.html
+      output: web, pdf
+
+    - title: Detailed APIs
+      url: /android_content_detailed_api.html
+      output: web, pdf
+  
+  - title: Halo Notifications API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_notifications_overview.html
+      output: web, pdf
+  
+  - title: Halo Translations API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_translations_overview.html
+      output: web, pdf
+
+  - title: Halo Social API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_social_overview.html
+      output: web, pdf
+
   - title: Release Notes
     output: web
     folderitems:

@@ -1,4 +1,12 @@
-# Halo Content SDK: Detailed documentation
+---
+title: Android SDK - Content SDK Detailed APIs
+keywords: android, content, getting started, halo, instance, module, query, search, sync, detailed
+last_updated: November 14, 2016
+tags: [content]
+sidebar: android_sidebar
+permalink: android_content_detailed_api.html
+folder: android
+---
 
 Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.
 
@@ -91,6 +99,7 @@ When a given module has so many items that handling them takes too much time or 
 The process of the synchronization is the following:
 
 - Subscribe to the synchronization hub to ensure when the synchronization process is done.
+
 ```java
 HaloContentApi contentApi = HaloContentApi.with(halo);
 ISubscription subscription = contentApi.subscribeToSync(moduleName, new HaloSyncListener() {
@@ -106,12 +115,14 @@ ISubscription subscription = contentApi.subscribeToSync(moduleName, new HaloSync
 
 ```
 - Then you can request an internal module name to be synced:
+
 ```java
 SyncQuery query = SyncQuery.create("my module name", Threading.POOL_QUEUE_POLICY);
 contentApi.sync(query);
 ```
 
 - You can then get the instances of the synced module even if you are offline:
+
 ```java
 contentApi.getSyncInstances("my module name")
 	.asContent(MySampleClass.class)
@@ -119,17 +130,20 @@ contentApi.getSyncInstances("my module name")
 ```
 
 - Remember to unsubscribe from the ```Subscription``` created when you are done, this will avoid possible memory leaks:
+
 ```java
 subscription.unsubscribe();
 ```
 
 - For debugging purposes, we keep a log for all the synchronizations that are done by an application. You can take them by module or all using the following call:
+
 ```java
 contentApi.getSyncLog("my module name")
 	.asContent()
 	.execute(callback);
 ```
 - Finally you can remove your stored data for a given module using:
+
 ```java
 contentApi.clearSyncInstances("my module name")
 	.asContent()
