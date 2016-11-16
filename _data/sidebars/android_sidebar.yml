@@ -128,6 +128,14 @@ entries:
       url: /android_social_overview.html
       output: web, pdf
 
+    - title: Facebook integration
+      url: /android_social_provider_facebook.html
+      output: web, pdf
+
+    - title: Google integration
+      url: /android_social_provider_google.html
+      output: web, pdf
+
   - title: Halo Presenter API
     output: web, pdf
     folderitems:

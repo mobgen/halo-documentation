@@ -116,12 +116,12 @@ HaloAuthProfile authProfile = new HaloAuthProfile(username,password,device.getAl
 HaloUserProfile userProfile = new HaloUserProfile(null,displayName,username,password,photoUrl,email);
 //make registration with auth profile and user profile given.
 socialApi.register(authProfile,userProfile)
-        .execute(new CallbackV2<HaloSocialProfile>() {
-          	@Override
-            public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
-             	if (result.status().isOk()) { // Ok
-                }
+    .execute(new CallbackV2<HaloSocialProfile>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
+            if (result.status().isOk()) { // Ok
             }
-        });
+        }
+    });
 ```
 {% include note.html content="You will handle the result of the registration process with a ```CallbackV2<HaloSocialProfile>``` as a parameter of execute." %}
