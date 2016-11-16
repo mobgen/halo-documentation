@@ -9,6 +9,9 @@ entries:
   - title: SDK Flavors
     output: web
     folderitems:
+    - title: Home
+      url: /index.html
+      output: web
     - title: HALO Android SDK
       url: /android_home.html
       output: web
