@@ -69,11 +69,11 @@ With the ```HaloSocialApi``` instance login with google provider.
 
 ```java
 CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
-          	@Override
-            public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
-             	//handle response
-            }
-        };
+        @Override
+        public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
+            //handle response
+        }
+    };
 socialApi.login(HaloSocialApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
