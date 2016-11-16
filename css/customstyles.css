@@ -1303,3 +1303,9 @@ path.domain {
   -o-transition: all .55s ease;
   transition: all .55s ease;
 }
+
+.btn-default {
+    background-color: #ff6b22;
+    color: white;
+    border-radius: 0px;
+}
