@@ -29,7 +29,7 @@ First of all we need to create a FCM project in the [Firebase Console](https://c
 7. There select cloud messaging.
 8. Write down the server key. It looks like 'AIzaSyAtN64Y0**********-*************'
 
-![Configure FCM](/images/fcm-instructions.gif)
+![Configure FCM](./images/fcm-instructions.gif)
 
 ## Step 2. Add the Server key to HALO
 Take the Server API Key obtained in the previous step and put it in the administration console of HALO.:
