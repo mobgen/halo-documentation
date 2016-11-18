@@ -76,9 +76,9 @@ Once the instance is created you can login with username and password only if th
 
 ```java
 //set a authentication profile to login
-HaloAuthProfile authProfile = new HaloAuthProfile(username,password,deviceAlias);
+HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
 //request login with the authoritation profile
-socialApi.login(HaloSocialApi.SOCIAL_HALO, authProfile, this);
+socialApi.loginWithHalo(HaloSocialApi.SOCIAL_HALO, authProfile, this);
 ```
 
 {% include note.html content="The third parameter is the callback of type ```CallbackV2<HaloSocialProfile>``` in wich you will handle the result of the authentication query." %}
@@ -93,13 +93,13 @@ Once the instance is created you can login with social network access token only
 If you set ```withFacebook()```:
 
 ```java
-socialApi.login(HaloSocialApi.SOCIAL_FACEBOOK, this);
+socialApi.loginWithSocial(HaloSocialApi.SOCIAL_FACEBOOK, this);
 ```
 
 If you set ```withGoogle()```:
 
 ```java
-socialApi.login(HaloSocialApi.SOCIAL_GOOGLE_PLUS, this);
+socialApi.loginWithSocial(HaloSocialApi.SOCIAL_GOOGLE_PLUS, this);
 ```
 
 {% include note.html content="The second parameter is the callback of type ```CallbackV2<HaloSocialProfile>``` in wich you will handle the result of the authentication query." %}
@@ -111,7 +111,7 @@ Once the instance is created you can register on HALO providing authoritation ob
 
 ```java
 //the authentication profile for the user
-HaloAuthProfile authProfile = new HaloAuthProfile(username,password,device.getAlias);
+HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
 //the user profile to register
 HaloUserProfile userProfile = new HaloUserProfile(null,displayName,username,password,photoUrl,email);
 //make registration with auth profile and user profile given.
@@ -119,9 +119,32 @@ socialApi.register(authProfile,userProfile)
     .execute(new CallbackV2<HaloSocialProfile>() {
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
-            if (result.status().isOk()) { // Ok
+            if (result.status().isOk()) { 
+                // Handle result
             }
         }
     });
 ```
 {% include note.html content="You will handle the result of the registration process with a ```CallbackV2<HaloSocialProfile>``` as a parameter of execute." %}
+
+### Check a provider
+
+Once the instance is created you can check if a given provider is available. A provider will be available if it was defined when creating the instance and the library of the provider is available.
+
+```java
+//the authentication profile for the user
+socialApi.isSocialNetworkAvailable(HaloSocialApi.SOCIAL_HALO);
+```
+
+### Release 
+
+You could release the memory in the ```onTerminate``` method of your application.
+
+
+```java
+//release resources
+socialApi.release();
+```
+
+
+

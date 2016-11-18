@@ -74,7 +74,7 @@ CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
             //handle response
         }
     };
-socialApi.login(HaloSocialApi.SOCIAL_GOOGLE_PLUS, callback);
+socialApi.loginWithSocial(HaloSocialApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
 

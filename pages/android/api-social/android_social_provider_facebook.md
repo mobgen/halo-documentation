@@ -76,7 +76,7 @@ CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
             //handle response
         }
     };
-socialApi.login(HaloSocialApi.SOCIAL_FACEBOOK, callback);
+socialApi.loginWithSocial(HaloSocialApi.SOCIAL_FACEBOOK, callback);
 ```
 
 
