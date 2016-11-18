@@ -39,6 +39,10 @@ entries:
       url: /android_support.html
       output: web
 
+    - title: Open source contributions
+      url: /android_contributions.html
+      output: web
+
   - title: Halo Core API
     output: web, pdf
     folderitems:
