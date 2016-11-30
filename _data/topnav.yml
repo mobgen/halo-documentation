@@ -10,11 +10,13 @@ topnav:
 topnav_dropdowns:
 - title: Navigation dropdowns
   folders:
-    - title: Native SDKs
+    - title: Platform documentation
       folderitems:
         - title: HALO CMS
           external_url: https://halo.mobgen.com
-        - title: HALO Android SDK
+        - title: HALO CMS Documentation
+          url: /cms_home.html
+        - title: HALO Android SDK Documentation
           url: /android_home.html
-        - title: HALO iOS SDK
+        - title: HALO iOS SDK Documentation
           url: /p1_landing_page.html

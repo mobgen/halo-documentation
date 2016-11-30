@@ -12,6 +12,9 @@ entries:
     - title: Home
       url: /index.html
       output: web
+    - title: HALO CMS
+      url: /cms_home.html
+      output: web
     - title: HALO Android SDK
       url: /android_home.html
       output: web
