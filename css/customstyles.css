@@ -1306,3 +1306,12 @@ path.domain {
     color: white;
     border-radius: 0px;
 }
+
+.post-content ol, .post-content ul {
+    border-left: solid 5px;
+    border-color: #004d40;
+}
+
+div#toc ol, div#toc ul {
+    border-left: none;
+}

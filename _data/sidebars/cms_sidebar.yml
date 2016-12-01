@@ -25,3 +25,27 @@ entries:
       url: /cms_home.html
       output: web
       type: web
+  
+  - title: Credentials
+    output: web, pdf
+    folderitems:
+
+    - title: Login
+      url: /cms_login.html
+      output: web, pdf
+
+    - title: Forget password
+      url: /cms_forget_password.html
+      output: web, pdf
+
+  - title: Content Management
+    output: web, pdf
+    folderitems:
+
+    - title: Content Modules
+      url: /cms_content_modules.html
+      output: web, pdf
+
+    - title: Content Items
+      url: /cms_content_items.html
+      output: web, pdf
