@@ -30,8 +30,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Login
-      url: /cms_login.html
+    - title: Login / Logout
+      url: /cms_login_logout.html
       output: web, pdf
 
     - title: Forget password
@@ -44,6 +44,10 @@ entries:
 
     - title: Content Modules
       url: /cms_content_modules.html
+      output: web, pdf
+
+    - title: Content Module Structure
+      url: /cms_content_module_structure.html
       output: web, pdf
 
     - title: Content Items

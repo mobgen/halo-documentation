@@ -18,24 +18,6 @@ the needed structure.
 Content items are each of the items that comply the structure of a module, so if we keep going with the same example, a module called
 books can have content items of books, which is the real data.
 
-## Module Configuration
-
-You can configure the modules by accessing the left panel menu <span class="fa fa-bars"/> content icon. When creating a module you can
-customize 3 main parameters:
-
-- **Module structure**: Here you will define the fields of a module. Imagine your entity book has an ISBN, an internal id,
-a title and some description. Each of this elements is a field, and you can select the type of field so HALO can make some
-checks and validations agains it.
-- **Segmentation tags**: You can configure which tags will be available for this content. A tag is just a way to differenciate
-content and the audiences it has access. Lets say we have some content that is only available for US market, but not for UK,
-then we can add a market tag to avoid it to appear for those markets.
-- **Push templates**: You can also schedule with the content items a push notification. This way you can update the apps
-in background seemlesly and without worrying about the publication time.
-
-You can also assign the users that have access to this module using the '*assign users*' form.
-
-{% include warning.html content="You can also change the name of the module, but keep in mind this is very risky since the applications in production may crash and stop showing the content" %}
-
 ## Operations over a Module
 
 ### Create a Content Module
@@ -72,5 +54,11 @@ below:
 
 {% include note.html content="Duplication of modules only duplicates its structure but not the instances. The module will remain empty once duplicated." %}
 
+### Change Module name
 
+- Access the left panel menu '*Content*'.
+- Enter the details of the module you wish to change the name.
+- In the '*Structure tab*' there is a field that states the Module name.
+- Change it and click '<span class="fa fa-floppy-o" /> *Save*' on the top action button bar.
 
+{% include warning.html content="Changing the name of an already created module may break your apps in production. Make sure this is what you want to do before saving the module with a different name." %}
