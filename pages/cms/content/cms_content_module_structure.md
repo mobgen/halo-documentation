@@ -61,5 +61,44 @@ countries in different languages.
 
 ## Segmentation
 
+Modules can segment the content so the applications request the content that is targetted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
+but it is intended to be used as a way to clasify content.
+
+To enable segmentation in content instances, firstly it is needed to attach the segmentation tags to a module. Segmentation tags have 4 different categories:
+
+- **Device**: default tags created with the default tags from the devices.
+- **User**: custom tags created by users.
+- **Market**: allows segmentation based on countries. This way the instances can be divided or used differently per country.
+- **Language**: this tags contain all the standard languages in the world so the content can be segmented by language. For localized fields, all the tags attached as language tags to the module
+are the ones that will be available as languages for the localization.
+
+### Apply a segmentation tag to a Content Item
+
+- Go to the module structure menu.
+- In content tags section, press the button '*Add tags*'.
+- In the left dropdown select the tag type that will be looked at. In the right part you can search for a specific tag.
+- Once you have selected the tags that will be added to the content, press the '*Add*' button.
+- Go to the content item you want to attach a tag to by selecting the content item list.
+- Click on the concrete item.
+- In the '*Apply tags*' section click on the tags you want to add to this content.
+- Don't forget to save your content once you finish the edition.
+
+### Delete a segmentation tag from a Content Item
+
+- Access the left panel menu '*Content*'.
+- Open the content items tab.
+- Select the item you want to remove the tag from.
+- Click on the 'X' next to the tag to remove it.
+- Don't forget to save the content item.
+
 ## Notification templates
 
+As well as the tags, when you send a notification attached to the publication of a content item, you can specify which templates are available. Once you have defined in the notifications
+section the possible templates, you can select which of those templates can be used in the notifications for this content.
+
+To add new templates to the module structure:
+
+- Access the left panel menu '*Content*'.
+- In the module structure tab, scroll to the '*Push templates*' section.
+- From all the available push templates, click on the ones you want to have available in this module. They will be automatically added.
+- From now on, you can select this push templates when sending push notifications with applied content to your users.

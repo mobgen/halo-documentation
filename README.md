@@ -1,3 +1,7 @@
-## Jekyll Documentation theme
+## HALO Documentation
 
-Build the site to see the instructions for using it. Or just go here: [http://idratherbewriting.com/documentation-theme-jekyll/](http://idratherbewriting.com/documentation-theme-jekyll/)
+This repository contains the official HALO documentation for the different platforms and SDKs. You can find:
+
+- [CMS Documentation]()
+- [Android SDK Documentation]()
+- [iOS SDK Documentation]()
