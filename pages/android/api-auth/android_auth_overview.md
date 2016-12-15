@@ -1,12 +1,10 @@
 ---
-title: Android SDK - Social SDK Overview
-keywords: android, social login, facebook integration, google integration
+title: Android SDK - Auth SDK Overview
+keywords: android, social login, facebook integration, google integration, auth
 last_updated: November 15, 2016
 tags: [social]
-toc: true
 sidebar: android_sidebar
-map_name: android_social
-permalink: android_social_overview.html
+permalink: android_auth_overview.html
 folder: android
 ---
 
@@ -20,7 +18,7 @@ apply plugin: 'halo'
 halo {
 	...
 	services {
-            social {
+            auth {
                 google "GOOGLE_CLIENT_ID"
                 facebook "FACEBOOK_APP_ID"
             }
@@ -43,8 +41,8 @@ The HALO Social SDK allows the user to sign in in three ways:
 It is fairly recommendable to create the instance as a singleton in your application class or using Dagger after installing HALO. Creating an instance of the Social API is really simple once you have your HALO running. Just write the following lines:
 
 ```java
-HaloSocialApi socialApi = HaloSocialApi.with(haloInstance)
-                .recoveryPolicy(HaloSocialApi.RECOVERY_ALWAYS)
+HaloAuthApi authApi = HaloAuthApi.with(haloInstance)
+                .recoveryPolicy(HaloAuthApi.RECOVERY_ALWAYS)
                 .storeCredentials("halo.account.demoapp")
                 .withHalo()
                 .withFacebook()
@@ -54,7 +52,7 @@ HaloSocialApi socialApi = HaloSocialApi.with(haloInstance)
 Also you have to release the memory in the onTerminate method of your application:
 
 ```java
-socialApi.release();
+authApi.release();
 ```
 
 
@@ -62,8 +60,8 @@ As you can see there are some parameters that you can provide to configure your 
 
 | Parameter name                 | Explanation                                                                                                                                                        |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **recoveryPolicy** (Optional)  | This field specifies if HALO will store your credentials with Android account manager. By default is set to HaloSocialApi.RECOVERY_NEVER so HALO will not store credentials.|
-| **storeCredentials** (Optional)| This field specifies which is the account type to store on Android account manager. It is mandatory if recoveryPolicy is set to HaloSocialApi.RECOVERY_ALWAYS.              |
+| **recoveryPolicy** (Optional)  | This field specifies if HALO will store your credentials with Android account manager. By default is set to HaloAuthApi.RECOVERY_NEVER so HALO will not store credentials.|
+| **storeCredentials** (Optional)| This field specifies which is the account type to store on Android account manager. It is mandatory if recoveryPolicy is set to HaloAuthApi.RECOVERY_ALWAYS.              |
 | **withHalo** (Optional)        | To use HALO as provider to login or sign in.                                                                                                                            |
 | **withFacebook** (Optional)    | To use facebook as provider to login.                                                                                                                             |
 | **withGoogle** (Optional)      | To use google as a provider to login.                                                                                                                             |
@@ -72,20 +70,20 @@ As you can see there are some parameters that you can provide to configure your 
 ## Simple use
 
 ### Login with HALO
-Once the instance is created you can login with username and password only if the ```wihtHalo()``` was especified on the ```HaloSocialApi``` instance. This will try to login the user with this credentials(username,password):
+Once the instance is created you can login with username and password only if the ```wihtHalo()``` was especified on the ```HaloAuthApi``` instance. This will try to login the user with this credentials(username,password):
 
 ```java
 //set a authentication profile to login
 HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
 //request login with the authoritation profile
-socialApi.loginWithHalo(HaloSocialApi.SOCIAL_HALO, authProfile, this);
+authApi.loginWithHalo(HaloAuthApi.SOCIAL_HALO, authProfile, this);
 ```
 
 {% include note.html content="The third parameter is the callback of type ```CallbackV2<HaloSocialProfile>``` in wich you will handle the result of the authentication query." %}
 
 
 ### Login with a social provider (Facebook or Google)
-Once the instance is created you can login with social network access token only if the ```wihtFacebook()``` or ```withGoogle()``` was especified on the ```HaloSocialApi``` instance. This will try to login the user after the system obtain the social provider accessToken with the providers:
+Once the instance is created you can login with social network access token only if the ```wihtFacebook()``` or ```withGoogle()``` was especified on the ```HaloAuthApi``` instance. This will try to login the user after the system obtain the social provider accessToken with the providers:
 
 {% include warning.html content="If you want go in deep on Facebook integration, please refer to [the detailed documentation](android_social_provider_facebook.html)" %}
 {% include warning.html content="If you want go in deep on Google integration, please refer to [the detailed documentation](android_social_provider_google.html)" %}
@@ -93,19 +91,19 @@ Once the instance is created you can login with social network access token only
 If you set ```withFacebook()```:
 
 ```java
-socialApi.loginWithSocial(HaloSocialApi.SOCIAL_FACEBOOK, this);
+authApi.loginWithSocial(HaloAuthApi.SOCIAL_FACEBOOK, this);
 ```
 
 If you set ```withGoogle()```:
 
 ```java
-socialApi.loginWithSocial(HaloSocialApi.SOCIAL_GOOGLE_PLUS, this);
+authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, this);
 ```
 
 {% include note.html content="The second parameter is the callback of type ```CallbackV2<HaloSocialProfile>``` in wich you will handle the result of the authentication query." %}
 
 ### Register
-Once the instance is created you can register on HALO providing authoritation object and a user profile only if the ```withHalo()``` was especified on the HaloSocialApi instance. This will try to register the user with HALO:
+Once the instance is created you can register on HALO providing authoritation object and a user profile only if the ```withHalo()``` was especified on the ```HaloAuthApi``` instance. This will try to register the user with HALO:
 
 {% include tip.html content="This process only register the user against HALO so you must call to login after registration process finishes correctly." %}
 
@@ -113,9 +111,9 @@ Once the instance is created you can register on HALO providing authoritation ob
 //the authentication profile for the user
 HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
 //the user profile to register
-HaloUserProfile userProfile = new HaloUserProfile(null,displayName,username,password,photoUrl,email);
+HaloUserProfile userProfile = new HaloUserProfile(null, displayName, username, password, photoUrl, email);
 //make registration with auth profile and user profile given.
-socialApi.register(authProfile,userProfile)
+authApi.register(authProfile,userProfile)
     .execute(new CallbackV2<HaloSocialProfile>() {
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
@@ -133,7 +131,7 @@ Once the instance is created you can check if a given provider is available. A p
 
 ```java
 //the authentication profile for the user
-socialApi.isSocialNetworkAvailable(HaloSocialApi.SOCIAL_HALO);
+authApi.isAuthProviderAvailable(HaloAuthApi.SOCIAL_HALO);
 ```
 
 ### Release 
@@ -143,7 +141,7 @@ You could release the memory in the ```onTerminate``` method of your application
 
 ```java
 //release resources
-socialApi.release();
+authApi.release();
 ```
 
 

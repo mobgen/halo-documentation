@@ -124,7 +124,7 @@ entries:
       url: /android_translations_overview.html
       output: web, pdf
 
-  - title: Halo Social API
+  - title: Halo Auth API
     output: web, pdf
     folderitems:
 

@@ -53,3 +53,31 @@ entries:
     - title: Content Items
       url: /cms_content_items.html
       output: web, pdf
+
+  - title: Push notifications
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /cms_notifications_overview.html
+      output: web, pdf
+
+    - title: Create a push template
+      url: /cms_notifications_template.html
+      output: web, pdf
+
+    - title: Create a push notification
+      url: /cms_notifications_create.html
+      output: web, pdf
+
+  - title: Segmentation
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /cms_segmentation_overview.html
+      output: web, pdf
+
+    - title: Operations
+      url: /cms_segmentation_operations.html
+      output: web, pdf
