@@ -129,7 +129,7 @@ entries:
     folderitems:
 
     - title: Overview
-      url: /android_social_overview.html
+      url: /android_auth_overview.html
       output: web, pdf
 
     - title: Facebook integration

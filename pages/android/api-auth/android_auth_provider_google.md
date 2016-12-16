@@ -22,6 +22,18 @@ Register in the firebase console and create a new app, if you don't already have
 
 Add the package name and and follow the setup steps.
 
+#### Optional Step to add security
+
+{% include note.html content="You can add extra security if you add the google id into the Halo CMS." %}
+
+![Configure Google project](./images/google-console.png)
+
+This step is optional and if you add this field to the HALO CMS it would verify that the tokens you provide belongs to the Google application. You can provide as many ids as you need for different platforms. In another case the HALO system only verifies if it is a valid token against Google.
+
+You can add this information in app section on HALO CMS.
+
+![Add extra security to facebook tokens](./images/halo-cms-secure-social.png)
+
 ### Step 3: Generate the hashes (Optional)
 
 To generate a hash of your release key, run the following command substituting your release key alias and the path to your keystore.
@@ -78,5 +90,5 @@ socialApi.loginWithSocial(HaloSocialApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
 
-{% include note.html content="For more information about Firebase SDK visit the [official Firebase documentation page](https://firebase.google.com/docs/android/setup)" %}
+{% include note.html content="For further information about Firebase SDK visit the [official Firebase documentation page](https://firebase.google.com/docs/android/setup)" %}
 
