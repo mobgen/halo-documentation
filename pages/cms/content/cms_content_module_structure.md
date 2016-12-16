@@ -15,12 +15,12 @@ customize 3 main parameters:
 
 - **Module structure**: Here you will define the fields of a module. Imagine your entity book has an ISBN, an internal id,
 a title and some description. Each of this elements is a field, and you can select the type of field so HALO can make some
-checks and validations agains it.
-- **Segmentation tags**: You can configure which tags will be available for this content. A tag is just a way to differenciate
+checks and validations against it.
+- **Segmentation tags**: You can configure which tags will be available for this content. A tag is just a way to differentiate
 content and the audiences it has access. Lets say we have some content that is only available for US market, but not for UK,
 then we can add a market tag to avoid it to appear for those markets.
-- **Push templates**: You can also schedule with the content items a push notification. This way you can update the apps
-in background seemlesly and without worrying about the publication time.
+- **Push templates**: You can also schedule a push notification attached to a content item. This way you can update the apps
+in background seamlessly and without worrying about the publication time.
 
 You can also assign the users that have access to this module using the '*assign users*' form, but this is out of the scope of this document.
 
@@ -61,8 +61,8 @@ countries in different languages.
 
 ## Segmentation
 
-Modules can segment the content so the applications request the content that is targetted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
-but it is intended to be used as a way to clasify content.
+Modules can segment the content so the applications request the content that is targeted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
+but it is intended to be used as a way to classify content.
 
 To enable segmentation in content instances, firstly it is needed to attach the segmentation tags to a module.
 
