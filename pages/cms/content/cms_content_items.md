@@ -34,7 +34,7 @@ if it would be possible.
 - Access the left panel menu '*Content*'.
 - Click in the list the module you want to create a Content Item for.
 - In the tabs, select the '*Content tab*'.
-- In the action button bar, click on the ‘New conent item' button.
+- In the action button bar, click on the ‘New content item' button.
 - Fill in the title and the fields you want to be present.
 
 

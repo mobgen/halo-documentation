@@ -24,7 +24,7 @@ books can have content items of books, which is the real data.
 
 - Access the left panel menu '*Content*'.
 - In the action button bar, click on the '*New module*' button.
-- Enter the name and select if this module is single or not.
+- Enter the name and select if this module is single or not. Single modules can have only one content item.
 - Start configuring your module.
 
 <img src="./images/tutorial_create_module.gif" />
@@ -62,3 +62,34 @@ below:
 - Change it and click '<span class="fa fa-floppy-o" /> *Save*' on the top action button bar.
 
 {% include warning.html content="Changing the name of an already created module may break your apps in production. Make sure this is what you want to do before saving the module with a different name." %}
+
+## Display options
+
+The modules overview is displayed in a list view and ordered by last updated one by default. This display options can be modified to provide a customized
+user experience.
+
+### Grid view
+
+In the top right section of the list overview we can select the display option '<span class="fa fa-th-large" /> *Grid view*' to access to this
+display configuration. 
+
+- In the grid view we can perform the same actions than in the list view. 
+- A module can be selected/deselected by clicking in the title section of the card element.
+- A module can be accessed and edited by clicking in the edit icon present in the bottom of the card element '<span class="fa fa-pencil" /> *Edit*'. 
+
+<img src="./images/tutorial_grid_view.png" />
+
+### Columns display
+
+Is possible to select the columns that are going to be displayed in the modules list view. The '*Columns*' selector in the list overview 
+header allows to check/uncheck the different columns and display them in the list.
+
+### Sorting options
+
+By default, the modules list is sorted by last updated one. This sorting can be modified clicking in the selector present in the list overview header.
+The different sorting options are:
+
+- Name Ascendant
+- Name Descendant
+- Last Updated Ascendant
+- Last Updated Descendant (default)
