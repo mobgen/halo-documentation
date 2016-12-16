@@ -54,10 +54,26 @@ Optionally you can remove multiple modules at the same time:
 - Open the bulk options pressing the top right 3 dots icon <span class="fa fa-ellipsis-v"/>.
 - Press on '*Delete*'. This will remove all the selected items.
 
+### Duplicate Content Item
+
+You can duplicate an already existing content item and his content. This will create a new content item with the same name 
+but finished with 'Copy N' where N is the number of copies. To do it follow the instructions below:
+
+- Access the left panel menu '*Content*'.
+- Click in the list the module you want to duplicate a Content Item for.
+- In the tabs, select the '*Content tab*'.
+- In the list of content items select all the content items you want to duplicate by pressing the selection square in the left of each row.
+- Open the bulk options pressing the top right 3 dots icon <span class="fa fa-ellipsis-v"/>.
+- Press on '*Duplicate*'. This will duplicate all the selected items.
+
+{% include note.html content="The duplicated content item will not inherit the publish and expiration date. Also, if the original content item 
+had a push notification attached, this push will not be attached in the copy." %}
+
+
 ### Search Content Items
 
 - Access the left panel menu '*Content*'.
-- Click in the list the module you want to create a Content Item for.
+- Click in the list the module where you want to search a specific Content Item.
 - In the tabs, select the '*Content tab*'.
 - In the top action bar, click on '<span class="fa fa-search" /> *Search*'.
 - Enter your query and see how the list is getting updated.
@@ -83,7 +99,7 @@ To schedule an **expiration**:
 ### Schedule notification
 
 When publishing content, you can schedule this publication with a Push notification. This means that when the item is published, a new
-push notification will be sent to all the devices targetted by the segmentation tags. To perform this sort of publication:
+push notification will be sent to all the devices targeted by the segmentation tags. To perform this sort of publication:
 
 - Create a new Content Item or access one already created.
 - Fill in all the fields and the title for the item.
