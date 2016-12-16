@@ -19,6 +19,18 @@ This getting started guide will guide you on setting up Google  SDK for Android 
 
 Register in the facebook console and create a new app. You must have a properly configured developer account.
 
+#### Optional Step to add security
+
+{% include note.html content="You can add extra security if you add the client secret and client id into the Halo CMS." %}
+
+![Configure Facebook Application](./images/facebook-console.png)
+
+This step is optional and if you add this field to the HALO CMS it would verify that the tokens you provide belongs to the Facebook application. In another case the HALO system only verifies if it is a valid token against Facebook.
+
+You can add this information in app section on HALO CMS.
+
+![Add extra security to facebook tokens](./images/halo-cms-secure-social.png)
+
 ### Step 2: Add your package 
 
 Add the package name and your potential deeplink activity on the facebook console.
@@ -80,5 +92,5 @@ socialApi.loginWithSocial(HaloSocialApi.SOCIAL_FACEBOOK, callback);
 ```
 
 
-{% include note.html content="For more information about Facebook SDK visit the [official Facebook documentation page](https://developers.facebook.com/docs/facebook-login/android)" %}
+{% include note.html content="For further information about Facebook SDK visit the [official Facebook documentation page](https://developers.facebook.com/docs/facebook-login/android)" %}
 
