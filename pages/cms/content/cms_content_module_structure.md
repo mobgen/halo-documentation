@@ -1,7 +1,7 @@
 ---
 title: HALO CMS - Content Module Structure
 keywords: cms, content, modules, structure, fields, template, notification template, tag, segmentation, module
-last_updated: December 7, 2016
+last_updated: December 15, 2016
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_content_module_structure.html
@@ -64,13 +64,7 @@ countries in different languages.
 Modules can segment the content so the applications request the content that is targetted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
 but it is intended to be used as a way to clasify content.
 
-To enable segmentation in content instances, firstly it is needed to attach the segmentation tags to a module. Segmentation tags have 4 different categories:
-
-- **Device**: default tags created with the default tags from the devices.
-- **User**: custom tags created by users.
-- **Market**: allows segmentation based on countries. This way the instances can be divided or used differently per country.
-- **Language**: this tags contain all the standard languages in the world so the content can be segmented by language. For localized fields, all the tags attached as language tags to the module
-are the ones that will be available as languages for the localization.
+To enable segmentation in content instances, firstly it is needed to attach the segmentation tags to a module.
 
 ### Apply a segmentation tag to a Content Item
 

@@ -1,6 +1,6 @@
 ---
 title: Android SDK - Presenter SDK Overview
-keywords: android, presenter, UI, user experience, helper
+keywords: android, presenter, UI, UX, helper
 last_updated: November 15, 2016
 tags: [getting_started, ui]
 sidebar: android_sidebar
