@@ -57,7 +57,7 @@ apply plugin: 'halo'
 halo {
     ...
     services {
-            social {
+            auth {
                 google "GOOGLE_CLIENT_ID"
             }
     }
@@ -65,19 +65,19 @@ halo {
 }
 ```
 
-### Step 6: Create the halo social instance 
+### Step 6: Create the halo auth instance 
 
-Create the ```HaloSocialApi``` instance to login with google. It is fairly recommendable to create the instance as a singleton in your application class.
+Create the ```HaloAuthApi``` instance to login with google. It is fairly recommendable to create the instance as a singleton in your application class.
 
 ```java
-HaloSocialApi socialApi = HaloSocialApi.with(halo)
+HaloAuthApi authApi = HaloAuthApi.with(halo)
                 .withGoogle()
                 .build();
 ```
 
 ### Step 7: Login with Google
 
-With the ```HaloSocialApi``` instance login with google provider.
+With the ```HaloAuthApi``` instance login with google provider.
 
 ```java
 CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
@@ -86,7 +86,7 @@ CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
             //handle response
         }
     };
-socialApi.loginWithSocial(HaloSocialApi.SOCIAL_GOOGLE_PLUS, callback);
+authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
 

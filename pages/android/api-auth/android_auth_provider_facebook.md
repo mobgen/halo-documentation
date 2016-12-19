@@ -54,7 +54,7 @@ apply plugin: 'halo'
 halo {
     ...
     services {
-            social {
+            auth {
                 facebook "FACEBOOK_APP_ID"
             }
     }
@@ -67,19 +67,19 @@ halo {
 
 Open the app in the console, open settings and enable "Single sign-on" by setting it to YES. Make sure you save the changes.
 
-### Step 6: Create the halo social instance 
+### Step 6: Create the halo auth instance 
 
-Create the ```HaloSocialApi``` instance  login with facebook. It is fairly recommendable to create the instance as a singleton in your application class.
+Create the ```HaloAuthApi``` instance  login with facebook. It is fairly recommendable to create the instance as a singleton in your application class.
 
 ```java
-HaloSocialApi socialApi = HaloSocialApi.with(halo)
+HaloAuthApi authApi = HaloAuthApi.with(halo)
                 .withFacebook()
                 .build();
 ```
 
 ### Step 7: Login with Facebook
 
-With the ```HaloSocialApi``` instance login with facebook provider.
+With the ```HaloAuthApi``` instance login with facebook provider.
 
 ```java
 CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
@@ -88,7 +88,7 @@ CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
             //handle response
         }
     };
-socialApi.loginWithSocial(HaloSocialApi.SOCIAL_FACEBOOK, callback);
+authApi.loginWithSocial(HaloAuthApi.SOCIAL_FACEBOOK, callback);
 ```
 
 
