@@ -49,3 +49,13 @@ provide. To check this stats:
 - Search for the sent notification.
 - Click on it and whatch the stats on the top of the form.
 
+### Remove notifications
+
+You can remove notifications that are saved as concept or sent:
+
+- In the top left menu select '*Notifications*'.
+- Between the two tabs, select the '*Notification messages*'.
+- In the dropdown select the type of notification you want to delete (sent or saved).
+- Finally find the entry to be deleted and in the right side click on the <span class="fa fa-traash" /> trash.
+
+{% include important.html content="In the case of sent notifications removing it will not mean that those devices who received the previous notification will dismiss it." %}
