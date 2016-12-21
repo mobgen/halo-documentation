@@ -82,10 +82,46 @@ entries:
       url: /cms_segmentation_operations.html
       output: web, pdf
   
+  - title: Applications
+    output: web, pdf
+    folderitems:
+
+    - title: Application concept overview
+      url: /cms_applications_overview.html
+      output: web, pdf
+
+    - title: Operations over applications
+      url: /cms_applications_operations.html
+      output: web, pdf
+
+    - title: Notifications, social and native apps
+      url: /cms_applications_parameters.html
+      output: web, pdf
+
+    - title: Access rights
+      url: /cms_applications_rights.html
+      output: web, pdf
+
+   - title: Users
+    output: web, pdf
+    folderitems:
+
+     - title: Manage users
+      url: /cms_users_management.html
+      output: web, pdf
+
+     - title: Permissions
+      url: /cms_users_permissions.html
+      output: web, pdf
+
   - title: Admin
     output: web, pdf
     folderitems:
 
     - title: Overview on system
       url: /cms_system_overview.html
+      output: web, pdf
+
+    - title: Customers
+      url: /cms_customers_overview.html
       output: web, pdf
