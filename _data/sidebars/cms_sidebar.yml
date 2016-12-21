@@ -81,3 +81,11 @@ entries:
     - title: Operations
       url: /cms_segmentation_operations.html
       output: web, pdf
+  
+  - title: Admin
+    output: web, pdf
+    folderitems:
+
+    - title: Overview on system
+      url: /cms_system_overview.html
+      output: web, pdf

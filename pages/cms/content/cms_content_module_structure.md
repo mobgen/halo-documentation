@@ -34,37 +34,36 @@ that you can use in your Modules:
 
 ### Basics
 - **Text**: This field accepts just plain text to match a typical String field.
-- **Long text**: Same as text field, but accepts a way bigger text and html formatting.
-- **Boolean**: Accepts or true or false.
-- **Number**: Accepts a number.
+- **Long text**: This field accepts the same as text field, but accepts a way bigger text and html formatting.
+- **Boolean**: This field accepts or true or false.
+- **Number**: This field accepts a number that can be decimal.
 - **Date**: This field accepts a date (day/month/year).
-- **Time**: Time field which accepts a moment in the day in terms of hh:mm:ss.
-- **Image**: You can add a link that refers an image or upload your own image to the cloudinary service connected with HALO.
-- **Video**: It behaves the same way as the image field. You can paste a video url or you can upload a video to the platform.
-- **Object**: It is a generic object field that accepts a json object format, for all the items that are not matching with all the other options.
-- **List**: Text field that has to be expressed as a JSON Array, storing multiple items.
+- **Time**: This field accepts a moment in the day in terms of hh:mm:ss.
+- **Image**: This field accepts a link that refers an image or upload your own image to the cloudinary service connected with HALO.
+- **Video**: This field behaves the same way as the image but with video. You can paste a video url or you can upload a video to the platform.
+- **Object**: This field is a generic object field that accepts a json object format, for all the items that are not matching with all the other options.
+- **List**: This field is a text field that has to be expressed as a JSON Array, storing multiple items.
 
 ### Validation fields
-- **Website**: You can enter a website and this field will validate the format of the website. It should be something like `http(s)://pre.website.domain/acceptsThis?andAlso=params`
-- **Youtube**: Accepts a youtube video and validates the source. Some sort of special video field.
-- **Color**: Accepts hexadecimal colors.
+- **Website**: This field accepts a website and this field will validate the format of the website. It should be something like `http(s)://pre.website.domain/acceptsThis?andAlso=params`
+- **Youtube**: This field accepts a youtube video and validates the source. Some sort of special video field.
+- **Color**: This field accepts hexadecimal colors.
 
 ### Multichoice and complex relations
-- **Localized text**: Based on the tags of the structure, localized fields allows the user to enter the value for different
-countries in different languages.
-- **Single choice**: Allows to select between multiple values as a radio button in the content creation form.
-- **Multiple choice**: Allows to select multiple values as a multiple checkboxes in the content creation form.
-- **Single select dropdown**: Displays a dropdown that only allows one item selection in the content creation form.
-- **Multiple select dropdown**: Displays a dropdown that allows multiple item selection in the content creation form.
-- **Single relation**: Allows the creation of a relation between this field and a different module instance.
-- **Multiple relation**: Allows the creation of multiple relations between the field and different modules.
+- **Localized text**: This field allows the user to enter the value for different countries in different languages based on the tags of the structure.
+- **Single choice**: This field allows to select between multiple values as a radio button in the content creation form.
+- **Multiple choice**: This field allows to select multiple values as a multiple checkboxes in the content creation form.
+- **Single select dropdown**: This field displays a dropdown that only allows one item selection in the content creation form.
+- **Multiple select dropdown**: This field displays a dropdown that allows multiple item selection in the content creation form.
+- **Single relation**: This field allows the creation of a relation between this field and a different module instance.
+- **Multiple relation**: This field allows the creation of multiple relations between the field and different modules.
 
 ## Segmentation
 
-Modules can segment the content so the applications request the content that is targeted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
+The content can be segmented based on tags, meaning the applications can display just the content targeted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
 but it is intended to be used as a way to classify content.
 
-To enable segmentation in content instances, firstly it is needed to attach the segmentation tags to a module.
+In order to segment your content, first you need to add the relevant tags to the content module itself.
 
 ### Apply a segmentation tag to a Content Item
 

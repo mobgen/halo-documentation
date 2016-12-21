@@ -81,12 +81,12 @@ display configuration.
 
 ### Columns display
 
-Is possible to select the columns that are going to be displayed in the modules list view. The '*Columns*' selector in the list overview 
+It is possible to select the columns that are going to be displayed in the modules list view. The '*Columns*' selector in the list overview 
 header allows to check/uncheck the different columns and display them in the list.
 
 ### Sorting options
 
-By default, the modules list is sorted by last updated one. This sorting can be modified clicking in the selector present in the list overview header.
+By default, the modules list is sorted by date modified. This sorting can be modified clicking in the selector present in the list overview header.
 The different sorting options are:
 
 - Name Ascendant
