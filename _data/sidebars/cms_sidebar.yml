@@ -102,17 +102,17 @@ entries:
       url: /cms_applications_rights.html
       output: web, pdf
 
-   - title: Users
+  - title: Users
     output: web, pdf
     folderitems:
 
      - title: Manage users
-      url: /cms_users_management.html
-      output: web, pdf
+       url: /cms_users_management.html
+       output: web, pdf
 
      - title: Permissions
-      url: /cms_users_permissions.html
-      output: web, pdf
+       url: /cms_users_permissions.html
+       output: web, pdf
 
   - title: Admin
     output: web, pdf
