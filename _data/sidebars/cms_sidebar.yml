@@ -94,14 +94,6 @@ entries:
       url: /cms_applications_operations.html
       output: web, pdf
 
-    - title: Notifications, social and native apps
-      url: /cms_applications_parameters.html
-      output: web, pdf
-
-    - title: Access rights
-      url: /cms_applications_rights.html
-      output: web, pdf
-
   - title: Users
     output: web, pdf
     folderitems:
