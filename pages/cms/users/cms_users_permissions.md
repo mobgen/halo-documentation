@@ -105,7 +105,7 @@ and do not belong to any of the modules mentioned before.
 
 ### General content
 
-- **Access to all content modules**:  allows the user to acces the content items in all the content modules.
+- **Access to all content modules**: allows the user to acces the content items in all the content modules without granting them manually using access righs.
 - **Manage modules**: allows to create, edit or remove modules from the general content section.
 - **Manage module items**: allows the user to create, edit or delete content items from content modules.
 - **Enable segmented content**: allows the user to attach segmentation tags into the content module while defining the content structure.
