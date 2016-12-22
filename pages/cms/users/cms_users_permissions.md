@@ -92,7 +92,7 @@ with other modules such as segmentation.
 - **Push notifications**: Handles the permissions for creation and deletion of push templates and notifications. Also
 has the possiblity to enable push notifications in content.
 - **Core**: Handles the permissions for the main elements of the system like customers, users, apps and custom
-moddlewares.
+middlewares.
 - **OAuth**: Handles the permissions for the authentications server and some essential user management operations. It is linked
 in many cases with the authentication module.
 - **Authentication**: Handles permissions with the tokens attaching them to the roles, apps and its access rights and the
