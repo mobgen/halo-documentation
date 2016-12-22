@@ -38,6 +38,16 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+
+    <script>
+        $(document).ready ( function(){
+            if(document.location.href.indexOf('fromCms=true') !== -1){
+            $('nav').addClass('hidden');
+            $('.col-md-3').addClass('hidden');
+            }
+        });
+    </script>
+
     {% if page.datatable == true %}
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
