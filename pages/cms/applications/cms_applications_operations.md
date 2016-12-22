@@ -26,6 +26,9 @@ folder: cms
 - In the list find the app you want to delete and press in the right the <span class="fa fa-trash"/> trash button.
 - Optionally you can select multiple apps in the left square and perform a bulk delete with the <span class="fa fa-ellipsis-v"/> menu.
 
+{% include warning.html content="Keep in mind that deleting an application that is in production can damage your business and the applications using the
+client id and secret of this app will not work again." %}
+
 ### Receive the client id and secret by mail
 
 - Open the top left menu and select 'Apps' using a user with 'Manage apps' permission.
