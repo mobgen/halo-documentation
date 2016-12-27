@@ -20,14 +20,14 @@ The permissions are classified by the module they belong to:
 - **General content**: Handles the permissions related to content creation and modules and the links it has
 with other modules such as segmentation.
 - **Push notifications**: Handles the permissions for creation and deletion of push templates and notifications. Also
-has the possiblity to enable push notifications in content.
+has the possibility to enable push notifications in content.
 - **Core**: Handles the permissions for the main elements of the system like customers, users, apps and custom
 middlewares.
 - **OAuth**: Handles the permissions for the authentications server and some essential user management operations. It is linked
 in many cases with the authentication module.
 - **Authentication**: Handles permissions with the tokens attaching them to the roles, apps and its access rights and the
 access to custom content elements.
-- **Segmentation**: Hanldes the permissions to create segmentation tags that then can be attached to content or notifications. Also handles
+- **Segmentation**: Handles the permissions to create segmentation tags that then can be attached to content or notifications. Also handles
 business helpers like the statistics or the application devices.
 - **Media**: Handles permissions with the media module that allows you to upload content to cloudinary services.
 - **Others**: Here it comes other permissions related to different elements in the system that can be traversal
@@ -35,11 +35,11 @@ and do not belong to any of the modules mentioned before.
 
 ### General content
 
-- **Access to all content modules**:  allows the user to acces the content items in all the content modules without granting them manually via access rights.
+- **Access to all content modules**:  allows the user to access the content items in all the content modules without granting them manually via access rights.
 - **Manage modules**: allows to create, edit or remove modules from the general content section.
 - **Manage module items**: allows the user to create, edit or delete content items from content modules.
 - **Enable segmented content**: allows the user to attach segmentation tags into the content module while defining the content structure.
-- **Access content**: allows the user to acces modules or instances.
+- **Access content**: allows the user to access modules or instances.
 
 ### Push notifications
 

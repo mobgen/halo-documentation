@@ -49,7 +49,7 @@ Each module can be accessed by multiple apps. If you want an application to have
 
 ### Configure fcm
 
-To enable noifications in your application you need firstly to create a firebase project. Please refer
+To enable notifications in your application you need firstly to create a firebase project. Please refer
 to the [notifications section]() to get more details. Once you have this project then:
 
 - Open the top left menu and select 'Apps' using a user with 'Manage apps' permission.

@@ -12,7 +12,7 @@ folder: cms
 
 When you are working with the content management using HALO you will work with content modules and content items.
 A Content module is the definition of the structure of content items. Imagine you want to build a *library*, then you will
-need books, subscriptors and retrievals. Each of this entities is a different module and have to be created with
+need books, subscribers and retrievals. Each of this entities is a different module and have to be created with
 the needed structure.
 
 Content items are each of the items that comply the structure of a module, so if we keep going with the same example, a module called
