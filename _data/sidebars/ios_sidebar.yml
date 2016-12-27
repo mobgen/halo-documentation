@@ -1,7 +1,6 @@
 entries:
 - title: Sidebar
   product: HALO iOS SDK Documentation
-  version: 2.0
   folders:
 
   - title:
@@ -31,50 +30,30 @@ entries:
       output: web, pdf
       type: web, pdf
 
-  #   - title: Supported Features
-  #     url: /android_supported_features.html
-  #     output: web
-
-  #   - title: Support
-  #     url: /android_support.html
-  #     output: web
-
-  #   - title: Open source contributions
-  #     url: /android_contributions.html
-  #     output: web
-
-  # - title: Halo Core API
-  #   output: web, pdf
-  #   folderitems:
-
-  #   - title: Halo Installer Options
-  #     url: /android_core_installer_options.html
-  #     output: web, pdf
-
-  #     subfolders:
-  #     - title: Android Gradle Plugin
-  #       output: web, pdf
-  #       subfolderitems:
-
-  #       - title: Getting Started
-  #         url: /android_core_gradle_plugin_started.html
-  #         output: web, pdf
-
-  #       - title: Gradle Plugin Options
-  #         url: /android_core_gradle_plugin_options.html
-  #         output: web, pdf
+  - title: Halo Core Framework
+    output: web, pdf
+    folderitems:
     
-  #   - title: Halo Core API
-  #     url: /android_halo_core.html
-  #     output: web, pdf
+    - title: Overview
+      url: /ios_core_overview.html
+      output: web, pdf
 
-  #   - title: Manager API
-  #     url: /android_core_manager_api.html
-  #     output: web, pdf
-  
-  #   - title: Media Cloudinary API
-  #     url: /android_core_cloudinary.html
-  #     output: web, pdf
+    - title: User authentication
+      url: /ios_auth_overview.html
+      output: web, pdf
+
+      subfolders:
+      - title: Helpers
+        output: web, pdf
+        subfolderitems:
+
+        - title: Cloudinary Helper
+          url: /ios_cloudinary_helper.html
+          output: web, pdf
+      
+        - title: Translations Helper
+          url: /ios_translations_helper.html
+          output: web, pdf
 
   #   - title: Custom Middleware Requests
   #     url: /android_core_custom_middleware_request.html
@@ -104,49 +83,29 @@ entries:
   #     url: /android_content_detailed_api.html
   #     output: web, pdf
   
-  # - title: Halo Notifications API
-  #   output: web, pdf
-  #   folderitems:
+  - title: Halo Notifications Framework
+    output: web, pdf
+    folderitems:
 
-  #   - title: Overview
-  #     url: /android_notifications_overview.html
-  #     output: web, pdf
+    - title: Overview
+      url: /ios_notifications_overview.html
+      output: web, pdf
 
-  #   - title: Detailed APIs
-  #     url: /android_notifications_detailed_api.html
-  #     output: web, pdf
-  
-  # - title: Halo Translations API
-  #   output: web, pdf
-  #   folderitems:
+  - title: Halo Social Framework
+    output: web, pdf
+    folderitems:
 
-  #   - title: Overview
-  #     url: /android_translations_overview.html
-  #     output: web, pdf
+    - title: Overview
+      url: /ios_social_overview.html
+      output: web, pdf
 
-  # - title: Halo Auth API
-  #   output: web, pdf
-  #   folderitems:
+    - title: Facebook integration
+      url: /ios_social_facebook.html
+      output: web, pdf
 
-  #   - title: Overview
-  #     url: /android_auth_overview.html
-  #     output: web, pdf
-
-  #   - title: Facebook integration
-  #     url: /android_social_provider_facebook.html
-  #     output: web, pdf
-
-  #   - title: Google integration
-  #     url: /android_social_provider_google.html
-  #     output: web, pdf
-
-  # - title: Halo Presenter API
-  #   output: web, pdf
-  #   folderitems:
-
-  #   - title: Overview
-  #     url: /android_presenter_overview.html
-  #     output: web, pdf
+    - title: Google integration
+      url: /ios_social_google.html
+      output: web, pdf
 
   # - title: Release Notes
   #   output: web
