@@ -20,7 +20,7 @@ section you can:
 {% include warning.html content="Be careful when removing this entries. They perform the link between different parts
 of the system and removing them can break some key links and make content not available or your apps useless." %}
 
-## Opetations on system
+## Operations on system
 
 ### Create your custom middleware link
 
