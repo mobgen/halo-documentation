@@ -149,4 +149,4 @@ Halo.Manager.auth.loginWithFacebook(viewController: self, stayLoggedIn: false) {
 }];
 ```
 
-{% include note.html content="For further information about Facebook SDK visit the [official Facebook documentation page](https://developers.facebook.com/docs/facebook-login/android)" %}
+{% include note.html content="For further information about Facebook SDK visit the [official Facebook documentation page](https://developers.facebook.com/docs/facebook-login/ios)" %}
