@@ -47,6 +47,10 @@ At the end, you'll download a GoogleService-Info.plist. You can download this fi
 
 Add the needed libraries from Firebase: **FirebaseAnalytics.framework**, **FirebaseCore.framework**, **FirebaseInstanceID.framework**, **GoogleInterchangeUtilities.framework**, **GoogleSymbolUtilities.framework**, **GoogleUtilities.framework**, **FirebaseAuth.framework**, **GoogleNetworkingUtilities.framework** and **GoogleSignIn.framework**.
 
+{% include warning.html content="**GoogleSignIn.framework** is inside the **Invites** folder when you download the Firebase SDK. You need this framework to compile your project." %}
+
+Remove all the libraries from **Linked Frameworks and Libraries** and **Embedded Binaries**.
+
 Add the *-ObjC* flag to **Other Linker Settings**. This can be found inside **Build Settings** tab in the Linking section.
 
 Drag the **Firebase.h** into your project. 
