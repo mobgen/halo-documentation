@@ -5,7 +5,7 @@ last_updated: January 5, 2016
 tags: [changelog]
 sidebar: android_sidebar
 toc: false
-permalink: android_release_notes_200.html
+permalink: android_release_notes_210.html
 folder: android
 ---
 
