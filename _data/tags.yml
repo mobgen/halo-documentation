@@ -6,5 +6,6 @@ allowed-tags:
   - notifications
   - ui
   - news
+  - auth
   - social
   - cms

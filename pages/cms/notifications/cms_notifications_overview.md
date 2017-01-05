@@ -10,7 +10,7 @@ folder: cms
 
 HALO CMS supports sending notifications using Firebase messaging service behind the scenes (a battle-tested) 
 and standard notifications system. All together the notifications, the HALO device tracking and the identified users
-can be used with segmentation to send certain notifications to targetted devices.
+can be used with segmentation to send certain notifications to targeted devices.
 
 Thanks to HALO Notifications you will be able to reach certain device groups or users based on market characteristics. One use 
 case that can suit your needs could be segmenting push notifications by platform.
@@ -20,7 +20,7 @@ The different sdks will allow you to manages those notifications and present the
 # Push templates and Push notifications
 
 A push notification is a message that sent from the server to trigger some action in a client application even if it is
-not being used. This meessage can trigger a notification message in a phone or a backgroung work like synchronizing some
+not being used. This message can trigger a notification message in a phone or a background work like synchronizing some
 data, it is up to the business logic how do you use the notifications.
 
 We support 2 different types of notifications:
@@ -37,7 +37,7 @@ for the different case.
 Once you have the template, you can just create your notification, specify which template you wan to use and fill in
 some data, segmentation and scheduling behaviour, that is it.
 
-To get more information about push templates checkout the detailed tutorial [here](./cms_notificaitons_template). If 
+To get more information about push templates checkout the detailed tutorial [here](./cms_notifications_template). If 
 you want to learn how to send a notification you can follow [this other tutorial](./cms_notifications_create). 
 
 You can also add support for the notifications in your [android](./android_notifications_overview) and [iOS]() devices.

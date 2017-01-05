@@ -16,7 +16,7 @@ To group those permissions we use the role concept so each role has some permiss
 By default we provide 3 different roles, but you can create your own custom roles:
 
 - **Admin**: The admin has access to all the CMS and all the features available for you as a client. He can 
-change the information for everything and it is thoght for the most advanced users.
+change the information for everything and it is thought for the most advanced users.
 - **Manager**: The manager has permissions to manage modules, tags, notifications and content but it cannot handle
 permissions or app configurations or users.
 - **Editor**: The editor only has permissions to create or edit content for the modules it has access. This role

@@ -1,0 +1,119 @@
+entries:
+- title: Sidebar
+  product: HALO iOS SDK Documentation
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Home & Status
+      url: /ios_home.html
+      output: web
+      type: web
+
+    - title: Getting Started
+      url: /ios_getting_started.html
+      output: web, pdf
+      type: web, pdf
+
+  - title: Halo Core Framework
+    output: web, pdf
+    folderitems:
+    
+    - title: Overview
+      url: /ios_core_overview.html
+      output: web, pdf
+
+    - title: User authentication
+      url: /ios_auth_overview.html
+      output: web, pdf
+
+      subfolders:
+      - title: Helpers
+        output: web, pdf
+        subfolderitems:
+
+        - title: Cloudinary Helper
+          url: /ios_cloudinary_helper.html
+          output: web, pdf
+      
+        - title: Translations Helper
+          url: /ios_translations_helper.html
+          output: web, pdf
+
+  #   - title: Custom Middleware Requests
+  #     url: /android_core_custom_middleware_request.html
+  #     output: web, pdf
+
+  #   - title: Offline Support
+  #     url: /android_core_offline_support.html
+  #     output: web, pdf
+
+  #   - title: Change Server Environment
+  #     url: /android_core_environment.html
+  #     output: web, pdf
+
+  #   - title: Enable Debug Mode
+  #     url: /android_core_debug.html
+  #     output: web, pdf
+
+  # - title: Halo Content API
+  #   output: web, pdf
+  #   folderitems:
+
+  #   - title: Overview
+  #     url: /android_content_overview.html
+  #     output: web, pdf
+
+  #   - title: Detailed APIs
+  #     url: /android_content_detailed_api.html
+  #     output: web, pdf
+  
+  - title: Halo Notifications Framework
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /ios_notifications_overview.html
+      output: web, pdf
+
+  - title: Halo Social Framework
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /ios_social_overview.html
+      output: web, pdf
+
+    - title: Facebook integration
+      url: /ios_social_facebook.html
+      output: web, pdf
+
+    - title: Google integration
+      url: /ios_social_google.html
+      output: web, pdf
+
+  # - title: Release Notes
+  #   output: web
+  #   folderitems:
+
+  #   - title: 2.0.0 Release Notes
+  #     url: /android_release_notes_200.html
+  #     output: web
+  #   - title: 1.4.0 Release Notes
+  #     url: /android_release_notes_140.html
+  #     output: web

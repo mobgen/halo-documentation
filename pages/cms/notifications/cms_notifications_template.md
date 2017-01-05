@@ -8,13 +8,13 @@ permalink: cms_notifications_template.html
 folder: cms
 ---
 
-Notification templates are a way to specify different types of noifications that can be sent to the app depending on the 
+Notification templates are a way to specify different types of notifications that can be sent to the app depending on the 
 business rules. You can create, update and delete those templates if you have the manage push templates permission. In
 this document we describe the different operations and elements that conform a push template.
 
 ## Push template fields
 
-You can configure as many push templates as you need, but there are some predefined elemnts that can be added. Here we
+You can configure as many push templates as you need, but there are some predefined elements that can be added. Here we
 will describe this parameters and the effect they have in the push notifications received in the device:
 
 - **Silent content**: Allows to mark the push notification as silent or not. When a push notification sent is silent the 
@@ -44,7 +44,7 @@ send and maybe modify in the future. To learn more about segmenting push notific
 - Enter a default message (optional).
 - Finally in the top action bar select '<span class="fa fa-floppy-o"/> *Save*'
 
-{% include note.html content="You can always edit the created template by selecting it in the pushn templates list." %}
+{% include note.html content="You can always edit the created template by selecting it in the push templates list." %}
 
 ### Delete a push template
 
