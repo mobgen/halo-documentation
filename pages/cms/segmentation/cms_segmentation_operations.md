@@ -36,7 +36,7 @@ Once a tag is configured in the module:
 
 Since localization texts are just a special way to segment your content, you can create texts in different languages:
 
-- Attach some language tags to your module as described [here]([this documentation](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item).
+- Attach some language tags to your module as described [here](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item).
 - Create a localized field. If you are not sure how to create a field in a module refer to [this documentation](./cms_content_module_structure.html#fields).
 - Go to a content item in the '*Content tab*'.
 - Select the localized field and add some texts in different languages.
