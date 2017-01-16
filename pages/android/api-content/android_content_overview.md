@@ -102,3 +102,57 @@ contentApi.getSyncInstances("my module name")
 {% include note.html content="Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](./android_content_detailed_api.html#content-parsing)." %}
 
 If you want to go in deep into this module, please refer to [the detailed documentation](./android_content_detailed_api.html).
+
+## Edit Content API
+
+The Edit Content API is the way to manipulate the general content instances. If you have the proper credentials you will be able to create, update or delete general content instances. See [Halo Auth API](/android_auth_overview.html) to get apropiate credentials. 
+
+For example if you want to update an instance.
+
+{% include important.html content="Please refer to [the detailed documentation](./android_edit_content_detailed_api.html) to see other operations." %}
+
+You must set a map with the content values. In this example: title and backgroundColor) 
+
+```java
+Map<String,Object> values = new HashMap<>();
+values.put("title","the title");
+values.put("backgroundColor", "#987654");
+```
+
+or set a custom object properly configured
+
+{% include note.html content="Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](./android_content_detailed_api.html#content-parsing)." %}
+
+```java
+MyCustomClass values = new MyCustomClass("the title","#987654");
+```
+
+You must provide the item id, module id, instance name. As optional parameters you should provide segmentation tags, publication date and deletion date:
+
+```java
+HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Builder(moduleName)
+    .withId(instanceId)
+    .withModuleId(moduleId)
+    .withPublishDate(publishDate)
+    .withName(instanceName)
+    .withContentData(values);
+```
+
+```java
+HaloContentEditApi.updateContent(instanceBuilder.build())
+    .threadPolicy(Threading.POOL_QUEUE_POLICY)
+    .execute(new CallbackV2<HaloContentInstance>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<HaloContentInstance> result) {
+            if(result.status().isAuthenticationError()){
+               //there is an authentication . Notify user to login.
+            } else {
+                if(result.data()!=null) {
+                    //handle result of the update operation.                
+                }
+            }
+        }
+     });
+```
+
+If you want to go in deep into this module, please refer to [the detailed documentation](./android_edit_content_detailed_api.html).

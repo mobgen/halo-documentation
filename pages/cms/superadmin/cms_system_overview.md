@@ -17,8 +17,7 @@ section you can:
 - Configure a new middleware located in some url.
 - Remove any of the modules configured for your company.
 
-{% include warning.html content="Be careful when removing this entries. They perform the link between different parts
-of the system and removing them can break some key links and make content not available or your apps useless." %}
+{% include warning.html content="Be careful when removing this entries. They perform the link between different parts of the system and removing them can break some key links and make content not available or your apps useless." %}
 
 ## Operations on system
 
