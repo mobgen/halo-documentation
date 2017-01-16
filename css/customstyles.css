@@ -1,5 +1,6 @@
 body {
     font-size:15px;
+    padding-top: 0; /* Padding is added dynamically if there is a .navbar-fixed-top. */
 }
 
 .bs-callout {
