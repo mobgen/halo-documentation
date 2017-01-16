@@ -66,8 +66,7 @@ but finished with 'Copy N' where N is the number of copies. To do it follow the 
 - Open the bulk options pressing the top right 3 dots icon <span class="fa fa-ellipsis-v"/>.
 - Press on '*Duplicate*'. This will duplicate all the selected items.
 
-{% include note.html content="The duplicated content item will not inherit the publish and expiration date. Also, if the original content item 
-had a push notification attached, this push will not be attached in the copy." %}
+{% include note.html content="The duplicated content item will not inherit the publish and expiration date. Also, if the original content item had a push notification attached, this push will not be attached in the copy." %}
 
 
 ### Search Content Items

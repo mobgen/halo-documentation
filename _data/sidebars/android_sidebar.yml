@@ -100,8 +100,12 @@ entries:
       url: /android_content_overview.html
       output: web, pdf
 
-    - title: Detailed APIs
+    - title: Detailed Content APIs
       url: /android_content_detailed_api.html
+      output: web, pdf
+
+    - title: Detailed Edit Content APIs
+      url: /android_edit_content_detailed_api.html
       output: web, pdf
   
   - title: Halo Notifications API
