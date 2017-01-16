@@ -10,7 +10,7 @@ folder: android
 
 Here you can find fine grained explanations for every public param of the edit content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.
 
-With the edit content API you can add, modify or delete general content instances if you have appropiate credentials. See [Halo Auth API](/android_auth_overview.html) to get apropiate credentials.
+With the edit content API you can add, modify or delete general content instances if you have appropiate credentials. See [Halo Auth API](./android_auth_overview.html) to get apropiate credentials.
 
 ## HaloEditContentOptions
 
@@ -96,7 +96,7 @@ HaloEditContentOptions haloEditContentOptions = instanceBuilder.build();
 
 ## Operations
 
-{% include tip.html content="If you want to receive updates about sync process please remember to subscribe. The ```HaloEditContentApi``` perfoms internally a sync after every requested operation. Please refer to [sync process documentation](/android_content_detailed_api.html#sync) to know more about sync." %}
+{% include tip.html content="If you want to receive updates about sync process please remember to subscribe. The ```HaloEditContentApi``` perfoms internally a sync after every requested operation. Please refer to [sync process documentation](./android_content_detailed_api.html#sync) to know more about sync." %}
 
 ```java
 ISubscription mSyncSubscription = HaloContentApi.with(MobgenHaloApplication.halo()).subscribeToSync(moduleName,this);
