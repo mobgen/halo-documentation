@@ -105,7 +105,7 @@ If you want to go in deep into this module, please refer to [the detailed docume
 
 ## Edit Content API
 
-The Edit Content API is the way to manipulate the general content instances. If you have the proper credentials you will be able to create, update or delete general content instances. See [Halo Auth API](/android_auth_overview.html) to get apropiate credentials. 
+The Edit Content API is the way to manipulate the general content instances. If you have the proper credentials you will be able to create, update or delete general content instances. See [Halo Auth API](./android_auth_overview.html) to get apropiate credentials. 
 
 For example if you want to update an instance.
 
