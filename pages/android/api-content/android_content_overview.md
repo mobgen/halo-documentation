@@ -130,7 +130,7 @@ MyCustomClass values = new MyCustomClass("the title","#987654");
 You must provide the item id, module id, instance name. As optional parameters you should provide segmentation tags, publication date and deletion date:
 
 ```java
-HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Builder(moduleName)
+HaloContentInstance.Builder instanceBuilder = new HaloContentInstance.Builder(moduleName)
     .withId(instanceId)
     .withModuleId(moduleId)
     .withPublishDate(publishDate)
@@ -139,12 +139,13 @@ HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Buil
 ```
 
 ```java
-HaloContentEditApi.updateContent(instanceBuilder.build())
+HaloContentEditApi.with(halo)
+    .updateContent(instanceBuilder.build())
     .threadPolicy(Threading.POOL_QUEUE_POLICY)
     .execute(new CallbackV2<HaloContentInstance>() {
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloContentInstance> result) {
-            if(result.status().isAuthenticationError()){
+            if(result.status().isSecurityError()){
                //there is an authentication . Notify user to login.
             } else {
                 if(result.data()!=null) {

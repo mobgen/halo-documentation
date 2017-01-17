@@ -12,14 +12,14 @@ Here you can find fine grained explanations for every public param of the edit c
 
 With the edit content API you can add, modify or delete general content instances if you have appropiate credentials. See [Halo Auth API](./android_auth_overview.html) to get apropiate credentials.
 
-## HaloEditContentOptions
+## HaloContentInstance
 
-To create, update or delete a general content instance on the server you must provide a valid ```HaloEditContentOptions```. You have to use the fluent API to create a valid object through  ```Builder``` pattern by calling ```HaloEditContentOptions.builder()```. 
+To create, update or delete a general content instance on the server you must provide a valid ```HaloContentInstance```. You have to use the fluent API to create a valid object through  ```Builder``` pattern by calling ```HaloContentInstance.builder()```. 
 
 The build object is parcelable and so you can send it across activities if needed.
 
 ```java
-HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Builder(moduleName)
+HaloContentInstance.Builder instanceBuilder = new HaloContentInstance.Builder(moduleName)
     .withId(instanceId)
     .withModuleId(moduleId)
     .withPublishDate(publishDate)
@@ -27,17 +27,23 @@ HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Buil
     .withContentData(values);
 ```
 
-Here you have the complete list of methods you can use to create a ```HaloEditContentOptions.Builder```.
+Here you have the complete list of methods you can use to create a ```HaloContentInstance.Builder```.
 
-| HaloEditContentOptions| Explanation |
+| HaloContentInstance| Explanation |
 |--------------|-------------|
 | **withId** | the item id to use on update or delete operations. |
 | **withModuleId** | the module id. |
+| **withAuthor** | the instance author. |
 | **withName** | the name of the content item. |
 | **withTags** | the segmentation tags to the content instance. |
 | **withContentData** | the content values of the instance. |
+| **withCreationDate** | the creation date. |
+| **withLastUpdateDate** | the last update date. |
 | **withPublishDate** | the publish date. |
 | **withRemovalDate** | the removal date shceduled. |
+
+
+
 
 The ```withContentData``` method will accept a Map of values or a properly annotated class. 
 
@@ -50,7 +56,7 @@ Map<String,Object> values = new HashMap<>();
 values.put("title","the title");
 values.put("pubDate", "01/10");
 
-HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Builder(moduleName)
+HaloContentInstance.Builder instanceBuilder = new HaloContentInstance.Builder(moduleName)
     .withId(instanceId)
     .withModuleId(moduleId)
     .withPublishDate(publishDate)
@@ -80,7 +86,7 @@ public class MyObjectAnnotated implements Parcelable {
 ```java
 MyObjectAnnotated myObject = new MyObjectAnnotated(title, pubDate);
 
-HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Builder(moduleName)
+HaloContentInstance.Builder instanceBuilder = new HaloContentInstance.Builder(moduleName)
     .withId(instanceId)
     .withModuleId(moduleId)
     .withPublishDate(publishDate)
@@ -88,10 +94,10 @@ HaloEditContentOptions.Builder instanceBuilder = new HaloEditContentOptions.Buil
     .withContentData(values);
 ```
 
-Finally to create the ```HaloEditContentOptions``` call the build method.
+Finally to create the ```HaloContentInstance``` call the build method.
 
 ```java
-HaloEditContentOptions haloEditContentOptions = instanceBuilder.build();
+HaloContentInstance haloContentInstance = instanceBuilder.build();
 ```
 
 ## Operations
@@ -99,22 +105,23 @@ HaloEditContentOptions haloEditContentOptions = instanceBuilder.build();
 {% include tip.html content="If you want to receive updates about sync process please remember to subscribe. The ```HaloEditContentApi``` perfoms internally a sync after every requested operation. Please refer to [sync process documentation](./android_content_detailed_api.html#sync) to know more about sync." %}
 
 ```java
-ISubscription mSyncSubscription = HaloContentApi.with(MobgenHaloApplication.halo()).subscribeToSync(moduleName,this);
+ISubscription mSyncSubscription = HaloContentApi.with(halo).subscribeToSync(moduleName,this);
 ```
 
 ### Add content
 
-With the ```addContent``` method you can add new general content instances on the HALO Backend. To create a general content instance on the server you must provide a new valid ```HaloEditContentOptions```. The result will provide feedback about any error (authentication, parsing or network exception) during the request or the result parsed as ```HaloContentInstance```.
+With the ```addContent``` method you can add new general content instances on the HALO Backend. To create a general content instance on the server you must provide a new valid ```HaloContentInstance```. The result will provide feedback about any error (authentication, parsing or network exception) during the request or the result parsed as ```HaloContentInstance```.
 
 
 ```java
-HaloContentEditApi.addContent(haloEditContentOptions)
+HaloContentEditApi.with(halo)
+    .addContent(haloContentInstance)
     .threadPolicy(Threading.POOL_QUEUE_POLICY)
     .execute(new CallbackV2<HaloContentInstance>() {
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloContentInstance> result) {
-            if(result.status().isAuthenticationError()){
-               //there is an authentication . Notify user to login.
+            if(result.status().isSecurityError()){
+               //there is an authentication error. Notify user to login.
             } else {
                 if(result.data()!=null) {
                     //handle result of the add operation.                
@@ -126,17 +133,18 @@ HaloContentEditApi.addContent(haloEditContentOptions)
 
 ### Update Content
 
-With the ```updateContent``` method you can update current general content instances on the HALO Backend. To update a general content instance on the server you must provide the ```HaloEditContentOptions``` to perfom the update. The result will provide feedback about any error (authentication, parsing or network exception) during the request or the result parsed as ```HaloContentInstance```.
+With the ```updateContent``` method you can update current general content instances on the HALO Backend. To update a general content instance on the server you must provide the ```HaloContentInstance``` to perfom the update. The result will provide feedback about any error (authentication, parsing or network exception) during the request or the result parsed as ```HaloContentInstance```.
 
 
 ```java
-HaloContentEditApi.updateContent(haloEditContentOptions)
+HaloContentEditApi.with(halo)
+    .updateContent(haloContentInstance)
     .threadPolicy(Threading.POOL_QUEUE_POLICY)
     .execute(new CallbackV2<HaloContentInstance>() {
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloContentInstance> result) {
-            if(result.status().isAuthenticationError()){
-               //there is an authentication . Notify user to login.
+            if(result.status().isSecurityError()){
+               //there is an authentication error. Notify user to login.
             } else {
                 if(result.data()!=null) {
                     //handle result of the update operation.                
@@ -148,17 +156,18 @@ HaloContentEditApi.updateContent(haloEditContentOptions)
 
 ### Delete Content
 
-With the ```updateContent``` method you can remove current general content instances on the HALO Backend. To delete a general content instance on the server you must provide the ```HaloEditContentOptions``` to perfom the removal operation. The result will provide feedback about any error (authentication, parsing or network exception) during the request or the result parsed as ```HaloContentInstance```.
+With the ```updateContent``` method you can remove current general content instances on the HALO Backend. To delete a general content instance on the server you must provide the ```HaloContentInstance``` to perfom the removal operation. The result will provide feedback about any error (authentication, parsing or network exception) during the request or the result parsed as ```HaloContentInstance```.
 
 
 ```java
-HaloContentEditApi.deleteContent(haloEditContentOptions)
+HaloContentEditApi.with(halo)
+    .deleteContent(haloContentInstance)
     .threadPolicy(Threading.POOL_QUEUE_POLICY)
     .execute(new CallbackV2<HaloContentInstance>() {
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloContentInstance> result) {
-            if(result.status().isAuthenticationError()){
-               //there is an authentication . Notify user to login.
+            if(result.status().isSecurityError()){
+               //there is an authentication error. Notify user to login.
             } else {
                 if(result.data()!=null) {
                     //handle result of the delete operation.                
