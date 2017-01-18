@@ -44,7 +44,10 @@
           if(document.location.href.indexOf('fromCms=true') === -1){
             $('body').css('padding-top', '50px');
             $('nav').removeClass('hidden');
-            $('.col-md-3').removeClass('hidden');
+            $('#sidebar').removeClass('hidden');
+            $('#content-column').addClass('col-md-9');
+            $('#content-column').removeClass('col-md-12');
+            $('.footer').css('text-align', 'right');
           }
         });
     </script>
@@ -71,11 +74,11 @@
     <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-md-3 hidden">
+        <div id="sidebar" class="col-md-3 hidden">
 
           {% include sidebar.html %}
     <!-- Content Column -->
-    <div class="col-md-9">
+    <div id="content-column" class="col-md-12">
         {{content}}
     </div>
     <!-- /.row -->
