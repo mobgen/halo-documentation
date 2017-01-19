@@ -146,7 +146,7 @@ HaloContentEditApi.with(halo)
         @Override
         public void onFinish(@NonNull HaloResultV2<HaloContentInstance> result) {
             if(result.status().isSecurityError()){
-               //there is an authentication . Notify user to login.
+               //there is an authentication error. Notify user to login.
             } else {
                 if(result.data()!=null) {
                     //handle result of the update operation.                
