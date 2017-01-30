@@ -117,3 +117,14 @@ entries:
     - title: Customers
       url: /cms_customers_overview.html
       output: web, pdf
+
+  - title: Release Notes
+    output: web
+    folderitems:
+
+    - title: 2.2.0 Release Notes
+      url: /halo_release_notes_220.html
+      output: web
+    - title: 2.0.0 Release Notes
+      url: /halo_release_notes_200.html
+      output: web     
