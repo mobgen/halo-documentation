@@ -13,7 +13,7 @@ folder: cms
 | Backend     | ![Build Status](https://supermercado.mobgen.com:8443/plugins/servlet/wittified/build-status/HALO-BDMP) |
 
 
-##Introduction
+## Introduction
 
 HALO is an MBaaS (Mobile Backend as a Service) that was developed to increase developer productivity and decrease an application’s time-to-market by creating a highly modular CMS. A native development team will be able to hook up with HALO in a matter of minutes via the SDK which uses an open API.
 
