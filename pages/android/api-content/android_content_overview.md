@@ -62,6 +62,34 @@ contentApi.search(Data.NETWORK_ONLY, query)
 
 This search will request all the instances for the module id "myModuleId" and which body contains a name with the value "Sample". Check out the rest of the available options in [the detailed documentation](./android_content_detailed_api.html).
 
+{% include warning.html content="The query builder search will return all results available including deleted or draft items. You must provide the appropiate query to return only published ones." %}
+
+#### SearchQuery Factory
+
+If you want to use common search options the ```SearchQueryBuilderFactory``` helps you to get items that has been published or removed or drafted.
+
+```java
+SearchQuery query = SearchQueryBuilderFactory.getPublishedItemsByName(moduleName, searchTag, searchQuery)
+    .onePage(true)
+    .segmentWithDevice()
+    .build();
+contentApi.search(Data.NETWORK_ONLY, query)
+    .asContent()
+    .execute(callback);
+```
+Here you can find the list of predefined search common operations with the ```SearchQueryBuilderFactory```:
+
+| SearchQueryBuilderFactory | Explanation |
+|--------------|-------------|
+| **getPublishedItems** | Brings all the published items for the given module. |
+| **getPublishedItemsByName** | Brings all the published items for the given module filtered by name. |
+| **getItemsByContentValue** | Brings all items for the given module filtered by a content value. |
+| **getExpiredItems** | Provides the expired items. |
+| **getArchivedItems** | Provides the archived items. |
+| **getLastUpdatedItems** | The updated items during the given millis from now. |
+| **getDraftItems** | Provides the draft items for the given module. |
+
+
 ### Sync
 The sync operation is thought for performance critical tasks. It allows to synchronize a full module consuming the less amount of data possible.
 
