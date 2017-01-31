@@ -155,7 +155,10 @@ entries:
   - title: Release Notes
     output: web
     folderitems:
-
+      
+    - title: 2.2.0 Release Notes
+      url: /android_release_notes_220.html
+      output: web
     - title: 2.1.0 Release Notes
       url: /android_release_notes_210.html
       output: web
