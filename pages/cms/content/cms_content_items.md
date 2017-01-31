@@ -14,16 +14,25 @@ A Content Item is one of each elements that can be consumed from an application 
 Content Items must match with the structure of a module (for more information about modules [click here](./cms_content_modules.html))
 and its fields contain the information that will be consumed.
 
-Content Items can be created, deleted, published and saved as concept. Here we are describing how to operate over this content
+Content Items can be created, saved as draft, published, archived and deleted. Here we are describing how to operate over this content
 items to change their states. The description of the states are:
 
 1. **Created**: You can create a Content Item by filling the title for this item. This is the only mandatory information, since
 all the fields are optional.
-2. **Deleted**: Every element deleted in the CMS has a logic deletion, so the information can be retrieved by an administrator
-if it would be possible.
-3. **Saved as concept**: Once you create an item it will not be published by default. This item will be saved as concept unless you click on
-'*publish*'. Saved as concept items can be changed and scheduled for publication, but they are not actually published.
-4. **Published**: Those are the considered visible items for the apps.
+2. **Saved as draft**: Once you create an item it will not be published by default. This item will be saved as draft unless you click on
+   '*Publish now*'. Saved as draft items can be changed and scheduled for publication, but they are not actually published.
+3. **Published**: Those are the considered visible items for the apps. A Content Item can be '*Unpublished*' and will not be visible anymore 
+and change its status to Saved as draft. 
+4. **Archived**: A published Content Item can be archived using the '*Archive*' button or automatically is changed to this state 
+when reaches the '*Archive on*' date.
+5. **Deleted**: Every element deleted in the CMS has a logic deletion, so the information can be retrieved by an administrator
+   if it would be possible.
+   
+The state flow of the Content Items respond to this following state diagram.
+
+
+<img src="./images/content-item-states-flow.png" />
+
 
 ## Operations over a Content Item
 
@@ -39,6 +48,7 @@ if it would be possible.
 
 
 <img src="./images/tutorial_create_content_item.gif" />
+
 
 ### Delete Content Item
 - Access the left panel menu '*Content*'.
