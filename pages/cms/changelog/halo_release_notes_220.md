@@ -32,8 +32,7 @@ folder: cms
 - Social login functionality (Facebook, Google, Halo)
 - APP+ role for identified app users
 - Content management enabled for App SDKs
-- First 2 factor confirmation webservices
-- First loyalty webservices
+- Initial work on 2 factor confirmation webservices
 - Database health check and reconnection improvements
 - Push notification performance and memory comsuption improvements
 - App user events (ip geolocation tracking)
