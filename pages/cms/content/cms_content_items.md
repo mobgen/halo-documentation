@@ -76,7 +76,7 @@ but finished with 'Copy N' where N is the number of copies. To do it follow the 
 - Open the bulk options pressing the top right 3 dots icon <span class="fa fa-ellipsis-v"/>.
 - Press on '*Duplicate*'. This will duplicate all the selected items.
 
-{% include note.html content="The duplicated content item will not inherit the publish and expiration date. Also, if the original content item had a push notification attached, this push will not be attached in the copy." %}
+{% include note.html content="The duplicated content item will not inherit the publish and archive date. Also, if the original content item had a push notification attached, this push will not be attached in the copy." %}
 
 
 ### Search Content Items
@@ -89,21 +89,21 @@ but finished with 'Copy N' where N is the number of copies. To do it follow the 
 
 {% include important.html content="This operation only searches in the content items by title name. It does not use any of the contents stored inside the item." %}
 
-### Schedule for publication and expiration
+### Schedule for publication and archival
 
 To schedule a **publication**:
 
 - Enter the content item you want to schedule.
 - On the '*Parameters*' panel, fill the '*Publish on*' calendars.
-- Click on '<span class="fa fa-upload" /> *Publish*'.
+- Click on '<span class="fa fa-upload" /> *Save*'.
 - This content will be published at the scheduled date and time.
 
-To schedule an **expiration**:
+To schedule an **archive**:
 
 - Enter the content item you want to schedule.
-- On the '*Parameters*' panel, fill the '*Expiration date*' calendars.
-- Click on '<span class="fa fa-upload" /> *Publish*'.
-- This content will be expired at the scheduled date and time.
+- On the '*Parameters*' panel, fill the '*Archive on*' calendars.
+- Click on '<span class="fa fa-upload" /> *Save*'.
+- This content will be archived at the scheduled date and time.
 
 ### Schedule notification
 
@@ -116,4 +116,4 @@ push notification will be sent to all the devices targeted by the segmentation t
 - In the form that appears, select a template already configured in the Module Structure.
 - Fill in the app, the publication date and time and the tags.
 - Fill in the template information that reflects the notification that will be displayed in the apps.
-- On the top action bar click on '<span class="fa fa-upload"/> *Publish*' button.
+- On the top action bar click on '<span class="fa fa-upload"/> *Save*' button.
