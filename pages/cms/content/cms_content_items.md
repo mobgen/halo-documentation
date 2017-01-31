@@ -14,16 +14,25 @@ A Content Item is one of each elements that can be consumed from an application 
 Content Items must match with the structure of a module (for more information about modules [click here](./cms_content_modules.html))
 and its fields contain the information that will be consumed.
 
-Content Items can be created, deleted, published and saved as concept. Here we are describing how to operate over this content
+Content Items can be created, saved as draft, published, archived and deleted. Here we are describing how to operate over this content
 items to change their states. The description of the states are:
 
 1. **Created**: You can create a Content Item by filling the title for this item. This is the only mandatory information, since
 all the fields are optional.
-2. **Deleted**: Every element deleted in the CMS has a logic deletion, so the information can be retrieved by an administrator
-if it would be possible.
-3. **Saved as concept**: Once you create an item it will not be published by default. This item will be saved as concept unless you click on
-'*publish*'. Saved as concept items can be changed and scheduled for publication, but they are not actually published.
-4. **Published**: Those are the considered visible items for the apps.
+2. **Saved as draft**: Once you create an item it will not be published by default. This item will be saved as draft unless you click on
+   '*Publish now*'. Saved as draft items can be changed and scheduled for publication, but they are not actually published.
+3. **Published**: Those are the considered visible items for the apps. A Content Item can be '*Unpublished*' and will not be visible anymore 
+and change its status to Saved as draft. 
+4. **Archived**: A published Content Item can be archived using the '*Archive*' button or automatically is changed to this state 
+when reaches the '*Archive on*' date.
+5. **Deleted**: Every element deleted in the CMS has a logic deletion, so the information can be retrieved by an administrator
+   if it would be possible.
+   
+The state flow of the Content Items respond to this following state diagram.
+
+
+<img src="./images/content-item-states-flow.png" />
+
 
 ## Operations over a Content Item
 
@@ -39,6 +48,7 @@ if it would be possible.
 
 
 <img src="./images/tutorial_create_content_item.gif" />
+
 
 ### Delete Content Item
 - Access the left panel menu '*Content*'.
@@ -66,7 +76,7 @@ but finished with 'Copy N' where N is the number of copies. To do it follow the 
 - Open the bulk options pressing the top right 3 dots icon <span class="fa fa-ellipsis-v"/>.
 - Press on '*Duplicate*'. This will duplicate all the selected items.
 
-{% include note.html content="The duplicated content item will not inherit the publish and expiration date. Also, if the original content item had a push notification attached, this push will not be attached in the copy." %}
+{% include note.html content="The duplicated content item will not inherit the publish and archive date. Also, if the original content item had a push notification attached, this push will not be attached in the copy." %}
 
 
 ### Search Content Items
@@ -79,21 +89,21 @@ but finished with 'Copy N' where N is the number of copies. To do it follow the 
 
 {% include important.html content="This operation only searches in the content items by title name. It does not use any of the contents stored inside the item." %}
 
-### Schedule for publication and expiration
+### Schedule for publication and archival
 
 To schedule a **publication**:
 
 - Enter the content item you want to schedule.
 - On the '*Parameters*' panel, fill the '*Publish on*' calendars.
-- Click on '<span class="fa fa-upload" /> *Publish*'.
+- Click on '<span class="fa fa-upload" /> *Save*'.
 - This content will be published at the scheduled date and time.
 
-To schedule an **expiration**:
+To schedule an **archive**:
 
 - Enter the content item you want to schedule.
-- On the '*Parameters*' panel, fill the '*Expiration date*' calendars.
-- Click on '<span class="fa fa-upload" /> *Publish*'.
-- This content will be expired at the scheduled date and time.
+- On the '*Parameters*' panel, fill the '*Archive on*' calendars.
+- Click on '<span class="fa fa-upload" /> *Save*'.
+- This content will be archived at the scheduled date and time.
 
 ### Schedule notification
 
@@ -106,4 +116,4 @@ push notification will be sent to all the devices targeted by the segmentation t
 - In the form that appears, select a template already configured in the Module Structure.
 - Fill in the app, the publication date and time and the tags.
 - Fill in the template information that reflects the notification that will be displayed in the apps.
-- On the top action bar click on '<span class="fa fa-upload"/> *Publish*' button.
+- On the top action bar click on '<span class="fa fa-upload"/> *Save*' button.
