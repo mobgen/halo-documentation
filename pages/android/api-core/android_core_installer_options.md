@@ -14,6 +14,7 @@ In the install step of HALO there are many parameters that can be configured. He
 - **config**: provides the configuration for the HALO framework so you can add some aditional behaviour or configuration on it.
 - **credentials**: sets the credentials client id and secret. They are added with gradle by default.
 - **debug**: sets the debug flag to see what is going behind the scenes in HALO. See also [the debug recipe](./android_core_debug.html).
+- **printLogToFile**: if debug mode is enabled then you can print the log to file. See also [the print log policies](./android_core_debug.html#print-log-information-to-file).
 - **endProcess**: adds a startup process that will be run during the installation process in HALO.
 - **addTagCollector**: adds a tag collector that allows you to add some tags in the moment the app is initialized.
 - **enableDefaultTags**: adds the halo default tags into the tag collectors. This was enabled by default some time ago but now it is optional.
