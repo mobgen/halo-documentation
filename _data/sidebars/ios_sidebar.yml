@@ -30,7 +30,7 @@ entries:
       output: web, pdf
       type: web, pdf
 
-  - title: Halo Core Framework
+  - title: Halo SDK
     output: web, pdf
     folderitems:
     
@@ -53,6 +53,22 @@ entries:
       
         - title: Translations Helper
           url: /ios_translations_helper.html
+          output: web, pdf
+      
+      - title: Changelog
+        output: web, pdf
+        subfolderitems:
+
+        - title: 2.2.0 Release notes
+          url: /ios_release_notes_220.html
+          output: web, pdf
+      
+        - title: 2.1.1 Release notes
+          url: /ios_release_notes_211.html
+          output: web, pdf
+
+        - title: 2.1.0 Release notes
+          url: /ios_release_notes_210.html
           output: web, pdf
 
   #   - title: Custom Middleware Requests
@@ -83,7 +99,7 @@ entries:
   #     url: /android_content_detailed_api.html
   #     output: web, pdf
   
-  - title: Halo Notifications Framework
+  - title: Halo Notifications SDK
     output: web, pdf
     folderitems:
 
@@ -91,7 +107,24 @@ entries:
       url: /ios_notifications_overview.html
       output: web, pdf
 
-  - title: Halo Social Framework
+      subfolders:
+      - title: Changelog
+        output: web, pdf
+        subfolderitems:
+
+        - title: 2.2.0 Release notes
+          url: /ios_notifications_release_notes_220.html
+          output: web, pdf
+      
+        - title: 2.1.1 Release notes
+          url: /ios_notifications_release_notes_211.html
+          output: web, pdf
+
+        - title: 2.1.0 Release notes
+          url: /ios_notifications_release_notes_210.html
+          output: web, pdf
+
+  - title: Halo Social SDK
     output: web, pdf
     folderitems:
 
@@ -106,6 +139,23 @@ entries:
     - title: Google integration
       url: /ios_social_google.html
       output: web, pdf
+
+      subfolders:
+      - title: Changelog
+        output: web, pdf
+        subfolderitems:
+
+        - title: 2.2.0 Release notes
+          url: /ios_social_release_notes_220.html
+          output: web, pdf
+      
+        - title: 2.1.1 Release notes
+          url: /ios_social_release_notes_211.html
+          output: web, pdf
+
+        - title: 2.1.0 Release notes
+          url: /ios_social_release_notes_210.html
+          output: web, pdf
 
   # - title: Release Notes
   #   output: web

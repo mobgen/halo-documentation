@@ -87,59 +87,81 @@ Open the app in the console, open settings and enable "Single sign-on" by settin
 
 In your AppDelegate, register the Facebook Addon before you call the **startup** method of Halo.
 
-#### Swift
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-1" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc-1" data-toggle="tab">ObjC</a></li>
+</ul>
 
-```swift
+<div class="tab-content">
+  <div id="swift-1" class="tab-pane fade in active">
+    <pre>
 import Halo
 import HaloSocialFacebook
+
 [...]
+      
 let facebookAddon = FacebookSocialAddon()
 Halo.Manager.core.registerAddon(addon: facebookAddon)
+      
 [...]
+      
 Halo.Manager.core.startup()
-```
-
-#### Objective-C
-
-```objc
+    </pre>
+  </div>
+  <div id="objc-1" class="tab-pane fade">
+    <pre>
 #import <Halo/Halo-Swift.h>
 #import <HaloObjC/HaloObjC-Swift.h>
 #import <HaloSocialFacebook/HaloSocialFacebook.h>
+  
 [...]
+  
 FacebookSocialAddon *facebookAddon = [FacebookSocialAddon new];
 [HaloManager.core registerAddon:facebookAddon];
+  
 [...]
+  
 [HaloManager.core startup:^(BOOL success) {
-        NSLog(@"Halo started");
+  NSLog(@"Halo started");
 }];
-```
+    </pre>
+  </div>
+</div>
 
 ### Step 7: Login with Facebook
 
 Use the **loginWithFacebook** method to login with Facebook. 
 
-#### Swift
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc-2" data-toggle="tab">ObjC</a></li>
+</ul>
 
-```swift
+<div class="tab-content">
+  <div id="swift-2" class="tab-pane fade in active">
+    <pre>
 import Halo
 import HaloSocialFacebook
+
 [...]
+
 Halo.Manager.auth.loginWithFacebook(viewController: self, stayLoggedIn: false) { (user, error) in
-	if error != nil {
-		// Something went wrong.
-	} else {
-		// User logged in succesfully. Do something with "user".
-	}
+  if error != nil {
+    // Something went wrong.
+  } else {
+    // User logged in succesfully. Do something with "user".
+  }
 }
-```
-
-#### Objective-C
-
-```objc
+    </pre>
+  </div>
+  <div id="objc-2" class="tab-pane fade">
+    <pre>
 #import <Halo/Halo-Swift.h>
 #import <HaloObjC/HaloObjC-Swift.h>
 #import <HaloSocialFacebook/HaloSocialFacebook.h>
+
 [...]
+
 [HaloManager.auth loginWithFacebookWithViewController:self stayLoggedIn:false completionHandler:^(HaloUser * _Nullable user, NSError * _Nullable error) {
         if (error != NULL) {
             // Something went wrong.
@@ -147,6 +169,8 @@ Halo.Manager.auth.loginWithFacebook(viewController: self, stayLoggedIn: false) {
             // User logged in succesfully. Do something with "user".
         }
 }];
-```
+    </pre>
+  </div>
+</div>
 
 {% include note.html content="For further information about Facebook SDK visit the [official Facebook documentation page](https://developers.facebook.com/docs/facebook-login/ios)" %}
