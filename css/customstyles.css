@@ -1317,9 +1317,16 @@ ul.nav {
     border: none;
 }
 
-ul.nav li,
-div.tab-content pre {
+ul.nav li {
     margin: 0;
+}
+
+div.tab-content pre:first-child {
+    margin-top: 0;
+}
+
+div.tab-content pre:last-child {
+    margin-bottom: 0;
 }
 
 div.tab-content {
