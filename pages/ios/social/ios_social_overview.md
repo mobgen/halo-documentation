@@ -1,5 +1,5 @@
 ---
-title: HALO Social Framework Overview
+title: HALO Social SDK
 keywords: ios, social
 last_updated: December 27, 2016
 tags: [social, auth]
