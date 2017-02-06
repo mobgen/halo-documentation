@@ -43,6 +43,22 @@ entries:
       output: web, pdf
 
       subfolders:
+      - title: Content
+        output: web, pdf
+        subfolderitems:
+
+        - title: Overview
+          url: /ios_content_overview.html
+          output: web, pdf
+      
+        - title: Content search
+          url: /ios_content_search.html
+          output: web, pdf
+
+        - title: Content handling
+          url: /ios_content_handling.html
+          output: web, pdf
+
       - title: Helpers
         output: web, pdf
         subfolderitems:
