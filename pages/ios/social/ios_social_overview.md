@@ -46,8 +46,9 @@ The HALO Social SDK provides at the moment two integrations with existing social
 
 Once the HALO SDK is started and you add the Social SDK, you can use a social provider to log in.
 
-{% include tip.html content="Learn more.<br/>If you want to learn more about the Facebook integration, please refer to [the detailed documentation](ios_social_facebook.html).<br/> 
-If you want to learn more about the Google integration, please refer to [the detailed documentation](ios_social_google.html)" %}
+{% include tip.html content="If you want to learn more about the Facebook integration, please refer to [the detailed documentation](ios_social_facebook.html)." %}
+
+{% include tip.html content="If you want to learn more about the Google integration, please refer to [the detailed documentation](ios_social_google.html)" %}
 
 If you choose Facebook:
 

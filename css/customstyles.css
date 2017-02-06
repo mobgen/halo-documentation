@@ -1313,27 +1313,6 @@ path.domain {
     border-color: #004d40;
 }
 
-ul.nav {
-    border: none;
-}
-
-ul.nav li {
-    margin: 0;
-}
-
-div.tab-content pre:first-child {
-    margin-top: 0;
-}
-
-div.tab-content pre:last-child {
-    margin-bottom: 0;
-}
-
-div.tab-content {
-    border: solid 1px;
-    border-color: #004d40;
-}
-
 div#toc ol, div#toc ul {
     border-left: none;
 }
