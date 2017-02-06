@@ -30,7 +30,7 @@ entries:
       output: web, pdf
       type: web, pdf
 
-  - title: Halo Core Framework
+  - title: Halo Core SDK
     output: web, pdf
     folderitems:
     
@@ -43,6 +43,22 @@ entries:
       output: web, pdf
 
       subfolders:
+      - title: Content
+        output: web, pdf
+        subfolderitems:
+
+        - title: Overview
+          url: /ios_content_overview.html
+          output: web, pdf
+      
+        - title: Content search
+          url: /ios_content_search.html
+          output: web, pdf
+
+        - title: Content handling
+          url: /ios_content_handling.html
+          output: web, pdf
+
       - title: Helpers
         output: web, pdf
         subfolderitems:
@@ -54,6 +70,7 @@ entries:
         - title: Translations Helper
           url: /ios_translations_helper.html
           output: web, pdf
+        
 
   #   - title: Custom Middleware Requests
   #     url: /android_core_custom_middleware_request.html
@@ -83,7 +100,7 @@ entries:
   #     url: /android_content_detailed_api.html
   #     output: web, pdf
   
-  - title: Halo Notifications Framework
+  - title: Halo Notifications SDK
     output: web, pdf
     folderitems:
 
@@ -91,7 +108,7 @@ entries:
       url: /ios_notifications_overview.html
       output: web, pdf
 
-  - title: Halo Social Framework
+  - title: Halo Social SDK
     output: web, pdf
     folderitems:
 
@@ -107,6 +124,22 @@ entries:
       url: /ios_social_google.html
       output: web, pdf
 
+  - title: Release Notes
+    output: web, pdf
+    folderitems:
+
+    - title: 2.2.0 Release notes
+      url: /ios_release_notes_220.html
+      output: web, pdf
+      
+    - title: 2.1.1 Release notes
+      url: /ios_release_notes_211.html
+      output: web, pdf
+
+    - title: 2.1.0 Release notes
+      url: /ios_release_notes_210.html
+      output: web, pdf
+      
   # - title: Release Notes
   #   output: web
   #   folderitems:

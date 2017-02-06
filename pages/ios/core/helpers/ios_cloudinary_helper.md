@@ -1,5 +1,5 @@
 ---
-title: Halo Cloudinary Helper
+title: HALO Cloudinary Helper
 keywords: ios, cloudinary
 last_updated: December 27, 2016
 tags: []

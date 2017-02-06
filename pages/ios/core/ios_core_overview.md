@@ -1,5 +1,5 @@
 ---
-title: Halo Core Framework Overview
+title: HALO Core SDK
 keywords: ios
 last_updated: December 27, 2016
 tags: [core]

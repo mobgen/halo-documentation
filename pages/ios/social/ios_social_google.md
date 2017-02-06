@@ -45,88 +45,115 @@ At the end, you'll download a GoogleService-Info.plist. You can download this fi
 
 ### Step 5: Configure the project
 
-Add the needed libraries from Firebase: **FirebaseAnalytics.framework**, **FirebaseCore.framework**, **FirebaseInstanceID.framework**, **GoogleInterchangeUtilities.framework**, **GoogleSymbolUtilities.framework**, **GoogleUtilities.framework**, **FirebaseAuth.framework**, **GoogleNetworkingUtilities.framework** and **GoogleSignIn.framework**.
+If you are not using CocoaPods you will need to add some libraries manually from Firebase:
+
+- ```FirebaseAnalytics.framework```
+- ```FirebaseCore.framework```
+- ```FirebaseInstanceID.framework```
+- ```GoogleInterchangeUtilities.framework```
+- ```GoogleSymbolUtilities.framework```
+- ```GoogleUtilities.framework```
+- ```FirebaseAuth.framework```
+- ```GoogleNetworkingUtilities.framework```
+- ```GoogleSignIn.framework```
 
 {% include warning.html content="**GoogleSignIn.framework** is inside the **Invites** folder when you download the Firebase SDK. You need this framework to compile your project." %}
 
-Remove all the libraries from **Linked Frameworks and Libraries** and **Embedded Binaries**.
+Remove all the libraries from ```Linked Frameworks and Libraries``` and ```Embedded Binaries```.
 
-Add the *-ObjC* flag to **Other Linker Settings**. This can be found inside **Build Settings** tab in the Linking section.
+Add the ```-ObjC``` flag to ```Other Linker Settings```. This can be found inside ```Build Settings``` tab in the Linking section.
 
-Drag the **Firebase.h** into your project. 
+Drag the ```Firebase.h``` header into your project. 
 
-Open app in **TARGETS**, click on **Info** tab and expand **URL Types** section.
+Open app in **TARGETS**, click on ```Info``` tab and expand ```URL Types``` section.
 
-Click on **+** button and add a new Url Scheme. Find the key *REVERSED_CLIENT_ID* inside your *GoogleService-Info.plist* file. Copy the value of this key and paste it into the field **URL Schemes**. Let the other fields empty.
+Click on the ```+``` button and add a new Url Scheme. Find the key ```REVERSED_CLIENT_ID``` inside your ```GoogleService-Info.plist``` file. Copy the value of this key and paste it into the field ```URL Schemes```. Let the other fields empty.
 
-Click on **+** button and add a second scheme. Copy the ID of your package *com.example.app* and paste it into **URL Schemes** field. You can find the ID of your package in the **General** tab below **Identity > Bundle Identifier**.
+Click again on the ```+``` button and add a second scheme. Copy the ID of your package ```com.example.app``` and paste it into ```URL Schemes``` field. You can find the ID of your package in the **General** tab below **Identity > Bundle Identifier**.
 
 ### Step 6: Register the Google Addon
 
-In your AppDelegate, register the Google Addon before you call the **startup** method of Halo.
+In your ```AppDelegate```, register the GoogleAddon before you call the **startup** method of Halo.
 
-#### Swift
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-1" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc-1" data-toggle="tab">ObjC</a></li>
+</ul>
 
-```swift
-import Halo
+<div class="tab-content">
+  <div id="swift-1" class="tab-pane fade in active">
+    <pre><code class="swift">import Halo
 import HaloSocialGoogle
+
 [...]
-let googleAddon = FacebookGoogleAddon()
+
+let googleAddon = GoogleSocialAddon()
 Halo.Manager.core.registerAddon(addon: googleAddon)
+
 [...]
-Halo.Manager.core.startup()
-```
 
-#### Objective-C
-
-```objc
-#import <Halo/Halo-Swift.h>
+Halo.Manager.core.startup()</code></pre>
+  </div>
+  <div id="objc-1" class="tab-pane fade">
+    <pre><code class="objective-c">#import <Halo/Halo-Swift.h>
 #import <HaloObjC/HaloObjC-Swift.h>
 #import <HaloSocialGoogle/HaloSocialGoogle.h>
+
 [...]
+
 GoogleSocialAddon *googleAddon = [GoogleSocialAddon new];
 [HaloManager.core registerAddon:googleAddon];
+
 [...]
+
 [HaloManager.core startup:^(BOOL success) {
-        NSLog(@"Halo started");
-}];
-```
+  NSLog(@"Halo started");
+}];</code></pre>
+  </div>
+</div>
 
-### Step 7: Login with Google
 
-Use the **loginWithGoogle** method to login with Google. 
+### Step 7: Log in with Google
 
-#### Swift
+Use the ```loginWithGoogle``` function to log in with Google. 
 
-```swift
-import Halo
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc-2" data-toggle="tab">ObjC</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="swift-2" class="tab-pane fade in active">
+    <pre><code class="swift">import Halo
 import HaloSocialGoogle
+
 [...]
+
 // Your ViewController should implement GIDSignInUIDelegate protocol.
 Halo.Manager.auth.loginWithGoogle(uiDelegate: self, stayLoggedIn: false) { (user, error) in
-	if error != nil {
-		// Something went wrong.
-	} else {
-		// User logged in succesfully. Do something with "user".
-	}
-}
-```
-
-#### Objective-C
-
-```objc
-#import <Halo/Halo-Swift.h>
+  if error != nil {
+    // Something went wrong.
+  } else {
+    // User logged in succesfully. Do something with "user".
+  }
+}</code></pre>
+  </div>
+  <div id="objc-2" class="tab-pane fade">
+    <pre><code class="objective-c">#import <Halo/Halo-Swift.h>
 #import <HaloObjC/HaloObjC-Swift.h>
 #import <HaloSocialGoogle/HaloSocialGoogle.h>
+
 [...]
+
 // Your ViewController should implement GIDSignInUIDelegate protocol.
 [HaloManager.auth loginWithGoogleWithUIDelegate:self stayLoggedIn:false completionHandler:^(HaloUser * _Nullable user, NSError * _Nullable error) {
-        if (error != NULL) {
-            // Something went wrong.
-        } else {
-            // User logged in succesfully. Do something with "user".
-        }
-}];
-```
+  if (error != NULL) {
+    // Something went wrong.
+  } else {
+    // User logged in succesfully. Do something with "user".
+  }
+}];</code></pre>
+  </div>
+</div>
 
 {% include note.html content="For further information about Firebase SDK visit the [official Firebase documentation page](https://firebase.google.com/docs/ios/setup)" %}
