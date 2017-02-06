@@ -94,8 +94,7 @@ In your AppDelegate, register the Facebook Addon before you call the **startup**
 
 <div class="tab-content">
   <div id="swift-1" class="tab-pane fade in active">
-    <pre>
-import Halo
+    <pre><code class="swift">import Halo
 import HaloSocialFacebook
 
 [...]
@@ -105,12 +104,10 @@ Halo.Manager.core.registerAddon(addon: facebookAddon)
       
 [...]
       
-Halo.Manager.core.startup()
-    </pre>
+Halo.Manager.core.startup()</code></pre>
   </div>
   <div id="objc-1" class="tab-pane fade">
-    <pre>
-#import <Halo/Halo-Swift.h>
+    <pre><code class="objective-c">#import <Halo/Halo-Swift.h>
 #import <HaloObjC/HaloObjC-Swift.h>
 #import <HaloSocialFacebook/HaloSocialFacebook.h>
   
@@ -123,8 +120,7 @@ FacebookSocialAddon *facebookAddon = [FacebookSocialAddon new];
   
 [HaloManager.core startup:^(BOOL success) {
   NSLog(@"Halo started");
-}];
-    </pre>
+}];</code></pre>
   </div>
 </div>
 
@@ -139,8 +135,7 @@ Use the **loginWithFacebook** method to login with Facebook.
 
 <div class="tab-content">
   <div id="swift-2" class="tab-pane fade in active">
-    <pre>
-import Halo
+    <pre><code class="swift">import Halo
 import HaloSocialFacebook
 
 [...]
@@ -151,25 +146,22 @@ Halo.Manager.auth.loginWithFacebook(viewController: self, stayLoggedIn: false) {
   } else {
     // User logged in succesfully. Do something with "user".
   }
-}
-    </pre>
+}</code></pre>
   </div>
   <div id="objc-2" class="tab-pane fade">
-    <pre>
-#import <Halo/Halo-Swift.h>
+    <pre><code class="objective-c">#import <Halo/Halo-Swift.h>
 #import <HaloObjC/HaloObjC-Swift.h>
 #import <HaloSocialFacebook/HaloSocialFacebook.h>
 
 [...]
 
 [HaloManager.auth loginWithFacebookWithViewController:self stayLoggedIn:false completionHandler:^(HaloUser * _Nullable user, NSError * _Nullable error) {
-        if (error != NULL) {
-            // Something went wrong.
-        } else {
-            // User logged in succesfully. Do something with "user".
-        }
-}];
-    </pre>
+  if (error != NULL) {
+    // Something went wrong.
+  } else {
+    // User logged in succesfully. Do something with "user".
+  }
+}];</code></pre>
   </div>
 </div>
 

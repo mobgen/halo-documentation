@@ -14,10 +14,10 @@ folder: ios
 <!-- [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager) -->
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-|---|:------:|
-| [halo](https://github.com/mobgen/halo-ios) | ![Build Status](https://supermercado.mobgen.com:8443/plugins/servlet/wittified/build-status/HALO-ISB) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases) |
-| [halo-notifications](https://github.com/mobgen/halo-notifications-ios) | ![Build Status](https://supermercado.mobgen.com:8443/plugins/servlet/wittified/build-status/HALO-ISB) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases) |
-| [halo-social](https://github.com/mobgen/halo-social-ios) | ![Build Status](https://supermercado.mobgen.com:8443/plugins/servlet/wittified/build-status/HALO-ISB) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases) |
+
+- [halo-ios](https://github.com/mobgen/halo-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases)
+- [halo-notifications-ios](https://github.com/mobgen/halo-notifications-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases)
+- [halo-social-ios](https://github.com/mobgen/halo-social-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases)
 
 You can also download our standalone documentation.
 

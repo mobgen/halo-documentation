@@ -11,6 +11,8 @@ folder: ios
 
 ## Changelog
 
+### Core SDK
+
 - Improved error handling.
 - Fix a potential crash related to locales and the `TranslationsHelper`.
 
