@@ -53,17 +53,15 @@ folder: cms
 - Search multiple push archives by schedule id:
 [POST /api/generalcontent/module/upload/](https://halo.mobgen.com/api/docs/#!/Push_-_Archive/push_archive_search)
 
-- Redeem a loyalty item
+- [Beta] Redeem a loyalty item
 [POST /api/loyalty/redeemable/](https://halo.mobgen.com/api/docs/#!/Loyalty_-_Redeemable/loyalty_redeemable_create)
 
-- Get a loyalty item
+- [Beta] Get a loyalty item
 [GET /api/loyalty/redeemable/](https://halo.mobgen.com/api/docs/#!/Loyalty_-_Redeemable/loyalty_redeemable_list)
 
-- Register 2 factor confimation user
+- [Beta] Register 2 factor confimation user
 [POST /api/2-factor/user/register/](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2-factor_register)
 
-- Send 2 factor confirmation code (sms)
-[POST /api/2-factor/code/send/](https://halo.mobgen.com/api/docs/#!/2-factor_-_Code/2-factor_send_code)
 
 ### Breaking changes
 
