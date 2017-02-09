@@ -34,14 +34,10 @@ entries:
     output: web, pdf
     folderitems:
     
-    - title: Overview
-      url: /ios_core_overview.html
-      output: web, pdf
-
     - title: User authentication
       url: /ios_auth_overview.html
       output: web, pdf
-
+  
       subfolders:
       - title: Content
         output: web, pdf
@@ -70,7 +66,10 @@ entries:
         - title: Translations Helper
           url: /ios_translations_helper.html
           output: web, pdf
-        
+    
+    - title: Logging
+      url: /ios_logging_overview.html
+      output: web, pdf    
 
   #   - title: Custom Middleware Requests
   #     url: /android_core_custom_middleware_request.html
