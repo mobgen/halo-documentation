@@ -15,7 +15,8 @@ folder: ios
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
-- [halo-ios](https://github.com/mobgen/halo-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases)
+- [halo-ios](https://github.com/mobgen/halo-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/HaloSDK.svg)](https://cocoapods.org/pods/HaloSDK)
+- [halo-ios (Obj-C)](https://github.com/mobgen/halo-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-ios.svg)](https://github.com/mobgen/halo-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/HaloObjCSDK.svg)](https://cocoapods.org/pods/HaloObjCSDK)
 - [halo-notifications-ios](https://github.com/mobgen/halo-notifications-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases)
 - [halo-social-ios](https://github.com/mobgen/halo-social-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases)
 

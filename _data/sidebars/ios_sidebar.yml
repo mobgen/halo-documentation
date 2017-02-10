@@ -30,10 +30,14 @@ entries:
       output: web, pdf
       type: web, pdf
 
-  - title: Halo Core SDK
+  - title: HALO Core SDK
     output: web, pdf
     folderitems:
     
+    - title: Overview
+      url: /ios_core_overview.html
+      output: web, pdf
+
     - title: User authentication
       url: /ios_auth_overview.html
       output: web, pdf
@@ -71,35 +75,7 @@ entries:
       url: /ios_logging_overview.html
       output: web, pdf    
 
-  #   - title: Custom Middleware Requests
-  #     url: /android_core_custom_middleware_request.html
-  #     output: web, pdf
-
-  #   - title: Offline Support
-  #     url: /android_core_offline_support.html
-  #     output: web, pdf
-
-  #   - title: Change Server Environment
-  #     url: /android_core_environment.html
-  #     output: web, pdf
-
-  #   - title: Enable Debug Mode
-  #     url: /android_core_debug.html
-  #     output: web, pdf
-
-  # - title: Halo Content API
-  #   output: web, pdf
-  #   folderitems:
-
-  #   - title: Overview
-  #     url: /android_content_overview.html
-  #     output: web, pdf
-
-  #   - title: Detailed APIs
-  #     url: /android_content_detailed_api.html
-  #     output: web, pdf
-  
-  - title: Halo Notifications SDK
+  - title: HALO Notifications SDK
     output: web, pdf
     folderitems:
 
@@ -107,7 +83,7 @@ entries:
       url: /ios_notifications_overview.html
       output: web, pdf
 
-  - title: Halo Social SDK
+  - title: HALO Social SDK
     output: web, pdf
     folderitems:
 
@@ -138,14 +114,3 @@ entries:
     - title: 2.1.0 Release notes
       url: /ios_release_notes_210.html
       output: web, pdf
-      
-  # - title: Release Notes
-  #   output: web
-  #   folderitems:
-
-  #   - title: 2.0.0 Release Notes
-  #     url: /android_release_notes_200.html
-  #     output: web
-  #   - title: 1.4.0 Release Notes
-  #     url: /android_release_notes_140.html
-  #     output: web
