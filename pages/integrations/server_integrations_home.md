@@ -21,4 +21,4 @@ The steps for every integration are quite simple:
 3. Call the proper web services according to the documentation.
 4. Provide some external APIs for your integration to your apps.
 
-You can start checking the [authentication documentation](/sever_integrations_authentication.html).
+You can start checking the [authentication documentation](./sever_integrations_authentication.html).

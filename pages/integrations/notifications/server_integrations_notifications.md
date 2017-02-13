@@ -13,7 +13,7 @@ HALO integrates FCM (Firebase cloud messaging) to create notifications and trigg
 you can always need some custom behavior in the server to trigger an automatic notification instead of a manual one. This integration will show you how to call the web services
 and the different options you have.
 
-If you already know how to use the API you can check the different use cases you can implement [here](/server_integrations_notifications_usecases.html).
+If you already know how to use the API you can check the different use cases you can implement [here](./server_integrations_notifications_usecases.html).
 
 ## Notifications web service parameters
 

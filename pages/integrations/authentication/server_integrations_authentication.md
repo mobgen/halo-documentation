@@ -21,8 +21,8 @@ every request against HALO can be performed using this token and the header as f
 
 The steps to get the token are:
 
-- Create a user in the CMS. You can access the documentation [here](/cms_users_management.html).
-- Configure the user permissions. You can see the documentation [here](/cms_users_permissions.html).
+- Create a user in the CMS. You can access the documentation [here](./cms_users_management.html).
+- Configure the user permissions. You can see the documentation [here](./cms_users_permissions.html).
 - Take the user and password and add it with your environment details in your own server.
 - Perform a call to the login web service.
 
