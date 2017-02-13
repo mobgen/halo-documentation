@@ -35,7 +35,7 @@ Registering the notifications add-on is then as simple as:
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-1" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-1" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-1" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">

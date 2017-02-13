@@ -756,6 +756,7 @@ table p {
     margin-bottom: 12px;
 }
 
+/*
 pre, table code {
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -763,6 +764,7 @@ pre, table code {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+*/
 
 pre {
     margin: 25px 0px;
@@ -1319,6 +1321,10 @@ path.domain {
 
 .post-content ul.nav li {
     margin: 0;
+}
+
+.post-content div.tab-content {
+    margin-bottom: 1em;
 }
 
 .post-content div.tab-content pre:first-child {

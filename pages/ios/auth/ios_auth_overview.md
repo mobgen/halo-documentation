@@ -21,7 +21,7 @@ The first one will be needed when registering a user, and it will contain basic 
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-1" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-1" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-1" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -51,7 +51,7 @@ This last option is intended to be used when integrating the login in HALO with 
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-2" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-2" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -77,7 +77,7 @@ Registering a user in the platform is really simple after creating the two struc
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-3" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-3" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-3" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -99,7 +99,7 @@ For an already registered user, the login action can be performed by providing t
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-4" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-4" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-4" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -119,7 +119,7 @@ For an already registered user, the login action can be performed by providing t
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-5" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-5" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-5" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -159,7 +159,6 @@ HaloAuthProfile *authProfile = [[HaloAuthProfile alloc] initWithEmail:@"your@ema
 }];</code></pre>
   </div>
 </div>
-<br/>
 
 The **current user**, if any, can be accessed at any time through the `currentUser` property of the `AuthManager` instance (optional in Swift, nullable in Objective-C).
 
@@ -169,7 +168,7 @@ The logout action is fairly simple as well. Only by calling the `logout` functio
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-6" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-6" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-6" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">

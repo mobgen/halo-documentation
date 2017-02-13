@@ -4,6 +4,7 @@ keywords: ios, getting started, start, how to
 last_updated: December 26, 2016
 tags: [getting_started]
 sidebar: ios_sidebar
+toc: false
 permalink: ios_getting_started.html
 folder: ios
 ---

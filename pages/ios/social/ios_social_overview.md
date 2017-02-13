@@ -54,7 +54,7 @@ If you choose Facebook:
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-2" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-2" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -82,7 +82,7 @@ If you choose Google:
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-3" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-3" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-3" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -115,7 +115,7 @@ Once the HALO SDK is started, you can use the HaloAuthManager and try to registe
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-4" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-4" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-4" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
@@ -171,7 +171,7 @@ Once the HALO SDK is started and user is logged in, you can use theHaloAuthManag
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift-5" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-5" data-toggle="tab">ObjC</a></li>
+  <li role="presentation"><a href="#objc-5" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
