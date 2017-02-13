@@ -94,7 +94,8 @@ sidebars:
 - home_sidebar
 - android_sidebar
 - ios_sidebar
-- mydoc_sidebar
+- cms_sidebar
+- server_integrations_sidebar
 
 description: "HALO is an MBaaS (Mobile Backend as a Service) that was developed to increase developer productivity and decrease an application's time-to-market by creating a highly modular CMS. A native development team will be able to hook up with HALO in a matter of minutes via the SDK which uses an open API."
 # the description is used in the feed.xml file

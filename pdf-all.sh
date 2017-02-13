@@ -1,1 +1,1 @@
-. pdf-android.sh; . pdf-ios.sh; . pdf-cms.sh;
+. pdf-android.sh; . pdf-ios.sh; . pdf-cms.sh; .pdf-server-integrations.sh
