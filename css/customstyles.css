@@ -616,7 +616,7 @@ div#toc ul li ul li {
 
 .tab-content {
     padding: 15px;
-    background-color: #FAFAFA;
+    background-color: white;
 }
 
 span.tagTitle {font-weight: 500;}
@@ -1342,4 +1342,8 @@ path.domain {
 
 div#toc ol, div#toc ul {
     border-left: none;
+}
+
+pre code {
+    font-size: 12px;
 }

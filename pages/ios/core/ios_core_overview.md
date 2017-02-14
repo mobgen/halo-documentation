@@ -21,17 +21,17 @@ Once all the configuration is done, the only remaining step is to call the `star
 <div class="tab-content">
   <div id="swift-1" class="tab-pane fade in active">
     <pre><code class="swift">Halo.Manager.core.startup { [weak self] (success) -> Void in
-	// Do your stuff     
+  // Do your stuff     
 }</code></pre>
   </div>
   <div id="objc-1" class="tab-pane fade">
     <pre><code class="objective-c">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    [HaloManager.core startup:^(BOOL success) {
-        // Do some stuff
-    }];
+  // Override point for customization after application launch.
+  [HaloManager.core startup:^(BOOL success) {
+    // Do some stuff
+  }];
     
-    return YES;
+  return YES;
 }</code></pre>
   </div>
 </div>
@@ -88,27 +88,48 @@ func managerWillSetupDevice(device: Halo.Device) -> Void {
 
 Later on, the device will be accessible through the Core Manager's `device` property.
 
-### `environment` (Swift-only)
+### `environment`
 
-Apart from the configuration `.plist`, this is one of the properties that can also be set through code, by using the existing `enum`. There is a set of predefined environments, but also an option to specify a custom one by providing the full url.
+Apart from the configuration `.plist`, this is one of the properties that can also be set programatically. There is a set of predefined environments, but also an option to specify a custom one by providing the full url.
 
-```swift
-public enum HaloEnvironment {
-    case int
-    case qa
-    case stage
-    case prod
-    case custom(String)
-}
-```
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-4" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc-4" data-toggle="tab">Obj-C</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="swift-4" class="tab-pane fade in active">
+    <pre><code class="swift">public enum HaloEnvironment {
+  case int
+  case qa
+  case stage
+  case prod
+  case custom(String)
+}</code></pre>
+
+<p>The environment can be changed then using the following function in the Core Manager, which provides also a completion handler to be executed once the environment has been successfully changed.</p>
+
+<pre><code class="swift">public func setEnvironment(_ env: HaloEnvironment, completionHandler handler: ((Bool) -> Void)? = nil)</code></pre>
+
+  </div>
+  <div id="objc-4" class="tab-pane fade">
+    <pre><code class="objective-c"></code></pre>
+  </div>
+</div>
 
 ### `defaultOfflinePolicy`
 
 A caching system is available out of the box for the network requests executed through the Framework. There are three modes in which the Framework can operate: 
 
-* `None`: No caching for the network requests is done.
-* `LoadAndStoreLocalData`: The data is fetched from the network and also stored in order to be used in other scenarios (e.g. temporary lack of internet connection).
-* `ReturnLocalDataDontLoad`: Don't even try to fetch data and just return whatever information is cached locally.
+* `None`: No caching for the network requests is done
+* `LoadAndStoreLocalData`: The data is fetched from the network and also stored in order to be used in other scenarios (e.g. temporary lack of internet connection)
+* `ReturnLocalDataDontLoad`: Don't even try to fetch data and just return whatever information is cached locally 
+
+|---|---|---|
+**Policy** | **Swift** | **Obj-C**
+`None`| `.none` | `HaloOfflinePolicyNone`
+`LoadAndStoreLocalData` | `.loadAndStoreLocalData` | `HaloOfflinePolicyLoadAndStoreLocalData`
+`ReturnLocalDataDontLoad` | `.returnLocalDataDontLoad` | `HaloOfflinePolicyReturnLocalDataDontLoad`
 
 Although this is the default mode, it can also be specified per request, overriding this default value if needed.
 
@@ -120,12 +141,13 @@ Just like the `defaultOfflinePolicy`, this is a default value that will be used 
 
 ### `authenticationMode`
 
-The Framework allows the user to switch between two authentication modes (application/user), based on which it will use the credentials provided.
+The SDK provides and uses three authentication modes (app/app+/user), based on which it will use the credentials provided.
 
 ```swift
 public enum AuthenticationMode {
-    case App
-    case User
+  case app
+  case appPlus
+  case user
 }
 ```
 
@@ -139,7 +161,7 @@ Halo.Manager.core.userCredentials = Credentials(username: "username", password: 
 Switching the authentication mode would be then as easy as:
 
 ```swift
-Halo.Manager.core.authenticationMode = .User
+Halo.Manager.core.authenticationMode = .user
 ```
 
 And again, this authentication mode will be used throughout the framework when no specific mode is set per request.
@@ -154,15 +176,12 @@ public func startup(completionHandler handler: ((Bool) -> Void)?) -> Void
 
 Will be called in order to start the setup and launching process of the Framework. The closure will be executed once the whole process has finished and all the Framework features are ready to be used.
 
----
 
 ```swift
 public func getModules(completionHandler handler: (NSHTTPURLResponse?, Result<PaginatedModules?>) -> Void) -> Void
 ```
 
 It will return a request set up to request the available modules. It can be customised as needed and then executed.
-
----
 
 ```swift
 public func saveDevice(completionHandler handler: ((NSHTTPURLResponse?, Halo.Result<Halo.Device?, NSError>) -> Void)? = nil) -> Void
@@ -179,21 +198,20 @@ Currently there are three protocols that are being used by different existing ad
 ```swift
 public protocol Addon {
 
-    var addonName: String {get}
+  var addonName: String {get}
 
-    func setup(core: Halo.CoreManager, completionHandler handler: ((Halo.Addon, Bool) -> Void)?) -> Void
-    func startup(core: Halo.CoreManager, completionHandler handler: ((Halo.Addon, Bool) -> Void)?) -> Void
+  func setup(core: Halo.CoreManager, completionHandler handler: ((Halo.Addon, Bool) -> Void)?) -> Void
+  func startup(core: Halo.CoreManager, completionHandler handler: ((Halo.Addon, Bool) -> Void)?) -> Void
 
-    func willRegisterAddon(core: Halo.CoreManager) -> Void
-    func didRegisterAddon(core: Halo.CoreManager) -> Void
+  func willRegisterAddon(core: Halo.CoreManager) -> Void
+  func didRegisterAddon(core: Halo.CoreManager) -> Void
 
-    func willRegisterDevice(core: Halo.CoreManager) -> Void
-    func didRegisterDevice(core: Halo.CoreManager) -> Void
+  func willRegisterDevice(core: Halo.CoreManager) -> Void
+  func didRegisterDevice(core: Halo.CoreManager) -> Void
 
-    func applicationDidFinishLaunching(application: UIApplication, core: Halo.CoreManager) -> Void
-    func applicationDidEnterBackground(application: UIApplication, core: Halo.CoreManager) -> Void
-    func applicationDidBecomeActive(application: UIApplication, core: Halo.CoreManager) -> Void
-
+  func applicationDidFinishLaunching(application: UIApplication, core: Halo.CoreManager) -> Void
+  func applicationDidEnterBackground(application: UIApplication, core: Halo.CoreManager) -> Void
+  func applicationDidBecomeActive(application: UIApplication, core: Halo.CoreManager) -> Void
 }
 ```
 
@@ -204,10 +222,10 @@ More specific protocols exist depending on the purpose of the add-on (notificati
 ```swift
 public protocol NotificationsAddon: Addon {
 
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData, core: Halo.CoreManager) -> Void
-    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: Halo.CoreManager) -> Void
+  func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData, core: Halo.CoreManager) -> Void
+  func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: Halo.CoreManager) -> Void
 
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], core: Halo.CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) -> Void
+  func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], core: Halo.CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) -> Void
 
 }
 ```
@@ -223,8 +241,14 @@ public protocol NetworkAddon: Addon {
 
 Adding an add-on to the core is as simple as registering it using the appropriate function (always before calling the `startup` function):
 
-```swfit
-let notificationsAddon = NotificationsAddon()
+```swift
+fileprivate func setup() -> Void {
 
-Halo.Manager.core.registerAddon(notificationsAddon)
+  [...]
+
+  let notificationsAddon = NotificationsAddon()
+  Halo.Manager.core.registerAddon(notificationsAddon)
+
+  [...]
+}
 ```
