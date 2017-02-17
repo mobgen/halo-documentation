@@ -18,4 +18,5 @@ In the install step of HALO there are many parameters that can be configured. He
 - **endProcess**: adds a startup process that will be run during the installation process in HALO.
 - **addTagCollector**: adds a tag collector that allows you to add some tags in the moment the app is initialized.
 - **enableDefaultTags**: adds the halo default tags into the tag collectors. This was enabled by default some time ago but now it is optional.
-- **environment**: sets the environment that will be used for the calls of halo.
+- **environment**: sets the environment that will be used for the calls of halo. See also [server enviroment](./android_core_environment.html).
+- **disablePinning**: disables the SSL pinning in the HALO SDK. See also [SSL pinning](./android_core_environment.html).

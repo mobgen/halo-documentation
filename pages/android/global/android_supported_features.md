@@ -98,7 +98,7 @@ folder: android
                 </span>
             </div>
             <div class="media-body">
-                <h4 class="media-heading">HALO Social</h4>
+                <h4 class="media-heading">HALO Auth</h4>
                 <p>This library allows the developer to login to different social networks to gain APP+ priviledges.</p>
             </div>
         </div>
@@ -128,7 +128,7 @@ folder: android
 || Sync a translations module                           ||
 || Set default translation                              ||
 || Set translation to a TextView asynchronously         ||
-| **HALO Social**       |   |         halo-social        |
+| **HALO Auth**         |   |         halo-auth         |
 || Built in support for google login                    ||
 || Built in support for facebook login                  ||
 || Built in support for halo login                      ||

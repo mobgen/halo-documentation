@@ -84,7 +84,7 @@ entries:
       url: /android_core_offline_support.html
       output: web, pdf
 
-    - title: Change Server Environment
+    - title: Server Environment and SSL pinning
       url: /android_core_environment.html
       output: web, pdf
 
