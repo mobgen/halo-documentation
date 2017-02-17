@@ -21,6 +21,7 @@ Halo.core().manager();
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | storage                        | Provides the current storage api                                                                                                                                   |
 | getModules                     | Provides the modules that belongs to the current application. You can decide if this request supports offline and also in which thread this request should be done |
+|printModulesMetaData            | This method is intented for development purposes and provides all modules metadata information from network into the log                 |
 | getServerVersion               | Provides the server version for the current sdk. This tells if the sdk is outdated or not                                                                          |
 | requestToken                   | Requests a new authentication token                                                                                                                                |
 | isAppAuthentication            | Tells if the current authentication is based in the app credentials                                                                                                |
@@ -50,6 +51,16 @@ halo.core().manager()
 			//Manage the result
 		}
 	});
+```
+
+## Example: request the modules metadata information
+
+Here is a full example on how to request the modules metadata for the current app:
+
+```java
+//print module metadata into log
+halo.core().manager()
+    .printModulesMetaData();
 ```
 
 ## Example: Add a device tag
