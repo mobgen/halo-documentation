@@ -144,6 +144,14 @@ entries:
       url: /android_social_provider_google.html
       output: web, pdf
 
+  - title: Halo Two Factor Auth API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_2factorauth_overview.html
+      output: web, pdf
+
   - title: Halo Presenter API
     output: web, pdf
     folderitems:
