@@ -55,8 +55,8 @@ entries:
           url: /ios_content_search.html
           output: web, pdf
 
-        - title: Content handling
-          url: /ios_content_handling.html
+        - title: Content edition
+          url: /ios_content_edition.html
           output: web, pdf
 
       - title: Helpers
