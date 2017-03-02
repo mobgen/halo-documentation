@@ -107,6 +107,10 @@ entries:
     - title: Detailed Edit Content APIs
       url: /android_edit_content_detailed_api.html
       output: web, pdf
+
+    - title: Detailed code generator tool APIs
+      url: /android_content_generated_api.html
+      output: web, pdf
   
   - title: Halo Notifications API
     output: web, pdf
