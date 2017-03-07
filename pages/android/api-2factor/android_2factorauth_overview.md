@@ -40,7 +40,7 @@ It is fairly recommendable to create the instance as a singleton in your applica
 ```java
 HaloTwoFactorApi twoFactorAuthentication = HaloTwoFactorApi.with(halo)
                 .smsProvider("HALO")
-                .withNotifications()
+                .withNotifications(mHaloNotificationApi)
                 .withSMS()
                 .build();
 ```
@@ -55,9 +55,9 @@ As you can see there are some parameters that you can provide to configure your 
 
 | Parameter name                  | Explanation                                                                                                                                                        |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **smsProvider** (Optional)      | Set the name of the sms sender. By default it is set to HALO.                                                                                                      |
-| **withNotifications** (Optional)| Prepare the two factor auth listener to receive codes from push notifications.                                                                                     |
-| **withSMS** (Optional)          | Prepare the two factor auth listener to receive codes from SMS notification.                                                                                       |
+| **smsProvider** (Optional)      | Set the name of the sms sender. By default it is set to HALO.                                                                                                     |
+| **withNotifications** (Optional)| Prepare the two factor auth listener to receive codes from push notifications. You must provide a valid HALO notification API.                                    |
+| **withSMS** (Optional)          | Prepare the two factor auth listener to receive codes from SMS notification.                                                                                      |
 
 
 ## Simple use
