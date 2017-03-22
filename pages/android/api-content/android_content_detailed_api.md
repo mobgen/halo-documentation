@@ -1,7 +1,7 @@
 ---
 title: Android SDK - Content SDK Detailed APIs
 keywords: android, content, getting started, halo, instance, module, query, search, sync, detailed
-last_updated: November 14, 2016
+last_updated: March 22, 2017
 tags: [content]
 sidebar: android_sidebar
 permalink: android_content_detailed_api.html
@@ -32,6 +32,9 @@ Here you can find the full list of options you can chain into the ```SearchQuery
 | **moduleName** | requests a module by its name. You must owe it and it must be available for client applications. |
 | **moduleIds** | the list of module ids to request. |
 | **instanceIds** | the list of instance ids to request. |
+| **addRelatedInstances**| add single relationship to filter the request |
+| **relatedInstances**| the list of relationships to filter the request |
+| **allRelatedInstances**| Request all relationships related to fieldname given |
 | **pickFields** | filters the values returned from the api, so it will not send more information than the needed by the application. |
 | **segmentMode** | specifies how the segmentation should work against the tags. It can take two values: ```PARTIAL_MATCH```or  ```TOTAL_MATCH```. Partial match checks if there is at least one tag in the content provided while total match ensures the content retrieved contains all the tags provided. |
 | **tags** | segmentation tags to apply to this content. This param is related to the segmentMode one since it selects and segments the content based on those tags. |
