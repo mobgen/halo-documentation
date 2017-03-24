@@ -178,12 +178,6 @@ Will be called in order to start the setup and launching process of the Framewor
 
 
 ```swift
-public func getModules(completionHandler handler: (NSHTTPURLResponse?, Result<PaginatedModules?>) -> Void) -> Void
-```
-
-It will return a request set up to request the available modules. It can be customised as needed and then executed.
-
-```swift
 public func saveDevice(completionHandler handler: ((NSHTTPURLResponse?, Halo.Result<Halo.Device?, NSError>) -> Void)? = nil) -> Void
 ```
 

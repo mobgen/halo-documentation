@@ -51,3 +51,9 @@ All the content manipulation from this HALO SDK is based on the existence of two
 
 
 ## Retrieving modules
+
+```swift
+public func getModules(completionHandler handler: (NSHTTPURLResponse?, Result<PaginatedModules?>) -> Void) -> Void
+```
+
+It will return a request set up to request the available modules. It can be customised as needed and then executed.

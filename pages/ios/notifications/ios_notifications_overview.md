@@ -22,12 +22,26 @@ But in order to do that, the Framework needs to be added as a dependency to the 
 
 <div class="tab-content">
   <div id="carthage" class="tab-pane fade in active">
-    <pre><code class="bash">github 'mobgen/halo-notifications-ios' '2.2.0'</code></pre>
+    <pre><code class="bash">github 'mobgen/halo-notifications-ios' '2.2.2'</code></pre>
   </div>
   <div id="cocoapods" class="tab-pane fade">
-    <pre><code class="bash">pod 'HaloNotificationsSDK', '2.2.0'</code></pre>
+    <pre><code class="bash">pod 'HaloNotificationsSDK', '2.2.2'</code></pre>
   </div>
 </div>
+
+## The `HaloNotification` model
+
+This Notifications SDK, contrary to what iOS does by default, offers a model which makes accessing some of the information contained in the push notifications slightly easier.
+
+---|:---:|:---:|---
+**Field** | **Swift** | **Obj-C** | **Description**
+`scheduleId`| `String?` | `NSString` | Id which internally identifies the push notification within the HALO platform
+`title` | `String?` | `NSString` | Title of the push notification
+`body` | `String?` | `NSString` | Content of the message included in the push notification
+`icon` | `String?` | `NSString` | Icon specified for the push notification (Android feature, but also accessible here in case it is needed)
+`sound`| `String?` | `NSString` | Sound of the push notification. It will be automatically handled by the system, but it can be also accessed
+`type` | `HaloNotificationType` | `HaloNotificationType` | Type of the push notification (normal, silent or two factor)
+`payload` | `[AnyHashable: Any]` | `NSDictionary` | "Raw" payload of the push notification as received from the server
 
 ## Usage
 
@@ -50,69 +64,84 @@ Halo.Manager.core.registerAddon(notificationsAddon)</code></pre>
 <p>In order to handle the received notifications, a delegate should be set to the notifications add-on, conforming to the <code>NotificationsDelegate</code> protocol.</p>
 
 <pre><code class="swift">public protocol NotificationsDelegate {
-  // This handler will be called when any push notification is received (silent or not) 
-  func haloApplication(application: UIApplication, 
-    didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) -> Void
   
-  // Executed when a silent notification is received
-  func haloApplication(application: UIApplication, 
-    didReceiveSilentNotification userInfo: [NSObject : AnyObject], 
-    fetchCompletionHandler completionHandler: ((UIBackgroundFetchResult) -> Void)?) -> Void
+  func application(_ app: UIApplication, 
+      didReceiveRemoteNotification notification: HaloNotification, 
+      userInteraction user: Bool, 
+      fetchCompletionHandler completionHandler: ((UIBackgroundFetchResult) -> Void)?) -> Void
 
-  // Executed when a non-silent notification is received
-  func haloApplication(application: UIApplication, 
-    didReceiveNotification userInfo: [NSObject : AnyObject]) -> Void
 }</code></pre>
 
-Also, an already implemented custom app delegate is provided by the core (`HaloAppDelegate`) so that the app delegate can inherit from it. If that's not possible, some methods need to be overwritten to redirect the flow to the Core Manager:
+<p>Also, an already implemented custom app delegate is provided by the core (<code>HaloAppDelegate</code>) so that the app delegate can inherit from it. If that's not possible, some methods need to be overwritten to redirect the flow to the Core Manager:</p>
 
-<pre><code class="swift">public func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-    Manager.core.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+<pre><code class="swift">public func application(application: UIApplication, 
+  didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+    
+    Manager.core.application(application, 
+      didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+
 }
 
-public func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-    Manager.core.application(application, didFailToRegisterForRemoteNotificationsWithError: error)
+public func application(application: UIApplication, 
+  didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+    
+    Manager.core.application(application, 
+      didFailToRegisterForRemoteNotificationsWithError: error)
+
 }
 
-public func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-    Manager.core.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+public func application(application: UIApplication, 
+  didReceiveRemoteNotification userInfo: [NSObject : AnyObject], 
+  fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+   
+    Manager.core.application(application, 
+      didReceiveRemoteNotification: userInfo, 
+      fetchCompletionHandler: completionHandler)
+
 }</code></pre>
 
   </div>
   <div id="objc-1" class="tab-pane fade">
-    <pre><code class="objective-c">#import <Halo/Halo-Swift.h>
-#import <HaloObjC/HaloObjC-Swift.h>
-#import <HaloNotifications/HaloNotifications-Swift.h>
+    <pre><code class="objective-c">#import &lt;Halo/Halo-Swift.h&gt;
+#import &lt;HaloObjC/HaloObjC-Swift.h&gt;
+#import &lt;HaloNotifications/HaloNotifications-Swift.h&gt;
 
 HaloNotificationsAddon *notifAddon = [HaloNotificationsAddon new];
 notifAddon.delegate = self;
     
 [HaloManager.core registerAddon:notifAddon];</code></pre>
 
-Since in Objective-C there is a restriction by which the app delegate cannot extend from another class, a mandatory extra step is needed in order for the notifications to work. Some of the flow must be redirected through the core manager of HALO:
+<p>Since in Objective-C there is a restriction by which the app delegate cannot extend from another class, a mandatory extra step is needed in order for the notifications to work. Some of the flow must be redirected through the core manager of HALO:</p>
 
-<pre><code class="objective-c">- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-  [HaloManager.core application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+<pre><code class="objective-c">- (void)application:(UIApplication *)application 
+    didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+  
+      [HaloManager.core application:application 
+        didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+
 }
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-  [HaloManager.core application:application didFailToRegisterForRemoteNotificationsWithError:error];
+- (void)application:(UIApplication *)application 
+    didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+  
+      [HaloManager.core application:application 
+        didFailToRegisterForRemoteNotificationsWithError:error];
+
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-  [HaloManager.core application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+- (void)application:(UIApplication *)application 
+    didReceiveRemoteNotification:(NSDictionary *)userInfo 
+    fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+      
+      [HaloManager.core application:application 
+          didReceiveRemoteNotification:userInfo
+          fetchCompletionHandler:completionHandler];
+
 }</code></pre>
 
-After doing that, the notifications can be handled using three delegate methods:
+<p>After doing that, the notifications can be handled using the delegate method:</p>
 
-<<pre><code class="objective-c">// This handler will be called when any push notification is received (silent or not)
-- (void)haloApplication:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-
-// Executed when a silent notification is received
-- (void)haloApplication:(UIApplication *)application didReceiveSilentNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
-
-// Executed when a non-silent notification is received
-- (void)haloApplication:(UIApplication *)application didReceiveNotification:(NSDictionary *)userInfo</code></pre>
+<pre><code class="objective-c">- (void)application:(UIApplication *)app didReceiveRemoteNotification:(HaloNotification *)notification userInteraction:(BOOL)user fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler</code></pre>
   </div>
 </div>
 
