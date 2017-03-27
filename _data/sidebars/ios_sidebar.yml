@@ -37,6 +37,10 @@ entries:
     - title: Overview
       url: /ios_core_overview.html
       output: web, pdf
+    
+    - title: SSL pinning
+      url: /ios_ssl_pinning.html
+      output: web, pdf
 
     - title: User authentication
       url: /ios_auth_overview.html
