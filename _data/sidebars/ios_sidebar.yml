@@ -59,6 +59,10 @@ entries:
           url: /ios_content_search.html
           output: web, pdf
 
+        - title: Content sync
+          url: /ios_content_sync.html
+          output: web, pdf
+
         - title: Content edition
           url: /ios_content_edition.html
           output: web, pdf

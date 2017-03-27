@@ -15,20 +15,20 @@ In order to use all the features provided by the HALO Social Framework, its depe
 
 ### Carthage
 
-Adding the dependency on the HALO Social Framework is as easy as adding the following line to the ```Cartfile```:
+Adding the dependency on the HALO Social Framework is as easy as adding the following line to the `Cartfile`:
 
 ```sh
-github "mobgen/halo-social-ios" "2.2.0"
+github "mobgen/halo-social-ios" "2.2.2"
 ```
 
-After that, performing a ```carthage update``` all the required resources to use this Framework should be downloaded.
+After that, performing a `carthage update` all the required resources to use this Framework should be downloaded.
 
 ### CocoaPods
 
 Similarly, configuring the dependency using CocoaPods is fairly simple:
 
 ```sh
-pod 'HaloSocialSDK', '2.2.0'
+pod 'HaloSocialSDK', '2.2.2'
 ```
 
 ### Social API

@@ -22,9 +22,9 @@ All the content manipulation from this HALO SDK is based on the existence of two
 `id`	 		| `String?`			| `NSString`		| Id of the module
 `name`			| `String?`			| `NSString`		| Name of the module
 `isSingle`		| `Bool`			| `BOOL`			| Whether the module is a single one or not
-`createdAt` 	| `Date?`			| `NSDate`			| Date of creation of the module
+`createdAt` 	| `Date?`			| `NSDate`			| Creation date of the module
 `updatedAt`		| `Date?`			| `NSDate`			| Date of the last update of the module
-`deletedAt`		| `Date?`			| `NSDate`			| Date of deletion of this module
+`deletedAt`		| `Date?`			| `NSDate`			| Deletion date of this module
 `createdBy`		| `String?`			| `NSString`		| User responsible for the creation of the module
 `updatedBy`		| `String?`			| `NSString`		| User responsible for the last update of the module
 `deletedBy`		| `String?`			| `NSString`		| User responsible for the deletion of the module
@@ -34,26 +34,36 @@ All the content manipulation from this HALO SDK is based on the existence of two
 
 |---|:---:|:---:|---|
 **Property** 	| **Swift type** 	| **Obj-C type** 	| **Description**
-`id`			| `String?`			| `NSString`		|
-`moduleId`		| `String`			| `NSString`		|
-`name`			| `String`			| `NSString`		|
-`values`		| `[String: Any]` 	| `NSDictionary`	| 
-`createdAt`		| `Date`			| `NSDate`			|
-`publishedAt` 	| `Date?`			| `NSDate`			|
-`updatedAt`		| `Date?`			| `NSDate`			| 
-`deletedAt`		| `Date?`			| `NSDate`			|
-`removedAt` 	| `Date?`			| `NSDate`			|
-`archivedAt`	| `Date?`			| `NSDate`			|
-`createdBy`		| `String?`			| `NSString`		|
-`updatedBy`		| `String?`			| `NSString`		|
-`deletedBy`		| `String?`			| `NSString`		|
-`tags`			| `[String: Tag]`	| `NSDictionary`	|
-
+`id`			| `String?`			| `NSString`		| Id of the instance within the platform
+`moduleId`		| `String`			| `NSString`		| Id of the module to which this instance belongs
+`name`			| `String`			| `NSString`		| Name of the instance
+`values`		| `[String: Any]` 	| `NSDictionary`	| Dictionary containing the key-value pairs representing the custom data of the instance
+`createdAt`		| `Date`			| `NSDate`			| Creation date of the instance
+`publishedAt` 	| `Date?`			| `NSDate`			| Publication date of the instance
+`updatedAt`		| `Date?`			| `NSDate`			| Date of the last update of the instance
+`deletedAt`		| `Date?`			| `NSDate`			| Date in which the instance has been deleted
+`removedAt` 	| `Date?`			| `NSDate`			| Date in which the instance has been removed
+`archivedAt`	| `Date?`			| `NSDate`			| Date in which the instance has been archived
+`createdBy`		| `String?`			| `NSString`		| User responsible for the creation of the instance
+`updatedBy`		| `String?`			| `NSString`		| User responsible for the last update of the instance
+`deletedBy`		| `String?`			| `NSString`		| User responsible for the deletion of the instance
+`tags`			| `[String: Tag]`	| `NSDictionary`	| Collection of tags associated with the instance
 
 ## Retrieving modules
 
-```swift
-public func getModules(completionHandler handler: (NSHTTPURLResponse?, Result<PaginatedModules?>) -> Void) -> Void
-```
+The collection of existing modules can be retrieved through the Core Manager using a specific call. The response will come in the shape of paginated content. 
 
-It will return a request set up to request the available modules. It can be customised as needed and then executed.
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc" data-toggle="tab">Obj-C</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="swift" class="tab-pane fade in active">
+    <pre><code class="swift">public func getModules(completionHandler handler: (NSHTTPURLResponse?, Result<PaginatedModules?>) -> Void) -> Void</code></pre>
+    <p>It will return a request set up to request the available modules. It can be customised as needed and then executed.</p>
+  </div>
+  <div id="objc" class="tab-pane fade">
+    <pre><code class="objective-c">- (void)modulesWithSuccess:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, HaloPaginatedModules * _Nonnull))success failure:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, NSError * _Nonnull))failure;</code></pre>
+  </div>
+</div>
