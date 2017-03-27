@@ -107,6 +107,10 @@ entries:
     - title: Detailed Edit Content APIs
       url: /android_edit_content_detailed_api.html
       output: web, pdf
+
+    - title: Detailed code generator tool APIs
+      url: /android_content_generated_api.html
+      output: web, pdf
   
   - title: Halo Notifications API
     output: web, pdf
@@ -142,6 +146,14 @@ entries:
 
     - title: Google integration
       url: /android_social_provider_google.html
+      output: web, pdf
+
+  - title: Halo Two Factor Auth API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /android_2factorauth_overview.html
       output: web, pdf
 
   - title: Halo Presenter API
