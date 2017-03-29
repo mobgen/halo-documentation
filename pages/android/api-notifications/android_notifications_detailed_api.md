@@ -83,6 +83,23 @@ notificationsApi.listenNotSilentNotifications(new NotificationReceiver()); //Not
 notificationsApi.listenSilentNotifications(new NotificationReceiver()); //Silent
 ```
 
+## Set custom notification id 
+You can attach custom id generation to change the way the notification will be created. Also you can modify the bundle data of the notification.
+
+```java
+notificationsApi.customIdGeneration(new CustomIdGeneration() {
+            @Override
+            public int getNextNotificationId(@NonNull Bundle data, int currentId) {
+                //you can update your bundle
+                data.putInt("customData","customData");
+                //you can modify how notification id creation
+                int miCustomID = generateNotificationIdMethod();
+                return miCustomID;
+            }
+        });
+```
+
+
 ## Get UI notification id
 When a notification is displayed in the UI, this notifications has an unique id assigned so you can perform some actions on it, like cancelling. You can access to this id in the data bundle provided in the notification callback. There is a helper method in the api to do so:
 
