@@ -1,5 +1,5 @@
 ---
-title: Android SDK - Status
+title: Android HALO SDK - Altamira
 keywords: home
 sidebar: android_sidebar
 permalink: android_home.html
