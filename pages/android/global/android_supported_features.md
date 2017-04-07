@@ -42,12 +42,12 @@ folder: android
             <div class="pull-left">
                 <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                 </span>
             </div>
             <div class="media-body">
-                <h4 class="media-heading">Support</h4>
-                <p>Using the github open source project you will get direct support for bug fixes from HALO developers.</p>
+                <h4 class="media-heading">HALO Two Factor</h4>
+                <p>This library allows the developer to use two factor authentication with HALO.</p>
             </div>
         </div>
     </div>
@@ -74,6 +74,18 @@ folder: android
             <div class="media-body">
                 <h4 class="media-heading">HALO Analytics</h4>
                 <p>This library allows the developer to send analytic tags and keep track of the user interaction.</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="pull-left">
+                <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                </span>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Support</h4>
+                <p>Using the github open source project you will get direct support for bug fixes from HALO developers.</p>
             </div>
         </div>
     </div>
@@ -134,6 +146,9 @@ folder: android
 || Built in support for halo login                      ||
 || Halo account registration                            ||
 || Role App+ adquisition to perform upgraded operations ||
+| **HALO Two Factor**   |   |      halo-twofactor       |
+|| Built in support for confirmation via sms provider   ||
+|| Built in support for confirmation via push provider  ||
 | **HALO Analytics** |      |        halo-analytics      |
 || Send custom content                                  ||
 || Support for google analytics                         ||
