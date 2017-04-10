@@ -13,8 +13,7 @@ folder: ios
 
 All the content manipulation from this HALO SDK is based on the existence of two main models: `Module` and `ContentInstance` (`HaloModule` and `HaloContentInstance` if using the Obj-C version of the SDK). These two models match perfectly with the concepts present in the CMS.
 
-### `Module`
-
+### `Module` (`HaloModule`)
 
 |---|:---:|:---:|---|
 **Property** 	| **Swift type** 	| **Obj-C type** 	| **Description**
@@ -30,7 +29,7 @@ All the content manipulation from this HALO SDK is based on the existence of two
 `deletedBy`		| `String?`			| `NSString`		| User responsible for the deletion of the module
 `tags` 			| `[String: Tag]` 	| `NSDictionary`	| Collection of tags associated to this module
 
-### `ContentInstance`
+### `ContentInstance` (`HaloContentInstance`)
 
 |---|:---:|:---:|---|
 **Property** 	| **Swift type** 	| **Obj-C type** 	| **Description**
@@ -49,9 +48,28 @@ All the content manipulation from this HALO SDK is based on the existence of two
 `deletedBy`		| `String?`			| `NSString`		| User responsible for the deletion of the instance
 `tags`			| `[String: Tag]`	| `NSDictionary`	| Collection of tags associated with the instance
 
+Another structure widely used related to the content is the `PaginationInfo`. Although pagination can be skipped, the result will be returned in the shape of paginated modules or instances depending on the call (to maintain coherence).
+
+### `PaginationInfo` (`HaloPaginationInfo`)
+
+|---|:---:|:---:|---|
+**Property** 	| **Swift type** 	| **Obj-C type** 	| **Description**
+`page`			| `Int`				| `Int`				| Value of the current page
+`limit`			| `Int`				| `Int`				| Limit set for the current result
+`offset`		| `Int`				| `Int`				| Offset which the current result starts from
+`totalItems`	| `Int`				| `Int`				| Total number of items resulting from the query
+`totalPages`	| `Int`				| `Int`				| Total number of pages resulting from the query
+
 ## Retrieving modules
 
 The collection of existing modules can be retrieved through the Core Manager using a specific call. The response will come in the shape of paginated content. 
+
+### `PaginatedModules` (`HaloPaginatedModules`)
+
+|---|:---:|:---:|---|
+**Property** 	| **Swift type** 	| **Obj-C type** 		| **Description**
+`paginationInfo`| `PaginationInfo`	| `HaloPaginationInfo`	| Structure containing the pagination info
+`modules`		| `[Module]`		| `[HaloModule]`		| Array of modules
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#swift" data-toggle="tab">Swift</a></li>
