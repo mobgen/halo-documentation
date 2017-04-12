@@ -1,5 +1,5 @@
 ---
-title: HALO content edition
+title: Content edition
 keywords: ios
 last_updated: February 6, 2017
 tags: [core, content]

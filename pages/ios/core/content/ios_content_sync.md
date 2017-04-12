@@ -1,5 +1,5 @@
 ---
-title: HALO content sync
+title: Content sync
 keywords: ios
 last_updated: March 27, 2017
 tags: [core, content]

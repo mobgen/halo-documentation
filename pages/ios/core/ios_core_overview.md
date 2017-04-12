@@ -113,7 +113,7 @@ Apart from the configuration `.plist`, this is one of the properties that can al
 
   </div>
   <div id="objc-4" class="tab-pane fade">
-    <pre><code class="objective-c"></code></pre>
+    <p>Because of the way it is defined, this property is not accessible from Objective-C. Hence, the only way to configure it is through the `.plist` file.</p>
   </div>
 </div>
 
