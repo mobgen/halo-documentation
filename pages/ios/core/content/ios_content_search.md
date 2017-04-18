@@ -4,7 +4,6 @@ keywords: ios
 last_updated: February 6, 2017
 tags: [core, content]
 sidebar: ios_sidebar
-toc: false
 permalink: ios_content_search.html
 folder: ios
 ---
@@ -34,6 +33,42 @@ There is a set of parameters that can be specified in order to define the search
 
 ### The `SearchQuery` (`HaloSearchQuery`)
 
+The `SearchQuery` provides a flexible mechanism to build an object containing all the parameters that will be forwarded to the search engine in HALO. Since the functions return a `SearchQuery`, the calls can be conveniently chained.
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#objc-2" data-toggle="tab">Obj-C</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="swift-2" class="tab-pane fade in active">
+    <pre><code class="swift">let query = SearchQuery().moduleIds([moduleId1, moduleId2]).searchFilter(filter).skipPagination()</code></pre>
+  </div>
+  <div id="objc-2" class="tab-pane fade">
+    <pre><code class="objective-c">HaloSearchQuery *query = [[[[HaloSearchQuery new] moduleIds:@[moduleId1, moduleId2]] searchFilter: filter] skipPagination];</code></pre>
+  </div>
+</div>
+
+The different functions than can be used to customise the `SearchQuery` are:
+
+|---|:---:|---|
+**Swift** | **Obj-C** | **Description**
+`searchFilter()`  | `searchFilter:`    |
+`metaFilter()`    | `metaFilter:`     | 
+`fields()`    | `String?`     |
+`tags()`      | `Bool`      |      
+`moduleIds()` | `Date?`     |      
+`addRelatedInstances(fieldName:instanceIds:)`   | `addRelatedInstancesWithFieldName:instanceIds:` |     
+`addAllRelatedInstances(fieldName:)`   | `addAllRelatedInstancesWithFieldName:` |      
+`moduleName()`   | `moduleName:`   |    
+`instanceIds()`   | `instanceIds:`     |    
+`populateFields()`   | `populateFields:`     |    
+`populateAll()`      | `populateAll`   |
+`segmentWithDevice()`      | `segmentWithDevice:`   | 
+`segmentMode()`      | `segmentMode:`   | 
+`locale()`      | `locale:`   |
+`skipPagination()`      | `skipPagination`   |
+`pagination(page:limit:)`      | `paginationWithPage:limit:`   |
 
 ### The `SearchFilter` (`HaloSearchFilter`)
 
