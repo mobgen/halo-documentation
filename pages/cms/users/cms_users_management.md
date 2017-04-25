@@ -1,5 +1,5 @@
 ---
-title: HALO CMS - Users management
+title: HALO CMS - Users Management
 keywords: cms, users, security, admin, management, roles, permissions, rights
 last_updated: December 22, 2016
 tags: [cms]
