@@ -133,6 +133,8 @@ If you want to go in deep into this module, please refer to [the detailed docume
 
 ## Edit Content API
 
+### Basic content manipulation
+
 The Edit Content API is the way to manipulate the general content instances. If you have the proper credentials you will be able to create, update or delete general content instances. See [Halo Auth API](./android_auth_overview.html) to get apropiate credentials. 
 
 For example if you want to update an instance.
@@ -185,6 +187,30 @@ HaloContentEditApi.with(halo)
 ```
 
 If you want to go in deep into this module, please refer to [the detailed documentation](./android_edit_content_detailed_api.html).
+
+### Advanced content manipulation
+
+If you want to be able to add, modify and remove content instances in advanced use cases you must use the batch operation. You need to provide a ```BatchOperations``` which contains all the operations to perfom.
+
+```java
+BatchOperations operations = new BatchOperations.Builder()
+    .create(createInstances)
+    .delete(deleteInstances)
+    .update(updateInstaces)
+    .truncate(truncateInstance)
+    .build();
+HaloContentEditApi.with(halo
+    .batch(operations)
+    .threadPolicy(Threading.POOL_QUEUE_POLICY)
+    .execute(new CallbackV2<BatchOperationResults>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<BatchOperationResults> result) {
+            //handle response with halo backend results             
+        }
+    });
+```
+
+If you want to go in deep into this module, please refer to [the detailed documentation](./android_edit_content_detailed_api.html#batch-operations).
 
 ## Code generation tool to annotate custom models
 
