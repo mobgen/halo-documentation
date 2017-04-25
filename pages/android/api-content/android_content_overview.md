@@ -200,7 +200,7 @@ BatchOperations operations = new BatchOperations.Builder()
     .truncate(truncateInstance)
     .build();
 HaloContentEditApi.with(halo
-    .batch(operations)
+    .batch(operations, true)
     .threadPolicy(Threading.POOL_QUEUE_POLICY)
     .execute(new CallbackV2<BatchOperationResults>() {
         @Override

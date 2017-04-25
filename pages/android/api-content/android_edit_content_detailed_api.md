@@ -179,7 +179,7 @@ HaloContentEditApi.with(halo)
 
 ### Batch operations
  
-When you need to perfom multiple operations like add, modify or remove content instances in advanced use cases you must use the batch operation method. You need to provide a ```BatchOperations``` which contains all the operations to perfom.
+When you need to perfom multiple operations like add, modify or remove content instances in advanced use cases you must use the batch operation method. You need to provide a ```BatchOperations``` which contains all the operations to perfom. The second parameter is to perfom or not a sync operation of the module.
 
 Saving engine will handle two ways of saving changes:
 
@@ -194,7 +194,7 @@ BatchOperations operations = new BatchOperations.Builder()
     .truncate(truncateInstance)
     .build();
 HaloContentEditApi.with(halo
-    .batch(operations)
+    .batch(operations, true)
     .threadPolicy(Threading.POOL_QUEUE_POLICY)
     .execute(new CallbackV2<BatchOperationResults>() {
         @Override
