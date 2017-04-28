@@ -64,7 +64,7 @@ In the beginSearch/end and beginMetaSearch/end parameters there are many query p
 | **lte** | Checks the value is less than or equals the provided value. |
 | **gt** | Checks the value is greater than the provided value. |
 | **gte** | Checks the value is greater than or equals the provided value. |
-| **like** | Search a value that match with the provided value. |
+| **like** | Search a value that match with the provided value (you must provide at least 3 characters).  |
 | **beginGroup** | Begins a parenthesis group. |
 | **endGroup** | Ends a parenthesis group. |
 
