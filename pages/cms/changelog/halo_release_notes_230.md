@@ -51,15 +51,6 @@ folder: cms
 - Unregisters an user or channel for the 2-Factor services:
 [POST /api/2-factor/user/unregister](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2_factor_unregister)
 
-- Unregisters an user or channel for the 2-Factor services:
-[POST /api/2-factor/user/unregister](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2_factor_unregister)
-
-- Unregisters an user or channel for the 2-Factor services:
-[POST /api/2-factor/user/unregister](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2_factor_unregister)
-
-- Unregisters an user or channel for the 2-Factor services:
-[POST /api/2-factor/user/unregister](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2_factor_unregister)
-
 - Obtains the list of system actions (including web-hooks):
 [GET /api/events/action](https://halo.mobgen.com/api/docs/#!/Events_-_Action/events_action_list)
 
