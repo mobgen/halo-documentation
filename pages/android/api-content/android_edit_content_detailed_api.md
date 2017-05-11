@@ -177,3 +177,53 @@ HaloContentEditApi.with(halo)
      });
 ```
 
+### Batch operations
+ 
+When you need to perfom multiple operations like add, modify or remove content instances in advanced use cases you must use the batch operation method. You need to provide a ```BatchOperations``` which contains all the operations to perfom. The second parameter is to perfom or not a sync operation of the module.
+
+Saving engine will handle two ways of saving changes:
+
+* Directly by trying to make the call and failing if it is not possible giving a callback with ```BatchOperationResults``` which contains all opertions result ordered by operation type.
+* In background so it is done when the internet connection is ready again by storing modifications in local temporarily. SDK user will be notified with a notification event if user was subscribed to receive this events.
+
+```java
+BatchOperations operations = new BatchOperations.Builder()
+    .create(createInstances)
+    .delete(deleteInstances)
+    .update(updateInstaces)
+    .truncate(truncateInstance)
+    .build();
+HaloContentEditApi.with(halo
+    .batch(operations, true)
+    .threadPolicy(Threading.POOL_QUEUE_POLICY)
+    .execute(new CallbackV2<BatchOperationResults>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<BatchOperationResults> result) {
+            //handle response with halo backend results             
+        }
+    });
+```
+You should subscribe to batch events if you want to receive notifications with conflict operations (when server has a newer version of the instance) or to receive a notification event when the SDK tried to retry a previous batch operation that failed.
+
+{% include important.html content="Please remember to keep a reference to the subscrition." %}
+
+```java
+ISubscription subscription = HaloContentEditApi.with(halo)
+    .subscribeToBatch(new HaloContentEditApi.HaloBatchListener() {
+        @Override
+        public void onBatchConflict(@Nullable BatchOperations operations) {
+            //handle conflict operations as you need
+        }
+  
+        @Override
+        public void onBatchRetrySuccess(@NonNull HaloStatus status, @Nullable BatchOperationResults operations) {
+           //handle operations after internet connection works again
+        }
+    });
+```
+{% include important.html content="Please remember to unsbscribe from events when your are done to avoid leaking" %}
+
+```java
+subscription.unsubscribe();
+```
+
