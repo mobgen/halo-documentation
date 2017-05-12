@@ -124,6 +124,37 @@ To modify something in the notifications, we provide a method so you can handle 
 
 If you return ```null``` in your custom decorator the notification will not be displayed.
 
+#### Notification with image support
+
+If your payload contains image object, as follows, HALO will handle different custom notification UI for you. The layout types are one of the following:
+
+```
+["default","top", "left", "right", "bottom", "background", "expanded"]
+```
+
+```
+{
+    "data": {
+        "image": { 
+            "url": "http://imageurl" , 
+            "layout": "background"
+            }
+      }
+}
+```
+
+We show you the different layout configurations:
+
+|Layout type | Example                |
+|------------|-------------------------------------|
+|default|![Default push](./images/push-default.png)|
+|expanded|![Expanded push](./images/push-expanded.png)|
+|left|![Left push](./images/push-left.png)|
+|right|![Right push](./images/push-right.png)|
+|top|![Top push](./images/push-top.png)|
+|bottom|![Bottom push](./images/push-bottom.png)|
+|background|![Background push](./images/push-background.png)|
+
 ### 1. Create custom decorator
 We are providing a custom implementation of the icon decorator:
 
@@ -178,4 +209,10 @@ public class PendingIntentDecorator extends HaloNotificationDecorator {
         return chain(builder, bundle);
     }
 }
+```
+
+If you want to get the custom decorator of the notification service you can do it:
+
+```java
+notificationsApi.getNotificationDecorator();
 ```
