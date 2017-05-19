@@ -1,17 +1,20 @@
 ---
-title: Android SDK - Changelog for 2.3.0 Altamira
+title: Android SDK - Changelog for 2.3.2 Altamira
 keywords: android, changelog, 2.3
-last_updated: April 6, 2017
+last_updated: May 19, 2017
 tags: [changelog]
 sidebar: android_sidebar
 toc: false
-permalink: android_release_notes_230.html
+permalink: android_release_notes_232.html
 folder: android
 ---
 
 ## Changelog
 - Code generation for own model tables
 - 3rd party 2-Factor authentication
+- Batch content manipulation.
+- Update demo application with a chat onte to one example.
+- Solve parsing error with in operator.
 - Gradle 3.3 compatibility
 - Custom notification id generation
 - Filter target relationships by ids
@@ -23,6 +26,5 @@ No breaking changes.
 
 ## Upcoming features
 
-- Batch content manipulation
-- Advanced push notifications
-- 3rd party single sign on in Auth
+- Advanced push notifications with image support. 
+- Save custom user content.

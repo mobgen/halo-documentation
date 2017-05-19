@@ -167,9 +167,9 @@ entries:
   - title: Release Notes
     output: web
     folderitems:
-    
-    - title: 2.3.0 Altamira
-      url: /android_release_notes_230.html
+ 
+    - title: 2.3.2 Altamira
+      url: /android_release_notes_232.html
       output: web  
     - title: 2.2.0 Release Notes
       url: /android_release_notes_220.html
