@@ -1,6 +1,6 @@
 ---
 title: iOS Framework - Changelog for 2.2.1
-keywords: android, changelog, 2.2.1
+keywords: ios, changelog, 2.2.1
 last_updated: March 22, 2017
 tags: [changelog]
 sidebar: ios_sidebar
