@@ -35,6 +35,7 @@ Halo.core().manager();
 | addDeviceTags                  | Adds multiple tags to the device and syncs it                                                                                                                      | 
 | removeDeviceTag                | Removes a tag from the device and syncs it                                                                                                                         | 
 | removeDeviceTags               | Removes multiple tags                                                                                                                                              |
+| sendEvent                      | Send tracking analytic events of the current user.                                                       |
 
 ## Example: request the modules
 
@@ -78,4 +79,30 @@ halo.core().manager()
 			//Do something with the new device
 		}
 	});
+```
+
+## Example: Send event
+
+Here is the full example to send a analytic event to HALO:
+
+```java
+//create custom object to send as an extra
+HashMap<String, Object> eventValues = new HashMap<>();
+eventValues.put("idUser", userId);
+eventValues.put("userName",userName);
+//create halo event to send
+HaloEvent event = HaloEvent.builder()
+        .withType(HaloEvent.REGISTER_LOCATION)
+        .withLocation(locationAsString) //locationAsString = "lat,long"
+        .withExtra(eventValues)
+        .build();
+//send event
+halo.core().manager()
+        .sendEvent(event)
+        .execute(new CallbackV2<HaloEvent>() {
+            @Override
+            public void onFinish(@NonNull HaloResultV2<HaloEvent> result) {
+                //do something with the event            
+            }
+        });
 ```

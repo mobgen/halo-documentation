@@ -164,6 +164,17 @@ entries:
       url: /android_presenter_overview.html
       output: web, pdf
 
+  - title: SDK samples
+    output: web, pdf
+    folderitems:
+
+      - title: One to one chat
+        url: /android_chat.html
+        output: web
+      - title: Indoor location
+        url: /android_location.html
+        output: web
+
   - title: Release Notes
     output: web
     folderitems:
