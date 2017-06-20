@@ -164,7 +164,7 @@ entries:
       url: /android_presenter_overview.html
       output: web, pdf
 
-  - title: SDK examples
+  - title: SDK samples
     output: web, pdf
     folderitems:
 

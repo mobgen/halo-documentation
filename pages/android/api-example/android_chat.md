@@ -12,7 +12,7 @@ folder: android
 
 Using the content module of HALO we store all the data to have the possibility to maintain long lasting one to one conversations that can "survive" even when the app has been closed. The app generate a BIDI code to share with other users and after pairing you can chat with push notifications.
 
-The app uses the following modules of HALO SDK:
+The app uses the following libraries of HALO SDK:
 
 - **HALO Notification API**: to send push notifications. See also [Auth API](./android_auth_overview.html).
 - **HALO Content API**: provides all the content of the app. See also [Content API](./android_content_overview.html).
@@ -20,7 +20,7 @@ The app uses the following modules of HALO SDK:
 
 You can download the source code in the following link: [Chat POC](https://github.com/mobgen/halo-android/tree/develop/sdk-samples/halo-demo)
 
-You can try this app in the following link: [Chat POC](https://google.com)
+<!---You can try this app in the following link: [Chat POC](https://google.com) -->
 
 ### Screenshots
 
