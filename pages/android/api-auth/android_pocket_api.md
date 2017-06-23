@@ -25,7 +25,7 @@ HaloPocketApi pocketApi = authApi.pocket();
 ```
 
 
-As you can see there are some parameters that you can provide to configure your social instance. In the following list you will find an explanation for each of those:
+As you can see there are some methods that you can use to get or save the pocket data. In the following list you will find an explanation for each of those:
 
 | Method name           | Explanation 																						|
 |-----------------------|---------------------------------------------------------------------------------------------------|
