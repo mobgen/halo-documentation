@@ -91,6 +91,10 @@ entries:
       url: /ios_notifications_overview.html
       output: web, pdf
 
+    - title: Rich notifications
+      url: /ios_rich_notifications.html
+      output: web, pdf
+
   - title: HALO Social SDK
     output: web, pdf
     folderitems:
