@@ -49,26 +49,26 @@ The `SearchQuery` provides a flexible mechanism to build an object containing al
   </div>
 </div>
 
-The different functions than can be used to customise the `SearchQuery` are:
+The different functions than can be used to customise the `SearchQuery` (using Swift notation) are:
 
-|---|:---:|---|
-**Swift** | **Obj-C** | **Description**
-`searchFilter()`  | `searchFilter:`    |
-`metaFilter()`    | `metaFilter:`     | 
-`fields()`    | `String?`     |
-`tags()`      | `Bool`      |      
-`moduleIds()` | `Date?`     |      
-`addRelatedInstances(fieldName:instanceIds:)`   | `addRelatedInstancesWithFieldName:instanceIds:` |     
-`addAllRelatedInstances(fieldName:)`   | `addAllRelatedInstancesWithFieldName:` |      
-`moduleName()`   | `moduleName:`   |    
-`instanceIds()`   | `instanceIds:`     |    
-`populateFields()`   | `populateFields:`     |    
-`populateAll()`      | `populateAll`   |
-`segmentWithDevice()`      | `segmentWithDevice:`   | 
-`segmentMode()`      | `segmentMode:`   | 
-`locale()`      | `locale:`   |
-`skipPagination()`      | `skipPagination`   |
-`pagination(page:limit:)`      | `paginationWithPage:limit:`   |
+|:---:|---|
+**Swift** | **Description**
+`searchFilter(Halo.SearchFilter)`  | 
+`metaFilter(Halo.SearchFilter)`    |  
+`fields([String])`    | 
+`tags([Tag])`      |       
+`moduleIds([String])` |       
+`addRelatedInstances(fieldName:String, instanceIds:[String])`   |      
+`addAllRelatedInstances(fieldName:String)`   |       
+`moduleName(String)`   |     
+`instanceIds([String])`   |     
+`populateFields([String])`   |     
+`populateAll()`      | 
+`segmentWithDevice(Bool)`      |  
+`segmentMode(Halo.SegmentMode)`      |  
+`locale(Halo.Locale)`      | 
+`skipPagination()`      | 
+`pagination(page:Int, limit:Int)`      | 
 
 ### The `SearchFilter` (`HaloSearchFilter`)
 
