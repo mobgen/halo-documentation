@@ -49,7 +49,7 @@ Here you can find the full list of options you can chain into the ```SearchQuery
 | **ttl** | time that the content should remain available offline. |
 | **pagination** | indicates which page and which limit should be requested to get the instances. |
 | **onePage** | allows to make a request with a single page. It is equivalent to make the request without pagination but provides the information as if you did it in a single page. The priority of this param is higher than the pagination one. |
-| **sort** | allows to order by asc or desc any metatada field (name, publishedAt, createdAt, archivedAt, etc.). |
+| **sort** | allows to order by [asc or desc] any metatada field of the instance ( name, publishedAt, createdAt, archivedAt, removedAt, deletedAt). |
 | **serverCache** | set a time in seconds to cache the server response. |
 
 In the beginSearch/end and beginMetaSearch/end parameters there are many query parameters supported. Here you have an index on how to use them and an example.
