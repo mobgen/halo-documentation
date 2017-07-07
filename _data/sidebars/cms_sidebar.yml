@@ -122,7 +122,7 @@ entries:
     output: web
     folderitems:
 
-    - title: 2.3.0 Release Notes
+    - title: 2.3.0 Release Notes - Altamira
       url: /halo_release_notes_230.html
       output: web
     - title: 2.2.0 Release Notes
