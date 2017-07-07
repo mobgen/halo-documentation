@@ -179,7 +179,7 @@ entries:
     output: web
     folderitems:
  
-    - title: 2.3.2 Altamira
+    - title: 2.3.2 Release Notes - Altamira
       url: /android_release_notes_232.html
       output: web  
     - title: 2.2.0 Release Notes
