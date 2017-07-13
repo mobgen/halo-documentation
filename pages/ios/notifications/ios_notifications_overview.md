@@ -22,10 +22,10 @@ But in order to do that, the Framework needs to be added as a dependency to the 
 
 <div class="tab-content">
   <div id="carthage" class="tab-pane fade in active">
-    <pre><code class="bash">github 'mobgen/halo-notifications-ios' '2.2.2'</code></pre>
+    <pre><code class="bash">github 'mobgen/halo-notifications-ios' '{{ site.ios_version }}'</code></pre>
   </div>
   <div id="cocoapods" class="tab-pane fade">
-    <pre><code class="bash">pod 'HaloNotificationsSDK', '2.2.2'</code></pre>
+    <pre><code class="bash">pod 'HaloNotificationsSDK', '{{ site.ios_version }}'</code></pre>
   </div>
 </div>
 
