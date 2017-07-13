@@ -113,7 +113,7 @@ Apart from the configuration `.plist`, this is one of the properties that can al
 
   </div>
   <div id="objc-4" class="tab-pane fade">
-    <pre><code class="objective-c"></code></pre>
+    <p>Because of the way it is defined, this property is not accessible from Objective-C. Hence, the only way to configure it is through the `.plist` file.</p>
   </div>
 </div>
 
@@ -178,12 +178,6 @@ Will be called in order to start the setup and launching process of the Framewor
 
 
 ```swift
-public func getModules(completionHandler handler: (NSHTTPURLResponse?, Result<PaginatedModules?>) -> Void) -> Void
-```
-
-It will return a request set up to request the available modules. It can be customised as needed and then executed.
-
-```swift
 public func saveDevice(completionHandler handler: ((NSHTTPURLResponse?, Halo.Result<Halo.Device?, NSError>) -> Void)? = nil) -> Void
 ```
 
@@ -246,7 +240,7 @@ fileprivate func setup() -> Void {
 
   [...]
 
-  let notificationsAddon = NotificationsAddon()
+  let notificationsAddon = FirebaseNotificationsAddon()
   Halo.Manager.core.registerAddon(notificationsAddon)
 
   [...]

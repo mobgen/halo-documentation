@@ -9,8 +9,9 @@ folder: ios
 
 ![mobgen_logo_top_black.png](./images/ios/halo-ios.png)
 
-[![Swift Version](https://img.shields.io/badge/Swift-3.0.2-orange.svg)](https://swift.org/)
+[![Swift Version](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org/)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)
 <!-- [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager) -->
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 

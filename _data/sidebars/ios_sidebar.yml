@@ -37,6 +37,10 @@ entries:
     - title: Overview
       url: /ios_core_overview.html
       output: web, pdf
+    
+    - title: SSL pinning
+      url: /ios_ssl_pinning.html
+      output: web, pdf
 
     - title: User authentication
       url: /ios_auth_overview.html
@@ -55,8 +59,12 @@ entries:
           url: /ios_content_search.html
           output: web, pdf
 
-        - title: Content handling
-          url: /ios_content_handling.html
+        - title: Content sync
+          url: /ios_content_sync.html
+          output: web, pdf
+
+        - title: Content edition
+          url: /ios_content_edition.html
           output: web, pdf
 
       - title: Helpers
@@ -83,6 +91,10 @@ entries:
       url: /ios_notifications_overview.html
       output: web, pdf
 
+    - title: Rich notifications
+      url: /ios_rich_notifications.html
+      output: web, pdf
+
   - title: HALO Social SDK
     output: web, pdf
     folderitems:
@@ -102,6 +114,34 @@ entries:
   - title: Release Notes
     output: web, pdf
     folderitems:
+
+    - title: 2.3.1 Release notes
+      url: /ios_release_notes_231.html
+      output: web, pdf
+
+    - title: 2.3.0 Release notes
+      url: /ios_release_notes_230.html
+      output: web, pdf
+
+    - title: 2.2.5 Release notes
+      url: /ios_release_notes_225.html
+      output: web, pdf
+
+    - title: 2.2.4 Release notes
+      url: /ios_release_notes_224.html
+      output: web, pdf
+
+    - title: 2.2.3 Release notes
+      url: /ios_release_notes_223.html
+      output: web, pdf   
+
+    - title: 2.2.2 Release notes
+      url: /ios_release_notes_222.html
+      output: web, pdf
+
+    - title: 2.2.1 Release notes
+      url: /ios_release_notes_221.html
+      output: web, pdf
 
     - title: 2.2.0 Release notes
       url: /ios_release_notes_220.html
