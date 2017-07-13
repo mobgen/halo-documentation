@@ -97,14 +97,21 @@ public class NotificationService: HaloNotificationService {
 }</code></pre>
   </div>
   <div id="objc-1" class="tab-pane fade">
-    <pre><code class="objective-c">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
-  [HaloManager.core startup:^(BOOL success) {
-    // Do some stuff
-  }];
-    
-  return YES;
-}</code></pre>
+    <pre><code class="objective-c">// NotificationService.h
+
+@import HaloNotifications;
+
+@interface NotificationService : HaloNotificationServiceExtensionObjC
+
+@end
+
+// NotificationService.m
+
+#import "NotificationService.h"
+
+@implementation NotificationService
+
+@end</code></pre>
   </div>
 </div>
 
