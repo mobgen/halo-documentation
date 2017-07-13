@@ -171,5 +171,5 @@ In order for the notifications to work, the project must be set up in Firebase, 
 
 #### Troubleshooting
 
-* Since the Notifications SDK relies on Firebase, the location of those SDKs (downloaded automatically as dependencies) will have to be added to the `Header Search Paths` under the project build settings. Probably something like `$(SRCROOT)/Carthage/Build/iOS`.
+* Since the Notifications SDK relies on Firebase, the location of those SDKs (downloaded automatically as dependencies) will have to be added to the `Header Search Paths` under the project build settings. Probably something like `$(SRCROOT)/Carthage/Build/iOS`. ![](images/ios/push_notifications/search_paths.png)
 
