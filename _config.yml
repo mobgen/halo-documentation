@@ -108,3 +108,4 @@ url: https://mobgen.github.io/halo-documentation
 ####################
 
 ios_version: 2.3.4
+ios_latest_sdk: 10.3

@@ -240,7 +240,7 @@ fileprivate func setup() -> Void {
 
   [...]
 
-  let notificationsAddon = NotificationsAddon()
+  let notificationsAddon = FirebaseNotificationsAddon()
   Halo.Manager.core.registerAddon(notificationsAddon)
 
   [...]

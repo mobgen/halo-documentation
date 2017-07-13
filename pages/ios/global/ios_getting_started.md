@@ -9,7 +9,7 @@ permalink: ios_getting_started.html
 folder: ios
 ---
 
-In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK (10.2). In order to offer higher compatibility, the deployment target is set to iOS 8.0.
+In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK ({{ site.ios_latest_sdk }}). In order to offer higher compatibility, the deployment target is set to iOS 8.0.
 
 ## Carthage
 
