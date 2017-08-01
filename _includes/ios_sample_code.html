@@ -1,13 +1,13 @@
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#{{ include.swift-id }}" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#{{ include.objc-id }}" data-toggle="tab">Obj-C</a></li>
+  <li role="presentation" class="active"><a href="#{{ include.id }}-swift" data-toggle="tab">Swift</a></li>
+  <li role="presentation"><a href="#{{ include.id }}-objc" data-toggle="tab">Obj-C</a></li>
 </ul>
 
 <div class="tab-content">
-  <div id="{{ include.swift-id }}" class="tab-pane fade in active">
+  <div id="{{ include.id }}-swift" class="tab-pane fade in active">
   	{% highlight swift %}{{ include.swift-content }}{% endhighlight %}
   </div>
-  <div id="{{ include.objc-id }}" class="tab-pane fade">
-    {% highlight objective-c %}{{ include.objc-content }}{% endhighlight %}
+  <div id="{{ include.id }}-objc" class="tab-pane fade">
+    {% highlight objc %}{{ include.objc-content }}{% endhighlight %}
   </div>
 </div>

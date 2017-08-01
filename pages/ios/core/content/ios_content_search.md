@@ -8,8 +8,8 @@ toc: false
 permalink: ios_content_search.html
 folder: ios
 properties: [
-  'addAllRelatedInstances',
   'addRelatedInstances',
+  'addAllRelatedInstances',
   'addSortBy',
   'fields',
   'instanceIds',
@@ -18,8 +18,8 @@ properties: [
   'moduleIds',
   'moduleName',
   'pagination',
-  'populateAll',
   'populateFields',
+  'populateAll',
   'searchFilter',
   'segmentMode',
   'segmentWithDevice',
@@ -49,7 +49,7 @@ In order to retrieve specific instances, a whole system based on queries and fil
 
 Depending on the desired format of the results, the search operation can return already parsed content instances or, if any extra processing needs to be made, the SDK also offers the chance to receive the response as *raw* data.
 
-{% include ios_sample_code.html swift-id="swift-1" objc-id="objc-1"
+{% include ios_sample_code.html id="search-api"
 swift-content="public func search(query: SearchQuery, completionHandler handler: @escaping (HTTPURLResponse?, Result<PaginatedContentInstances?>) -> Void) -> Void
 
 public func searchAsData(query: SearchQuery, completionHandler handler: @escaping (HTTPURLResponse?, Result<Data>) -> Void) -> Void"
@@ -64,7 +64,7 @@ There is a set of parameters that can be specified in order to define the search
 
 The `SearchQuery` provides a flexible mechanism to build an object containing all the parameters that will be forwarded to the search engine in HALO. Since the functions return a `SearchQuery`, the calls can be conveniently chained.
 
-{% include ios_sample_code.html swift-id="swift-2" objc-id="objc-2" 
+{% include ios_sample_code.html id="search-query" 
 swift-content="let query = SearchQuery().moduleIds([moduleId1, moduleId2]).searchFilter(filter).skipPagination()" 
 objc-content="HaloSearchQuery *query = [[[[HaloSearchQuery new] moduleIds:@[moduleId1, moduleId2]] searchFilter: filter] skipPagination];" %}
 
@@ -84,7 +84,7 @@ The different functions than can be used to customise the `SearchQuery` are the 
     </div>
     <div id="{{ p }}Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{ p }}Heading">
       <div class="panel-body">
-        {% include_relative search_query_options/{{ p }}.html %}
+        {% include_relative search_query_options/{{ p }}.md %}
       </div>
     </div>
   </div>
@@ -92,7 +92,6 @@ The different functions than can be used to customise the `SearchQuery` are the 
 {% endfor %}
 
 </div>
-
 
 ### The `SearchFilter` (`HaloSearchFilter`)
 
