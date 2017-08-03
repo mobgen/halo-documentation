@@ -95,3 +95,57 @@ The different functions than can be used to customise the `SearchQuery` are the 
 
 ### The `SearchFilter` (`HaloSearchFilter`)
 
+A `SearchFilter` can be created through the existing Swift *high level* functions (static methods in Objective-C), which will allow to define conditions over different fields and their values:
+
+{% include ios_sample_code.html id='search-filter-functions'
+swift-content='public func eq(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func neq(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func gt(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func lt(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func gte(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func lte(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func valueIn(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func valueNotIn(property: String, value: Any?, type: String? = nil) -> SearchFilter
+public func like(property: String, value: String) -> SearchFilter 
+public func or(_ elements: SearchFilter...) -> SearchFilter
+public func and(_ elements: SearchFilter...) -> SearchFilter'
+objc-content='+ (HaloSearchFilter * _Nonnull)eq:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)neq:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)gt:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)lt:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)gte:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)lte:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)valueIn:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)valueNotIn:(NSString * _Nonnull)property value:(id _Nullable)value;
++ (HaloSearchFilter * _Nonnull)likeWithProperty:(NSString * _Nonnull)property value:(NSString * _Nonnull)value;
++ (HaloSearchFilter * _Nonnull)and:(NSArray<HaloSearchFilter *> * _Nonnull)elements;
++ (HaloSearchFilter * _Nonnull)or:(NSArray<HaloSearchFilter *> * _Nonnull)elements;'
+%}
+
+Since all these operations return a `SearchFilter`, they can be conveniently combined to compose more complex filtering criteria.
+
+{% include ios_sample_code.html id='search-filter-sample' 
+swift-content='let searchFilter = and(
+  or(
+    and(
+      gte(property: "age", value: 18),
+      lt(property: "age", value: 100)
+    ),
+    eq(property: "registration", value: nil)
+  ),
+  neq(property: "name", value: "July Young"),
+  valueIn(property: "name", value: ["Forever alone", "Fake name"])
+)'
+objc-content='HaloSearchFilter *gte = [HaloSearchFilter gte:@"age" value:@18];
+HaloSearchFilter *lt = [HaloSearchFilter lt:@"age" value:@100];
+    
+HaloSearchFilter *eq = [HaloSearchFilter eq:@"registration" value:nil];
+HaloSearchFilter *neq = [HaloSearchFilter neq:@"name" value:@"July Young"];
+    
+HaloSearchFilter *valueIn = [HaloSearchFilter valueIn:@"name" value:@[@"Forever alone", @"Fake name"]];
+    
+HaloSearchFilter *and1 = [HaloSearchFilter and:@[gte, lt]];
+HaloSearchFilter *or = [HaloSearchFilter or:@[and1, eq]];
+    
+HaloSearchFilter *filter = [HaloSearchFilter and:@[or, neq, valueIn]];'
+%}
