@@ -1,6 +1,6 @@
 ---
 title: iOS SDK - Changelog for 2.1.0
-keywords: android, changelog, 2.1.0
+keywords: ios, changelog, 2.1.0
 last_updated: January 9, 2017
 tags: [changelog]
 sidebar: ios_sidebar

@@ -144,5 +144,45 @@ You could release the memory in the ```onTerminate``` method of your application
 authApi.release();
 ```
 
+### Halo Pocket API: Identified user data
+
+With this new ```HaloPocketAPI``` you can store two new objects on the identified users collection. One for references ```ReferenceContainer``` and one for custom data that can be any model of your business or by default as ```JSONObject```. 
+
+- To fetch all ```Pocket``` information you should use the ```get()``` method.
+
+```java
+//get the pocket api instance
+HaloPocketApi pocketApi = authApi.pocket();
+//get the pocket data (user custom data and filter references)
+pocketApi.get().execute(new CallbackV2<Pocket>() {
+            @Override
+            public void onFinish(@NonNull HaloResultV2<Pocket> result) {
+                        
+            }
+        });
+```
+
+- To store all ```Pocket``` information you should use the ```save(Pocket pocket)``` method.
+
+```java
+//get the pocket api instance
+HaloPocketApi pocketApi = authApi.pocket();
+//create a pocket instance
+Pocket pocket = new Pocket.Builder()
+                .withData(customModelClass)
+                .withReferences(referenceContainer)
+                .build();
+//get the pocket data (user custom data and filter references)
+pocketApi.save(pocket).execute(new CallbackV2<Pocket>() {
+            @Override
+            public void onFinish(@NonNull HaloResultV2<Pocket> result) {
+                        
+            }
+        });
+```
+
+{% include warning.html content="If you want go in deep, please refer to [the detailed documentation](android_pocket_api.html)" %}
+
+
 
 

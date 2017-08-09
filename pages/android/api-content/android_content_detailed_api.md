@@ -49,6 +49,8 @@ Here you can find the full list of options you can chain into the ```SearchQuery
 | **ttl** | time that the content should remain available offline. |
 | **pagination** | indicates which page and which limit should be requested to get the instances. |
 | **onePage** | allows to make a request with a single page. It is equivalent to make the request without pagination but provides the information as if you did it in a single page. The priority of this param is higher than the pagination one. |
+| **sort** | allows to order by [asc or desc] any metatada field of the instance ( name, publishedAt, createdAt, archivedAt, removedAt, deletedAt). |
+| **serverCache** | set a time in seconds to cache the server response. |
 
 In the beginSearch/end and beginMetaSearch/end parameters there are many query parameters supported. Here you have an index on how to use them and an example.
 
@@ -169,8 +171,43 @@ The result provided by all the callbacks is a HaloResult as many other calls, so
 ## Execution options
 This api supports some execution options based on the sdk. Checkout them to see how productive you can be.
 
+#### Response with callback in any thread: execute
+
+{% include tip.html content="You can provide Threading mode and get the result of the operation on the callback)." %}
+
+```java
+SearchQuery query = SearchQuery.builder()
+    .moduleIds("myModuleId")
+    .build();
+contentApi.search(Data.NETWORK_ONLY, query)
+    .asContent(MyModel.class)
+    .threadPolicy(Threading.POOL_QUEUE_POLICY)
+    .execute(new CallbackV2<List<MyModel>>() {
+            @Override
+            public void onFinish(@NonNull HaloResultV2<List<MyModel>> result) {
+                //Handle result on the callback
+            }
+        );
+```
+
+#### Response inline in the same thread: excecuteInline
+
+{% include tip.html content="You can execute sync requests on same execution thread (**Threading.SAME_THREAD_POLICY**) that returns responses (inline, no callback needed)." %}
+
+{% include warning.html content="The execution will be on the same thread so you can not modify Threading mode." %}
+
+
+```java
+SearchQuery query = SearchQuery.builder()
+    .moduleIds("myModuleId")
+    .build();
+HaloResultV2<List<MyModel>> response = contentApi.search(Data.NETWORK_ONLY, query)
+    .asContent(MyModel.class)
+    .executeInline();
+```
+
 ### Threading
-Almost every request supports the threading more. This mode allows you to select which is the threading context in which the request will be executed. Lets say you are already in another thread and you don't want to spawn another one, with this param you can specify this behavior. There are 3 modes supported:
+Almost every request supports the threading mode. This mode allows you to select which is the threading context in which the request will be executed. Lets say you are already in another thread and you don't want to spawn another one, with this param you can specify this behavior. There are 3 modes supported:
 
 - **Threading.POOL_QUEUE_POLICY**: spawns a new thread into a thread pool that will be executed as soon as possible.
 - **Threading.SINGLE_QUEUE_POLICY**: spawns a new thread into a thread queue that will execute it once the other threads enqueued free the queue.

@@ -148,6 +148,10 @@ entries:
       url: /android_social_provider_google.html
       output: web, pdf
 
+    - title: Halo Pocket API
+      url: /android_pocket_api.html
+      output: web, pdf
+
   - title: Halo Two Factor Auth API
     output: web, pdf
     folderitems:
@@ -164,12 +168,23 @@ entries:
       url: /android_presenter_overview.html
       output: web, pdf
 
+  - title: SDK samples
+    output: web, pdf
+    folderitems:
+
+      - title: One to one chat
+        url: /android_chat.html
+        output: web
+      - title: Indoor location
+        url: /android_location.html
+        output: web
+
   - title: Release Notes
     output: web
     folderitems:
-    
-    - title: 2.3.0 Altamira
-      url: /android_release_notes_230.html
+ 
+    - title: 2.3.2 Release Notes - Altamira
+      url: /android_release_notes_232.html
       output: web  
     - title: 2.2.0 Release Notes
       url: /android_release_notes_220.html

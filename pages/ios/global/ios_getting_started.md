@@ -9,7 +9,7 @@ permalink: ios_getting_started.html
 folder: ios
 ---
 
-In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK (10.2). In order to offer higher compatibility, the deployment target is set to iOS 8.0.
+In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK ({{ site.ios_latest_sdk }}). In order to offer higher compatibility, the deployment target is set to iOS 8.0.
 
 ## Carthage
 
@@ -18,7 +18,7 @@ One of the easiest ways to integrate the Halo Framework into your project and ma
 In order to do that, we would need to add the following line to our `Cartfile`:
 
 ```sh
-github "mobgen/halo-ios" "2.2.0"
+github "mobgen/halo-ios" "{{ site.ios_version }}"
 ```
 
 After that, and by performing the following command in the terminal
@@ -26,7 +26,7 @@ After that, and by performing the following command in the terminal
 ```sh
 carthage update --platform iOS
 
-*** Checking out halo-ios at "2.2.0"
+*** Checking out halo-ios at "{{ site.ios_version }}"
 *** xcodebuild output can be found in /var/folders/51/r2wsrcnx1t9d991gs_bnwqsr0000gn/T/carthage-xcodebuild.syE1RN.log
 *** Building scheme "Halo ObjC" in HALO.xcworkspace
 *** Building scheme "Halo iOS" in HALO.xcworkspace
@@ -45,7 +45,13 @@ We would then need to add those frameworks as embedded frameworks (iOS 8+). Depe
 CocoaPods is also supported, so if this is your choice to manage your dependencies, you can add the Halo Framework to your project by adding the following line to your `Podfile`
 
 ```sh
-pod 'HaloSDK', '2.2.0'
+pod 'HaloSDK', '{{ site.ios_version }}'
+```
+
+If using Objective-C, the corresponding SDK the line should be
+
+```sh
+pod 'HaloObjCSDK', '{{ site.ios_version }}'
 ```
 
 # Configuration
