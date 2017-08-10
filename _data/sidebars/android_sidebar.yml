@@ -178,6 +178,9 @@ entries:
       - title: Indoor location
         url: /android_location.html
         output: web
+      - title: Loyalty
+        url: /android_loyalty.html
+        output: web
 
   - title: Release Notes
     output: web
