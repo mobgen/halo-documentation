@@ -45,6 +45,10 @@ entries:
     - title: User authentication
       url: /ios_auth_overview.html
       output: web, pdf
+
+    - title: User pocket
+      url: /ios_pocket.html
+      output: web, pdf
   
       subfolders:
       - title: Content
