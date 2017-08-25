@@ -15,4 +15,9 @@ folder: ios
 
 * Added support for the sort operation of content instances via the search query
 * Implemented the pocket feature to store custom data associated to an identified user
-* 
+* Other minor bugfixes
+
+### Notifications SDK
+
+* Fixed an issue where the device wouldn't get a valid push token in the startup process
+* Fixed an issue where silent notifications were received as regular ones

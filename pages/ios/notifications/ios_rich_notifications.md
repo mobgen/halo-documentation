@@ -77,7 +77,17 @@ Another thing to check is that both the hosting app and the extension have the *
 <img src="images/ios/push_notifications/capabilities.png">
 </p>
 
+### Search paths
+
+Remember to check that both the hosting app and the extension will need to have the `Framework Search Paths` and `Header Search Paths` correctly set (including the path to the Carthage folder, where the Firebase dependencies are downloaded).
+
 ## Implementation
+
+### Dependencies
+
+As of iOS 10.0, a new framework - `UserNotification.framework` - has been added in order to handle everything related to push notifications. Hence, that dependency needs to be added when targeting iOS 10+ devices.
+
+### Coding
 
 When creating the service extension, a sample file with some code in it will be automatically created by Xcode. The HALO Notifications SDK already provides this feature implemented, so that no extra processing needs to be done by the developer.
 
