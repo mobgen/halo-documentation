@@ -15,6 +15,7 @@ folder: ios
 
 * Added support for the sort operation of content instances via the search query
 * Implemented the pocket feature to store custom data associated to an identified user
+* Added support for rich notifications (notifications with image)
 * Other minor bugfixes
 
 ### Notifications SDK
