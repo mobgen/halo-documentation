@@ -16,7 +16,7 @@ The app uses the following libraries of HALO SDK:
 
 - **HALO Loyalty API**: to generate and redeem promotion codes.
 - **HALO Content API**: provides all the content of the app. See also [Content API](./android_content_overview.html).
-- **HALO Auth API**: to login or create users. See also [Auth API](./android_notifications_overview.html).
+- **HALO Auth API**: to login or create users. See also [Auth API](./android_auth_overview.html).
 
 You can download the source code in the following link: [Loyalty POC](https://bitbucket.org/fernandosouto/halo-loyalty)
 
