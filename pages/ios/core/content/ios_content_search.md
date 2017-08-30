@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: Content search
 keywords: ios
 last_updated: February 6, 2017
@@ -148,4 +148,4 @@ HaloSearchFilter *and1 = [HaloSearchFilter and:@[gte, lt]];
 HaloSearchFilter *or = [HaloSearchFilter or:@[and1, eq]];
     
 HaloSearchFilter *filter = [HaloSearchFilter and:@[or, neq, valueIn]];'
-%} -->
+%}
