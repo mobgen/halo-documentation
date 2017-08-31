@@ -19,7 +19,6 @@ The app uses the following libraries of HALO SDK:
 - **HALO Auth API**: to login or create users. See also [Auth API](./android_auth_overview.html).
 - **HALO Notification API**: send push notifications. See also [Notification API](./android_notifications_overview).
 
-You can download the source code in the following link: [Awesome wines POC](https://bitbucket.org/fernandosouto/halo-awesome-wines-flutter)
 
 ### BIDI Codes
 
