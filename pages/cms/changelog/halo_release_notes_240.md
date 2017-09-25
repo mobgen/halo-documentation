@@ -13,8 +13,9 @@ folder: cms
 
 ## CMS changes
 - UX improvements: highlight created / updated items, usage of snack-bars, better switch buttons, copy / paste of dropdown values, explanatory texts, undesirable click zones, inconsistent namings, annoying popups...
+- Advanced content search by field
 - Image support for push notifications
-- Navigation improvements for modules, content items and structure fields
+- Navigation improvements for modules, content items and structure fields (breadcrumbs)
 - Better handling for user session expiration and overall improvements for error handling
 - Possibility to remove push notifications, dates, times, colors and relations on content items
 - Improvements for sorting media files, content items, push notifications and apps
@@ -26,9 +27,12 @@ folder: cms
 - Support for deeplinks on the url field of a push notification
 - Sensitive audit data removal available on the configuration of the apps
 - Possibility to filter by Published and Concept content items
-- Autocomplete for tag names and values
+- Autocomplete for tag names and values on tag form
 - More granularity for module / item permissions for apps (read, write, update, delete)
 - RTL support for arabic and other languages
+- Search push notifications by name
+- Push notifications workflow simplified
+- App form redesigned
 - Multiple bug fixes...
 
 ## Server changes
