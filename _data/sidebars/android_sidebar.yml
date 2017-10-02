@@ -1,7 +1,7 @@
 entries:
 - title: Sidebar
   product: HALO Android SDK Documentation
-  version: 2.3
+  version: 2.4
   folders:
 
   - title:
@@ -171,18 +171,27 @@ entries:
   - title: SDK samples
     output: web, pdf
     folderitems:
-
+      
+      - title: Awesome wines
+        url: /android_awesome_wines.html
+        output: web
       - title: One to one chat
         url: /android_chat.html
         output: web
       - title: Indoor location
         url: /android_location.html
         output: web
+      - title: Loyalty
+        url: /android_loyalty.html
+        output: web
 
   - title: Release Notes
     output: web
     folderitems:
- 
+
+    - title: 2.4.0 Release Notes - Balboa
+      url: /android_release_notes_240.html
+      output: web  
     - title: 2.3.2 Release Notes - Altamira
       url: /android_release_notes_232.html
       output: web  

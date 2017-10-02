@@ -1,5 +1,5 @@
 ---
-title: Android HALO SDK - Altamira
+title: Android HALO SDK - Balboa
 keywords: home
 sidebar: android_sidebar
 permalink: android_home.html
