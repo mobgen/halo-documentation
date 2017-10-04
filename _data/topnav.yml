@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: News
-      url: /news.html
+      url: /tag_news.html
 
 #Topnav dropdowns
 topnav_dropdowns:
