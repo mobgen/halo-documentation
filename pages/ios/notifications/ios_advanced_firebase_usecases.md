@@ -10,18 +10,12 @@ folder: ios
 ---
 
 
-The Halo Push add-on module make usage of the Firebase libraries, including setting up their configuration and downloading the complete set of Firebase libs in order to be available for the developer by just by importing / referencing the required file. That helps on easing the setup process of the push notifications bby taking care internally of the Firebase dependencies and setup.
+The Halo Push add-on module make usage of the Firebase libraries, including setting up their configuration and downloading the complete set of Firebase libs in order to be available for the developer by just by importing / referencing the required file. That helps on easing the setup process of the push notifications by taking care internally of the Firebase dependencies and setup.
 
 The amount of flexibility of the Notifications add-on allows the developer to configure Firebase directly, the add-on will reuse that configuration by default. But TAKE CARE, the responsability of having a correct and functional push notifications config relays on your end on those cases. 
 
 <pre><code class="swift">
-    var firebaseConfigFile: String!
-
-    switch Utility.appleAccountOwner() {
-	    case .unknown: assertionFailure("This should be never reached!")
-	    case .production: firebaseConfigFile = Bundle.main.path(forResource: "GoogleService-Info-Production", ofType: "plist")
-	    case .development: firebaseConfigFile = Bundle.main.path(forResource: "GoogleService-Info-Development", ofType: "plist")
-    }
+    var firebaseConfigFile: String = "path/of/your/firebase/config/file"
 
     if let firOptions = FirebaseOptions(contentsOfFile: firebaseConfigFile) {
         FirebaseApp.configure(options: firOptions)
