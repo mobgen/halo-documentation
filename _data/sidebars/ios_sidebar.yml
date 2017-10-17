@@ -99,6 +99,10 @@ entries:
       url: /ios_rich_notifications.html
       output: web, pdf
 
+    - title: Advanced Firebase Use Cases
+      url: /ios_advanced_firebase_usecases.html
+      output: web, pdf      
+
   - title: HALO Social SDK
     output: web, pdf
     folderitems:
