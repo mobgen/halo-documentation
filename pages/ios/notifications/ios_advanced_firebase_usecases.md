@@ -9,8 +9,12 @@ permalink: ios_advanced_firebase_usecases.html
 folder: ios
 ---
 
+## Advanced Firebase Use Cases
 
 The Halo Push add-on module make usage of the Firebase libraries, including setting up their configuration and downloading the complete set of Firebase libs in order to be available for the developer by just by importing / referencing the required file. That helps on easing the setup process of the push notifications by taking care internally of the Firebase dependencies and setup.
+
+
+### External Configuration
 
 The amount of flexibility of the Notifications add-on allows the developer to configure Firebase directly, the add-on will reuse that configuration by default. But TAKE CARE, the responsability of having a correct and functional push notifications config relays on your end on those cases. 
 
@@ -24,6 +28,8 @@ The amount of flexibility of the Notifications add-on allows the developer to co
     }
 </code></pre>
 
+
+### Usage of additional Firebase libs
 
 As an example of another Firebase libs usage, the developer can add the Analitics lib (located at: $(SRCROOT)/Carthage/Build/iOS/ ) to their project configuration (under Embedded Binaries) and later after the  Halo Firebase configure [case 1] (occurring on the Push add-on startup) or their own configure [case 2] (explained on the above example) start making using of the initialized instance of Firebase Analitics. 
 
@@ -46,6 +52,8 @@ As an example of another Firebase libs usage, the developer can add the Analitic
 	Analytics.logEvent("event", parameters: nil)
 </code></pre>
 
+
+### Custom name support for the Firebase config .plist 
 
 Additionaly you can set a diferent file name distinct than the Firebase default "GoogleService-Info.plist" by using an additional property keyed "FIREBASE_PLIST_NAME" on the Halo config .plist
 
