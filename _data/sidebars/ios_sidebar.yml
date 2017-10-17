@@ -99,6 +99,10 @@ entries:
       url: /ios_rich_notifications.html
       output: web, pdf
 
+    - title: Advanced Firebase Use Cases
+      url: /ios_advanced_firebase_usecases.html
+      output: web, pdf      
+
   - title: HALO Social SDK
     output: web, pdf
     folderitems:
@@ -119,9 +123,9 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: 2.4.0 Release notes
-      url: /ios_release_notes_240.html
-      output: web, pdf
+  #  - title: 2.4.0 Release notes
+   #   url: /ios_release_notes_240.html
+    #  output: web, pdf
 
     - title: 2.3.4 Release notes
       url: /ios_release_notes_234.html
