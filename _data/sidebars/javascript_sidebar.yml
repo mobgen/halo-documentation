@@ -1,0 +1,35 @@
+entries:
+- title: Sidebar
+  product: HALO Javascript SDK Documentation
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Home & Status
+      url: /javascript_home.html
+      output: web
+      type: web
+
+  - title: Release Notes
+    output: web
+    folderitems:
+
+    - title: 1.0.0 Release Notes - Balboa
+      url: /javascript_release_notes_100.html
+      output: web  

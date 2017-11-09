@@ -10,6 +10,9 @@
 {% elsif page.sidebar == "ios_sidebar" %}
 {% assign sidebar = site.data.sidebars.ios_sidebar.entries %}
 
+{% elsif page.sidebar == "javascript_sidebar" %}
+{% assign sidebar = site.data.sidebars.javascript_sidebar.entries %}
+
 {% elsif page.sidebar == "server_integrations" %}
 {% assign sidebar = site.data.sidebars.server_integrations_sidebar.entries %}
 
@@ -33,6 +36,10 @@ sidebar configuration for print files
 
 {% if site.product == "ios" %}
 {% assign sidebar_pdf = site.data.sidebars.ios_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "javascript" %}
+{% assign sidebar_pdf = site.data.sidebars.javascript_sidebar.entries %}
 {% endif %}
 
 {% if site.product == "server_integrations" %}
