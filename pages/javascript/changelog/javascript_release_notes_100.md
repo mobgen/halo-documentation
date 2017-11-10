@@ -1,5 +1,5 @@
 ---
-title: Javascript SDK - Changelog for 1.0.0 
+title: JavaScript SDK - Changelog for 1.0.0 
 keywords: javascript, changelog, 2.4
 last_updated: November 1, 2017
 tags: [changelog]

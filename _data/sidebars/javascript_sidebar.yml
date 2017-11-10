@@ -26,6 +26,51 @@ entries:
       output: web
       type: web
 
+    - title: Getting Started
+      url: /javascript_getting_started.html
+      output: web, pdf
+      type: web, pdf
+
+    - title: Supported Features
+      url: /javascript_supported_features.html
+      output: web
+
+    - title: Support
+      url: /javascript_support.html
+      output: web
+
+  - title: Halo Notifications API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /javascript_notifications_overview.html
+      output: web, pdf
+
+    - title: Detailed APIs
+      url: /javascript_notifications_detailed_api.html
+      output: web, pdf
+
+  - title: Halo Auth API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /javascript_auth_overview.html
+      output: web, pdf
+
+  - title: Halo Segmentation API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /javascript_segmentation_overview.html
+      output: web, pdf
+
+    - title: Detailed APIs
+      url: /javascript_segmentation_detailed_api.html
+      output: web, pdf
+
   - title: Release Notes
     output: web
     folderitems:
