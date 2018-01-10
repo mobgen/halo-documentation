@@ -39,6 +39,18 @@ entries:
       url: /javascript_support.html
       output: web
 
+  - title: Halo Content API
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /javascript_content_overview.html
+      output: web, pdf
+
+    - title: Detailed Content APIs
+      url: /javascript_content_detailed_api.html
+      output: web, pdf
+
   - title: Halo Notifications API
     output: web, pdf
     folderitems:
