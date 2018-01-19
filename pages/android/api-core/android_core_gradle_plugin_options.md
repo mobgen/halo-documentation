@@ -52,6 +52,8 @@ Allows you to add more services from HALO. Only when you enable a service the de
 | **translations** (Boolean:Optional)|Enables the translations library for HALO.|
 | **twofactorauth** (Boolean:Optional) |Enables the two factor authentication library for HALO. You will have to use **sms** or **push** boolean to enable one or both services under this closure.|
 
+If you want to have both credentials for debug and prod and the following services enabled (twofactor, notifications, translations, content and auth) you have to provide the following HALO closure:
+
 ```groovy
 
 halo {
@@ -77,7 +79,7 @@ halo {
 ```
 
 
-In the case you want different configurations for different variants, you can enable it with this configuration. You have to put the same configuration with services and clientId/clientSecret as you do in the global config. Both kind of configurations cannot be mixed.
+In the case you want different configurations for different variants, you can enable it with this configuration. You have to put the same configuration with services and clientId/clientSecret as you do in the global config. Both kind of configurations cannot be mixed. In this example we have three differente flavours: dev, qa and prod:
 
 ```groovy
 halo {

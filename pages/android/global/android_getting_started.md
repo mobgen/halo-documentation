@@ -45,7 +45,7 @@ halo {
     }
 }
 ```
-{% include warning.html content="If you want go in deep with all the options with the gradle configuration, please refer to [the detailed documentation](android_core_gradle_plugin_options.html)" %}
+{% include warning.html content="If you want go in deep with all the options with the gradle configuration or variants configuration, please refer to [the detailed documentation](android_core_gradle_plugin_options.html)" %}
 
 
 
