@@ -79,7 +79,7 @@ HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
 authApi.loginWithHalo(HaloAuthApi.SOCIAL_HALO, authProfile, this);
 ```
 
-{% include note.html content="The third parameter is the callback of type ```CallbackV2<HaloSocialProfile>``` in wich you will handle the result of the authentication query." %}
+{% include note.html content="The third parameter is the callback of type ```CallbackV2<HaloUserProfile>``` in wich you will handle the result of the authentication query." %}
 
 
 ### Login with a social provider (Facebook or Google)
@@ -100,7 +100,7 @@ If you set ```withGoogle()```:
 authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, this);
 ```
 
-{% include note.html content="The second parameter is the callback of type ```CallbackV2<HaloSocialProfile>``` in wich you will handle the result of the authentication query." %}
+{% include note.html content="The second parameter is the callback of type ```CallbackV2<HaloUserProfile>``` in wich you will handle the result of the authentication query." %}
 
 ### Register
 Once the instance is created you can register on HALO providing authoritation object and a user profile only if the ```withHalo()``` was especified on the ```HaloAuthApi``` instance. This will try to register the user with HALO:
@@ -114,16 +114,16 @@ HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
 HaloUserProfile userProfile = new HaloUserProfile(null, displayName, username, password, photoUrl, email);
 //make registration with auth profile and user profile given.
 authApi.register(authProfile,userProfile)
-    .execute(new CallbackV2<HaloSocialProfile>() {
+    .execute(new CallbackV2<HaloUserProfile>() {
         @Override
-        public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
+        public void onFinish(@NonNull HaloResultV2<HaloUserProfile> result) {
             if (result.status().isOk()) { 
                 // Handle result
             }
         }
     });
 ```
-{% include note.html content="You will handle the result of the registration process with a ```CallbackV2<HaloSocialProfile>``` as a parameter of execute." %}
+{% include note.html content="You will handle the result of the registration process with a ```CallbackV2<HaloUserProfile>``` as a parameter of execute." %}
 
 ### Check a provider
 
