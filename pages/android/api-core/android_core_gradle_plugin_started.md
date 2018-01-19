@@ -11,6 +11,8 @@ folder: android
 
 Here we provide the step by step guide to add the plugin to your project and start using it with the minimal configuration.
 
+{% include warning.html content="HALO SDK is now compatible with Android Plugin for Gradle 3.0.1+" %}
+
 ## 1. Apply the classpath to the buildscript
 Open the build.gradle of the project root and add the plugin to the classpath:
 
@@ -40,5 +42,10 @@ Open the build.gradle of your app and apply the basic configuration based on you
 halo {
     clientId 'YOUR_HALO_KEY'
     clientSecret 'YOUR_HALO_SECRET'
+    services {
+        //you have to add this closure empty if you dont want any service
+    }
 }
 ```
+
+{% include warning.html content="If you want go in deep with all the options with the gradle configuration, please refer to [the detailed documentation](android_core_gradle_plugin_options.html)" %}
