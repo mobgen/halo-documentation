@@ -123,6 +123,10 @@ entries:
     - title: Detailed APIs
       url: /android_notifications_detailed_api.html
       output: web, pdf
+
+    - title: Notifications event tracking
+      url: /android_notifications_report.html
+      output: web, pdf
   
   - title: Halo Translations API
     output: web, pdf

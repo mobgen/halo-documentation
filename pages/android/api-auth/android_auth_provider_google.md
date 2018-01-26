@@ -34,7 +34,7 @@ You can add this information in app section on HALO CMS.
 
 ![Add extra security to facebook tokens](./images/halo-cms-secure-social.png)
 
-### Step 3: Generate the hashes (Optional)
+### Step 3: Generate the hashes
 
 To generate a hash of your release key, run the following command substituting your release key alias and the path to your keystore.
 
