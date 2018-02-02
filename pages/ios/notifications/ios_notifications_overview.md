@@ -173,3 +173,43 @@ In order for the notifications to work, the project must be set up in Firebase, 
 
 * Since the Notifications SDK relies on Firebase, the location of those SDKs (downloaded automatically as dependencies) will have to be added to the `Header Search Paths` under the project build settings. Probably something like `$(SRCROOT)/Carthage/Build/iOS`. ![](images/ios/push_notifications/search_paths.png)
 
+
+### Enable notifications usage
+
+When a new notification is received on a device, the SDK will send a request to HALO reporting notification updates. There are three different events we can report: receipt, open and dismiss. To enable this feature you must enable directly on the notification addon. This feature is only availabe on iOS 10+ versions.
+
+{% include warning.html content="Remember to set a valid notification category on the push notification. For the following example we will use this configuration: ```\"click_action\" : \"dismiss_halo\"```" %}
+
+```swift
+if #available(iOS 10.0, *) {
+  UNUserNotificationCenter.current().delegate = self
+  notificationsAddon.enableNotificationEvents(userNotificationCenter : UNUserNotificationCenter.current(), notificationCategory: "dismiss_halo")
+}
+```
+
+You only have to override the following function to notify halo that a notification was dismissed or opened and HALO will manage everything for you.
+
+```swift
+@available(iOS 10.0, *)
+func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+  Manager.core.userNotificationCenter(center, didReceive: response, core: halo, fetchCompletionHandler: completionHandler)
+}
+```
+
+
+
+#### Report the event manually
+
+If you want to report the notification you should not call ```Manager.core.userNotificationCenter```. You have to set a ```HaloNotificationEvent``` with the action, the device alias from HALO, the scheduleId of the push notification and call the ```notificationAction``` function on the HALO core Manager.
+
+{% include tip.html content="You can get the scheduleId of the notification in the dictionary  userInfo when you receive the notification as follows ```userInfo[\"scheduleId\"]```" %}
+
+
+```swift
+let haloNotificationEvent : HaloNotificationEvent = HaloNotificationEvent(device: deviceAlias, schedule: scheduleId, action: EventType.receipt.rawValue)
+Manager.core.notificationAction(notificationEvent: haloNotificationEvent) { (event, error) in
+  //handle response
+}
+```
+
+
