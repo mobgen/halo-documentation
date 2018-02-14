@@ -13,6 +13,8 @@ folder: ios
 
 Adding notifications to a HALO-powered application from the SDK point of view is just as simple as instantiating a notifications addon and registering it within the core.
 
+{% include warning.html content="HALO will handle the download of all necessary dependencies to use the Firebase push notifications SDK. Do not duplicate Firebase libraries on your project or you will not receive correctly push notifications." %}
+
 But in order to do that, the Framework needs to be added as a dependency to the project:
 
 <ul class="nav nav-tabs">
@@ -180,36 +182,29 @@ When a new notification is received on a device, the SDK will send a request to 
 
 {% include warning.html content="Remember to set a valid notification category on the push notification. For the following example we will use this configuration: ```\"click_action\" : \"dismiss_halo\"```" %}
 
-```swift
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
+</ul>
+
+<div class="tab-content">
+
+  <div id="swift-2" class="tab-pane fade in active">
+    <pre><code class="swift">
 if #available(iOS 10.0, *) {
   UNUserNotificationCenter.current().delegate = self
   notificationsAddon.enableNotificationEvents(userNotificationCenter : UNUserNotificationCenter.current(), notificationCategory: "dismiss_halo")
-}
-```
+}    
+    </code></pre>
 
-You only have to override the following function to notify halo that a notification was dismissed or opened and HALO will manage everything for you.
+    You only have to override the following function to notify halo that a notification was dismissed or opened and HALO will manage everything for you.
 
-```swift
+    <pre><code class="swift">
 @available(iOS 10.0, *)
-func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response:  UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
   Manager.core.userNotificationCenter(center, didReceive: response, core: halo, fetchCompletionHandler: completionHandler)
-}
-```
-
-
-
-#### Report the event manually
-
-If you want to report the notification you should not call ```Manager.core.userNotificationCenter```. You have to set a ```HaloNotificationEvent``` with the action, the device alias from HALO, the scheduleId of the push notification and call the ```notificationAction``` function on the HALO core Manager.
-
-{% include tip.html content="You can get the scheduleId of the notification in the dictionary  userInfo when you receive the notification as follows ```userInfo[\"scheduleId\"]```" %}
-
-
-```swift
-let haloNotificationEvent : HaloNotificationEvent = HaloNotificationEvent(device: deviceAlias, schedule: scheduleId, action: EventType.receipt.rawValue)
-Manager.core.notificationAction(notificationEvent: haloNotificationEvent) { (event, error) in
-  //handle response
-}
-```
+}    
+    </code></pre>
+  </div>
+</div>
 
 

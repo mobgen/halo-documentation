@@ -29,35 +29,5 @@ notificationsApi.enablePushEvents(new HaloNotificationEventListener() {
         }
     }
 });
-```
-
-## How to trigger manually the event?
-
-If you want to trigger those events (receipt, open or dismiss) manually, you can not use the ```enablePushEvents()``` method. Instead you will use the ```notifyPushEvent()``` method.
-
-**1.**  You have to build a HaloPushEvent object (in this example a new push was receipt on the phone). 
-
-{% include tip.html content="To set the action you have yo choose one: {NotificationEventsActions.PUSH_RECEIPT,  NotificationEventsActions.PUSH_OPEN, NotificationEventsActions.PUSH_DISMISS}" %}
-
-
-```java
-HaloPushEvent receiptPush = new HaloPushEvent.Builder(deviceAlias)
-    .withAction(NotificationEventsActions.PUSH_RECEIPT) // the action you want to notify
-    .withSchedule(scheduleId) //the id of the push notification 
-    .build();
-```   
-
-**2.** The next step is send the ```HaloPushEvent``` as follows: 
-
-
-```java
-notificationsApi.notifyPushEvent(receiptPush)
-    .threadPolicy(Threading.POOL_QUEUE_POLICY)
-    .execute(new CallbackV2<HaloPushEvent>() {
-        @Override
-        public void onFinish(@NonNull HaloResultV2<HaloPushEvent> haloResultV2) {
-                //handle HaloResultV2 response
-            }
-    });
-```                
+```    
 
