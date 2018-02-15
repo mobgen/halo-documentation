@@ -192,10 +192,10 @@ entries:
   - title: Release Notes
     output: web
     folderitems:
-
-    - title: 2.4.0 Release Notes - Balboa
-      url: /android_release_notes_240.html
-      output: web  
+    
+    - title: 2.4.1 Release Notes - Balboa
+      url: /android_release_notes_241.html
+      output: web
     - title: 2.3.2 Release Notes - Altamira
       url: /android_release_notes_232.html
       output: web  
