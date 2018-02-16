@@ -14,6 +14,8 @@ folder: android
 
 This getting started guide will guide you on setting up HALO SDK for Android in a few minutes. We will provide a step by step guide to get everything working with the most basic setup, for more detailed information about specific calls or how a module works check the sidebar.
 
+{% include warning.html content="HALO SDK is now compatible with Android Plugin for Gradle 3.0.1+" %}
+
 ## Step 1: Add the HALO plugin 
 Open the build.gradle of the project root and add the plugin to the classpath:
 
@@ -38,8 +40,14 @@ Open the build.gradle of your app and apply the basic configuration based on you
 halo {
     clientId "YOUR_HALO_KEY"
     clientSecret "YOUR_HALO_SECRET"
+    services {
+        //you have to add this closure empty if you dont want any service
+    }
 }
 ```
+{% include warning.html content="If you want go in deep with all the options with the gradle configuration or variants configuration, please refer to [the detailed documentation](android_core_gradle_plugin_options.html)" %}
+
+
 
 ## Step 3: Init the Halo instance inside your app
 

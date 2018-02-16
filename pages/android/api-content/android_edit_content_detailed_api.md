@@ -91,7 +91,7 @@ HaloContentInstance.Builder instanceBuilder = new HaloContentInstance.Builder(mo
     .withModuleId(moduleId)
     .withPublishDate(publishDate)
     .withName(instanceName)
-    .withContentData(values);
+    .withContentData(myObject);
 ```
 
 Finally to create the ```HaloContentInstance``` call the build method.

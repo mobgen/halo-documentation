@@ -60,3 +60,16 @@ You can also customize your notifications by adding a notification decorator. Yo
 ```java
 notificationsApi.setNotificationDecorator(notificationDecorator);
 ```
+
+### Enable notifications usage
+
+When a new notification is received on a device, the SDK will send a request to HALO reporting notification updates. There are three different events they have to report: receipt, open and dismiss. To enable this feature you must enable directly on the notification api singleton. Refer to [the detailed documentation](/android_notifications_report) to learn how to listen to notification events using the HALO SDK.
+
+
+```java
+notificationsApi.enablePushEvents();
+```
+
+
+
+

@@ -82,9 +82,9 @@ HaloAuthApi authApi = HaloAuthApi.with(halo)
 With the ```HaloAuthApi``` instance login with facebook provider.
 
 ```java
-CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
+CallbackV2<HaloUserProfile> callback = new CallbackV2<HaloUserProfile>() {
         @Override
-        public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
+        public void onFinish(@NonNull HaloResultV2<HaloUserProfile> result) {
             //handle response
         }
     };

@@ -34,7 +34,7 @@ You can add this information in app section on HALO CMS.
 
 ![Add extra security to facebook tokens](./images/halo-cms-secure-social.png)
 
-### Step 3: Generate the hashes (Optional)
+### Step 3: Generate the hashes
 
 To generate a hash of your release key, run the following command substituting your release key alias and the path to your keystore.
 
@@ -80,9 +80,9 @@ HaloAuthApi authApi = HaloAuthApi.with(halo)
 With the ```HaloAuthApi``` instance login with google provider.
 
 ```java
-CallbackV2<HaloSocialProfile> callback = new CallbackV2<HaloSocialProfile>() {
+CallbackV2<HaloUserProfile> callback = new CallbackV2<HaloUserProfile>() {
         @Override
-        public void onFinish(@NonNull HaloResultV2<HaloSocialProfile> result) {
+        public void onFinish(@NonNull HaloResultV2<HaloUserProfile> result) {
             //handle response
         }
     };

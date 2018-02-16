@@ -13,6 +13,8 @@ folder: ios
 
 Adding notifications to a HALO-powered application from the SDK point of view is just as simple as instantiating a notifications addon and registering it within the core.
 
+{% include warning.html content="HALO will handle the download of all necessary dependencies to use the Firebase push notifications SDK. Do not duplicate Firebase libraries on your project or you will not receive correctly push notifications." %}
+
 But in order to do that, the Framework needs to be added as a dependency to the project:
 
 <ul class="nav nav-tabs">
@@ -172,4 +174,37 @@ In order for the notifications to work, the project must be set up in Firebase, 
 #### Troubleshooting
 
 * Since the Notifications SDK relies on Firebase, the location of those SDKs (downloaded automatically as dependencies) will have to be added to the `Header Search Paths` under the project build settings. Probably something like `$(SRCROOT)/Carthage/Build/iOS`. ![](images/ios/push_notifications/search_paths.png)
+
+
+### Enable notifications usage
+
+When a new notification is received on a device, the SDK will send a request to HALO reporting notification updates. There are three different events we can report: receipt, open and dismiss. To enable this feature you must enable directly on the notification addon. This feature is only availabe on iOS 10+ versions.
+
+{% include warning.html content="Remember to set a valid notification category on the push notification. For the following example we will use this configuration: ```\"click_action\" : \"dismiss_halo\"```" %}
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
+</ul>
+
+<div class="tab-content">
+
+  <div id="swift-2" class="tab-pane fade in active">
+    <pre><code class="swift">
+if #available(iOS 10.0, *) {
+  UNUserNotificationCenter.current().delegate = self
+  notificationsAddon.enableNotificationEvents(userNotificationCenter : UNUserNotificationCenter.current(), notificationCategory: "dismiss_halo")
+}    
+    </code></pre>
+
+    You only have to override the following function to notify halo that a notification was dismissed or opened and HALO will manage everything for you.
+
+    <pre><code class="swift">
+@available(iOS 10.0, *)
+func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response:  UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+  Manager.core.userNotificationCenter(center, didReceive: response, core: halo, fetchCompletionHandler: completionHandler)
+}    
+    </code></pre>
+  </div>
+</div>
+
 

@@ -20,5 +20,7 @@ topnav_dropdowns:
           url: /android_home.html
         - title: HALO iOS SDK Documentation
           url: /ios_home.html
+        - title: HALO Javascript SDK Documentation
+          url: /javascript_home.html
         - title: HALO Server Integrations
           url: /server_integrations_home.html
