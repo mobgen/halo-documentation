@@ -121,7 +121,10 @@ entries:
   - title: Release Notes
     output: web
     folderitems:
-
+    
+    - title: 2.5.0 Release Notes
+      url: /halo_release_notes_250.html
+      output: web
     - title: 2.4.0 Release Notes
       url: /halo_release_notes_240.html
       output: web
