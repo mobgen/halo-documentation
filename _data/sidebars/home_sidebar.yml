@@ -21,9 +21,6 @@ entries:
     - title: HALO iOS SDK
       url: /ios_home.html
       output: web
-    - title: HALO Javascript SDK
-      url: /javascript_home.html
-      output: web
     - title: HALO Server integrations
       url: /server_integrations_home.html
       output: web
