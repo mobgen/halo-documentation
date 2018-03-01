@@ -20,5 +20,5 @@ In the install step of HALO there are many parameters that can be configured. He
 - **enableDefaultTags**: adds the halo default tags into the tag collectors. This was enabled by default some time ago but now it is optional.
 - **environment**: sets the environment that will be used for the calls of halo. See also [server enviroment](./android_core_environment.html).
 - **disablePinning**: disables the SSL pinning in the HALO SDK. See also [SSL pinning](./android_core_environment.html).
-- **enableServiceOnBoot**: enable the startup receiver to launch the service on foreground after a device reboot.
-- **channelServiceNotification**: set the channel name and the icon for the notification if the service is running on foreground. If you don't set any channel nor icon you will get a Halo one.
+- **enableServiceOnBoot**: enable the startup receiver to launch the service on foreground after a device reboot (only for android api 26+)
+- **channelServiceNotification**: set the channel name and the icon for the notification if the service is running on foreground. If you don't set any channel nor icon you will get a Halo one (only for android api 26+)
