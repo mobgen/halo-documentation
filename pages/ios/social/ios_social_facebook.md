@@ -10,6 +10,26 @@ folder: ios
 
 This getting started guide will guide you on setting up Facebook SDK for iOS in a few minutes. We will provide a step by step guide to get everything working with the most basic setup.
 
+{% include warning.html content="Remember to set ```Always Embed Swift Standard Libraries``` to ```Yes```" %}
+
+{% include warning.html content="You should add a build phase run script to code sign all the embedded frameworks." %}
+
+```sh
+pushd ${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Frameworks/HaloSocialFacebook.framework/Frameworks
+
+for EACH in *.framework; do
+
+echo "-- signing ${EACH}"
+
+/usr/bin/codesign --force --deep --sign "${EXPANDED_CODE_SIGN_IDENTITY}" --entitlements "${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent" 
+
+--timestamp=none $EACH
+
+done
+
+popd
+```
+
 ### Step 1: Create the app 
 
 Register in the facebook console and create a new app. You must have a properly configured developer account.
