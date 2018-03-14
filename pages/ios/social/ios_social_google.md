@@ -1,7 +1,7 @@
 ---
 title: Google Integration
 keywords: ios, social, google
-last_updated: December 26, 2016
+last_updated: March 14, 2018
 tags: [social, auth]
 sidebar: ios_sidebar
 permalink: ios_social_google.html
@@ -43,27 +43,21 @@ This command should generate a string. Copy and paste this Release Key Hash into
 
 At the end, you'll download a GoogleService-Info.plist. You can download this file again at any time. Copy this file into your project's files.
 
+{% include warning.html content="Ensure you have a ```GoogleService-Info.plist``` with that exact name on your project, otherwise the Google Social Framework will not work." %}
+
 ### Step 5: Configure the project
 
-If you are not using CocoaPods you will need to add some libraries manually from Firebase:
+If you are not using Carthage you will need to add some libraries manually:
 
-- ```FirebaseAnalytics.framework```
-- ```FirebaseCore.framework```
-- ```FirebaseInstanceID.framework```
-- ```GoogleInterchangeUtilities.framework```
-- ```GoogleSymbolUtilities.framework```
-- ```GoogleUtilities.framework```
-- ```FirebaseAuth.framework```
-- ```GoogleNetworkingUtilities.framework```
+- ```GoogleSignInDependencies.framework```
 - ```GoogleSignIn.framework```
+- ```GoogleSignIn.bundle```
 
-{% include warning.html content="**GoogleSignIn.framework** is inside the **Invites** folder when you download the Firebase SDK. You need this framework to compile your project." %}
+{% include warning.html content="You can download the **GoogleSignIn.framework** [official GoogleSignIn documentation page](https://developers.google.com/identity/sign-in/ios/start-integrating)" %}
 
 Remove all the libraries from ```Linked Frameworks and Libraries``` and ```Embedded Binaries```.
 
 Add the ```-ObjC``` flag to ```Other Linker Settings```. This can be found inside ```Build Settings``` tab in the Linking section.
-
-Drag the ```Firebase.h``` header into your project. 
 
 Open app in **TARGETS**, click on ```Info``` tab and expand ```URL Types``` section.
 

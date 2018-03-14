@@ -123,20 +123,8 @@ entries:
     output: web, pdf
     folderitems:
 
-  #  - title: 2.4.0 Release notes
-   #   url: /ios_release_notes_240.html
-    #  output: web, pdf
-
-    - title: 2.3.4 Release notes
-      url: /ios_release_notes_234.html
-      output: web, pdf
-
-    - title: 2.3.3 Release notes
-      url: /ios_release_notes_233.html
-      output: web, pdf
-
-    - title: 2.3.2 Release notes
-      url: /ios_release_notes_232.html
+    - title: 2.4.0 Release notes
+      url: /ios_release_notes_240.html
       output: web, pdf
 
     - title: 2.3.1 Release notes

@@ -1,7 +1,7 @@
 ---
 title: HALO Social SDK
 keywords: ios, social
-last_updated: December 27, 2016
+last_updated: March 14, 2018
 tags: [social, auth]
 sidebar: ios_sidebar
 toc: false
@@ -34,11 +34,35 @@ pod 'HaloSocialSDK', '{{ site.ios_version }}'
 ### Social API
 
 The social API is the way to sign in with social providers on HALO SDK. Importing this framework will need a valid HALO instance configured with some credentials and the credentials of the network providers you want to import.
-
 The HALO Social SDK provides at the moment two integrations with existing social networks:
 
 * Facebook integration. If you want to learn more, please refer to [the detailed documentation](ios_social_facebook.html)
 * Google integration. If you want to learn more, please refer to [the detailed documentation](ios_social_google.html)
+
+#### Facebook integration notes
+
+You must follow the next instructions to enable the halo social facebook addon.
+
+{% include warning.html content="Remember to set ```Always Embed Swift Standard Libraries``` to ```Yes```" %}
+
+{% include warning.html content="You should add a build phase run script to code sign all the embedded frameworks." %}
+
+```sh
+pushd ${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Frameworks/HaloSocialFacebook.framework/Frameworks
+
+for EACH in *.framework; do
+
+echo "-- signing ${EACH}"
+
+/usr/bin/codesign --force --deep --sign "${EXPANDED_CODE_SIGN_IDENTITY}" --entitlements "${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent" 
+
+--timestamp=none $EACH
+
+done
+
+popd
+```
+
 
 ## Simple usage
 

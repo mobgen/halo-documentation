@@ -1,7 +1,7 @@
 ---
 title: Android SDK - Auth SDK Overview
 keywords: android, social login, facebook integration, google integration, auth
-last_updated: November 15, 2016
+last_updated: March 1, 2018
 tags: [social]
 sidebar: android_sidebar
 permalink: android_auth_overview.html
@@ -75,8 +75,15 @@ Once the instance is created you can login with username and password only if th
 ```java
 //set a authentication profile to login
 HaloAuthProfile authProfile = new HaloAuthProfile(username,password);
+//set a callback
+CallbackV2<IdentifiedUser> callback = new CallbackV2<IdentifiedUser>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<IdentifiedUser> result) {
+            //handle response
+        }
+    };
 //request login with the authoritation profile
-authApi.loginWithHalo(HaloAuthApi.SOCIAL_HALO, authProfile, this);
+authApi.loginWithHalo(HaloAuthApi.SOCIAL_HALO, authProfile, callback);
 ```
 
 {% include note.html content="The third parameter is the callback of type ```CallbackV2<HaloUserProfile>``` in wich you will handle the result of the authentication query." %}
@@ -91,13 +98,27 @@ Once the instance is created you can login with social network access token only
 If you set ```withFacebook()```:
 
 ```java
-authApi.loginWithSocial(HaloAuthApi.SOCIAL_FACEBOOK, this);
+//set a callback
+CallbackV2<IdentifiedUser> callback = new CallbackV2<IdentifiedUser>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<IdentifiedUser> result) {
+            //handle response
+        }
+    };
+authApi.loginWithSocial(HaloAuthApi.SOCIAL_FACEBOOK, callback);
 ```
 
 If you set ```withGoogle()```:
 
 ```java
-authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, this);
+//set a callback
+CallbackV2<IdentifiedUser> callback = new CallbackV2<IdentifiedUser>() {
+        @Override
+        public void onFinish(@NonNull HaloResultV2<IdentifiedUser> result) {
+            //handle response
+        }
+    };
+authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
 {% include note.html content="The second parameter is the callback of type ```CallbackV2<HaloUserProfile>``` in wich you will handle the result of the authentication query." %}

@@ -1,7 +1,7 @@
 ---
 title: Android SDK - Notifications SDK Overview
 keywords: android, notifications, decorator, firebase, gcm, messages, cloud
-last_updated: November 14, 2016
+last_updated: March 1, 2018
 tags: [notifications]
 sidebar: android_sidebar
 permalink: android_notifications_overview.html
@@ -32,12 +32,26 @@ To start using the notifications, in the same way you do with other sdks you mus
 ```java
 HaloNotificationsApi notificationsApi = HaloNotificationsApi.with(halo);
 ```
+ 
+{% include warning.html content="Since android O you have to create a notification channel to receive the push notification when your compileSdkVersion is 26 or greater" %}
+
+HALO will create a notification channel on devices with Android O but you can override that channel with your own channel with your own settings.
+
+```java
+if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+    NotificationChannel channel = new NotificationChannel("NOTIFICATION_CHANNEL_ID", 
+            "CHANNEL_NAME", NotificationManager.IMPORTANCE_DEFAULT)
+    channel.setShowBadge(false);
+    notificationsApi.notificationChannel(channel);
+}
+```
 
 Also you have to release the memory in the ```onTerminate``` method of your application:
 
 ```java
 notificationsApi.release();
 ```
+
 
 ## Simple use
 

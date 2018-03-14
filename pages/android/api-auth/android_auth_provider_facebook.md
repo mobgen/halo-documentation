@@ -1,7 +1,7 @@
 ---
 title: Android SDK - Integration with Facebook
 keywords: android, getting started, facebook android sdk
-last_updated: November 15, 2016
+last_updated: March 1, 2018
 tags: [social]
 sidebar: android_sidebar
 toc: false
@@ -82,9 +82,9 @@ HaloAuthApi authApi = HaloAuthApi.with(halo)
 With the ```HaloAuthApi``` instance login with facebook provider.
 
 ```java
-CallbackV2<HaloUserProfile> callback = new CallbackV2<HaloUserProfile>() {
+CallbackV2<IdentifiedUser> callback = new CallbackV2<IdentifiedUser>() {
         @Override
-        public void onFinish(@NonNull HaloResultV2<HaloUserProfile> result) {
+        public void onFinish(@NonNull HaloResultV2<IdentifiedUser> result) {
             //handle response
         }
     };
