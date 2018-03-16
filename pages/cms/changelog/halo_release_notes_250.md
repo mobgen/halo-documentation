@@ -1,13 +1,15 @@
 ---
-title: HALO Release Notes - Changelog for 2.5.0
+title: HALO Release Notes - Changelog for 2.5.0 Cambados
 keywords: cms, server, changelog, 2.5
-last_updated: Feb 15, 2018
+last_updated: Martch 16, 2018
 tags: [changelog]
 sidebar: cms_sidebar
 toc: false
 permalink: halo_release_notes_250.html
 folder: cms
 ---
+
+There is a document that explains visually the most important changes of this release. You can download it [here](files/halo_release_notes_250.pdf).
 
 ## CMS Changes
 - First-time user assistance tooltips

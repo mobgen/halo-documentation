@@ -1,5 +1,5 @@
 ---
-title: Android SDK - Changelog for 2.4.1 Balboa
+title: Android SDK - Changelog for 2.4.1 Bora
 keywords: android, changelog, 2.4
 last_updated: Febreruary 15, 2018
 tags: [changelog]

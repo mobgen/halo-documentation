@@ -1,5 +1,5 @@
 ---
-title: HALO iOS SDK
+title: HALO iOS SDK - Cambados
 keywords: home
 sidebar: ios_sidebar
 permalink: ios_home.html
