@@ -122,10 +122,10 @@ entries:
     output: web
     folderitems:
     
-    - title: 2.5.0 Release Notes
+    - title: 2.5.0 Release Notes - Cambados
       url: /halo_release_notes_250.html
       output: web
-    - title: 2.4.0 Release Notes
+    - title: 2.4.0 Release Notes - Bora
       url: /halo_release_notes_240.html
       output: web
     - title: 2.3.0 Release Notes - Altamira

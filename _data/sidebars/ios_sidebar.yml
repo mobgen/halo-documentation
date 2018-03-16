@@ -123,15 +123,19 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: 2.4.0 Release notes
+    - title: 2.5.0 Release Notes - Cambados
+      url: /android_release_notes_250.html
+      output: web  
+
+    - title: 2.4.0 Release notes - Bora
       url: /ios_release_notes_240.html
       output: web, pdf
 
-    - title: 2.3.1 Release notes
+    - title: 2.3.1 Release notes - Altamira
       url: /ios_release_notes_231.html
       output: web, pdf
 
-    - title: 2.3.0 Release notes
+    - title: 2.3.0 Release notes - Altamira
       url: /ios_release_notes_230.html
       output: web, pdf
 

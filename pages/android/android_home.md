@@ -1,5 +1,5 @@
 ---
-title: Android HALO SDK - Balboa
+title: Android HALO SDK - Cambados
 keywords: home
 sidebar: android_sidebar
 permalink: android_home.html
