@@ -9,6 +9,8 @@ permalink: halo_release_notes_250.html
 folder: cms
 ---
 
+There is a document that explains visually the most important changes of this release. You can download it [here](files/halo_release_notes_250.pdf).
+
 ## CMS Changes
 - First-time user assistance tooltips
 - Loyalty menu with campaigns list
