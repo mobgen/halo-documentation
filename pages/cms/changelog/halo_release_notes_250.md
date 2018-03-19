@@ -1,7 +1,7 @@
 ---
 title: HALO Release Notes - Changelog for 2.5.0 Cambados
 keywords: cms, server, changelog, 2.5
-last_updated: Martch 16, 2018
+last_updated: March 19, 2018
 tags: [changelog]
 sidebar: cms_sidebar
 toc: false
@@ -13,7 +13,6 @@ There is a document that explains visually the most important changes of this re
 
 ## CMS Changes
 - First-time user assistance tooltips
-- Loyalty menu with campaigns list
 - Ability to add tags to multiple content items simultaneously via list view
 - Breadcrumbs in header to help navigate
 - User profile enabled for all CMS users and direct link via header bar
