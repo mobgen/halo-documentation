@@ -1,11 +1,11 @@
 ---
-title: Android SDK - Changelog for 2.5.0 Cambados
+title: Android SDK - Changelog for 2.5.1 Cambados
 keywords: android, changelog, 2.5
-last_updated: March 16, 2018
+last_updated: March 21, 2018
 tags: [changelog]
 sidebar: android_sidebar
 toc: false
-permalink: android_release_notes_250.html
+permalink: android_release_notes_251.html
 folder: android
 ---
 
@@ -14,6 +14,7 @@ folder: android
 * Update dependencies to support last Firebase version
 * Creation of channels for the push notificaions on android 26+
 * Background service worker on android 26+ devices force disabled 
+* Fix issue vibration on startup android 26+
 * Fix several bugs.
 
 
