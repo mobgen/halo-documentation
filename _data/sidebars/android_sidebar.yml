@@ -192,8 +192,8 @@ entries:
     output: web
     folderitems:
     
-    - title: 2.5.0 Release Notes - Cambados
-      url: /android_release_notes_250.html
+    - title: 2.5.1 Release Notes - Cambados
+      url: /android_release_notes_251.html
       output: web
     - title: 2.4.1 Release Notes - Bora
       url: /android_release_notes_241.html
