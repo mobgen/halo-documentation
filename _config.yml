@@ -110,5 +110,5 @@ url: https://mobgen.github.io/halo-documentation
 # Custom variables #
 ####################
 
-ios_version: 2.4.0
+ios_version: 2.5.0
 ios_latest_sdk: 11.0
