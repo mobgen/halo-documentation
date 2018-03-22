@@ -50,7 +50,7 @@ Allows you to add more services from HALO. Only when you enable a service the de
 | **notifications** (Boolean:Optional)|Enables Google FCM integration with HALO used to receive push notifications. Remember to add also the google-services.json to your project.|
 | **presenter** (Boolean:Optional)|Enables the presenter UI library for HALO. It is a small helper to use the MVP pattern in the UI.|
 | **translations** (Boolean:Optional)|Enables the translations library for HALO.|
-| **twofactorauth** (Boolean:Optional) |Enables the two factor authentication library for HALO. You will have to use **sms** or **push** boolean to enable one or both services under this closure.|
+| **twofactorauth** (Closure:Optional) |Enables the two factor authentication library for HALO. You will have to use **sms** or **push** boolean to enable one or both services under this closure.|
 
 If you want to have both credentials for debug and prod and the following services enabled (twofactor, notifications, translations, content and auth) you have to provide the following HALO closure:
 
