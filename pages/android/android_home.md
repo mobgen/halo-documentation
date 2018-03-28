@@ -16,10 +16,10 @@ folder: android
 ![Android >= 4.0.3](https://img.shields.io/badge/Android-%3E=%204.0.3-blue.svg)
 ![Gradle](https://img.shields.io/badge/Gradle-compatible-brightgreen.svg)
 
-You can also download our standalone documentation.
+You can download some release notes here:
 
-<a href="./pdf/android-documentation.pdf" target="_blank">
+<a href="./files/halo_release_notes_250.pdf" target="_blank">
   <button type="button" class="btn btn-default" aria-label="Left Align">
-    <span class="fa fa-download" aria-hidden="true"></span> Download standalone Android docs
+    <span class="fa fa-download" aria-hidden="true"></span> Download the 2.5 release preview
   </button>
 </a>

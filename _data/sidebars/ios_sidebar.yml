@@ -22,8 +22,8 @@ entries:
 
     - title: Home & Status
       url: /ios_home.html
-      output: web
-      type: web
+      output: web, pdf
+      type: web, pdf
 
     - title: Getting Started
       url: /ios_getting_started.html
@@ -125,7 +125,7 @@ entries:
 
     - title: 2.5.0 Release Notes - Cambados
       url: /android_release_notes_250.html
-      output: web  
+      output: web, pdf  
 
     - title: 2.4.0 Release notes - Bora
       url: /ios_release_notes_240.html
