@@ -123,16 +123,16 @@ entries:
     
     - title: 2.5.0 Release Notes - Cambados
       url: /halo_release_notes_250.html
-      output: web
+      output: web, pdf
     - title: 2.4.0 Release Notes - Bora
       url: /halo_release_notes_240.html
-      output: web
+      output: web, pdf
     - title: 2.3.0 Release Notes - Altamira
       url: /halo_release_notes_230.html
-      output: web
+      output: web, pdf
     - title: 2.2.0 Release Notes
       url: /halo_release_notes_220.html
-      output: web
+      output: web, pdf
     - title: 2.0.0 Release Notes
       url: /halo_release_notes_200.html
-      output: web     
+      output: web, pdf     

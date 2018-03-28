@@ -22,8 +22,8 @@ entries:
 
     - title: Home & Status
       url: /android_home.html
-      output: web
-      type: web
+      output: web, pdf
+      type: web, pdf
 
     - title: Getting Started
       url: /android_getting_started.html
@@ -32,15 +32,15 @@ entries:
 
     - title: Supported Features
       url: /android_supported_features.html
-      output: web
+      output: web, pdf
 
     - title: Support
       url: /android_support.html
-      output: web
+      output: web, pdf
 
     - title: Open source contributions
       url: /android_contributions.html
-      output: web
+      output: web, pdf
 
   - title: Halo Core API
     output: web, pdf
@@ -177,16 +177,16 @@ entries:
       
       - title: Awesome wines
         url: /android_awesome_wines.html
-        output: web
+        output: web, pdf
       - title: One to one chat
         url: /android_chat.html
-        output: web
+        output: web, pdf
       - title: Indoor location
         url: /android_location.html
-        output: web
+        output: web, pdf
       - title: Loyalty
         url: /android_loyalty.html
-        output: web
+        output: web, pdf
 
   - title: Release Notes
     output: web
@@ -194,22 +194,22 @@ entries:
     
     - title: 2.5.2 Release Notes - Cambados
       url: /android_release_notes_252.html
-      output: web
+      output: web, pdf
     - title: 2.4.1 Release Notes - Bora
       url: /android_release_notes_241.html
-      output: web
+      output: web, pdf
     - title: 2.3.2 Release Notes - Altamira
       url: /android_release_notes_232.html
-      output: web  
+      output: web, pdf  
     - title: 2.2.0 Release Notes
       url: /android_release_notes_220.html
-      output: web
+      output: web, pdf
     - title: 2.1.0 Release Notes
       url: /android_release_notes_210.html
-      output: web
+      output: web, pdf
     - title: 2.0.0 Release Notes
       url: /android_release_notes_200.html
-      output: web
+      output: web, pdf
     - title: 1.4.0 Release Notes
       url: /android_release_notes_140.html
-      output: web
+      output: web, pdf

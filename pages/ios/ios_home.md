@@ -21,10 +21,10 @@ folder: ios
 - [halo-notifications-ios](https://github.com/mobgen/halo-notifications-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-notifications-ios.svg)](https://github.com/mobgen/halo-notifications-ios/releases)
 - [halo-social-ios](https://github.com/mobgen/halo-social-ios) [![GitHub release](https://img.shields.io/github/release/mobgen/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases) [![CocoaPods](https://img.shields.io/cocoapods/v/halo-social-ios.svg)](https://github.com/mobgen/halo-social-ios/releases)
 
-You can also download our standalone documentation.
+You can view some release notes
 
-<a href="./pdf/ios-documentation.pdf" target="_blank">
+<a href="./files/halo_release_notes_250.pdf" target="_blank">
   <button type="button" class="btn btn-default" aria-label="Left Align">
-    <span class="fa fa-download" aria-hidden="true"></span> Download standalone iOS docs
+    <span class="fa fa-download" aria-hidden="true"></span> Download the 2.5 release preview
   </button>
 </a>
