@@ -1,7 +1,7 @@
 ---
 title: HALO CMS - Users Permissions
 keywords: cms, users, security, admin, management, roles, permissions, rights
-last_updated: December 22, 2016
+last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_users_permissions.html
@@ -17,7 +17,7 @@ afterwards.
 
 The permissions are classified by the module they belong to:
 
-- **General content**: Handles the permissions related to content creation and modules and the links it has
+- **General content**: Handles the permissions related to content creation and structures and the links it has
 with other modules such as segmentation.
 - **Push notifications**: Handles the permissions for creation and deletion of push templates and notifications. Also
 has the possibility to enable push notifications in content.
@@ -35,11 +35,11 @@ and do not belong to any of the modules mentioned before.
 
 ### General content
 
-- **Access to all content modules**:  allows the user to access the content items in all the content modules without granting them manually via access rights.
-- **Manage modules**: allows to create, edit or remove modules from the general content section.
-- **Manage module items**: allows the user to create, edit or delete content items from content modules.
-- **Enable segmented content**: allows the user to attach segmentation tags into the content module while defining the content structure.
-- **Access content**: allows the user to access modules or instances.
+- **Access to all content structures**:  allows the user to access the content items in all the content structures without granting them manually via access rights.
+- **Manage content structures**: allows to create, edit or remove structures from the general content section.
+- **Manage content items**: allows the user to create, edit or delete content items from content structures.
+- **Enable segmented content**: allows the user to attach segmentation tags into the structure while defining the content structure.
+- **Access content**: allows the user to access structures or instances.
 
 ### Push notifications
 

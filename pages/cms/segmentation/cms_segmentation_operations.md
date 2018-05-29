@@ -1,7 +1,7 @@
 ---
 title: HALO CMS - Segmentation operations
-keywords: cms, content, notifications, segmentation, users, target user, target, user, modules, structure, tag, market, device, localization, translations
-last_updated: December 15, 2016
+keywords: cms, content, notifications, segmentation, users, target user, target, user, structure, tag, market, device, localization, translations
+last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_segmentation_operations.html
@@ -20,13 +20,13 @@ folder: cms
 
 ## Segment content items based on tags
 
-To add a tag to a content item you firstly need to configure this tag in the structure of the module. Refer to [this documentation](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item) for more information 
-on how to configure the tags in the module.
+To add a tag to a content item you firstly need to configure this tag in the Content Structure. Refer to [this documentation](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item) for more information 
+on how to configure the tags in the content structure.
 
-Once a tag is configured in the module:
+Once a tag is configured in the content structure:
 
 - Access the '*Content*' section in the left menu.
-- Enter the content module where your instance is inside.
+- Enter the Content structure where your instance is inside.
 - Click the tab for the list of content items.
 - Select the item you want to add a tag to.
 - Add the tag in the '*Apply tags*' section.
@@ -36,14 +36,14 @@ Once a tag is configured in the module:
 
 Since localization texts are just a special way to segment your content, you can create texts in different languages:
 
-- Attach some language tags to your module as described [here](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item).
-- Create a localized field. If you are not sure how to create a field in a module refer to [this documentation](./cms_content_module_structure.html#fields).
+- Attach some language tags to your content structure as described [here](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item).
+- Create a localized field. If you are not sure how to create a field in a Content structure refer to [this documentation](./cms_content_module_structure.html#fields).
 - Go to a content item in the '*Content tab*'.
 - Select the localized field and add some texts in different languages.
 
 ## Segment notifications
 
-You can segment the notifications using the same tags as explained in this section. To do that, in a similar way as you do with the modules, create a push template
+You can segment the notifications using the same tags as explained in this section. To do that, in a similar way as you do with the content structures, create a push template
 that supports those notifications as part of the template. Then:
 
 - Open the left menu '*Notifications*'.

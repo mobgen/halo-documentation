@@ -41,11 +41,11 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Content Modules
+    - title: Content Structures
       url: /cms_content_modules.html
       output: web, pdf
 
-    - title: Content Module Structure
+    - title: Content Fields
       url: /cms_content_module_structure.html
       output: web, pdf
 

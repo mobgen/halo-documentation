@@ -1,28 +1,29 @@
 ---
-title: HALO CMS - Content Module Structure
-keywords: cms, content, modules, structure, fields, template, notification template, tag, segmentation, module
-last_updated: December 15, 2016
+title: HALO CMS - Content Structure
+keywords: cms, content, structure, content structure, fields, template, notification template, tag, segmentation
+last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_content_module_structure.html
 folder: cms
 ---
 
-## Module Structure: Configuration
+## Content Structure: Configuration
 
-You can configure the modules by accessing the left panel menu <span class="fa fa-bars"/> content icon. When configuring a module you can
-customize 3 main parameters:
+You can configure the content structures by accessing the left panel menu <span class="fa fa-bars"/> content icon. When configuring a content structure you can
+customize 4 main parameters:
 
-- **Module structure**: Here you will define the fields of a module. Imagine your entity book has an ISBN, an internal id,
+- **Fields**: Here you will define the fields of a content structure. Imagine your entity book has an ISBN, an internal id,
 a title and some description. Each of this elements is a field, and you can select the type of field so HALO can make some
 checks and validations against it.
+- **Multilanguage**: You can add and configure which languages will be avaliable. You can add a list of diferent languages and select one of this to be the default language to the content items that use this structure.
 - **Segmentation tags**: You can configure which tags will be available for this content. A tag is just a way to differentiate
 content and the audiences it has access. Lets say we have some content that is only available for US market, but not for UK,
 then we can add a market tag to avoid it to appear for those markets.
 - **Push templates**: You can also schedule a push notification attached to a content item. This way you can update the apps
 in background seamlessly and without worrying about the publication time.
 
-You can also assign the users that have access to this module using the '*assign users*' form, but this is out of the scope of this document.
+You can also assign the users that have access to this content structure using the '*assign users*' form, but this is out of the scope of this document.
 
 <img src="./images/tutorial_create_module_structure.gif" />
 
@@ -30,7 +31,7 @@ You can also assign the users that have access to this module using the '*assign
 ## Fields
 
 When you model your data you may need different types of fields to fit it. In HALO we provide a huge amount of different fields 
-that you can use in your Modules:
+that you can use in your Content structures:
 
 ### Basics
 - **Text**: This field accepts just plain text to match a typical String field.
@@ -55,19 +56,19 @@ that you can use in your Modules:
 - **Multiple choice**: This field allows to select multiple values as a multiple checkboxes in the content creation form.
 - **Single select dropdown**: This field displays a dropdown that only allows one item selection in the content creation form.
 - **Multiple select dropdown**: This field displays a dropdown that allows multiple item selection in the content creation form.
-- **Single relation**: This field allows the creation of a relation between this field and a different module instance.
-- **Multiple relation**: This field allows the creation of multiple relations between the field and different modules.
+- **Single relation**: This field allows the creation of a relation between this field and a different content structure instance.
+- **Multiple relation**: This field allows the creation of multiple relations between the field and different content structures.
 
 ## Segmentation
 
-The content can be segmented based on tags, meaning the applications can display just the content targeted to them. Segmentation doesn't protect the content from accessibility between users to the same module,
+The content can be segmented based on tags, meaning the applications can display just the content targeted to them. Segmentation doesn't protect the content from accessibility between users to the same content structure,
 but it is intended to be used as a way to classify content.
 
-In order to segment your content, first you need to add the relevant tags to the content module itself.
+In order to segment your content, first you need to add the relevant tags to the content structure itself.
 
 ### Apply a segmentation tag to a Content Item
 
-- Go to the module structure menu.
+- Go to the content structure menu.
 - In content tags section, press the button '*Add tags*'.
 - In the left dropdown select the tag type that will be looked at. In the right part you can search for a specific tag.
 - Once you have selected the tags that will be added to the content, press the '*Add*' button.
@@ -89,9 +90,9 @@ In order to segment your content, first you need to add the relevant tags to the
 As well as the tags, when you send a notification attached to the publication of a content item, you can specify which templates are available. Once you have defined in the notifications
 section the possible templates, you can select which of those templates can be used in the notifications for this content.
 
-To add new templates to the module structure:
+To add new templates to the Content structure:
 
 - Access the left panel menu '*Content*'.
-- In the module structure tab, scroll to the '*Push templates*' section.
-- From all the available push templates, click on the ones you want to have available in this module. They will be automatically added.
+- In the content structure tab, scroll to the '*Push templates*' section.
+- From all the available push templates, click on the ones you want to have available in this content structure. They will be automatically added.
 - From now on, you can select this push templates when sending push notifications with applied content to your users.
