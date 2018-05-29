@@ -1,6 +1,6 @@
 ---
 title: HALO CMS - Segmentation overview
-keywords: cms, content, notifications, segmentation, users, target user, target, user, structure, tag, market, device, localization, translations
+keywords: cms, content, notifications, segmentation, users, target user, target, user, modules, structure, tag, market, device, localization, translations
 last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
@@ -23,7 +23,7 @@ Segmentation tags have 4 different categories:
 - **Device**: default tags created with the default tags from the devices.
 - **User**: custom tags created by users.
 - **Market**: allows segmentation based on countries. This way the instances can be divided or used differently per country.
-- **Language**: this tags contain all the standard languages in the world so the content can be segmented by language. For localized fields, all the tags attached as language tags to the Content structure
+- **Language**: this tags contain all the standard languages in the world so the content can be segmented by language. For localized fields, all the tags attached as language tags to the content structure
 are the ones that will be available as languages for the localization.
 
 You can also add your own tags from the SDKs or directly from the CMS so they can be available for segmenting content.

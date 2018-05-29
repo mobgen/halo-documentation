@@ -1,6 +1,6 @@
 ---
 title: HALO CMS - Segmentation operations
-keywords: cms, content, notifications, segmentation, users, target user, target, user, structure, tag, market, device, localization, translations
+keywords: cms, content, notifications, segmentation, users, target user, target, user, modules, structure, tag, market, device, localization, translations
 last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
@@ -20,13 +20,13 @@ folder: cms
 
 ## Segment content items based on tags
 
-To add a tag to a content item you firstly need to configure this tag in the Content Structure. Refer to [this documentation](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item) for more information 
+To add a tag to a content item you firstly need to configure this tag in the content structure. Refer to [this documentation](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item) for more information 
 on how to configure the tags in the content structure.
 
 Once a tag is configured in the content structure:
 
 - Access the '*Content*' section in the left menu.
-- Enter the Content structure where your instance is inside.
+- Enter the content structure where your instance is inside.
 - Click the tab for the list of content items.
 - Select the item you want to add a tag to.
 - Add the tag in the '*Apply tags*' section.
@@ -37,7 +37,7 @@ Once a tag is configured in the content structure:
 Since localization texts are just a special way to segment your content, you can create texts in different languages:
 
 - Attach some language tags to your content structure as described [here](./cms_content_module_structure.html#apply-a-segmentation-tag-to-a-content-item).
-- Create a localized field. If you are not sure how to create a field in a Content structure refer to [this documentation](./cms_content_module_structure.html#fields).
+- Create a localized field. If you are not sure how to create a field in a content structure refer to [this documentation](./cms_content_module_structure.html#fields).
 - Go to a content item in the '*Content tab*'.
 - Select the localized field and add some texts in different languages.
 

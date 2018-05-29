@@ -1,6 +1,7 @@
 ---
 title: HALO CMS - Manage Content Structures
-keywords: cms, content, structures, content structure, create structures, structure, delete, edit
+keywords: cms, content, modules, create module, structures, content structure, module, delete, edit
+
 last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
@@ -8,21 +9,21 @@ permalink: cms_content_modules.html
 folder: cms
 ---
 
-{% include important.html content="The 'Module' name has change to 'Content structure'." %}
+{% include important.html content="The 'module' name has change to 'content structure'." %}
 
-## What is a Content Structure?
+## What is a content structure?
 
 When you are working with the content management using HALO you will work with content structures and content items.
-A Content structure is the definition of the structure of content items. Imagine you want to build a *library*, then you will
+A content structure is the definition of the structure of content items. Imagine you want to build a *library*, then you will
 need books, subscribers and retrievals. Each of this entities is a different content structure and have to be created with
 the needed structure.
 
-Content items are each of the items that comply the structure of a Content structure, so if we keep going with the same example, a content structure called
+Content items are each of the items that comply the structure of a content structure, so if we keep going with the same example, a content structure called
 books can have content items of books, which is the real data.
 
-## Operations over a Content Structure
+## Operations over a content structure
 
-### Create a Content Structure
+### Create a content structure
 
 - Access the left panel menu '*Content*'.
 - In the action button bar, click on the '*Create new structure*' button.
@@ -31,7 +32,7 @@ books can have content items of books, which is the real data.
 
 <img src="./images/tutorial_create_module.gif" />
 
-### Delete Content structures
+### Delete content structures
 
 - Access the left panel menu '*Content*'.
 - In the list of content structures, click the bin icon <span class="fa fa-trash"/>.
@@ -43,7 +44,7 @@ Optionally you can remove multiple content structures at the same time:
 - Open the bulk options pressing the top right 3 dots icon <span class="fa fa-ellipsis-v"/>.
 - Press on '*Delete*'. This will remove all the selected items.
 
-### Duplicate Content structures
+### Duplicate content structures
 
 You can duplicate an already existing content structure with all its fields, tags and push templates. This will create a 
 new content structure with the same name but finished with 'Copy N' where N is the number of copies. To do it follow the instructions
@@ -56,11 +57,11 @@ below:
 
 {% include note.html content="Duplication of content structures only duplicates its structure but not the instances. The content structure will remain empty once duplicated." %}
 
-### Change Content structure name
+### Change content structure name
 
 - Access the left panel menu '*Content*'.
 - Enter the details of the content structure you wish to change the name.
-- In the '*Structure tab*' there is a field that states the Content structure name.
+- In the '*Structure tab*' there is a field that states the content structure name.
 - Change it and click '<span class="fa fa-floppy-o" /> *Save*' on the top action button bar.
 
 {% include warning.html content="Changing the name of an already created content structure may break your apps in production. Make sure this is what you want to do before saving the content structure with a different name." %}
@@ -83,7 +84,7 @@ display configuration.
 
 ### Columns display
 
-It is possible to select the columns that are going to be displayed in the Content structure list view. The '*Columns*' selector in the list overview 
+It is possible to select the columns that are going to be displayed in the content structure list view. The '*Columns*' selector in the list overview 
 header allows to check/uncheck the different columns and display them in the list.
 
 ### Sorting options

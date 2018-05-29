@@ -1,6 +1,6 @@
 ---
-title: HALO CMS - Content Structure
-keywords: cms, content, structure, content structure, fields, template, notification template, tag, segmentation
+title: HALO CMS - Content Structure Fields
+keywords: cms, content, modules, structure, content structure, fields, template, notification template, tag, segmentation, module
 last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
@@ -8,7 +8,7 @@ permalink: cms_content_module_structure.html
 folder: cms
 ---
 
-## Content Structure: Configuration
+## Content structure fields: Configuration
 
 You can configure the content structures by accessing the left panel menu <span class="fa fa-bars"/> content icon. When configuring a content structure you can
 customize 4 main parameters:
@@ -31,7 +31,7 @@ You can also assign the users that have access to this content structure using t
 ## Fields
 
 When you model your data you may need different types of fields to fit it. In HALO we provide a huge amount of different fields 
-that you can use in your Content structures:
+that you can use in your content structures:
 
 ### Basics
 - **Text**: This field accepts just plain text to match a typical String field.
@@ -56,7 +56,7 @@ that you can use in your Content structures:
 - **Multiple choice**: This field allows to select multiple values as a multiple checkboxes in the content creation form.
 - **Single select dropdown**: This field displays a dropdown that only allows one item selection in the content creation form.
 - **Multiple select dropdown**: This field displays a dropdown that allows multiple item selection in the content creation form.
-- **Single relation**: This field allows the creation of a relation between this field and a different content structure instance.
+- **Single relation**: This field allows the creation of a relation between this field and a different content item.
 - **Multiple relation**: This field allows the creation of multiple relations between the field and different content structures.
 
 ## Segmentation
@@ -66,7 +66,7 @@ but it is intended to be used as a way to classify content.
 
 In order to segment your content, first you need to add the relevant tags to the content structure itself.
 
-### Apply a segmentation tag to a Content Item
+### Apply a segmentation tag to a content item
 
 - Go to the content structure menu.
 - In content tags section, press the button '*Add tags*'.
@@ -77,7 +77,7 @@ In order to segment your content, first you need to add the relevant tags to the
 - In the '*Apply tags*' section click on the tags you want to add to this content.
 - Don't forget to save your content once you finish the edition.
 
-### Delete a segmentation tag from a Content Item
+### Delete a segmentation tag from a content item
 
 - Access the left panel menu '*Content*'.
 - Open the content items tab.
@@ -90,7 +90,7 @@ In order to segment your content, first you need to add the relevant tags to the
 As well as the tags, when you send a notification attached to the publication of a content item, you can specify which templates are available. Once you have defined in the notifications
 section the possible templates, you can select which of those templates can be used in the notifications for this content.
 
-To add new templates to the Content structure:
+To add new templates to the content structure:
 
 - Access the left panel menu '*Content*'.
 - In the content structure tab, scroll to the '*Push templates*' section.

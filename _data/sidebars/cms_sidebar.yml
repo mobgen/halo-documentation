@@ -37,19 +37,19 @@ entries:
       url: /cms_forget_password.html
       output: web, pdf
 
-  - title: Content Management
+  - title: Content management
     output: web, pdf
     folderitems:
 
-    - title: Content Structures
+    - title: Content structures
       url: /cms_content_modules.html
       output: web, pdf
 
-    - title: Content Fields
+    - title: Content structure fields
       url: /cms_content_module_structure.html
       output: web, pdf
 
-    - title: Content Items
+    - title: Content items
       url: /cms_content_items.html
       output: web, pdf
 
