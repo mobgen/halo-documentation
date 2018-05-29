@@ -1,7 +1,7 @@
 ---
 title: HALO CMS - Applications operations
 keywords: cms, applications, native, fcm, configuration, social, google, facebook, token, client id, client secret, operations
-last_updated: December 22, 2016
+last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_applications_operations.html
@@ -39,11 +39,11 @@ folder: cms
 
 ### Grant access to certain content
 
-Each module can be accessed by multiple apps. If you want an application to have access to certain data:
+Each content structure can be accessed by multiple apps. If you want an application to have access to certain data:
 
 - Open the top left menu and select 'Apps' using a user with 'Manage apps' permission.
-- Select the application you want to grant access to some module.
-- Go to the section 'Access Rights' and find the modules you want to enable.
+- Select the application you want to grant access to some content structure.
+- Go to the section 'Access Rights' and find the content structures you want to enable.
 - Click on the right switch to enable them.
 
 ### Configure fcm

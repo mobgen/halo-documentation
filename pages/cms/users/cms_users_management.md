@@ -1,7 +1,7 @@
 ---
 title: HALO CMS - Users Management
 keywords: cms, users, security, admin, management, roles, permissions, rights
-last_updated: December 22, 2016
+last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_users_management.html
@@ -17,9 +17,9 @@ By default we provide 3 different roles, but you can create your own custom role
 
 - **Admin**: The admin has access to all the CMS and all the features available for you as a client. He can 
 change the information for everything and it is thought for the most advanced users.
-- **Manager**: The manager has permissions to manage modules, tags, notifications and content but it cannot handle
+- **Manager**: The manager has permissions to manage content structures, tags, notifications and content but it cannot handle
 permissions or app configurations or users.
-- **Editor**: The editor only has permissions to create or edit content for the modules it has access. This role
+- **Editor**: The editor only has permissions to create or edit content for the content structures it has access. This role
 can also create push notifications but it cannot handle push templates.
 
 If any of this roles suits your needs you can always create a custom role based on the permissions. See the 
