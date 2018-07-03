@@ -121,7 +121,7 @@ entries:
     output: web
     folderitems:
     - title: 2.6.0 Release Notes - Donón
-      url: /halo_release_notes_250.html
+      url: /halo_release_notes_260.html
       output: web, pdf
     - title: 2.5.0 Release Notes - Cambados
       url: /halo_release_notes_250.html
