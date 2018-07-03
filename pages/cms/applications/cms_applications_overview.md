@@ -1,7 +1,7 @@
 ---
 title: HALO CMS - Applications overview
 keywords: cms, applications, native, fcm, configuration, social, google, facebook, token, client id, client secret, operations
-last_updated: December 22, 2016
+last_updated: May 28, 2018
 tags: [cms]
 sidebar: cms_sidebar
 permalink: cms_applications_overview.html
@@ -14,7 +14,7 @@ the applications menu you will be able to:
 
 - Create, update or delete an application if you have the 'Manage applications' permission.
 - Enable FCM notifications by adding the application's token.
-- Enable certain content modules to the application.
+- Enable certain content structures to the application.
 - Get the data needed from the apps to configure the credentials (client id and client secret).
 - Enable extra security verification for google and facebook login tokens.
 

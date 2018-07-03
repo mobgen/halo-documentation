@@ -37,19 +37,19 @@ entries:
       url: /cms_forget_password.html
       output: web, pdf
 
-  - title: Content Management
+  - title: Content management
     output: web, pdf
     folderitems:
 
-    - title: Content Modules
+    - title: Content structures
       url: /cms_content_modules.html
       output: web, pdf
 
-    - title: Content Module Structure
+    - title: Content structure fields
       url: /cms_content_module_structure.html
       output: web, pdf
 
-    - title: Content Items
+    - title: Content items
       url: /cms_content_items.html
       output: web, pdf
 
@@ -120,7 +120,9 @@ entries:
   - title: Release Notes
     output: web
     folderitems:
-    
+    - title: 2.6.0 Release Notes - Donón
+      url: /halo_release_notes_260.html
+      output: web, pdf
     - title: 2.5.0 Release Notes - Cambados
       url: /halo_release_notes_250.html
       output: web, pdf

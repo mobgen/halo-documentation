@@ -220,7 +220,7 @@ The Content SDK provides an API to generate code based on annotations. The HALO 
 
 You can use this feature if you would like to:
 
-- use the code generation tool in compile time to make sure that the proper code is generated to be able to create tables based on my custom model content structurethe.
+- use the code generation tool in compile time to make sure that the proper code is generated to be able to create tables based on my custom model content structure.
 - use the code generation tool to create a shared table with the version of the table based on your custom model.
 - use the generated code to be able to perform queries into the local database based on your custom model content (insert, delete, update or select) in the same way as we use the general content API.
 
