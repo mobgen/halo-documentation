@@ -120,6 +120,9 @@ entries:
   - title: Release Notes
     output: web
     folderitems:
+    - title: 2.7.0 Release Notes - Estrada
+      url: /halo_release_notes_270.html
+      output: web, pdf
     - title: 2.6.0 Release Notes - Donón
       url: /halo_release_notes_260.html
       output: web, pdf
