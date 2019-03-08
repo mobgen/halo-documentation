@@ -16,12 +16,12 @@
       "cms/notifications/cms_notifications_create"
     ],
     "Segmentation": [
-      "cms/segmentation/cms_segmentation_operations",
-      "cms/segmentation/cms_segmentation_overview"
+      "cms/segmentation/cms_segmentation_overview",
+      "cms/segmentation/cms_segmentation_operations"
     ],
     "Applications":[
-      "cms/applications/cms_applications_operations",
-      "cms/applications/cms_applications_overview"
+      "cms/applications/cms_applications_overview",
+      "cms/applications/cms_applications_operations"
     ],
     "Users": [
       "cms/users/cms_users_management",
@@ -49,13 +49,13 @@
       "android/global/android_contributions"
     ],
     "Core API": [
-      "android/android_core_installer_options",
+      "android/core/android_core_installer_options",
       {
         "type": "subcategory",
         "label": "Android gradle plugin",
         "ids": [
-          "android/android_core_gradle_plugin_started",
-          "android/android_core_gradle_plugin_options"
+          "android/core/android_core_gradle_plugin_started",
+          "android/core/android_core_gradle_plugin_options"
         ]
       },
       "android/core/android_halo_core",
@@ -109,6 +109,16 @@
       "android/changelog/android_release_notes_210",
       "android/changelog/android_release_notes_200",
       "android/changelog/android_release_notes_140"
+    ]
+  },
+  "integrations-docs": {
+    "Overview": [
+      "integrations/server_integrations_home",
+      "integrations/authentication/server_integrations_authentication"
+    ],
+    "Notification integrations": [
+      "integrations/notifications/server_integrations_notifications",
+      "integrations/notifications/server_integrations_notifications_usecases"
     ]
   }
 }

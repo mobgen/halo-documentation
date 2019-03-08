@@ -1,10 +1,6 @@
 ---
-title: HALO Server Integrations - Notifications
-keywords: home
-sidebar: server_integrations
-last_updated: February 13, 2017
-permalink: server_integrations_notifications_usecases.html
-folder: integrations
+title: Notification use cases
+sidebar_label: Notification use cases
 ---
 
 The Notifications API is really flexible but there are certain use cases that can be to the interest of the integration 
@@ -34,23 +30,23 @@ alias and to link them to send the push to our server.
 
 To get the alias using the sdks you can use any of the following snippets:
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#android" data-toggle="tab">Android</a></li>
-  <li role="presentation"><a href="#swift" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc" data-toggle="tab">Obj-C</a></li>
-</ul>
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Android-->
+```Android
+Halo.instance().core().device().alias();
+```
 
-<div class="tab-content">
-  <div id="android" class="tab-pane fade in active">
-    <pre><code class="java">Halo.instance().core().device().alias();</code></pre>
-  </div>
-  <div id="swift" class="tab-pane fade">
-    <pre><code class="swift">Halo.Manager.core.device?.alias</code></pre>
-  </div>
-  <div id="objc" class="tab-pane fade">
-    <pre><code class="objective-c">HaloManager.core.device.alias</code></pre>
-  </div>
-</div>
+<!--Swift-->
+```Swift
+Halo.Manager.core.device?.alias
+```
+
+<!--Obj-C-->
+```C
+HaloManager.core.device.alias
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Send a notification to everybody using the app
 

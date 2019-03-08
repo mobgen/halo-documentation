@@ -1,12 +1,5 @@
 ---
-title: HALO Release Notes - Changelog for 2.3.0
-keywords: cms, server, changelog, 2.3
-last_updated: May 8, 2017
-tags: [changelog]
-sidebar: cms_sidebar
-toc: false
-permalink: halo_release_notes_230.html
-folder: cms
+title: Changelog for 2.3.0 - Altamira
 ---
 
 ## Changelog
@@ -40,28 +33,28 @@ folder: cms
 ### New webservices
 
 - Sends 2-Factor messages with a code: 
-[POST /api/2-factor/code/send](https://halo.mobgen.com/api/docs/#!/2-factor_-_Code/2_factor_send_code)
+[POST /api/2-factor/code/send](https://web-halo..mobgen.com/api/docs/#!/2-factor_-_Code/2_factor_send_code)
 
 - Validates 2-Factor codes: 
-[POST /api/2-factor/code/validate](https://halo.mobgen.com/api/docs/#!/2-factor_-_Code/2_factor_validate_code)
+[POST /api/2-factor/code/validate](https://web-halo..mobgen.com/api/docs/#!/2-factor_-_Code/2_factor_validate_code)
 
 - Registers an user for the 2-Factor services:
-[POST /api/2-factor/user/register](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2_factor_register)
+[POST /api/2-factor/user/register](https://web-halo..mobgen.com/api/docs/#!/2-factor_-_User/2_factor_register)
 
 - Unregisters an user or channel for the 2-Factor services:
-[POST /api/2-factor/user/unregister](https://halo.mobgen.com/api/docs/#!/2-factor_-_User/2_factor_unregister)
+[POST /api/2-factor/user/unregister](https://web-halo..mobgen.com/api/docs/#!/2-factor_-_User/2_factor_unregister)
 
 - Obtains the list of system actions (including web-hooks):
-[GET /api/events/action](https://halo.mobgen.com/api/docs/#!/Events_-_Action/events_action_list)
+[GET /api/events/action](https://web-halo..mobgen.com/api/docs/#!/Events_-_Action/events_action_list)
 
 - Search for an specific system action by key (including web-hooks):
-[GET /api/events/action/{key}](https://halo.mobgen.com/api/docs/#!/Events_-_Action/events_action_get)
+[GET /api/events/action/{key}](https://web-halo..mobgen.com/api/docs/#!/Events_-_Action/events_action_get)
 
 - Creates or updates a system action (including web-hooks):
-[POST /api/events/action](https://halo.mobgen.com/api/docs/#!/Events_-_Action/events_action_create)
+[POST /api/events/action](https://web-halo..mobgen.com/api/docs/#!/Events_-_Action/events_action_create)
 
 - Triggers a system action (including web-hooks):
-[POST /api/events/action/trigger](https://halo.mobgen.com/api/docs/#!/Events_-_Action/events_action_trigger)
+[POST /api/events/action/trigger](https://web-halo..mobgen.com/api/docs/#!/Events_-_Action/events_action_trigger)
 
 ### Breaking changes
 

@@ -1,15 +1,8 @@
 ---
-title: HALO Release Notes - Changelog for 2.6.0 Donón
-keywords: cms, server, changelog, 2.6
-last_updated: July 03, 2018
-tags: [changelog]
-sidebar: cms_sidebar
-toc: false
-permalink: halo_release_notes_260.html
-folder: cms
+title: Changelog for 2.6.0 - Donón
 ---
 
-There is a document that explains visually the most important changes of this release. You can download it [here](files/halo_release_notes_260.pdf).
+There is a document that explains visually the most important changes of this release. You can download it [here](/files/halo_release_notes_260.pdf).
 
 ## CMS Changes
 - _Modules_ are now _Content Structures_: This change make the hierarchy more clear in relation to content items. This only affects naming, so none URL was changed.

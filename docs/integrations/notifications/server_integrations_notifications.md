@@ -1,10 +1,6 @@
 ---
-title: HALO Server Integrations - Notifications
-keywords: home
-sidebar: server_integrations
-last_updated: February 13, 2017
-permalink: server_integrations_notifications.html
-folder: integrations
+title: Notifications API
+sidebar_label: API Details
 ---
 
 ## Server triggered notifications

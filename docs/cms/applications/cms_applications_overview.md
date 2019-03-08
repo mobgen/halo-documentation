@@ -1,11 +1,7 @@
 ---
-title: HALO CMS - Applications overview
-keywords: cms, applications, native, fcm, configuration, social, google, facebook, token, client id, client secret, operations
-last_updated: May 28, 2018
-tags: [cms]
-sidebar: cms_sidebar
-permalink: cms_applications_overview.html
-folder: cms
+title: Applications overview
+id: cms_applications_overview
+sidebar_label: Application concept overview
 ---
 
 When you want to create a native application that uses some of the features included in HALO you will need
@@ -20,5 +16,3 @@ the applications menu you will be able to:
 
 Once you have your applications created it is really easy to link to them some content and enable 
 this the access to the data in the native applications by using the SDK.
-
-To learn more about how to use all of these features refer to [this document](./cms_applications_operations).

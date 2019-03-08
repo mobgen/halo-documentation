@@ -10,7 +10,15 @@ permalink: android_getting_started.html
 folder: android
 ---
 
-{% include custom/android_started_workflow.html %}
+<div id="userMap">
+<div class="content"><a><div class="box box1">Add HALO plugin</div></a></div>
+<div class="arrow">→</div>
+<div class="content"><a><div class="box box1">Add HALO Configuration</div></a></div>
+<div class="arrow">→</div>
+<div class="content"><a><div class="box box1">Install HALO instance</div></a></div>
+<div class="arrow">→</div>
+<div class="content"><a><div class="box box1">Enjoy the libraries</div></a></div>
+</div>
 
 This getting started guide will guide you on setting up HALO SDK for Android in a few minutes. We will provide a step by step guide to get everything working with the most basic setup, for more detailed information about specific calls or how a module works check the sidebar.
 

@@ -1,12 +1,5 @@
 ---
-title: HALO Release Notes - Changelog for 2.0.0
-keywords: cms, server, changelog, 2.0
-last_updated: November 14, 2016
-tags: [changelog]
-sidebar: cms_sidebar
-toc: false
-permalink: halo_release_notes_200.html
-folder: cms
+title: Changelog for 2.0.0
 ---
 
 ## Changelog

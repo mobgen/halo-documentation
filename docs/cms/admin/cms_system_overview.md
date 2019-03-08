@@ -1,11 +1,7 @@
 ---
-title: HALO CMS - System overview
-keywords: cms, middleware, configuration, admin
-last_updated: December 21, 2016
-tags: [cms]
-sidebar: cms_sidebar
-permalink: cms_system_overview.html
-folder: cms
+title: System overview
+id: cms_system_overview
+sidebar_label: Overview of the system
 ---
 
 The system section allows you to create a middleware as an admin. A middleware is needed in the case our system does
@@ -17,7 +13,7 @@ section you can:
 - Configure a new middleware located in some url.
 - Remove any of the modules configured for your company.
 
-{% include warning.html content="Be careful when removing this entries. They perform the link between different parts of the system and removing them can break some key links and make content not available or your apps useless." %}
+> **Warning:** Be careful when removing this entries. They perform the link between different parts of the system and removing them can break some key links and make content not available or your apps useless.
 
 ## Operations on system
 

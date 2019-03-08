@@ -1,12 +1,7 @@
 ---
-title: HALO CMS - Segmentation overview
-keywords: cms, content, notifications, segmentation, users, target user, target, user, modules, structure, tag, market, device, localization, translations
-last_updated: May 28, 2018
-tags: [cms]
-sidebar: cms_sidebar
-permalink: cms_segmentation_overview.html
-folder: cms
-summary: Segmentation functionalities allows you to target your clients and customers in a more detailed way, so that they are the only ones that consume certain types of content.
+title: Segmentation overview
+id: cms_segmentation_overview
+sidebar_label: Overview
 ---
 
 Segmentation is a key feature of HALO because it allows us to target specific users based on preferences, market, device type or any other feature you may

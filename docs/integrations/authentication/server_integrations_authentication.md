@@ -1,10 +1,6 @@
 ---
-title: HALO Server Integrations - Authentication
-keywords: home
-sidebar: server_integrations
-last_updated: February 13, 2017
-permalink: server_integrations_authentication.html
-folder: integrations
+title: Authentication
+sidebar_label: Integrate authentication
 ---
 
 ## Retrieve the token
@@ -21,8 +17,8 @@ every request against HALO can be performed using this token and the header as f
 
 The steps to get the token are:
 
-- Create a user in the CMS. You can access the documentation [here](./cms_users_management.html).
-- Configure the user permissions. You can see the documentation [here](./cms_users_permissions.html).
+- Create a user in the CMS. You can access the documentation [here](../../cms/users/cms_users_management).
+- Configure the user permissions. You can see the documentation [here](../../cms/users/cms_users_permissions).
 - Take the user and password and add it with your environment details in your own server.
 - Perform a call to the login web service.
 
@@ -38,7 +34,7 @@ curl -X POST
   -H "Authorization: Basic BASE64(USERNAME:PASSWORD)" 
   -H "Content-Type: application/x-www-form-urlencoded" 
   -d "grant_type=password&username=EDITOR_USERNAME&password=EDITOR_PASSWORD"
-  "https://halo.mobgen.com/api/oauth/token?_user"
+  "https://web-halo.mobgen.com/api/oauth/token?_user"
 ```
 
 **Response**
@@ -54,5 +50,5 @@ Response:
 }
 ``` 
 
-Now with the ```access_token``` property you can perform calls to the other HALO services available in the [swagger documentation](https://halo.mobgen.com/api/docs) if the user you are using 
+Now with the ```access_token``` property you can perform calls to the other HALO services available in the [swagger documentation](https://web-halo.mobgen.com/api/docs) if the user you are using 
 has permissions for it.

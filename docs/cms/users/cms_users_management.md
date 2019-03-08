@@ -1,11 +1,7 @@
 ---
-title: HALO CMS - Users Management
-keywords: cms, users, security, admin, management, roles, permissions, rights
-last_updated: May 28, 2018
-tags: [cms]
-sidebar: cms_sidebar
-permalink: cms_users_management.html
-folder: cms
+title: Users Management
+id: cms_users_management
+sidebar_label: Manage users
 ---
 
 We take security in HALO in serious so managing who has permission to what is for us really important. 
@@ -23,7 +19,7 @@ permissions or app configurations or users.
 can also create push notifications but it cannot handle push templates.
 
 If any of this roles suits your needs you can always create a custom role based on the permissions. See the 
-[permissions document](./cms_users_permissions) for more information.
+[permissions document](cms_users_permissions) for more information.
 
 ## Operations over CMS users
 
@@ -31,11 +27,11 @@ If any of this roles suits your needs you can always create a custom role based 
 
 - Open the top left menu and click on the '*Users*' menu.
 - It will appear a list with the current users.
-- In the top action bar press '<span class="fa fa-user"/> *New user*'.
+- In the top action bar press '<span class="fa fa-user"></span> *New user*'.
 - In the form that appears fill in the name, surname, email, password, predefined role and allowed ips (if 
 you want to protect from where is it accessed to the CMS).
 - You can also select a profile picture from different networks.
-- Finally in the top action bar press on '<span class="fa fa-floppy-o"/> *Save*'.
+- Finally in the top action bar press on '<span class="fa fa-floppy-o"></span> *Save*'.
 
 You will be always able to edit the entered data and to modify the permissions afterwards.
 
@@ -43,9 +39,9 @@ You will be always able to edit the entered data and to modify the permissions a
 
 - Open the top left menu and click on the '*Users*' menu.
 - In the list that appears find the user you want to delete.
-- In the right of the row click on the <span class="fa fa-trash"/> trash button.
+- In the right of the row click on the <span class="fa fa-trash"></span> trash button.
 - Optionally you can delete multiple users by clicking in the empty square in the left of the row and selecting
-delete in the bulk edition <span class="fa fa-ellipsis-v"/> menu.
+delete in the bulk edition <span class="fa fa-ellipsis-v"></span> menu.
 
 ### Filtering users
 
@@ -60,6 +56,6 @@ To make the selection and finding process of the users an easier task we provide
 
 - Open the top left menu and click on the '*Users*' menu.
 - Find the user you want to modify the permissions and click on it.
-- Create a custom role following the instruction detailed [here](./cms_users_permissions).
+- Create a custom role following the instruction detailed [here](cms_users_permissions).
 - Assign the new role created in the '*Role*' field of the user.
-- Finally in the top action bar press on '<span class="fa fa-floppy-o"/> *Save*'.
+- Finally in the top action bar press on '<span class="fa fa-floppy-o"></span> *Save*'.

@@ -4,8 +4,6 @@ title: HALO CMS - Login / Logout
 sidebar_label: Login / Logout
 ---
 
-
-
 ## Login
 To login with a HALO account firstly you may ask your admin to provide this account. HALO does not provide a public registration
 form, so accounts are created in the scope of a company or project.

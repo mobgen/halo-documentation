@@ -1,11 +1,7 @@
 ---
-title: HALO CMS - Users Permissions
-keywords: cms, users, security, admin, management, roles, permissions, rights
-last_updated: May 28, 2018
-tags: [cms]
-sidebar: cms_sidebar
-permalink: cms_users_permissions.html
-folder: cms
+title: Users Permissions
+id: cms_users_permissions
+sidebar_label: Permissions
 ---
 
 We have a fine grained permission system that allows you to filter in a better way what are the items
@@ -29,7 +25,7 @@ in many cases with the authentication module.
 access to custom content elements.
 - **Segmentation**: Handles the permissions to create segmentation tags that then can be attached to content or notifications. Also handles
 business helpers like the statistics or the application devices.
-- **Media**: Handles permissions with the media module that allows you to upload content to cloudinary services.
+- **Media**: Handles permissions with the media module that allows you to upload content to `cloudinary` services.
 - **Others**: Here it comes other permissions related to different elements in the system that can be traversal
 and do not belong to any of the modules mentioned before.
 
@@ -43,11 +39,11 @@ and do not belong to any of the modules mentioned before.
 
 ### Push notifications
 
-- **Manage push templates**: allows the user to create, edit or delete push templates. Learn more about push templates [here](./cms_notifications_template).
+- **Manage push templates**: allows the user to create, edit or delete push templates. Learn more about push templates [here](../notifications/cms_notifications_template).
 - **Manage push notifications**: allows the user to create, send, edit or delete push notifications.
 - **Enable segmented push notifications**: allows the user to attach to the push templates some selected segmentation tags.
 - **Enable push notifications with content**: allows the user to attach a push notification while scheduling a general content item publication. Learn 
-more about general content items in [this document](./cms_content_items).
+more about general content items in [this document](../content/cms_content_items).
 
 ### Core
 
@@ -88,8 +84,8 @@ uses to upload the images for content items.
 
 - Open the top left menu and click on the '*Users*' menu.
 - Click on a user you want to change the role to.
-- Click on the  '<span class="fa fa-lock" /> *Permissions*' tab.
-- In the top action bar click on '<span class="fa fa-plus"/> *New custom role*'.
+- Click on the  '<span class="fa fa-lock"></span> *Permissions*' tab.
+- In the top action bar click on '<span class="fa fa-plus"></span> *New custom role*'.
 - Enter a name of the custom role.
 - Modify the permissions for this role.
 - Then you can assign this permission to all the users you want.

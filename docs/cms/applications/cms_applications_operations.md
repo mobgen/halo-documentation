@@ -1,11 +1,7 @@
 ---
-title: HALO CMS - Applications operations
-keywords: cms, applications, native, fcm, configuration, social, google, facebook, token, client id, client secret, operations
-last_updated: May 28, 2018
-tags: [cms]
-sidebar: cms_sidebar
-permalink: cms_applications_operations.html
-folder: cms
+title: Applications operations
+id: cms_applications_operations
+sidebar_label: Operations over applications
 ---
 
 ## Application operations
@@ -15,18 +11,18 @@ folder: cms
 - Open the top left menu and select 'Apps' using a user with 'Manage apps' permission.
 - In the top action bar press the button '*New app*'.
 - Put a name to the app, the rest of the fields are optional (and will be explained in the following sections).
-- In the top action bar press the '<span class="fa fa-floppy-o"/> *Save*' button.
+- In the top action bar press the '<span class="fa fa-floppy-o"></span> *Save*' button.
 - Your application will be created.
 
-<img src="./images/tutorial_create_app.gif" />
+[](./img/tutorial_create_app.gif)
 
 ### Delete an application
 
 - Open the top left menu and select 'Apps' using a user with 'Manage apps' permission.
-- In the list find the app you want to delete and press in the right the <span class="fa fa-trash"/> trash button.
-- Optionally you can select multiple apps in the left square and perform a bulk delete with the <span class="fa fa-ellipsis-v"/> menu.
+- In the list find the app you want to delete and press in the right the <span class="fa fa-trash"></span> trash button.
+- Optionally you can select multiple apps in the left square and perform a bulk delete with the <span class="fa fa-ellipsis-v"></span> menu.
 
-{% include warning.html content="Keep in mind that deleting an application that is in production can damage your business and the applications using the client id and secret of this app will not work again." %}
+> **Warning:** Keep in mind that deleting an application that is in production can damage your business and the applications using the client id and secret of this app will not work again.
 
 ### Receive the client id and secret by mail
 
@@ -49,12 +45,12 @@ Each content structure can be accessed by multiple apps. If you want an applicat
 ### Configure fcm
 
 To enable notifications in your application you need firstly to create a firebase project. Please refer
-to the [notifications section]() to get more details. Once you have this project then:
+to the [notifications section](../notifications/cms_notifications_overview) to get more details. Once you have this project then:
 
 - Open the top left menu and select 'Apps' using a user with 'Manage apps' permission.
 - Select the application you want to configure the notifications for.
 - In the '*General*' section add the legacy firebase token in the FCM key field.
-- In the top action bar click on the '<span class="fa fa-floppy-o"/> *Save*' button.
+- In the top action bar click on the '<span class="fa fa-floppy-o"></span> *Save*' button.
 
 ### Configure security for social login
 
@@ -66,4 +62,4 @@ you can provide additional security info:
 - Select the application you want to configure the social security for.
 - For facebook: bring the facebook client id and client secret from the facebook developer console project.
 - For google: create a project in the google developer console and create keys for android and ios.
-- In the top action bar click on the '<span class="fa fa-floppy-o"/> *Save*' button.
+- In the top action bar click on the '<span class="fa fa-floppy-o"></span> *Save*' button.

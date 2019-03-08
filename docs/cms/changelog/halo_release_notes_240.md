@@ -1,12 +1,5 @@
 ---
-title: HALO Release Notes - Changelog for 2.4.0
-keywords: cms, server, changelog, 2.4
-last_updated: Aug 9, 2017
-tags: [changelog]
-sidebar: cms_sidebar
-toc: false
-permalink: halo_release_notes_240.html
-folder: cms
+title: Changelog for 2.4.0 - Balboa
 ---
 
 ## Changelog
@@ -44,31 +37,31 @@ folder: cms
 - Loyalty: user list, points and trasactions, stamps behaviour
 - Fixed memory leak for instances batch
 - Azure deployment compatibility
-- Improved API documentation: https://halo.mobgen.com/api/docs/
+- Improved API documentation: https://web-halo.mobgen.com/api/docs/
 - Multiple bug fixes...
 
 ### New webservices
 
 - Allows to send "targeted" push notifications to identified app users
-[POST /api/push/schedule/toIdentified]()
+[POST /api/push/schedule/toIdentified](https://web-halo.mobgen.com/api/docs/)
 
 - Allows to send "targeted" push notifications to anonymous app users
-[POST /api/push/schedule/toAliases]()
+[POST /api/push/schedule/toAliases](https://web-halo.mobgen.com/api/docs/)
 
 - Returns the list of loyalty users
-[POST /api/loyalty/user/search]()
+[POST /api/loyalty/user/search](https://web-halo.mobgen.com/api/docs/)
 
 - Returns the loyalty information of the logged user
-[GET /api/loyalty/user/self]()
+[GET /api/loyalty/user/self](https://web-halo.mobgen.com/api/docs/)
 
 - Returns the loyalty information of the user
-[GET /api/loyalty/user/{id}]()
+[GET /api/loyalty/user/{id}](https://web-halo.mobgen.com/api/docs/)
 
 - Recalculates user points balance
-[POST /api/loyalty/user/rebalance]()
+[POST /api/loyalty/user/rebalance](https://web-halo.mobgen.com/api/docs/)
 
 - Saves or deletes a reference to media files
-[POST /api/media/file/updateByUrl]()
+[POST /api/media/file/updateByUrl](https://web-halo.mobgen.com/api/docs/)
 
 ### Breaking changes
 

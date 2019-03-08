@@ -1,15 +1,8 @@
 ---
-title: HALO Release Notes - Changelog for 2.7.0 Estrada
-keywords: cms, server, changelog, 2.7
-last_updated: January 8, 2019
-tags: [changelog]
-sidebar: cms_sidebar
-toc: false
-permalink: halo_release_notes_270.html
-folder: cms
+title: Changelog for 2.7.0 - Estrada
 ---
 
-There is a document that explains visually the most important changes of this release. You can download it [here](files/halo_release_notes_270.pdf).
+There is a document that explains visually the most important changes of this release. You can download it [here](/files/halo_release_notes_270.pdf).
 
 ## CMS Changes
 - Omnibar Global Search: Find your module, instances or media easier. Just click on the top left button or press cmd+K (mac)  ctrl+k (win/linux)  to open it.

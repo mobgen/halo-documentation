@@ -46,6 +46,9 @@ class Footer extends React.Component {
             <a href={this.docUrl('doc2.html', this.props.language)}>
               Getting started with iOS
             </a>
+            <a href={this.docUrl('android/server_integrations_home')}>
+              Server integrations
+            </a>
             <a target="_blank" href={"https://web-halo.mobgen.com/api/docs/"}>
               API Reference
             </a>

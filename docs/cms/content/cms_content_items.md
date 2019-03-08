@@ -1,7 +1,7 @@
 ---
 title: Manage Content Items
 id: cms_content_items
-sidebar_label: 
+sidebar_label: Content items
 ---
 
 ## What is a content item?

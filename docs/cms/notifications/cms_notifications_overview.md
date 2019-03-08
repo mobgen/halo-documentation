@@ -36,4 +36,4 @@ some data, segmentation and scheduling behaviour, that is it.
 To get more information about push templates checkout the detailed tutorial [here](cms_notifications_template). If 
 you want to learn how to send a notification you can follow [this other tutorial](cms_notifications_create). 
 
-You can also add support for the notifications in your [android](/docs/android/notifications/android_notifications_overview) and [iOS](/docs/android/notifications/ios_notifications_overview) devices.
+You can also add support for the notifications in your [android](../../android/notifications/android_notifications_overview) and [iOS](../../ios/notifications/ios_notifications_overview) devices.
