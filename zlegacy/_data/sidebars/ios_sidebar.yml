@@ -1,0 +1,172 @@
+entries:
+- title: Sidebar
+  product: HALO iOS SDK Documentation
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Home & Status
+      url: /ios_home.html
+      output: web, pdf
+      type: web, pdf
+
+    - title: Getting Started
+      url: /ios_getting_started.html
+      output: web, pdf
+      type: web, pdf
+
+  - title: HALO Core SDK
+    output: web, pdf
+    folderitems:
+    
+    - title: Overview
+      url: /ios_core_overview.html
+      output: web, pdf
+    
+    - title: SSL pinning
+      url: /ios_ssl_pinning.html
+      output: web, pdf
+
+    - title: User authentication
+      url: /ios_auth_overview.html
+      output: web, pdf
+
+    - title: User pocket
+      url: /ios_pocket.html
+      output: web, pdf
+  
+      subfolders:
+      - title: Content
+        output: web, pdf
+        subfolderitems:
+
+        - title: Overview
+          url: /ios_content_overview.html
+          output: web, pdf
+      
+        - title: Content search
+          url: /ios_content_search.html
+          output: web, pdf
+
+        - title: Content sync
+          url: /ios_content_sync.html
+          output: web, pdf
+
+        - title: Content edition
+          url: /ios_content_edition.html
+          output: web, pdf
+
+      - title: Helpers
+        output: web, pdf
+        subfolderitems:
+
+        - title: Cloudinary Helper
+          url: /ios_cloudinary_helper.html
+          output: web, pdf
+      
+        - title: Translations Helper
+          url: /ios_translations_helper.html
+          output: web, pdf
+    
+    - title: Logging
+      url: /ios_logging_overview.html
+      output: web, pdf    
+
+  - title: HALO Notifications SDK
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /ios_notifications_overview.html
+      output: web, pdf
+
+    - title: Rich notifications
+      url: /ios_rich_notifications.html
+      output: web, pdf
+
+    - title: Advanced Firebase Use Cases
+      url: /ios_advanced_firebase_usecases.html
+      output: web, pdf      
+
+  - title: HALO Social SDK
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /ios_social_overview.html
+      output: web, pdf
+
+    - title: Facebook integration
+      url: /ios_social_facebook.html
+      output: web, pdf
+
+    - title: Google integration
+      url: /ios_social_google.html
+      output: web, pdf
+
+  - title: Release Notes
+    output: web, pdf
+    folderitems:
+
+    - title: 2.5.0 Release Notes - Cambados
+      url: /android_release_notes_250.html
+      output: web, pdf  
+
+    - title: 2.4.0 Release notes - Bora
+      url: /ios_release_notes_240.html
+      output: web, pdf
+
+    - title: 2.3.1 Release notes - Altamira
+      url: /ios_release_notes_231.html
+      output: web, pdf
+
+    - title: 2.3.0 Release notes - Altamira
+      url: /ios_release_notes_230.html
+      output: web, pdf
+
+    - title: 2.2.5 Release notes
+      url: /ios_release_notes_225.html
+      output: web, pdf
+
+    - title: 2.2.4 Release notes
+      url: /ios_release_notes_224.html
+      output: web, pdf
+
+    - title: 2.2.3 Release notes
+      url: /ios_release_notes_223.html
+      output: web, pdf   
+
+    - title: 2.2.2 Release notes
+      url: /ios_release_notes_222.html
+      output: web, pdf
+
+    - title: 2.2.1 Release notes
+      url: /ios_release_notes_221.html
+      output: web, pdf
+
+    - title: 2.2.0 Release notes
+      url: /ios_release_notes_220.html
+      output: web, pdf
+      
+    - title: 2.1.1 Release notes
+      url: /ios_release_notes_211.html
+      output: web, pdf
+
+    - title: 2.1.0 Release notes
+      url: /ios_release_notes_210.html
+      output: web, pdf

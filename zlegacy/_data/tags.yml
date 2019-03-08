@@ -1,0 +1,12 @@
+allowed-tags:
+  - getting_started
+  - changelog
+  - core
+  - content
+  - notifications
+  - ui
+  - news
+  - auth
+  - social
+  - cms
+  - example

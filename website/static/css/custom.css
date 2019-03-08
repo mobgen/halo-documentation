@@ -1,0 +1,39 @@
+/* your custom css */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+.nav-footer {
+    background: #30404D;
+    color: #f5f8fa;
+}
+.nav-footer .fbOpenSource {
+    width: 335px
+}
+
+.nav-footer .sitemap .nav-home {
+    width: 80px
+}
+
+.docMainWrapper {
+    padding-bottom: 40px;
+    padding-left: 0px;
+}
+
+.docsNavContainer {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    padding: 0 20px 0 20px;
+    margin-left: 40px;
+}

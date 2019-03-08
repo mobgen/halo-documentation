@@ -1,0 +1,46 @@
+entries:
+- title: Sidebar
+  product: HALO Server Integrations
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /server_integrations_home.html
+      output: web, pdf
+      type: web, pdf
+
+    - title: Integrate authentication
+      url: /server_integrations_authentication.html
+      output: web, pdf
+      type: web, pdf
+
+  - title: Notifications integration
+    output: web, pdf
+    folderitems:
+
+    - title: API details
+      url: /server_integrations_notifications.html
+      output: web, pdf
+      type: web, pdf
+    
+    - title: Notification use cases
+      url: /server_integrations_notifications_usecases.html
+      output: web, pdf
+      type: web, pdf
+  

@@ -1,9 +1,12 @@
+.DS_Store
 
-# Created by https://www.gitignore.io/api/jekyll
-*.lock
+node_modules
 
-### Jekyll ###
-_site/
-.sass-cache/
-.jekyll-metadata
-.idea
+lib/core/metadata.js
+lib/core/MetadataBlog.js
+
+website/translated_docs
+website/build/
+website/yarn.lock
+website/node_modules
+website/i18n/*

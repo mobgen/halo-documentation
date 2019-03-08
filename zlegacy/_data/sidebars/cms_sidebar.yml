@@ -1,0 +1,143 @@
+entries:
+- title: Sidebar
+  product: HALO CMS Documentation
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Home & Status
+      url: /cms_home.html
+      output: web
+      type: web
+  
+  - title: Credentials
+    output: web, pdf
+    folderitems:
+
+    - title: Login / Logout
+      url: /cms_login_logout.html
+      output: web, pdf
+
+    - title: Forget password
+      url: /cms_forget_password.html
+      output: web, pdf
+
+  - title: Content management
+    output: web, pdf
+    folderitems:
+
+    - title: Content structures
+      url: /cms_content_modules.html
+      output: web, pdf
+
+    - title: Content structure fields
+      url: /cms_content_module_structure.html
+      output: web, pdf
+
+    - title: Content items
+      url: /cms_content_items.html
+      output: web, pdf
+
+  - title: Push notifications
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /cms_notifications_overview.html
+      output: web, pdf
+
+    - title: Create a push template
+      url: /cms_notifications_template.html
+      output: web, pdf
+
+    - title: Create a push notification
+      url: /cms_notifications_create.html
+      output: web, pdf
+
+  - title: Segmentation
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /cms_segmentation_overview.html
+      output: web, pdf
+
+    - title: Operations
+      url: /cms_segmentation_operations.html
+      output: web, pdf
+  
+  - title: Applications
+    output: web, pdf
+    folderitems:
+
+    - title: Application concept overview
+      url: /cms_applications_overview.html
+      output: web, pdf
+
+    - title: Operations over applications
+      url: /cms_applications_operations.html
+      output: web, pdf
+
+  - title: Users
+    output: web, pdf
+    folderitems:
+
+     - title: Manage users
+       url: /cms_users_management.html
+       output: web, pdf
+
+     - title: Permissions
+       url: /cms_users_permissions.html
+       output: web, pdf
+
+  - title: Admin
+    output: web, pdf
+    folderitems:
+
+    - title: Overview on system
+      url: /cms_system_overview.html
+      output: web, pdf
+
+    - title: Customers
+      url: /cms_customers_overview.html
+      output: web, pdf
+
+  - title: Release Notes
+    output: web
+    folderitems:
+    - title: 2.7.0 Release Notes - Estrada
+      url: /halo_release_notes_270.html
+      output: web, pdf
+    - title: 2.6.0 Release Notes - Donón
+      url: /halo_release_notes_260.html
+      output: web, pdf
+    - title: 2.5.0 Release Notes - Cambados
+      url: /halo_release_notes_250.html
+      output: web, pdf
+    - title: 2.4.0 Release Notes - Bora
+      url: /halo_release_notes_240.html
+      output: web, pdf
+    - title: 2.3.0 Release Notes - Altamira
+      url: /halo_release_notes_230.html
+      output: web, pdf
+    - title: 2.2.0 Release Notes
+      url: /halo_release_notes_220.html
+      output: web, pdf
+    - title: 2.0.0 Release Notes
+      url: /halo_release_notes_200.html
+      output: web, pdf     

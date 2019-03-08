@@ -1,0 +1,24 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: News
+      url: /tag_news.html
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Navigation dropdowns
+  folders:
+    - title: Platform documentation
+      folderitems:
+        - title: HALO CMS
+          external_url: https://halo.mobgen.com
+        - title: HALO CMS Documentation
+          url: /cms_home.html
+        - title: HALO Android SDK Documentation
+          url: /android_home.html
+        - title: HALO iOS SDK Documentation
+          url: /ios_home.html
+        - title: HALO Server Integrations
+          url: /server_integrations_home.html
