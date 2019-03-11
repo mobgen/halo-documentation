@@ -1,6 +1,5 @@
 ---
 title: Logging
-
 ---
 
 The HALO SDK provides a flexible and powerful logging system, based on a protocol (`Logger`) which allows a developer to even extend the already existing functionality.

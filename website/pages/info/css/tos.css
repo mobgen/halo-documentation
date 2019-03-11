@@ -1,0 +1,135 @@
+body {
+  background-color: rgb(242, 242, 242);
+}
+ol {
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  list-style: decimal; /* Keep using default numbering for IE6/7 */
+  font-size: 15px;
+  font-family: 'Montserrat';
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+ol ol {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}
+
+.rectangle-list li{
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em .4em;
+  *padding: .4em;
+  margin: .5em 0 .5em 2.5em;
+  text-decoration: none;
+  transition: all .3s ease-out;   
+}
+
+
+.rectangle-list li:before{
+  content: counter(li);
+  counter-increment: li;
+  position: absolute; 
+  left: -2.5em;
+  top: 32px;
+  margin-top: -1em;
+  background: #ff6b22;
+  color: white;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.rectangle-list li:after{
+  position: absolute; 
+  content: '';
+  border: .5em solid transparent;
+  left: -1em;
+  top: 32px;
+  margin-top: -.5em;
+  transition: all .3s ease-out;               
+}
+
+.rectangle-list > li:hover:after{
+  left: -.5em;
+  border-left-color: #ff6b22;             
+}
+
+.rounded-list li{
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 2em;
+  *padding: .4em;
+  margin: .5em 0;
+  text-decoration: none;
+  border-radius: .3em;
+}
+
+.rounded-list li:hover:before{
+  transform: rotate(360deg);
+  transition-duration: 1s;
+}
+
+.rounded-list li:before{
+  transition-duration: 1s;
+  content: counter(li);
+  counter-increment: li;
+  position: absolute; 
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #009688;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: .3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+}
+
+p, h1, h4, li {
+  font-family: 'Montserrat';
+}
+
+p, li {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.title {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.titleContainer {
+  background-color: #009688;
+  color: white;
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  padding: 16px 40px 16px 30px;
+}
+
+.lastUpdate {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
+  color: #eee
+}
+
+.container {
+  width: 90%;
+  margin: 25px auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.infoContainer {
+  padding: 2px 40px 20px 30px;
+}
