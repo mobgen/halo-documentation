@@ -1,5 +1,5 @@
 ---
-title: Changelog for 2.4.0 - Balboa
+title: 2.4.0 - Balboa
 ---
 
 ## Changelog

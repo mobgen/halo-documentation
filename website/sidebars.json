@@ -41,7 +41,7 @@
     ]
   },
   "android-docs": {
-    "Overview": [
+    "Android Documentation": [
       "android/android_home",
       "android/global/android_getting_started",
       "android/global/android_supported_features",
@@ -82,8 +82,8 @@
     ],
     "Auth API": [
       "android/auth/android_auth_overview",
-      "android/auth/android_social_provider_facebook",
-      "android/auth/android_social_provider_google",
+      "android/auth/android_auth_provider_facebook",
+      "android/auth/android_auth_provider_google",
       "android/auth/android_pocket_api"
     ],
     "Two Factor Auth API": [
@@ -111,8 +111,80 @@
       "android/changelog/android_release_notes_140"
     ]
   },
+  "iOS-docs":{
+    "iOS Documentation": [
+      "ios/ios_home",
+      "ios/global/ios_getting_started"
+    ],
+    "Core SDK": [
+      "ios/core/ios_core_overview",
+      "ios/core/ios_ssl_pinning",
+      "ios/core/ios_logging_overview"
+    ],
+    "Content SDK":[
+      "ios/content/ios_content_overview",
+      "ios/content/ios_content_search",
+      "ios/content/ios_content_sync",
+      "ios/content/ios_content_edition"
+    ],
+    "Notifications SDK": [
+      "ios/notifications/ios_notifications_overview",
+      "ios/notifications/ios_rich_notifications",
+      "ios/notifications/ios_advanced_firebase_usecases"
+    ],
+    "Auth SDK": [
+      "ios/auth/ios_social_overview",
+      "ios/auth/ios_social_facebook",
+      "ios/auth/ios_social_google",
+      "ios/auth/ios_auth_overview",
+      "ios/auth/ios_pocket"
+    ],
+    "Changelog": [
+      "ios/changelog/ios_release_notes_250",
+      "ios/changelog/ios_release_notes_240",
+      "ios/changelog/ios_release_notes_234",
+      "ios/changelog/ios_release_notes_233",
+      "ios/changelog/ios_release_notes_232",
+      "ios/changelog/ios_release_notes_231",
+      "ios/changelog/ios_release_notes_230",
+      "ios/changelog/ios_release_notes_225",
+      "ios/changelog/ios_release_notes_224",
+      "ios/changelog/ios_release_notes_223",
+      "ios/changelog/ios_release_notes_222",
+      "ios/changelog/ios_release_notes_221",
+      "ios/changelog/ios_release_notes_220",
+      "ios/changelog/ios_release_notes_211",
+      "ios/changelog/ios_release_notes_210"
+    ]
+  },
+  "javascript-docs":{
+    "Javascript Documentation": [
+      "javascript/javascript_home",
+      "javascript/global/javascript_getting_started",
+      "javascript/global/javascript_supported_features",
+      "javascript/global/javascript_support"
+    ],
+    "Content": [
+      "javascript/content/javascript_content_overview",
+      "javascript/content/javascript_content_detailed_api"
+    ],
+    "Notifications": [
+      "javascript/notifications/javascript_notifications_detailed_api",
+      "javascript/notifications/javascript_notifications_overview"
+    ],
+    "Segmentation": [
+      "javascript/segmentation/javascript_segmentation_detailed_api",
+      "javascript/segmentation/javascript_segmentation_overview"
+    ],
+    "Auth": [
+      "javascript/auth/javascript_auth_overview"
+    ],
+    "Changelog": [
+      "javascript/changelog/javascript_release_notes_100"
+    ]
+  },
   "integrations-docs": {
-    "Overview": [
+    "API integrations documentation": [
       "integrations/server_integrations_home",
       "integrations/authentication/server_integrations_authentication"
     ],

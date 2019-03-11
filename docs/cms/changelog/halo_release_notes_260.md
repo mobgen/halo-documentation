@@ -1,5 +1,5 @@
 ---
-title: Changelog for 2.6.0 - Donón
+title: 2.6.0 - Donón
 ---
 
 There is a document that explains visually the most important changes of this release. You can download it [here](/files/halo_release_notes_260.pdf).

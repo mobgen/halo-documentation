@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Notifications SDK report event action APIs
-keywords: android, notifications, decorator, firebase, gcm, messages, cloud
-last_updated: January 23, 2018
-tags: [notifications]
-sidebar: android_sidebar
-permalink: android_notifications_report.html
-folder: android
+title: Report event action APIs
 ---
 
 ## Enable notifications usage

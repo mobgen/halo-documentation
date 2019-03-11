@@ -1,12 +1,5 @@
 ---
-title: iOS Framework - Changelog for 2.5.0 Cambados
-keywords: ios, changelog, 2.4.0
-last_updated: March 16, 2018
-tags: [changelog]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_release_notes_250.html
-folder: ios
+title: 2.5.0 - Cambados
 ---
 
 ## Changelog

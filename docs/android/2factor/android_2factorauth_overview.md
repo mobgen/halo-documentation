@@ -1,18 +1,16 @@
 ---
-title: Android SDK - Two Factor Authentication SDK Overview
-keywords: android, two factor authentication, sms, push notifications
-last_updated: Febreruary 24, 2017
-tags: [2factorauthentication]
-sidebar: android_sidebar
-permalink: android_2factorauth_overview.html
-folder: android
+title: Overview
 ---
+
+[![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-TwoFactor/images/download.svg)](https://bintray.com/halo-mobgen/maven/HALO-TwoFactor/_latestVersion)
 
 ## Add dependency
 
 In the HALO plugin add the following to enable the two factor authentication sdk.
 
 ```groovy
+> project/build.gradle
+
 apply plugin: 'halo'
 
 halo {
@@ -32,7 +30,7 @@ halo {
 The Two Factor Authentication API is the helper to confirm you authentication code on HALO SDK. Importing this library will need a valid HALO instance configured (it will import push notification automatically if needed).
 The HALO Two Factor Authentication SDK allows the user to listen to confirmation codes in a simple listener from two providers:
 
-* Push notification. If you want go in deep about notifications, please refer to [the detailed documentation](android_notifications_overview.html)
+* Push notification. If you want go in deep about notifications, please refer to [the detailed documentation](../notifications/android_notifications_overview.html)
 * SMS notification.
 
 It is fairly recommendable to create the instance as a singleton in your application class or using Dagger after installing HALO. Creating an instance of the Two Factor Authentication API is really simple once you have your HALO running. Just write the following lines:
@@ -85,8 +83,9 @@ twoFactorAuthentication.listenTwoFactorAttempt(new HaloTwoFactorAttemptListener(
         });
 ```
 
-{% include note.html content="If you are using the push notification provider remember that push notifications are silents so it is your responsability to show them if you want." %}
-{% include note.html content="If you are using the SMS provider remember to set the SMS provider name to listen to the two factor authentication codes." %}
+> **Note:** If you are using the push notification provider remember that push notifications are silents so it is your responsability to show them if you want.
+
+> **Note:** If you are using the SMS provider remember to set the SMS provider name to listen to the two factor authentication codes.
 
 
 ### Release 

@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Changelog for 2.5.1 Cambados
-keywords: android, changelog, 2.5
-last_updated: March 21, 2018
-tags: [changelog]
-sidebar: android_sidebar
-toc: false
-permalink: android_release_notes_251.html
-folder: android
+title: 2.5.1 - Cambados
 ---
 
 ## Changelog

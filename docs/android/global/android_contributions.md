@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Open Source Contributions
-keywords: android, getting started, open source,  contribute, contribution, sdk, help, code, install, start
-summary: If you want to contribute to the HALO Android SDK open source project it is really important for you to read this information since it covers all you need to do so.
-last_updated: November 18, 2016
-tags: [getting_started]
-sidebar: android_sidebar
-permalink: android_contributions.html
-folder: android
+title: Open Source Contributions
 ---
 
 In HALO we have high standards within the features that are implemented in the platform and in the 
@@ -22,7 +15,7 @@ The project consist of 3 folders, each of which can be opened in a separate wind
 We usually make modifications on the libraries and check them with tests since otherwise you will have to add
 some use case to the Demo application. To get started execute the following commands in the root dir:
 
-```
+```bash
 ./gradlew installGradlePlugin
 ./gradlew installSdk
 ./gradlew installLibraries
@@ -50,7 +43,7 @@ is not followed, the pull request will not be merged.
 
 ### Pull request creation ###
 * Must come from a branch under feature/my-branch.
-* The branch name must follow the '-' name convention: every name separed by '-' and in lowercase.
+* The branch name must follow the '-' name convention: every name separated by '-' and in lowercase.
 * The branch have to be created from develop.
 * The pull request should include a description of what is this for and some discussions related if needed.
 

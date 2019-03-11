@@ -1,12 +1,5 @@
 ---
-title: iOS Framework - Changelog for 2.3.0
-keywords: ios, changelog, 2.3.0
-last_updated: May 26, 2017
-tags: [changelog]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_release_notes_230.html
-folder: ios
+title: 2.3.0
 ---
 
 ## Changelog
@@ -22,7 +15,10 @@ public func getAddons<T: Addon>(type: T.Type) -> [T]
 
 ### Notifications SDK
 
-* Add a way to request permissions to receive remote notifications manually (intended to delay that step if desired). The constructor of the `NotificationsAddon` accepts now a new parameter (`autoRegister`, `true` by default), which allows to disable the auto-registration for these notifications. After that, one of the following functions would have to be called to request permission to get remote notifications depending on the iOS version:
+* Add a way to request permissions to receive remote notifications manually (intended to delay that step if desired). 
+The constructor of the `NotificationsAddon` accepts now a new parameter (`autoRegister`, `true` by default), 
+which allows to disable the auto-registration for these notifications. After that, one of the following functions 
+would have to be called to request permission to get remote notifications depending on the iOS version:
 ```swift
 /// iOS 10+
 public func registerApplicationForNotificationsWithAuthOptions(

@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Supported Features
-keywords: android, features, characteristics
-last_updated: November 10, 2016
-tags: [getting_started]
-sidebar: android_sidebar
-toc: false
-permalink: android_supported_features.html
-folder: android
+title: Supported Features
 ---
 
 <div class="row">
@@ -22,7 +15,7 @@ folder: android
                 </span>
             </div>
             <div class="media-body">
-                <h4 class="media-heading">HALO Framework</h4>
+                <h4 class="media-heading">HALO Core</h4>
                 <p>Contains helper elements to create requests, database tables, instances and much more.</p>
             </div>
         </div>
@@ -118,7 +111,6 @@ folder: android
 </div>
 <br/>
 
-| Check out the different features in the following table| 
 | Library                |   Feature    |    Artifact    |
 |---------|-----------------------------|----------------|
 | **HALO Core**          |  |         halo-sdk           |
@@ -140,6 +132,9 @@ folder: android
 || Sync a translations module                           ||
 || Set default translation                              ||
 || Set translation to a TextView asynchronously         ||
+| **HALO Analytics** |      |        halo-analytics      |
+|| Send custom content                                  ||
+|| Support for google analytics                         ||
 | **HALO Auth**         |   |         halo-auth         |
 || Built in support for google login                    ||
 || Built in support for facebook login                  ||
@@ -149,8 +144,5 @@ folder: android
 | **HALO Two Factor**   |   |      halo-twofactor       |
 || Built in support for confirmation via sms provider   ||
 || Built in support for confirmation via push provider  ||
-| **HALO Analytics** |      |        halo-analytics      |
-|| Send custom content                                  ||
-|| Support for google analytics                         ||
 | **HALO Presenter** |      |        halo-presenter      |
 || Helpers for MVP pattern using HALO                   ||

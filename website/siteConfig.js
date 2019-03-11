@@ -24,13 +24,12 @@ const siteConfig = {
     placeholder: 'Search in the docs'
   },
   headerLinks: [
-    {doc: 'cms/cms_home', label: 'CMS Docs'},
-    {doc: 'android/android_home', label: 'Android Docs'},
-    {doc: 'cms/cms_home', label: 'iOS Docs'},
+    {doc: 'cms/cms_home', label: 'CMS docs'},
+    {doc: 'android/android_home', label: 'Android docs'},
+    {doc: 'ios/ios_home', label: 'iOS docs'},
+    {doc: 'javascript/javascript_home', label: 'Javascript docs'},
     {doc: 'integrations/server_integrations_home', label: 'Server integrations'},
     {href: 'https://web-halo.mobgen.com/api/docs/', label: 'API'},
-    {blog: true, label: 'Blog'},
-    {page: 'help', label: 'Help'},
     {search: true},
   ],
   users,
@@ -61,7 +60,9 @@ const siteConfig = {
     theme: 'default',
   },
   scripts: ['https://buttons.github.io/buttons.js'],
-  stylesheets: ['https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'],
+  stylesheets: [
+    'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+  ],
   onPageNav: 'separate',
   cleanUrl: true,
   enableUpdateTime: true,

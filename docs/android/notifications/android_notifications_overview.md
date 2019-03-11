@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Notifications SDK Overview
-keywords: android, notifications, decorator, firebase, gcm, messages, cloud
-last_updated: March 1, 2018
-tags: [notifications]
-sidebar: android_sidebar
-permalink: android_notifications_overview.html
-folder: android
+title: Overview
 ---
 
 [![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Notifications/images/download.svg) ](https://bintray.com/halo-mobgen/maven/HALO-Notifications/_latestVersion)
@@ -13,6 +7,8 @@ folder: android
 In the HALO plugin add the following to enable the notifications sdk.
 
 ```groovy
+> project/build.gradle
+
 apply plugin: 'halo'
 
 halo {
@@ -33,7 +29,7 @@ To start using the notifications, in the same way you do with other sdks you mus
 HaloNotificationsApi notificationsApi = HaloNotificationsApi.with(halo);
 ```
  
-{% include warning.html content="Since android O you have to create a notification channel to receive the push notification when your compileSdkVersion is 26 or greater" %}
+> **Warning:** Since android O you have to create a notification channel to receive the push notification when your compileSdkVersion is 26 or greater.
 
 HALO will create a notification channel on devices with Android O but you can override that channel with your own channel with your own settings.
 
@@ -69,7 +65,7 @@ Once you are done with this listener you can cancel the subscription by calling 
 subscription.unsubscribe();
 ```
 
-You can also customize your notifications by adding a notification decorator. You will receive as parameter the ```NotificationCompat.Builder``` already configured by HALO, so you can override its behavior. If a decorator returns ```null``` instead the ```NotificationCompat.Builder``` configured, the notification will not be displayed. Refer to [the detailed documentation](/android_notifications_detailed_api) to learn how to write your custom decorator.
+You can also customize your notifications by adding a notification decorator. You will receive as parameter the ```NotificationCompat.Builder``` already configured by HALO, so you can override its behavior. If a decorator returns ```null``` instead the ```NotificationCompat.Builder``` configured, the notification will not be displayed. Refer to [the detailed documentation](./android_notifications_detailed_api) to learn how to write your custom decorator.
 
 ```java
 notificationsApi.setNotificationDecorator(notificationDecorator);
@@ -77,7 +73,7 @@ notificationsApi.setNotificationDecorator(notificationDecorator);
 
 ### Enable notifications usage
 
-When a new notification is received on a device, the SDK will send a request to HALO reporting notification updates. There are three different events they have to report: receipt, open and dismiss. To enable this feature you must enable directly on the notification api singleton. Refer to [the detailed documentation](/android_notifications_report) to learn how to listen to notification events using the HALO SDK.
+When a new notification is received on a device, the SDK will send a request to HALO reporting notification updates. There are three different events they have to report: receipt, open and dismiss. To enable this feature you must enable directly on the notification api singleton. Refer to [the detailed documentation](./android_notifications_report) to learn how to listen to notification events using the HALO SDK.
 
 
 ```java

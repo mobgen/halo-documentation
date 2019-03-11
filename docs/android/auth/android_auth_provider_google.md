@@ -1,22 +1,15 @@
 ---
-title: Android SDK - Integration with Google
-keywords: android, getting started, google logging, android sdk
-last_updated: March 1, 2018
-tags: [social]
-sidebar: android_sidebar
-toc: false
-map_name: android_started_workflow
-permalink: android_social_provider_google.html
-folder: android
+title: Integration with Google
 ---
 
 This getting started guide will guide you on setting up Google Sign-in SDK for Android in a few minutes. We will provide a step by step guide to get everything working with the most basic setup.
 
-{% include warning.html content="You don't need to import Firebase Android SDK. It's automatically done by the HALO plugin." %}
+> **Warning:** You don't need to import Firebase Android SDK. It's automatically done by the HALO plugin.
 
 ### Step 1: Create the app 
 
-Register in the firebase console and create a new app, if you don't already have one. If you already have an existing Google project associated with your mobile app, click Import Google Project. Otherwise, click Create New Project.
+Register in the firebase console and create a new app, if you don't already have one. If you already have an existing 
+Google project associated with your mobile app, click Import Google Project. Otherwise, click Create New Project.
 
 ### Step 2: Generate an oAuth web key
 
@@ -24,15 +17,15 @@ Add the package name and and follow the setup steps.
 
 #### Optional Step to add security
 
-{% include note.html content="You can add extra security if you add the google id into the Halo CMS." %}
+> **Note:** You can add extra security if you add the google id into the Halo CMS.
 
-![Configure Google project](./images/google-console.png)
+![Configure Google project](/img/google-console.png)
 
 This step is optional and if you add this field to the HALO CMS it would verify that the tokens you provide belongs to the Google application. You can provide as many ids as you need for different platforms. In another case the HALO system only verifies if it is a valid token against Google.
 
 You can add this information in app section on HALO CMS.
 
-![Add extra security to facebook tokens](./images/halo-cms-secure-social.png)
+![Add extra security to facebook tokens](/img/halo-cms-secure-social.png)
 
 ### Step 3: Generate the hashes
 
@@ -90,5 +83,5 @@ authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
 
-{% include note.html content="For further information about Firebase SDK visit the [official Firebase documentation page](https://firebase.google.com/docs/android/setup)" %}
+> **Note:** For further information about Firebase SDK visit the [official Firebase documentation page](https://firebase.google.com/docs/android/setup)
 

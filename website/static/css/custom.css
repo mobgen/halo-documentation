@@ -138,3 +138,8 @@ div.box.box1 {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
     font-size: 14px;
 }
+
+
+iframe {
+    width: 100%
+}

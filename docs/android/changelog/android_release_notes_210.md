@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Changelog for 2.1.0
-keywords: android, changelog, 2.1
-last_updated: January 5, 2017
-tags: [changelog]
-sidebar: android_sidebar
-toc: false
-permalink: android_release_notes_210.html
-folder: android
+title: 2.1.0
 ---
 
 ## Changelog

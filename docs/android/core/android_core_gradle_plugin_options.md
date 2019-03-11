@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Gradle Plugin Options
-keywords: android, gradle, configuration, tool, clientId, clientSecret, secret, id
-last_updated: November 15, 2016
-tags: [core]
-sidebar: android_sidebar
-permalink: android_core_gradle_plugin_options.html
-folder: android
+title: Gradle Plugin Options
 ---
 
 ## Gradle plugin options
@@ -79,7 +73,9 @@ halo {
 ```
 
 
-In the case you want different configurations for different variants, you can enable it with this configuration. You have to put the same configuration with services and clientId/clientSecret as you do in the global config. Both kind of configurations cannot be mixed. In this example we have three differente flavours: dev, qa and prod:
+In the case you want different configurations for different variants, you can enable it with this configuration. 
+You have to put the same configuration with services and clientId/clientSecret as you do in the global config. Both 
+kind of configurations cannot be mixed. In this example we have three different flavours: dev, qa and prod:
 
 ```groovy
 halo {

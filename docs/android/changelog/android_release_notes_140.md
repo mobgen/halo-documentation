@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Changelog for 1.4.0
-keywords: android, changelog, 1.4.0
-last_updated: November 14, 2016
-tags: [changelog]
-sidebar: android_sidebar
-toc: false
-permalink: android_release_notes_140.html
-folder: android
+title: 1.4.0
 ---
 
 ## SDK Changelog

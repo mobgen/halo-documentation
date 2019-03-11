@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Changelog for 2.3.2 Altamira
-keywords: android, changelog, 2.3
-last_updated: May 19, 2017
-tags: [changelog]
-sidebar: android_sidebar
-toc: false
-permalink: android_release_notes_232.html
-folder: android
+title: 2.3.2 - Altamira
 ---
 
 ## Changelog

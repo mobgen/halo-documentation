@@ -1,15 +1,16 @@
 ---
-title: JavaScript HALO SDK - Getting Started
-keywords: javascript, getting started, start, how to
-last_updated: November 9, 2017
-tags: [getting_started]
-sidebar: javascript_sidebar
-toc: false
-permalink: javascript_getting_started.html
-folder: javascript
+title: Getting Started
 ---
 
-{% include custom/javascript_started_workflow.html %}
+<div id="userMap">
+<div class="content"><a><div class="box box1">Add HALO library</div></a></div>
+<div class="arrow">→</div>
+<div class="content"><a><div class="box box1">Add HALO Configuration</div></a></div>
+<div class="arrow">→</div>
+<div class="content"><a><div class="box box1">Get HALO authToken</div></a></div>
+<div class="arrow">→</div>
+<div class="content"><a><div class="box box1">Enjoy the libraries</div></a></div>
+</div>
 
 This getting started guide will guide you on setting up HALO SDK for JavaScript in a few minutes. We will provide a step by step guide to get everything working with the most basic setup, for more detailed information about specific calls or how a module works check the sidebar.
 
@@ -31,7 +32,7 @@ Import config from halo-sdk and apply the basic configuration based on your HALO
 import { config } from 'halo-sdk';
 
 config.setup({
-  entrypoint: 'https://halocms.****.com/',
+  entrypoint: 'https://web-halo.mobgen.com/',
   credentials: {
     clientId: 'YOUR_HALO_KEY',
     clientSecret: 'YOUR_HALO_SECRET',   

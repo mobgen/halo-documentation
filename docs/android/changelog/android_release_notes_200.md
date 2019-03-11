@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Changelog for 2.0.0
-keywords: android, changelog, 2.0
-last_updated: November 14, 2016
-tags: [changelog]
-sidebar: android_sidebar
-toc: false
-permalink: android_release_notes_200.html
-folder: android
+title: 2.0.0
 ---
 
 ## Changelog
@@ -30,7 +23,7 @@ folder: android
 - Improvement: Stability improvements with sensor app
 - Improvement: ```HaloNetworkApi``` simplifies the parser interface
 - Improvement: Firebase messages library updated
-- Improvement: documentation completelly updated for the published sdks (content, notifications, translations, presenter and core). More to come
+- Improvement: documentation completely updated for the published sdks (content, notifications, translations, presenter and core). More to come
 
 ## Breaking changes
 

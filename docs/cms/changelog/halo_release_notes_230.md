@@ -1,5 +1,5 @@
 ---
-title: Changelog for 2.3.0 - Altamira
+title: 2.3.0 - Altamira
 ---
 
 ## Changelog

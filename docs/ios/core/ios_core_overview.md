@@ -1,90 +1,80 @@
 ---
-title: iOS Core SDK Overview
-keywords: ios
-last_updated: February 10, 2017
-tags: [core]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_core_overview.html
-folder: ios
+title: Overview
 ---
 
 ## The Core Manager
 
 Once all the configuration is done, the only remaining step is to call the `startup` method on the core manager to start all the process and initialise the SDK.
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#swift-1" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-1" data-toggle="tab">Obj-C</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="swift-1" class="tab-pane fade in active">
-    <pre><code class="swift">Halo.Manager.core.startup { [weak self] (success) -> Void in
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+Halo.Manager.core.startup { [weak self] (success) -> Void in
   // Do your stuff     
-}</code></pre>
-  </div>
-  <div id="objc-1" class="tab-pane fade">
-    <pre><code class="objective-c">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+}
+```
+<!--Obj-C-->
+```C
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   [HaloManager.core startup:^(BOOL success) {
     // Do some stuff
   }];
     
   return YES;
-}</code></pre>
-  </div>
-</div>
+}
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-It should also be mentioned here that apart from that `.plist` configuration file, the same configuration can be achieved through code, setting the corresponding properties within the manager (credentials and authentication mode) before calling the `startup` method.
 
-This manager also has a delegate conforming to the `ManagerDelegate` protocol, that the developer could implement to customise the setup and launching process of the Framework.
 
-The Core Manager also holds the configurable parameters of the Framework that can be set according to the needs of each project. 
+It should also be mentioned here that apart from that `.plist` configuration file, the same configuration can be 
+achieved through code, setting the corresponding properties within the manager (credentials and authentication mode) 
+before calling the `startup` method.
+
+This manager also has a delegate conforming to the `ManagerDelegate` protocol, that the developer could implement 
+to customise the setup and launching process of the Framework.
+
+The Core Manager also holds the configurable parameters of the Framework that can be set according to the needs 
+of each project. 
 
 ### `delegate`
 
 Setting the delegate of the core manager will allow to implement some hook methods that will be executed during the setup process of the Framework. This delegate must conform to the `Halo.ManagerDelegate` protocol. 
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-2" data-toggle="tab">Obj-C</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="swift-2" class="tab-pane fade in active">
-    <pre><code class="swift">public protocol ManagerDelegate {
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+public protocol ManagerDelegate {
     func managerWillSetupDevice(device: Halo.Device) -> Void
-}</code></pre>
-  </div>
-  <div id="objc-2" class="tab-pane fade">
-    <pre><code class="objective-c">@protocol HaloManagerDelegate
+}
+```
+<!--Obj-C-->
+```C
+@protocol HaloManagerDelegate
 - (void)managerWillSetupDevice:(HaloDevice * _Nonnull)device;
-@end</code></pre>
-  </div>
-</div>
+@end
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 `managerWillSetupDevice` will be called when the device is being set up, so that the developer could potentially add any details to the it. E.g.:
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#swift-3" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-3" data-toggle="tab">Obj-C</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="swift-3" class="tab-pane fade in active">
-    <pre><code class="swift">// MARK: ManagerDelegate methods
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+// MARK: ManagerDelegate methods
     
 func managerWillSetupDevice(device: Halo.Device) -> Void {
 	device.addTag(name: "test", value: "testValue")
-}</code></pre>
-  </div>
-  <div id="objc-3" class="tab-pane fade">
-    <pre><code class="objective-c">- (void)managerWillSetupDevice:(HaloDevice *)device {
+}
+```
+<!--Obj-C-->
+```C
+- (void)managerWillSetupDevice:(HaloDevice *)device {
     [device addTagWithName:@"tagName" value:@"tagValue"];
-}</code></pre>
-  </div>
-</div>
+}
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 Later on, the device will be accessible through the Core Manager's `device` property.
 
@@ -92,30 +82,22 @@ Later on, the device will be accessible through the Core Manager's `device` prop
 
 Apart from the configuration `.plist`, this is one of the properties that can also be set programatically. There is a set of predefined environments, but also an option to specify a custom one by providing the full url.
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#swift-4" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-4" data-toggle="tab">Obj-C</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="swift-4" class="tab-pane fade in active">
-    <pre><code class="swift">public enum HaloEnvironment {
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+public enum HaloEnvironment {
   case int
   case qa
   case stage
   case prod
   case custom(String)
-}</code></pre>
-
-<p>The environment can be changed then using the following function in the Core Manager, which provides also a completion handler to be executed once the environment has been successfully changed.</p>
-
-<pre><code class="swift">public func setEnvironment(_ env: HaloEnvironment, completionHandler handler: ((Bool) -> Void)? = nil)</code></pre>
-
-  </div>
-  <div id="objc-4" class="tab-pane fade">
-    <p>Because of the way it is defined, this property is not accessible from Objective-C. Hence, the only way to configure it is through the `.plist` file.</p>
-  </div>
-</div>
+}
+```
+<!--Obj-C-->
+```C
+Because of the way it is defined, this property is not accessible from Objective-C. Hence, the only way to configure it is through the `.plist` file.
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `defaultOfflinePolicy`
 
@@ -125,8 +107,8 @@ A caching system is available out of the box for the network requests executed t
 * `LoadAndStoreLocalData`: The data is fetched from the network and also stored in order to be used in other scenarios (e.g. temporary lack of internet connection)
 * `ReturnLocalDataDontLoad`: Don't even try to fetch data and just return whatever information is cached locally 
 
-|---|---|---|
-**Policy** | **Swift** | **Obj-C**
+|**Policy** | **Swift** | **Obj-C**|
+|-----------|-----------|----------|
 `None`| `.none` | `HaloOfflinePolicyNone`
 `LoadAndStoreLocalData` | `.loadAndStoreLocalData` | `HaloOfflinePolicyLoadAndStoreLocalData`
 `ReturnLocalDataDontLoad` | `.returnLocalDataDontLoad` | `HaloOfflinePolicyReturnLocalDataDontLoad`

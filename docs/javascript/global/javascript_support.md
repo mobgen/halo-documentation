@@ -1,12 +1,5 @@
 ---
-title: JavaScript HALO SDK - Team Support
-keywords: javascript, support
-last_updated: November 9, 2017
-tags: [getting_started]
-sidebar: javascript_sidebar
-toc: false
-permalink: javascript_support.html
-folder: javascript
+title: Team Support
 ---
 
 We would love to hear from you and the way you interact with our products to improve them and add continuosly new 

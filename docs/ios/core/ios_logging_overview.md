@@ -1,12 +1,6 @@
 ---
 title: Logging
-keywords: ios
-last_updated: February 9, 2017
-tags: [core]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_logging_overview.html
-folder: ios
+
 ---
 
 The HALO SDK provides a flexible and powerful logging system, based on a protocol (`Logger`) which allows a developer to even extend the already existing functionality.
@@ -15,27 +9,24 @@ The HALO SDK provides a flexible and powerful logging system, based on a protoco
 
 In order for a logger to be used, it must be instantiated and registered in the `CoreManager`. This should be done prior to calling the `startup` function, to make sure all the requests are taken into account when logging the results.
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#swift-1" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-1" data-toggle="tab">Obj-C</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="swift-1" class="tab-pane fade in active">
-    <pre><code class="swift">Halo.Manager.core.addLogger(ConsoleLogger())</code></pre>
-  </div>
-  <div id="objc-1" class="tab-pane fade">
-    <pre><code class="objective-c">id&lt;HaloLogger&gt; logger = [HaloConsoleLogger new];
-[HaloManager.core addLogger:logger];</code></pre>
-  </div>
-</div>
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+Halo.Manager.core.addLogger(ConsoleLogger())
+```
+<!--Obj-C-->
+```C
+id<HaloLogger> logger = [HaloConsoleLogger new];
+[HaloManager.core addLogger:logger];
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ### Logging levels
 
 There are several logging levels which can be set to the `CoreManager` instance (property `logLevel`). The different values and meanings of each of the values of the enumeration are:
 
-|---|---|---|-------|
 **Level** | **Description** | **Swift** | **Obj-C**
+|---------|-----------------|-----------|----------|
 `NONE` | Disable any logging output. No information will be shown | ```.none``` | ```LogLevelNone```
 `ERROR` | Only show critical messages (errors) | ```.error``` | ```LogLevelError```
 `WARNING` | Show also messages related to warnings and potential issues | ```.warning``` | ```LogLevelWarning```
@@ -45,19 +36,16 @@ There are several logging levels which can be set to the `CoreManager` instance 
 
 A log message can easily be added through the core manager as follows:
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#swift-2" data-toggle="tab">Swift</a></li>
-  <li role="presentation"><a href="#objc-2" data-toggle="tab">Obj-C</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="swift-2" class="tab-pane fade in active">
-    <pre><code class="swift">Halo.Manager.core.logMessage(message: "message", level: .info)</code></pre>
-  </div>
-  <div id="objc-2" class="tab-pane fade">
-    <pre><code class="objective-c">[HaloManager.core logMessageWithMessage:@"log message" level:LogLevelInfo];</code></pre>
-  </div>
-</div>
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+Halo.Manager.core.logMessage(message: "message", level: .info)
+```
+<!--Obj-C-->
+```C
+[HaloManager.core logMessageWithMessage:@"log message" level:LogLevelInfo];
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Available loggers
 

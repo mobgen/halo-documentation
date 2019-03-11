@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Content SDK Overview
-keywords: android, content, getting started, halo, instance, module, query, search, sync
-last_updated: November 14, 2016
-tags: [content]
-sidebar: android_sidebar
-permalink: android_content_overview.html
-folder: android
+title: Overview
 ---
 
 [![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Content/images/download.svg) ](https://bintray.com/halo-mobgen/maven/HALO-Content/_latestVersion)
@@ -34,8 +28,9 @@ The HALO Content SDK allows the user to retrieve instances from the HALO Backend
 * Search
 * Sync
 
-{% include tip.html content="Use the search method to get conent when you want to get some concrete elements, segmented data or certain information." %}
-{% include tip.html content="Use the sync method if you prefer to download the whole module to use if offline. It is better for performance than search." %}
+> **Tip:** Use the search method to get conent when you want to get some concrete elements, segmented data or certain information.
+
+> **Tip:** Use the sync method if you prefer to download the whole module to use if offline. It is better for performance than search.
 
 Creating an instance of the Content API is really simple once you have your HALO running. Just write the following line:
 
@@ -62,7 +57,7 @@ contentApi.search(Data.NETWORK_ONLY, query)
 
 This search will request all the instances for the module id "myModuleId" and which body contains a name with the value "Sample". Check out the rest of the available options in [the detailed documentation](./android_content_detailed_api.html).
 
-{% include warning.html content="The query builder search will return all results available including deleted or draft items. You must provide the appropiate query to return only published ones." %}
+> **Warning:** The query builder search will return all results available including deleted or draft items. You must provide the appropiate query to return only published ones.
 
 #### SearchQuery Factory
 
@@ -127,19 +122,19 @@ contentApi.getSyncInstances("my module name")
 	.execute(callback);
 ```
 
-{% include note.html content="Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](./android_content_detailed_api.html#content-parsing)." %}
+> **Note:** Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](./android_content_detailed_api.html#content-parsing)
 
-If you want to go in deep into this module, please refer to [the detailed documentation](./android_content_detailed_api.html).
+If you want to go in deep into this module, please refer to [the detailed documentation](android_content_detailed_api.html).
 
 ## Edit Content API
 
 ### Basic content manipulation
 
-The Edit Content API is the way to manipulate the general content instances. If you have the proper credentials you will be able to create, update or delete general content instances. See [Halo Auth API](./android_auth_overview.html) to get apropiate credentials. 
+The Edit Content API is the way to manipulate the general content instances. If you have the proper credentials you will be able to create, update or delete general content instances. See [Halo Auth API](../auth/android_auth_overview.html) to get apropiate credentials. 
 
 For example if you want to update an instance.
 
-{% include important.html content="Please refer to [the detailed documentation](./android_edit_content_detailed_api.html) to see other operations." %}
+> **Important:** Please refer to [the detailed documentation](android_edit_content_detailed_api.html) to see other operations.
 
 You must set a map with the content values. In this example: title and backgroundColor) 
 
@@ -151,7 +146,7 @@ values.put("backgroundColor", "#987654");
 
 or set a custom object properly configured
 
-{% include note.html content="Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](./android_content_detailed_api.html#content-parsing)." %}
+> **Note:** Make sure your MyCustomClass.class is properly annotated with LoganSquare ```@JsonObject``` annotation to make it work properly, otherwise the result will not be parsed. You can check it in [content parsing section](android_content_detailed_api.html#content-parsing).
 
 ```java
 MyCustomClass values = new MyCustomClass("the title","#987654");
@@ -186,11 +181,11 @@ HaloContentEditApi.with(halo)
      });
 ```
 
-If you want to go in deep into this module, please refer to [the detailed documentation](./android_edit_content_detailed_api.html).
+If you want to go in deep into this module, please refer to [the detailed documentation](android_edit_content_detailed_api.html).
 
 ### Advanced content manipulation
 
-If you want to be able to add, modify and remove content instances in advanced use cases you must use the batch operation. You need to provide a ```BatchOperations``` which contains all the operations to perfom.
+If you want to be able to add, modify and remove content instances in advanced use cases you must use the batch operation. You need to provide a ```BatchOperations``` which contains all the operations to perform.
 
 ```java
 BatchOperations operations = new BatchOperations.Builder()
@@ -210,13 +205,13 @@ HaloContentEditApi.with(halo
     });
 ```
 
-If you want to go in deep into this module, please refer to [the detailed documentation](./android_edit_content_detailed_api.html#batch-operations).
+If you want to go in deep into this module, please refer to [the detailed documentation](android_edit_content_detailed_api.html#batch-operations).
 
 ## Code generation tool to annotate custom models
 
 The Content SDK provides an API to generate code based on annotations. The HALO plugin will fetch all necessary dependencies to generate code using Java Poet in the ```AbstractProcessor```.
 
-{% include important.html content="Please refer to [Java Poet](https://github.com/square/javapoet) to go in deep about code generation." %}
+> **Important:** Please refer to [Java Poet](https://github.com/square/javapoet) to go in deep about code generation.
 
 You can use this feature if you would like to:
 
@@ -226,7 +221,7 @@ You can use this feature if you would like to:
 
 Check out the following example creating a query to select in a database table by title.
 
-### Perfom a select query on a custom table with the generation tool
+### Perform a select query on a custom table with the generation tool
 
 First create the generated database using the ```HalocontentApi``` with a new instance of ```GeneratedDatabaseFromModel``` that was autogenerated in compile time. This operation should be done in the Application to ensure the database was created after launching the app.
 
@@ -236,11 +231,11 @@ HaloContentApi.with(haloinstance, locale, new GeneratedDatabaseFromModel());
 //...
 ```
 
-Then annotate your model with the ```@HaloSearchableAnnotation``` to create the database table and with the ```@HaloQuery``` annotation you will generate the code to perfom the query with the ```HaloContentQueryApi```.
+Then annotate your model with the ```@HaloSearchableAnnotation``` to create the database table and with the ```@HaloQuery``` annotation you will generate the code to perform the query with the ```HaloContentQueryApi```.
 
-{% include note.html content="The ```@HaloQuery``` parameters must be declared with the following format **@{name:class}**" %}
+> **Note:** The ```@HaloQuery``` parameters must be declared with the following format **@{name:class}**.
 
-{% include note.html content="The ```@HaloQueries``` annotation is just an array of ```@HaloQuery``` annotations" %}
+> **Note:** The ```@HaloQueries``` annotation is just an array of ```@HaloQuery``` annotations.
 
 ```java
 //...
@@ -252,7 +247,7 @@ public class Article implements Parcelable {
 
 Then annotate your model constructor with the ```@HaloConstructor``` annotation to indicate the names of the columns of your autogenerated table. 
 
-{% include warning.html content="The order of the attributes must be the same on the annotation and in the constructor." %}
+> **Warning:** The order of the attributes must be the same on the annotation and in the constructor.
 
 ```java
 //...
@@ -268,9 +263,9 @@ public Article(String title, Date date, String article, String summary, String t
 //...
 ```
 
-This annotations will generate the code on the **build/generated/source/apt/** folder. You only need to import ```com.mobgen.halo.android.app.generated``` package to use the ```HaloContentQueryApi``` to perfom the operation as follows. 
+This annotations will generate the code on the **build/generated/source/apt/** folder. You only need to import ```com.mobgen.halo.android.app.generated``` package to use the ```HaloContentQueryApi``` to perform the operation as follows. 
 
-{% include tip.html content="The way to use the autogenerated ```HaloContentQueryApi``` is the same as in the general content API." %}
+> **Tip:** The way to use the autogenerated ```HaloContentQueryApi``` is the same as in the general content API.
 
 ```java
 //...
@@ -287,4 +282,4 @@ HaloContentQueryApi.with(haloInstance).selectByTitle("My article title.")
 //...
 ```
 
-If you want to go in deep into this module, please refer to [the detailed documentation](./android_content_generated_api.html).
+If you want to go in deep into this module, please refer to [the detailed documentation](android_content_generated_api.html).

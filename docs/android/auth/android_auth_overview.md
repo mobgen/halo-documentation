@@ -1,12 +1,8 @@
 ---
-title: Android SDK - Auth SDK Overview
-keywords: android, social login, facebook integration, google integration, auth
-last_updated: March 1, 2018
-tags: [social]
-sidebar: android_sidebar
-permalink: android_auth_overview.html
-folder: android
+title: Overview
 ---
+
+[![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Auth/images/download.svg)](https://bintray.com/halo-mobgen/maven/HALO-Auth/_latestVersion)
 
 ## Add dependency
 
@@ -35,8 +31,8 @@ The social API is the way to sign in with social providers on HALO SDK. Importin
 The HALO Social SDK allows the user to sign in in three ways:
 
 * HALO username and password.
-* Facebook integration. If you want go in deep, please refer to [the detailed documentation](android_social_provider_facebook.html)
-* Google plus integration. If you want go in deep, please refer to [the detailed documentation](android_social_provider_google.html)
+* Facebook integration. If you want go in deep, please refer to [the detailed documentation](android_auth_provider_facebook)
+* Google plus integration. If you want go in deep, please refer to [the detailed documentation](android_auth_provider_google)
 
 It is fairly recommendable to create the instance as a singleton in your application class or using Dagger after installing HALO. Creating an instance of the Social API is really simple once you have your HALO running. Just write the following lines:
 
@@ -92,8 +88,9 @@ authApi.loginWithHalo(HaloAuthApi.SOCIAL_HALO, authProfile, callback);
 ### Login with a social provider (Facebook or Google)
 Once the instance is created you can login with social network access token only if the ```wihtFacebook()``` or ```withGoogle()``` was especified on the ```HaloAuthApi``` instance. This will try to login the user after the system obtain the social provider accessToken with the providers:
 
-{% include warning.html content="If you want go in deep on Facebook integration, please refer to [the detailed documentation](android_social_provider_facebook.html)" %}
-{% include warning.html content="If you want go in deep on Google integration, please refer to [the detailed documentation](android_social_provider_google.html)" %}
+> **Note:** If you want go in deep on Facebook integration, please refer to [the detailed documentation](android_auth_provider_facebook)
+
+> **Note:** If you want go in deep on Google integration, please refer to [the detailed documentation](android_auth_provider_google)
 
 If you set ```withFacebook()```:
 
@@ -121,7 +118,7 @@ CallbackV2<IdentifiedUser> callback = new CallbackV2<IdentifiedUser>() {
 authApi.loginWithSocial(HaloAuthApi.SOCIAL_GOOGLE_PLUS, callback);
 ```
 
-{% include note.html content="The second parameter is the callback of type ```CallbackV2<HaloUserProfile>``` in wich you will handle the result of the authentication query." %}
+> **Note:** The second parameter is the callback of type ```CallbackV2<HaloUserProfile>``` in wich you will handle the result of the authentication query.
 
 ### Register
 Once the instance is created you can register on HALO providing authoritation object and a user profile only if the ```withHalo()``` was especified on the ```HaloAuthApi``` instance. This will try to register the user with HALO:
@@ -144,7 +141,7 @@ authApi.register(authProfile,userProfile)
         }
     });
 ```
-{% include note.html content="You will handle the result of the registration process with a ```CallbackV2<HaloUserProfile>``` as a parameter of execute." %}
+> **Note:** You will handle the result of the registration process with a ```CallbackV2<HaloUserProfile>``` as a parameter of execute.
 
 ### Check a provider
 
@@ -202,7 +199,7 @@ pocketApi.save(pocket).execute(new CallbackV2<Pocket>() {
         });
 ```
 
-{% include warning.html content="If you want go in deep, please refer to [the detailed documentation](android_pocket_api.html)" %}
+> **Warning:** If you want go in deep, please refer to [the detailed documentation](android_pocket_api)
 
 
 

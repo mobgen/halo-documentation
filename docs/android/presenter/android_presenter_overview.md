@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Presenter SDK Overview
-keywords: android, presenter, UI, UX, helper
-last_updated: November 15, 2016
-tags: [getting_started, ui]
-sidebar: android_sidebar
-permalink: android_presenter_overview.html
-folder: android
+title: Presenter SDK Overview
 ---
 
 
@@ -26,6 +20,8 @@ In MVP there are three roles:
 You can use the HALO plugin to configure it in an easy way:
 
 ```groovy
+> project/build.gradle
+
 halo {
 	...
 	services {

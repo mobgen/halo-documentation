@@ -1,13 +1,5 @@
 ---
-title: Android SDK - Getting Started
-keywords: android, getting started, start, how to
-last_updated: November 10, 2016
-tags: [getting_started]
-sidebar: android_sidebar
-toc: false
-map_name: android_started_workflow
-permalink: android_getting_started.html
-folder: android
+title: Getting Started
 ---
 
 <div id="userMap">
@@ -22,12 +14,14 @@ folder: android
 
 This getting started guide will guide you on setting up HALO SDK for Android in a few minutes. We will provide a step by step guide to get everything working with the most basic setup, for more detailed information about specific calls or how a module works check the sidebar.
 
-{% include warning.html content="HALO SDK is now compatible with Android Plugin for Gradle 3.0.1+" %}
+> **Important:** HALO SDK is compatible with Android Plugin for Gradle 3.0.1+
 
 ## Step 1: Add the HALO plugin 
 Open the build.gradle of the project root and add the plugin to the classpath:
 
 ```groovy
+> root/build.gradle
+
 buildscript {
     dependencies {
           classpath 'com.mobgen.halo.android:halo-plugin:{version}'
@@ -38,6 +32,8 @@ buildscript {
 Now apply the halo plugin to your HALO application after the android one:
 
 ```groovy
+> project/build.gradle
+
 apply plugin: 'halo'
 ```
 
@@ -45,6 +41,8 @@ apply plugin: 'halo'
 Open the build.gradle of your app and apply the basic configuration based on your HALO project. Here you have the minimal configuration you will need. Put it after the Android node.
 
 ```groovy
+> project/build.gradle
+
 halo {
     clientId "YOUR_HALO_KEY"
     clientSecret "YOUR_HALO_SECRET"
@@ -53,7 +51,7 @@ halo {
     }
 }
 ```
-{% include warning.html content="If you want go in deep with all the options with the gradle configuration or variants configuration, please refer to [the detailed documentation](android_core_gradle_plugin_options.html)" %}
+See more options in [the detailed documentation](android_core_gradle_plugin_options.html)
 
 
 
@@ -65,13 +63,15 @@ If you **don't** have a custom application class, follow this instructions.
 Open your AndroidManifest.xml and apply the following configuration to your Application node:
 
 ```xml
- <application
+> manifest.xml
+
+<application
         ...
         android:name="com.mobgen.halo.android.sdk.api.HaloApplication">
         ...
 </application>
 ```
-{% include note.html content="This will create the ```Halo``` instance for you. You can always access this instance by calling ```HaloApplication.halo()```" %}
+You can access later on to the HALO instance calling ```HaloApplication.halo()```.
 
 
 ### Option 2: I do have a custom application class
@@ -81,6 +81,8 @@ In this case you can either install HALO by yourself or extend the ```HaloApplic
 **Adding to your custom application class**:
 
 ```java
+> project/YourApplication.java
+
 public class MyCustomApplication extends AnotherApplicationClass {
     @Override
     public void onCreate(){
@@ -93,6 +95,8 @@ public class MyCustomApplication extends AnotherApplicationClass {
 **Extending the ```HaloApplication``` class**:
 
 ```java
+> project/MyCustomApplication.java
+
 public class MyCustomApplication extends HaloApplication {
     public Halo.Installer onCreateInstaller(){}
     public Halo.Installer beforeInstallHalo(@NonNull Halo.Installer installer){}

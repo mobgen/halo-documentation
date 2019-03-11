@@ -1,18 +1,12 @@
 ---
-title: Android SDK - Notifications SDK Detailed APIs
-keywords: android, notifications, decorator, firebase, gcm, messages, cloud
-last_updated: November 14, 2016
-tags: [notifications]
-sidebar: android_sidebar
-permalink: android_notifications_detailed_api.html
-folder: android
+title: Detailed APIs
 ---
 
 ## Enable notifications
 
 The notification system is built in in the SDK based on the FCM framework (Firebase Cloud Messages), which is the default system to receive notifications in the Android OS.
 
-{% include warning.html content="Since FCM uses the Google Play Services framework, HALO cannot receive notifications in those mobile phones that does not support the Google Play Store with Play services." %}
+> **Warning:** Since FCM uses the Google Play Services framework, HALO cannot receive notifications in those mobile phones that does not support the Google Play Store with Play services.
 
 Based on the HALO backend you can send many data in the notifications and segment depending on the segmentation of the users present in the system. In this guide we will show you how to enable the notifications on the SDK and how to handle some custom actions on those notifications.
 
@@ -29,7 +23,7 @@ First of all we need to create a FCM project in the [Firebase Console](https://c
 7. There select cloud messaging.
 8. Write down the server key. It looks like 'AIzaSyAtN64Y0**********-*************'
 
-![Configure FCM](./images/fcm-instructions.gif)
+![Configure FCM](/img/fcm-instructions.gif)
 
 ## Step 2. Add the Server key to HALO
 Take the Server API Key obtained in the previous step and put it in the administration console of HALO.:
@@ -40,7 +34,7 @@ Take the Server API Key obtained in the previous step and put it in the administ
 4. Update the app filling the **Android key** field with your server key.
 
 ## Step 3. Enable the notifications in the SDK
-To enable the notifications inside your app you have to add the [HALO plugin](/android_core_gradle_plugin_started). Once done, in your **HALO properties closure** enable the notifications service. Take the following code of a build.gradle as an example.
+To enable the notifications inside your app you have to add the [HALO plugin](../core/android_core_gradle_plugin_started). Once done, in your **HALO properties closure** enable the notifications service. Take the following code of a build.gradle as an example.
 
 ```groovy
 halo {
@@ -147,13 +141,13 @@ We show you the different layout configurations:
 
 |Layout type | Example                |
 |------------|-------------------------------------|
-|default|![Default push](./images/push-default.png)|
-|expanded|![Expanded push](./images/push-expanded.png)|
-|left|![Left push](./images/push-left.png)|
-|right|![Right push](./images/push-right.png)|
-|top|![Top push](./images/push-top.png)|
-|bottom|![Bottom push](./images/push-bottom.png)|
-|background|![Background push](./images/push-background.png)|
+|default|![Default push](/img/push-default.png)|
+|expanded|![Expanded push](/img/push-expanded.png)|
+|left|![Left push](/img/push-left.png)|
+|right|![Right push](/img/push-right.png)|
+|top|![Top push](/img/push-top.png)|
+|bottom|![Bottom push](/img/push-bottom.png)|
+|background|![Background push](/img/push-background.png)|
 
 ### 1. Create custom decorator
 We are providing a custom implementation of the icon decorator:

@@ -1,5 +1,5 @@
 ---
-title: Changelog for 2.7.0 - Estrada
+title: 2.7.0 - Estrada
 ---
 
 There is a document that explains visually the most important changes of this release. You can download it [here](/files/halo_release_notes_270.pdf).

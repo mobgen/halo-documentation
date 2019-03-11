@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Changelog for 2.2.0
-keywords: android, changelog, 2.2
-last_updated: January 31, 2017
-tags: [changelog]
-sidebar: android_sidebar
-toc: false
-permalink: android_release_notes_220.html
-folder: android
+title: 2.2.0
 ---
 
 ## Changelog

@@ -1,12 +1,5 @@
 ---
-title: SSL Pinning
-keywords: ios
-last_updated: March 27, 2017
-tags: [core, ssl]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_ssl_pinning.html
-folder: ios
+title: SSL pinning
 ---
 
 Using SSL for network connections is the de facto method of ensuring secure data transmission in today's mobile apps.

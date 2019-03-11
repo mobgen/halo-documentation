@@ -1,5 +1,5 @@
 ---
-title: Changelog for 2.5.0 - Cambados
+title: 2.5.0 - Cambados
 ---
 
 There is a document that explains visually the most important changes of this release. You can download it [here](/files/halo_release_notes_250.pdf).

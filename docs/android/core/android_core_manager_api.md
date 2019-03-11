@@ -1,16 +1,11 @@
 ---
-title: Android SDK - HALO Manager API
-keywords: android, manager, tags, modules, authentication, api, core
-last_updated: November 15, 2016
-tags: [core]
-sidebar: android_sidebar
-permalink: android_core_manager_api.html
-folder: android
+title: Manager API
 ---
 
 ## API definition
 
-The manager plugin is in charge to all the management actions that can be done in the core, such as changing the tags of the device or requesting the modules that belongs to the current application.
+The manager plugin is in charge to all the management actions that can be done in the core, such as changing the tags 
+of the device or requesting the modules that belongs to the current application.
 
 In this guide you will find an explanation of the api available methods. To create an instance for the manager API you should use:
 ```java

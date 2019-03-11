@@ -1,12 +1,5 @@
 ---
-title: Android SDK - Enable Debug Mode
-keywords: android, debug, log, tool
-last_updated: November 15, 2016
-tags: [core]
-sidebar: android_sidebar
-toc: false
-permalink: android_core_debug.html
-folder: android
+title: Enable Debug Mode
 ---
 
 ## Debug mode

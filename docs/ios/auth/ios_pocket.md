@@ -1,12 +1,5 @@
 ---
 title: User pocket
-keywords: ios, auth
-last_updated: August 17, 2017
-tags: [auth]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_pocket.html
-folder: ios
 ---
 
 The HALO SDK provides a way to store custom data for a given identified user, and it is called `Pocket`.
@@ -15,6 +8,7 @@ The HALO SDK provides a way to store custom data for a given identified user, an
 
 Each user may have his own pocket stored in the server containing custom information. The structure of the pocket is simple and it has two components: `references` and `data`.
 
+|Property| Description |
 |---|---|
 | `references` | Set of collections (with custom keys) that will allow, for example, to store references to different items (instances, modules, etc) |
 | `data` | Custom JSON (limited to 2000 characters) |
@@ -36,8 +30,10 @@ The raw representation of a pocket from the server point of view would be someth
 
 In order to modify the pocket there are a set of helper functions that simplify the fact of making changes
 
-{% include ios_sample_code.html id='pocket-functions'
-swift-content='// Add a reference under the given key
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+// Add a reference under the given key
 public func addReference(key: String, value: String) -> Void
 
 // Remove a reference under the given key. Will return true if succeeds, false otherwise
@@ -50,8 +46,11 @@ public func setReferences(key: String, values: [String]?) -> Void
 public func removeReferences(key: String) -> Void
 
 // Set the custom JSON data to be stored in the pocket
-public func setData(_ data: [String: Any]) -> Void'
-objc-content='// Add a reference under the given key
+public func setData(_ data: [String: Any]) -> Void
+```
+<!--Obj-C-->
+```C
+// Add a reference under the given key
 - (void)addReferenceWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 
 // Remove a reference under the given key. Will return YES if succeeds, NO otherwise
@@ -64,8 +63,9 @@ objc-content='// Add a reference under the given key
 - (void)removeReferencesForKey:(NSString * _Nonnull)key;
 
 // Set the custom JSON data to be stored in the pocket
-- (void)setData:(NSDictionary<NSString *, id> * _Nonnull)data;'
-%}
+- (void)setData:(NSDictionary<NSString *, id> * _Nonnull)data;
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Retrieving and storing a `Pocket`
 
@@ -73,25 +73,36 @@ Any operation over the pocket will require a previously logged in user. These re
 
 The first step will be creating an empty `Pocket`, populating it with the desired values and storing it in the server. If the operation succeeds, the saved `Pocket` will be returned through the completion handler.
 
-{% include ios_sample_code.html id='save-pocket'
-swift-content='public func savePocket(
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+public func savePocket(
   _ pocket: Pocket,
   completionHandler handler: @escaping (HTTPURLResponse?, Result<Pocket?>) -> Void
-) -> Void'
-objc-content='- (void)savePocket:(HaloPocket * _Nonnull)pocket 
+) -> Void
+```
+<!--Obj-C-->
+```C
+- (void)savePocket:(HaloPocket * _Nonnull)pocket 
     withSuccess:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, HaloPocket * _Nonnull))success 
-    failure:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, NSError * _Nonnull))failure;'
-%}
+    failure:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, NSError * _Nonnull))failure;
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 Getting a `Pocket` for the logged in user is really straightforward. An extra feature will allow the developer to filter the references to be retrieved. The keys can be specified as an argument, and the resulting `Pocket` will only contain those references. This will help saving network traffic and processing unnecessary data. Setting it to `nil` will avoid any filtering.
 
-{% include ios_sample_code.html id='get-pocket'
-swift-content='public func getPocket(
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Swift-->
+```swift
+public func getPocket(
   filterReferences: [String]? = nil,
   completionHandler handler: @escaping (HTTPURLResponse?, Result<Pocket?>) -> Void
-) -> Void'
-objc-content='- (void)getPocketWithFilter:(NSArray<NSString *> * _Nullable)filterReferences 
+) -> Void
+```
+<!--Obj-C-->
+```C
+- (void)getPocketWithFilter:(NSArray<NSString *> * _Nullable)filterReferences 
     success:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, HaloPocket * _Nonnull))success 
-    failure:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, NSError * _Nonnull))failure;'
-%}
-
+    failure:(void (^ _Nonnull)(NSHTTPURLResponse * _Nullable, NSError * _Nonnull))failure;
+```
+<!--END_DOCUSAURUS_CODE_TABS-->

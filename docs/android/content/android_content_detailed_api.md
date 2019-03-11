@@ -1,18 +1,15 @@
 ---
-title: Android SDK - Content SDK Detailed APIs
-keywords: android, content, getting started, halo, instance, module, query, search, sync, detailed
-last_updated: March 22, 2017
-tags: [content]
-sidebar: android_sidebar
-permalink: android_content_detailed_api.html
-folder: android
+title: Detailed APIs
 ---
 
-Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.
+Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is 
+obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) 
+Open Source.
 
 ## Search
 
-With the search query you can request some instances from the HALO Backend based on some query parameters. See the Search query section for all the available params.
+With the search query you can request some instances from the HALO Backend based on some query parameters. 
+See the Search query section for all the available params.
 
 ```java
 HaloContentApi api = HaloContentApi.with(halo);
@@ -23,7 +20,9 @@ api.search(Data.NETWORK_AND_STORAGE, query)
 
 ### Search Query
 
-The ```SearchQuery``` object supports many params to help in the search task. To create a new instance of the ```SearchQuery``` you have to use the ```Builder``` pattern by calling ```SearchQuery.builder()```. The build object is parcelable and so you can send it across activities if needed.
+The ```SearchQuery``` object supports many params to help in the search task. To create a new instance of 
+the ```SearchQuery``` you have to use the ```Builder``` pattern by calling ```SearchQuery.builder()```. The build 
+object is parcelable and so you can send it across activities if needed.
 
 Here you can find the full list of options you can chain into the ```SearchQuery```:
 
@@ -52,7 +51,8 @@ Here you can find the full list of options you can chain into the ```SearchQuery
 | **sort** | allows to order by [asc or desc] any metatada field of the instance ( name, publishedAt, createdAt, archivedAt, removedAt, deletedAt). |
 | **serverCache** | set a time in seconds to cache the server response. |
 
-In the beginSearch/end and beginMetaSearch/end parameters there are many query parameters supported. Here you have an index on how to use them and an example.
+In the beginSearch/end and beginMetaSearch/end parameters there are many query parameters supported. Here you have an 
+index on how to use them and an example.
 
 | Search condition | Explanation |
 |--------------|-------------|
@@ -92,14 +92,18 @@ SearchQuery.builder()
 The search supports 3 modes to select the source where the content comes from:
 
 - **Data.NETWORK_ONLY**: this would be the simplest one. Just does the request and provides you the result.
-- **Data.NETWORK_AND_STORAGE**: in this case the data is brought from network, stored in the local storage and retrieved to the user.
+- **Data.NETWORK_AND_STORAGE**: in this case the data is brought from network, stored in the local storage and 
+retrieved to the user.
 - **Data.STORAGE_ONLY**: this option provides only the cached data for the given request.
 
 ### Data parsing
-When you call the ```api.search``` method you are not actually doing the request, it provides you an object that can be further configured to bring the data in the format you expect. In this case you have 3 different options:
+When you call the ```api.search``` method you are not actually doing the request, it provides you an object that 
+can be further configured to bring the data in the format you expect. In this case you have 3 different options:
 
-- **```asRaw()```**: provides a cursor you can parse by your own. Usually this will not be used unless you need some sort of performance critical task in a list.
-- **```asContent()```**: provides a ```HaloContentInstance``` list. This can be useful if you need to check also the metadata. To parse it to a custom class you can use the following operation on each instance:
+- **```asRaw()```**: provides a cursor you can parse by your own. Usually this will not be used unless you need 
+some sort of performance critical task in a list.
+- **```asContent()```**: provides a ```HaloContentInstance``` list. This can be useful if you need to check also 
+the metadata. To parse it to a custom class you can use the following operation on each instance:
 
 ```java
 HaloContentHelper.from(instance, MyCustomClass.class, halo.framework().parser());
@@ -107,7 +111,7 @@ HaloContentHelper.from(instance, MyCustomClass.class, halo.framework().parser())
 
 - **```asContent(Class<T> clazz)```**: this is the typical configuration you will need. Just pass your custom class to the content parameter and it will parse the list for you directly from the json received. Also the class must be annotated with ```@JsonObject``` and the fields with ```@JsonField```. Refer to [LoganSquare documentation](https://github.com/bluelinelabs/LoganSquare) for more details.
 
-{% include important.html content="Remember that to make the class available for parsing you need to use the correct annotations. See the [content parsing section](#content-parsing)." %}
+> **Important:** Remember that to make the class available for parsing you need to use the correct annotations. See the [content parsing section](#content-parsing).
 
 ## Sync
 When a given module has so many items that handling them takes too much time or you want to have some content available in the background for the user, synchronization can make that work for you.
@@ -151,7 +155,8 @@ contentApi.getSyncInstances("my module name")
 subscription.unsubscribe();
 ```
 
-- For debugging purposes, we keep a log for all the synchronizations that are done by an application. You can take them by module or all using the following call:
+- For debugging purposes, we keep a log for all the synchronizations that are done by an application. 
+You can take them by module or all using the following call:
 
 ```java
 contentApi.getSyncLog("my module name")
@@ -173,7 +178,7 @@ This api supports some execution options based on the sdk. Checkout them to see 
 
 #### Response with callback in any thread: execute
 
-{% include tip.html content="You can provide Threading mode and get the result of the operation on the callback)." %}
+> **Tip:** You can provide Threading mode and get the result of the operation on the callback).
 
 ```java
 SearchQuery query = SearchQuery.builder()
@@ -192,9 +197,9 @@ contentApi.search(Data.NETWORK_ONLY, query)
 
 #### Response inline in the same thread: excecuteInline
 
-{% include tip.html content="You can execute sync requests on same execution thread (**Threading.SAME_THREAD_POLICY**) that returns responses (inline, no callback needed)." %}
+> **Tip:** You can execute sync requests on same execution thread (**Threading.SAME_THREAD_POLICY**) that returns responses (inline, no callback needed).
 
-{% include warning.html content="The execution will be on the same thread so you can not modify Threading mode." %}
+> **Warning:** The execution will be on the same thread so you can not modify Threading mode.
 
 
 ```java

@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Team Support
-keywords: android, support
-last_updated: November 14, 2016
-tags: [getting_started]
-sidebar: android_sidebar
-permalink: android_support.html
-folder: android
+title: Team Support
 ---
 
 We would love to hear from you and the way you interact with our products to improve them and add continuosly new 

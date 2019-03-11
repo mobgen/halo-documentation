@@ -1,12 +1,5 @@
 ---
-title: Getting Started
-keywords: ios, getting started, start, how to
-last_updated: December 26, 2016
-tags: [getting_started]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_getting_started.html
-folder: ios
+title: Getting started
 ---
 
 In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK ({{ site.ios_latest_sdk }}). In order to offer higher compatibility, the deployment target is set to iOS 8.0.
@@ -34,11 +27,11 @@ carthage update --platform iOS
 
 we will get the compiled frameworks we need in order to make our project work.
 
-![](images/ios/carthage.png)
+![](/img/ios/carthage.png)
 
 We would then need to add those frameworks as embedded frameworks (iOS 8+). Depending on the language we are using in our project (Swift/Objective-C) we will either need to just add the `Halo.framework` or also the `HaloObjC.framework` (as shown in the image).
 
-![](images/ios/carthageProjectSetup.png)
+![](/img/ios/carthageProjectSetup.png)
 
 ## CocoaPods
 
@@ -60,7 +53,7 @@ The configuration process is quite simple. Your app will only need to contain a 
 
 This `.plist` file should contain at least the `CLIENT_ID` and `CLIENT_SECRET` key-value pairs, with the right values for your app.
 
-![](images/ios/plist.png)
+![](/img/ios/plist.png)
 
 The full list of available keys for this configuration file is the following:
 
@@ -68,7 +61,7 @@ The full list of available keys for this configuration file is the following:
 |----|:----:|----|:----:|
 | `CLIENT_ID` | String | Client id for the authentication as application | - |
 | `CLIENT_SECRET` | String | Client secret associated to the account used by the application | - |
-| `ENVIRONMENT` | String | The desired Halo environment | `https://halo.mobgen.com` |
+| `ENVIRONMENT` | String | The desired Halo environment | `https://web-halo.mobgen.com` |
 | `DISABLE_SSL_PINNING` | Boolean | Disable SSL pinning (usually for testing purposes). | `NO` |
 | `ENABLE_SYSTEM_TAGS` | Boolean | Enable a set of default system tags added to the user (OS, device, etc). | `NO` |
 
@@ -84,4 +77,4 @@ dyld: Library not loaded: @rpath/libswiftCore.dylib
 
 **A:** Regardless the method you choose to integrate the Halo SDK, you will need to make sure that the `Always Embed Swift Standard Libraries` under the Build Settings in your project is set to `YES` in order to avoid errors related to Swift.
 
-![](images/ios/embedded.png)
+![](/img/ios/embedded.png)

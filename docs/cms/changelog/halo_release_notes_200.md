@@ -1,5 +1,5 @@
 ---
-title: Changelog for 2.0.0
+title: 2.0.0
 ---
 
 ## Changelog

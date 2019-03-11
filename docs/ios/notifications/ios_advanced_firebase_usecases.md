@@ -1,17 +1,13 @@
 ---
-title: Advanced Firebase Use Cases
-keywords: ios, notifications, firebase
-last_updated: October 18, 2017
-tags: [notifications]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_advanced_firebase_usecases.html
-folder: ios
+title: Advanced Firebase use cases
 ---
 
 ## Advanced Firebase Use Cases
 
-The Halo Push add-on module make usage of the Firebase libraries, including setting up their configuration and downloading the complete set of Firebase libs in order to be available for the developer by just by importing / referencing the required file. That helps on easing the setup process of the push notifications by taking care internally of the Firebase dependencies and setup.
+The Halo Push add-on module make usage of the Firebase libraries, including setting up their configuration and 
+downloading the complete set of Firebase libs in order to be available for the developer by just by importing / 
+referencing the required file. That helps on easing the setup process of the push notifications by taking care 
+internally of the Firebase dependencies and setup.
 
 
 ### External Configuration
@@ -31,7 +27,10 @@ if let firOptions = FirebaseOptions(contentsOfFile: firebaseConfigFile) {
 
 ### Usage of additional Firebase libs
 
-As an example of another Firebase libs usage, the developer can add the Analitics lib (located at: $(SRCROOT)/Carthage/Build/iOS/ ) to their project configuration (under Embedded Binaries) and later after the  Halo Firebase configure [case 1] (occurring on the Push add-on startup) or their own configure [case 2] (explained on the above example) start making using of the initialized instance of Firebase Analitics. 
+As an example of another Firebase libs usage, the developer can add the Analitics lib (located at: 
+`$(SRCROOT)/Carthage/Build/iOS/`) to their project configuration (under Embedded Binaries) and later after the
+Halo Firebase configure [case 1] (occurring on the Push add-on startup) or their own configure [case 2] (explained 
+on the above example) start making using of the initialized instance of Firebase Analytics. 
 
 ```swift
 // [case 1] - After the Halo startup
@@ -55,7 +54,7 @@ Analytics.logEvent("event", parameters: nil)
 
 ### Custom name support for the Firebase config .plist 
 
-Additionaly you can set a diferent file name distinct than the Firebase default "GoogleService-Info.plist" by using an additional property keyed "FIREBASE_PLIST_NAME" on the Halo config .plist
+Additionaly you can set a diferent file name distinct than the Firebase default `GoogleService-Info.plist` by using an additional property keyed `FIREBASE_PLIST_NAME` on the Halo config .plist
 
 ```xml
 <key>FIREBASE_PLIST_NAME</key>

@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Pocket SDK Overview
-keywords: android, auth, identified user, pocket, reference filter, custom class, custom data
-last_updated: June 23, 2017
-tags: [pocket]
-sidebar: android_sidebar
-permalink: android_pocket_api.html
-folder: android
+title: Pocket SDK Overview
 ---
 
 ## Pocket API

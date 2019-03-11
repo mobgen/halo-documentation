@@ -1,12 +1,5 @@
 ---
-title: iOS Framework - Changelog for 2.4.0
-keywords: ios, changelog, 2.4.0
-last_updated: March 14, 2018
-tags: [changelog]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_release_notes_240.html
-folder: ios
+title: 2.4.0 - Balboa
 ---
 
 ## Changelog

@@ -1,12 +1,5 @@
 ---
-title: iOS Framework - Changelog for 2.2.3
-keywords: ios, changelog, 2.2.3
-last_updated: May 26, 2017
-tags: [changelog]
-sidebar: ios_sidebar
-toc: false
-permalink: ios_release_notes_223.html
-folder: ios
+title: 2.2.3
 ---
 
 ## Changelog

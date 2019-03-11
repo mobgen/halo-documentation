@@ -43,8 +43,11 @@ class Footer extends React.Component {
             <a href={this.docUrl('android/android_home')}>
               Getting started with Android
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
+            <a href={this.docUrl('ios/ios_home')}>
               Getting started with iOS
+            </a>
+            <a href={this.docUrl('javascript/javascript_home')}>
+              Getting started with Javascript
             </a>
             <a href={this.docUrl('android/server_integrations_home')}>
               Server integrations
@@ -61,7 +64,6 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
             <a href="https://github.com/mobgen"
                target="_blank">GitHub</a>
             <a

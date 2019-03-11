@@ -1,12 +1,5 @@
 ---
-title: Android SDK - HALO Core API
-keywords: android, core, authentication, token, version, segmentation, tag
-last_updated: November 15, 2016
-tags: [core]
-sidebar: android_sidebar
-toc: false
-permalink: android_halo_core.html
-folder: android
+title: Core API
 ---
 
 You will be able to access some internals of HALO by accessing to its ```HaloCore``` instance. This instance keeps the current device with its segmentation tags, the credentials, token and configuration provided in the plugin.

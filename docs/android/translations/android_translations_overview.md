@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Translations SDK Overview
-keywords: android, translations, sync, content, module, localized text, localization
-last_updated: November 15, 2016
-tags: [getting_started, content]
-sidebar: android_sidebar
-permalink: android_translations_overview.html
-folder: android
+title: Overview
 ---
 
 [![Download](https://api.bintray.com/packages/halo-mobgen/maven/HALO-Translations/images/download.svg) ](https://bintray.com/halo-mobgen/maven/HALO-Translations/_latestVersion)
@@ -42,7 +36,7 @@ To make this work with HALO you will need to configure the module in the followi
 - Create as a manager two fields for this module, *one as a text* and a *second as a localized text*.
 - Create some instances for this module with some localized texts.
 
-![halo-translations.png](./images/halo-key-value-tutorial.png)
+![halo-translations.png](/img/halo-key-value-tutorial.png)
 
 
 To create the Android Application translations instance you will have to do the following:

@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Indoor Location POC
-keywords: android, location, content ,POC
-last_updated: June 14, 2016
-tags: [example]
-sidebar: android_sidebar
-permalink: android_location.html
-folder: android
+title: Indoor Location POC
 ---
 
 # Indoor location
@@ -14,20 +8,18 @@ Using the content module of HALO we store all wifi access points on a room and t
 
 The app uses the following libraries of HALO SDK:
 
-- **HALO Content API**: provides all the content of the app. See also [Content API](./android_content_overview.html).
-- **HALO Auth API**: to login or create users. See also [Auth API](./android_auth_overview.html).
+- **HALO Content API**: provides all the content of the app. See also [Content API](../content/android_content_overview.html).
+- **HALO Auth API**: to login or create users. See also [Auth API](../auth/android_auth_overview.html).
 
 You can download the source code in the following link: [Location POC](https://github.com/mobgen/halo-android/tree/develop/sdk-samples/halo-location)
-
-<!--- You can try this app in the following link: [Location POC](https://google.com) -->
 
 ### Screenshots
 
 | My current room | Heatmap |
 |-----------------|---------|
-| ![Current room](./images/myroom.png) | ![Heatmap](./images/heatmap.png)|
+| ![Current room](/img/myroom.png) | ![Heatmap](/img/heatmap.png)|
 
 
 |Friend location | Friend list location|
 |------------------|---------------------|
-| ![Friend position](./images/friend.png)| ![Friends list](./images/friendlist.png)|
+| ![Friend position](/img/friend.png)| ![Friends list](/img/friendlist.png)|

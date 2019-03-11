@@ -1,12 +1,5 @@
 ---
-title: JavaScript HALO SDK - Supported features
-keywords: javascript, features, characteristics
-last_updated: November 9, 2017
-tags: [getting_started]
-sidebar: javascript_sidebar
-toc: false
-permalink: javascript_supported_features.html
-folder: javascript
+title: Supported features
 ---
 
 <div class="row">
@@ -37,7 +30,7 @@ folder: javascript
             </div>
             <div class="media-body">
                 <h4 class="media-heading">HALO Auth</h4>
-                <p></p>
+                <p>This library executes the authentication with different providers.</p>
             </div>
         </div>
     </div>

@@ -1,11 +1,5 @@
 ---
-title: Android SDK - Awesome wines 
-keywords: android, loyalty, content, segmentation, flutter , POC
-last_updated: September 1, 2017
-tags: [example]
-sidebar: android_sidebar
-permalink: android_awesome_wines.html
-folder: android
+title: Awesome wines
 ---
 
 # Awesome wines
@@ -15,9 +9,9 @@ List of wines based on dynamic image slideshows with a comment related module to
 The app uses the following libraries of HALO SDK:
 
 - **HALO Loyalty API**: to generate and redeem promotion codes.
-- **HALO Content API**: provides all the content of the app. See also [Content API](./android_content_overview.html).
-- **HALO Auth API**: to login or create users. See also [Auth API](./android_auth_overview.html).
-- **HALO Notification API**: send push notifications. See also [Notification API](./android_notifications_overview).
+- **HALO Content API**: provides all the content of the app. See also [Content API](../content/android_content_overview.html).
+- **HALO Auth API**: to login or create users. See also [Auth API](../auth/android_auth_overview.html).
+- **HALO Notification API**: send push notifications. See also [Notification API](../notifications/android_notifications_overview).
 
 
 ### BIDI Codes
@@ -41,28 +35,28 @@ img[alt="Item 200"] {
 
 | Stamp | |
 |-----------------|---------|
-| ![Stamp code](./images/FREE_COFFEE.png) | This is an example of stamp. You need to collect 5 stamps until you can request the gift with this example.|
+| ![Stamp code](/img/FREE_COFFEE.png) | This is an example of stamp. You need to collect 5 stamps until you can request the gift with this example.|
 
 | Pize 1000 | |
 |-----------------|---------|
-| ![Prize 1000](./images/WINE_1_1000.png) | This is an example of prize. If you have loyalty points on your balance you can redeem the code to obtain the offer. Prize always is a non positive value. In this case it will use 1500 points. |
+| ![Prize 1000](/img/WINE_1_1000.png) | This is an example of prize. If you have loyalty points on your balance you can redeem the code to obtain the offer. Prize always is a non positive value. In this case it will use 1500 points. |
 
 | Item 200 | |
 |-----------------|---------|
-| ![Item 200](./images/WINE_1-200.png) | This is an example of item. You can redeem the code to obtain loyalty points on your balance. Item always is a positive value. In this case you get 200 points. |
+| ![Item 200](/img/WINE_1-200.png) | This is an example of item. You can redeem the code to obtain loyalty points on your balance. Item always is a positive value. In this case you get 200 points. |
 
 
 ### Screenshots
 
 | Wines catalog | Wines detail |
 |-----------------|---------|
-| ![Wines catalog](./images/wines.png) | ![Wines detail](./images/winedetail.png)|
+| ![Wines catalog](/img/wines.png) | ![Wines detail](/img/winedetail.png)|
 
 
 | Wines comment |  Wines offers |
 |------------------|---------------------|
-| ![Wine comment](./images/comments.png)| ![Wines offers](./images/offers.png)|
+| ![Wine comment](/img/comments.png)| ![Wines offers](/img/offers.png)|
 
 | Scan codes screen | User profile |
 |------------------|---------------------|
-| ![Scan code screen](./images/scanwines.png)| ![Transaction result screen](./images/profile.png)|
+| ![Scan code screen](/img/scanwines.png)| ![Transaction result screen](/img/profile.png)|
