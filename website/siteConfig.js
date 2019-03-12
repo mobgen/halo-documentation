@@ -12,7 +12,7 @@ const users = [
 
 const siteConfig = {
   title: 'Official documentation', // Title for your website.
-  tagline: 'HALO: Official documentation',
+  tagline: 'HALO',
   url: 'https://web-halo.mobgen.com', // Your website URL
   baseUrl: '/',
   projectName: 'HALO',
@@ -38,7 +38,7 @@ const siteConfig = {
   favicon: 'img/favicon.png',
   colors: {
     primaryColor: '#137cbd',
-    secondaryColor: '#394b59',
+    secondaryColor: '#394b59'
   },
 
   /* Custom fonts for website */
@@ -59,9 +59,14 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',
   },
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+      'https://buttons.github.io/buttons.js'
+  ],
   stylesheets: [
-    'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+      'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+      'https://fonts.googleapis.com/css?family=Raleway',
+      'https://fonts.googleapis.com/css?family=Montserrat:400,700',
+      'https://fonts.googleapis.com/css?family=Open+Sans'
   ],
   onPageNav: 'separate',
   cleanUrl: true,

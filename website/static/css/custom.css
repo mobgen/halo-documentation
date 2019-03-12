@@ -16,9 +16,18 @@
 }
 
 .nav-footer {
-    background: #30404D;
+    background: #323a45;
     color: #f5f8fa;
+    -webkit-box-shadow: 0px -2px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px -2px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px -2px 5px 1px rgba(0,0,0,0.2);
+    z-index: 100;
 }
+
+.fixedHeaderContainer {
+    background: #323a45;
+}
+
 .nav-footer .fbOpenSource {
     width: 335px
 }
@@ -139,7 +148,8 @@ div.box.box1 {
     font-size: 14px;
 }
 
-
-iframe {
-    width: 100%
+.to-animate,.animate-object, .animate-single {
+    opacity: 0;
 }
+
+
