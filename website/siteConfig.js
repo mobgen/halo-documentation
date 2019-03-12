@@ -11,8 +11,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Official documentation', // Title for your website.
-  tagline: 'HALO',
+  title: 'HALO', // Title for your website.
+  tagline: 'Official documentation',
   url: 'https://web-halo.mobgen.com', // Your website URL
   baseUrl: '/',
   projectName: 'HALO',
@@ -33,7 +33,6 @@ const siteConfig = {
     {search: true},
   ],
   users,
-  headerIcon: 'img/mobgen_logo_text.png',
   footerIcon: 'img/mobgen_logo_text.png',
   favicon: 'img/favicon.png',
   colors: {

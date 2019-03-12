@@ -27,6 +27,10 @@
 .fixedHeaderContainer {
     background: #323a45;
 }
+.headerTitle {
+    font-family: 'Lab-Medium';
+    font-size: 2em !important;
+}
 
 .nav-footer .fbOpenSource {
     width: 335px

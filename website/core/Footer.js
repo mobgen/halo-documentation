@@ -36,10 +36,13 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
+            <h5>User documentation</h5>
             <a href={this.docUrl('cms/cms_home')}>
               CMS Documentation
             </a>
+          </div>
+          <div>
+            <h5>Technical documentation</h5>
             <a href={this.docUrl('android/android_home')}>
               Getting started with Android
             </a>
@@ -54,12 +57,6 @@ class Footer extends React.Component {
             </a>
             <a target="_blank" href={"https://web-halo.mobgen.com/api/docs/"}>
               API Reference
-            </a>
-          </div>
-          <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
             </a>
           </div>
           <div>
@@ -92,6 +89,13 @@ class Footer extends React.Component {
             <div/>
             <a
                 className="github-button"
+                href={"https://source.digital.accenture.com/projects/MGUNS/repos/halo-sdk-js/browse?at=refs/heads/develop"}
+                target="_blank">
+              Star Javascript SDK
+            </a>
+            <div/>
+            <a
+                className="github-button"
                 href={"https://github.com/mobgen/halo-documentation"}
                 target="_blank"
                 data-icon="octicon-star"
@@ -101,6 +105,7 @@ class Footer extends React.Component {
                 aria-label="Star this project on GitHub">
               Star Documentation
             </a>
+
           </div>
         </section>
 
