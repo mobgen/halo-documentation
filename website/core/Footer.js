@@ -64,6 +64,18 @@ class Footer extends React.Component {
             <a href="https://github.com/mobgen"
                target="_blank">GitHub</a>
             <a
+                className="github-button"
+                href={"https://github.com/mobgen/halo-documentation"}
+                target="_blank"
+                data-icon="octicon-star"
+                data-count-href="/facebook/docusaurus/stargazers"
+                data-show-count="true"
+                data-count-aria-label="# stargazers on GitHub"
+                aria-label="Star this project on GitHub">
+              Star Documentation
+            </a>
+            <div/>
+            <a
               className="github-button"
               href={"https://github.com/mobgen/halo-android"}
               target="_blank"
@@ -93,19 +105,6 @@ class Footer extends React.Component {
                 target="_blank">
               Star Javascript SDK
             </a>
-            <div/>
-            <a
-                className="github-button"
-                href={"https://github.com/mobgen/halo-documentation"}
-                target="_blank"
-                data-icon="octicon-star"
-                data-count-href="/facebook/docusaurus/stargazers"
-                data-show-count="true"
-                data-count-aria-label="# stargazers on GitHub"
-                aria-label="Star this project on GitHub">
-              Star Documentation
-            </a>
-
           </div>
         </section>
 
