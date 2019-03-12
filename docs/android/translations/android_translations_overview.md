@@ -36,7 +36,7 @@ To make this work with HALO you will need to configure the module in the followi
 - Create as a manager two fields for this module, *one as a text* and a *second as a localized text*.
 - Create some instances for this module with some localized texts.
 
-![halo-translations.png](/img/halo-key-value-tutorial.png)
+![halo-translations.png](../../../img/halo-key-value-tutorial.png)
 
 
 To create the Android Application translations instance you will have to do the following:

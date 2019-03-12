@@ -16,13 +16,13 @@ Add the package name and and follow the setup steps.
 
 You can add extra security if you add the google id into the Halo CMS.
 
-![Configure Google project](/img/google-console.png)
+![Configure Google project](../../../img/google-console.png)
 
 This step is optional and if you add this field to the HALO CMS it would verify that the tokens you provide belongs to the Google application. You can provide as many ids as you need for different platforms. In another case the HALO system only verifies if it is a valid token against Google.
 
 You can add this information in app section on HALO CMS.
 
-![Add extra security to facebook tokens](/img/halo-cms-secure-social.png)
+![Add extra security to facebook tokens](../../../img/halo-cms-secure-social.png)
 
 ### Step 3: Generate the hashes (Optional)
 

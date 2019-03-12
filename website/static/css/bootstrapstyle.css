@@ -1,18 +1,18 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Lab Medium';
-  src: url("/fonts/lab-medium.woff") format('woff');
+  src: url("../fonts/lab-medium.woff") format('woff');
 }
 
 @font-face {
   font-family: 'Lab Bold';
-  src: url("/fonts/lab_bold-webfont.woff2") format('woff2');
+  src: url("../fonts/lab_bold-webfont.woff2") format('woff2');
 }
 
 @font-face {
   font-family: 'icomoon';
-  src: url("/fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -8147,12 +8147,6 @@ p {
   bottom: -15em;
 }
 
-@media screen and (max-width: 992px) {
-  #fh5co-hero .fh5co-intro .fh5co-text {
-    bottom: 0;
-    bottom: -4em;
-  }
-}
 
 @media screen and (max-width: 768px) {
   #fh5co-hero .fh5co-intro .fh5co-text {

@@ -2,7 +2,7 @@
 title: 2.7.0 - Estrada
 ---
 
-There is a document that explains visually the most important changes of this release. You can download it [here](/files/halo_release_notes_270.pdf).
+There is a document that explains visually the most important changes of this release. You can download it [here](../../../files/halo_release_notes_270.pdf).
 
 ## CMS Changes
 - Omnibar Global Search: Find your module, instances or media easier. Just click on the top left button or press cmd+K (mac)  ctrl+k (win/linux)  to open it.

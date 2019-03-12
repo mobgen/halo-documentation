@@ -21,7 +21,7 @@ in background seamlessly and without worrying about the publication time.
 
 You can also assign the users that have access to this content structure using the '*assign users*' form, but this is out of the scope of this document.
 
-![](/img/tutorial_create_module_structure.gif)
+![](../../../img/tutorial_create_module_structure.gif)
 
 
 ## Fields

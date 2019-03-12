@@ -25,7 +25,7 @@ books can have content items of books, which is the real data.
 - Enter the name and select if this structure is single or not. Single structures can have only one content item.
 - Start configuring your content structure.
 
-![](/img/tutorial_create_module.gif)
+![](../../../img/tutorial_create_module.gif)
 
 ### Delete content structures
 
@@ -75,7 +75,7 @@ display configuration.
 - A content structure can be selected/deselected by clicking in the title section of the card element.
 - A content structure can be accessed and edited by clicking in the edit icon present in the bottom of the card element '<span class="fa fa-pencil"></span> *Edit*'. 
 
-![](./img/tutorial_grid_view.png)
+![](../../../img/tutorial_grid_view.png)
 
 ### Columns display
 

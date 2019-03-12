@@ -16,4 +16,4 @@ a form in the login screen to reset it securely:
 
 At this point your new password should be available and you can login again using it.
 
-![](/img/tutorial_forget.gif)
+![](../../../img/tutorial_forget.gif)

@@ -13,10 +13,10 @@ const users = [
 const siteConfig = {
   title: 'HALO', // Title for your website.
   tagline: 'Official documentation',
-  url: 'https://web-halo.mobgen.com', // Your website URL
-  baseUrl: '/',
-  projectName: 'HALO',
-  organizationName: 'MOBGEN | Accenture Interactive',
+  url: 'https://mobgen.github.io', // Your website URL
+  baseUrl: '/halo-documentation/',
+  projectName: 'halo-documentation',
+  organizationName: 'mobgen',
   algolia: {
     apiKey: 'my-api-key',
     indexName: 'my-index-name',
@@ -39,20 +39,6 @@ const siteConfig = {
     primaryColor: '#137cbd',
     secondaryColor: '#394b59'
   },
-
-  /* Custom fonts for website */
-  /*
-  fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },
-  */
   copyright: `Copyright © ${new Date().getFullYear()} MOBGEN | Accenture Interactive`,
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -63,9 +49,7 @@ const siteConfig = {
   ],
   stylesheets: [
       'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-      'https://fonts.googleapis.com/css?family=Raleway',
-      'https://fonts.googleapis.com/css?family=Montserrat:400,700',
-      'https://fonts.googleapis.com/css?family=Open+Sans'
+      'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway'
   ],
   onPageNav: 'separate',
   cleanUrl: true,

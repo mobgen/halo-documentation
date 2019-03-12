@@ -14,7 +14,7 @@ sidebar_label: Operations over applications
 - In the top action bar press the '<span class="fa fa-floppy-o"></span> *Save*' button.
 - Your application will be created.
 
-[](./img/tutorial_create_app.gif)
+![](../../../img/tutorial_create_app.gif)
 
 ### Delete an application
 

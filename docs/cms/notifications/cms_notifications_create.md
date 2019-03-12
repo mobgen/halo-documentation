@@ -17,7 +17,7 @@ Once it is configured you can come again as an admin and modify your app instanc
 - Where it states FCM key you have to enter the firebase server key. Use the legacy one since we still do 
 not support the new format.
 
-[](./img/tutorial_app_configure_fcm.gif)
+![](../../../img/tutorial_app_configure_fcm.gif)
 
 ## Operations with notifications
 

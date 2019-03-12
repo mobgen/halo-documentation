@@ -17,9 +17,9 @@ You can download the source code in the following link: [Location POC](https://g
 
 | My current room | Heatmap |
 |-----------------|---------|
-| ![Current room](/img/myroom.png) | ![Heatmap](/img/heatmap.png)|
+| ![Current room](../../../img/myroom.png) | ![Heatmap](../../../img/heatmap.png)|
 
 
 |Friend location | Friend list location|
 |------------------|---------------------|
-| ![Friend position](/img/friend.png)| ![Friends list](/img/friendlist.png)|
+| ![Friend position](../../../img/friend.png)| ![Friends list](../../../img/friendlist.png)|

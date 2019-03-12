@@ -25,17 +25,17 @@ pod 'HaloNotificationsSDK', '{{ site.ios_version }}
 
 The HALO platform offers the option to customise the push notifications by setting different sounds apart from the default one. Since that one is an optional feature, and in favour of a smaller SDK, the sound files are kept outside of the delivered SDK, leaving the responsibility of adding the needed ones to the developers.
 
-The full pack containing all of the custom sounds offered by the platform can be downloaded [here](/files/Sounds.zip). 
+The full pack containing all of the custom sounds offered by the platform can be downloaded [here](../../../files/Sounds.zip). 
 
 After downloading the sounds, the desired ones will need to be copied to the project. Remember to uncheck everything from *Add to targets*, since we will be specifying a custom location for those files.
 
-![](/img/ios/push_notifications/copying_sounds.png)
+![](../../../img/ios/push_notifications/copying_sounds.png)
 
 The next step will be adding a new *Build Phase*, where we will define the location where these sound files will be copied. The destination will be inside the notifications framework, and for that, we will add a *New Copy Files Phase*, where we will choose `Frameworks` as destination and add `HaloNotifications.framework` as subpath.
 
 That way, the sound files will get copied to that location and will be used when receiving a push notification specifying one of those custom sounds.
 
-![](/img/ios/push_notifications/build_phase.png)
+![](../../../img/ios/push_notifications/build_phase.png)
 
 ## The `HaloNotification` model
 

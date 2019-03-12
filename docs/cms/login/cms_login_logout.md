@@ -18,7 +18,7 @@ form, so accounts are created in the scope of a company or project.
 You will be taken to a welcome message where you can start selecting the menu to access all the features available
 as a customer.
 
-![](/img/tutorial_login.gif)
+![](../../../img/tutorial_login.gif)
 
 ## Logout
 
@@ -29,4 +29,4 @@ Once you are logged in you can perform a logout following the next steps:
 - A dialog will appear that says '*Logout*'.
 - Once clicked you will be immediately logged out from HALO.
 
-![](/img/tutorial_logout.gif)
+![](../../../img/tutorial_logout.gif)

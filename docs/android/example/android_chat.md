@@ -20,9 +20,9 @@ You can download the source code in the following link: [Chat POC](https://githu
 
 | Home screen | Scan BIDI user code |
 |-----------------|---------|
-| ![Home room](/img/home.png) | ![Scan user QR](/img/scanuser.png)|
+| ![Home room](../../../img/home.png) | ![Scan user QR](../../../img/scanuser.png)|
 
 
 | Contact list | Chat screen |
 |------------------|---------------------|
-| ![Contact list position](/img/contactlist.png)| ![Chat screen list](/img/chatscreen.png)|
+| ![Contact list position](../../../img/contactlist.png)| ![Chat screen list](../../../img/chatscreen.png)|

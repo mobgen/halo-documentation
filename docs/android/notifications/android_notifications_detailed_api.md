@@ -23,7 +23,7 @@ First of all we need to create a FCM project in the [Firebase Console](https://c
 7. There select cloud messaging.
 8. Write down the server key. It looks like 'AIzaSyAtN64Y0**********-*************'
 
-![Configure FCM](/img/fcm-instructions.gif)
+![Configure FCM](../../../img/fcm-instructions.gif)
 
 ## Step 2. Add the Server key to HALO
 Take the Server API Key obtained in the previous step and put it in the administration console of HALO.:
@@ -141,13 +141,13 @@ We show you the different layout configurations:
 
 |Layout type | Example                |
 |------------|-------------------------------------|
-|default|![Default push](/img/push-default.png)|
-|expanded|![Expanded push](/img/push-expanded.png)|
-|left|![Left push](/img/push-left.png)|
-|right|![Right push](/img/push-right.png)|
-|top|![Top push](/img/push-top.png)|
-|bottom|![Bottom push](/img/push-bottom.png)|
-|background|![Background push](/img/push-background.png)|
+|default|![Default push](../../../img/push-default.png)|
+|expanded|![Expanded push](../../../img/push-expanded.png)|
+|left|![Left push](../../../img/push-left.png)|
+|right|![Right push](../../../img/push-right.png)|
+|top|![Top push](../../../img/push-top.png)|
+|bottom|![Bottom push](../../../img/push-bottom.png)|
+|background|![Background push](../../../img/push-background.png)|
 
 ### 1. Create custom decorator
 We are providing a custom implementation of the icon decorator:

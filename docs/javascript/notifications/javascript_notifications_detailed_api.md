@@ -21,7 +21,7 @@ First of all we need to create a FCM project in the [Firebase Console](https://c
 4. Write down the server key. It looks like 'AIzaSyAtN64Y0**********-*************'
 5. Write down the Sender ID. It looks like '10421********'
 
-![Configure FCM](/img/fcm-instructions.gif)
+![Configure FCM](../../../img/fcm-instructions.gif)
 
 ## Step 2. Add the Server key to HALO
 Take the Server API Key obtained in the previous step and put it in the administration console of HALO.:

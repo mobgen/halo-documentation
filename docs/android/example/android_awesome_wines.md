@@ -35,28 +35,28 @@ img[alt="Item 200"] {
 
 | Stamp | |
 |-----------------|---------|
-| ![Stamp code](/img/FREE_COFFEE.png) | This is an example of stamp. You need to collect 5 stamps until you can request the gift with this example.|
+| ![Stamp code](../../../img/FREE_COFFEE.png) | This is an example of stamp. You need to collect 5 stamps until you can request the gift with this example.|
 
 | Pize 1000 | |
 |-----------------|---------|
-| ![Prize 1000](/img/WINE_1_1000.png) | This is an example of prize. If you have loyalty points on your balance you can redeem the code to obtain the offer. Prize always is a non positive value. In this case it will use 1500 points. |
+| ![Prize 1000](../../../img/WINE_1_1000.png) | This is an example of prize. If you have loyalty points on your balance you can redeem the code to obtain the offer. Prize always is a non positive value. In this case it will use 1500 points. |
 
 | Item 200 | |
 |-----------------|---------|
-| ![Item 200](/img/WINE_1-200.png) | This is an example of item. You can redeem the code to obtain loyalty points on your balance. Item always is a positive value. In this case you get 200 points. |
+| ![Item 200](../../../img/WINE_1-200.png) | This is an example of item. You can redeem the code to obtain loyalty points on your balance. Item always is a positive value. In this case you get 200 points. |
 
 
 ### Screenshots
 
 | Wines catalog | Wines detail |
 |-----------------|---------|
-| ![Wines catalog](/img/wines.png) | ![Wines detail](/img/winedetail.png)|
+| ![Wines catalog](../../../img/wines.png) | ![Wines detail](../../../img/winedetail.png)|
 
 
 | Wines comment |  Wines offers |
 |------------------|---------------------|
-| ![Wine comment](/img/comments.png)| ![Wines offers](/img/offers.png)|
+| ![Wine comment](../../../img/comments.png)| ![Wines offers](../../../img/offers.png)|
 
 | Scan codes screen | User profile |
 |------------------|---------------------|
-| ![Scan code screen](/img/scanwines.png)| ![Transaction result screen](/img/profile.png)|
+| ![Scan code screen](../../../img/scanwines.png)| ![Transaction result screen](../../../img/profile.png)|

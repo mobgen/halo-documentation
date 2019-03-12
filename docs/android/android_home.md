@@ -2,7 +2,7 @@
 title: Android SDK overview
 ---
 
-![mobgen_logo_top_black.png](/img/halo-android.png)
+![mobgen_logo_top_black.png](../../img/halo-android.png)
 
 ![Build Status](https://android.mobgen.com/plugins/servlet/wittified/build-status/HALO-AS2)
 

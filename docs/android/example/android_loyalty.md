@@ -36,28 +36,28 @@ img[alt="Item 1000"] {
 
 | Stamp | |
 |-----------------|---------|
-| ![Stamp code](/img/stamp.png) | This is an example of stamp. You need to collect 5 stamps until you can request the gift with this example.|
+| ![Stamp code](../../../img/stamp.png) | This is an example of stamp. You need to collect 5 stamps until you can request the gift with this example.|
 
 | Pize 20 | |
 |-----------------|---------|
-| ![Prize 20](/img/prize20.png) | This is an example of prize. If you have loyalty points on your balance you can redeem the code to obtain the offer. Prize always is a non positive value. In this case it will use 20 points. |
+| ![Prize 20](../../../img/prize20.png) | This is an example of prize. If you have loyalty points on your balance you can redeem the code to obtain the offer. Prize always is a non positive value. In this case it will use 20 points. |
 
 | Item 1000 | |
 |-----------------|---------|
-| ![Item 1000](/img/item1000.png) | This is an example of item. You can redeem the code to obtain loyalty points on your balance. Item always is a positive value. In this case you get 1000 points. |
+| ![Item 1000](../../../img/item1000.png) | This is an example of item. You can redeem the code to obtain loyalty points on your balance. Item always is a positive value. In this case you get 1000 points. |
 
 
 ### Screenshots
 
 | Home screen | User transaction data |
 |-----------------|---------|
-| ![Home screen](/img/home_loyalty.png) | ![User transaction data](/img/user_data.png)|
+| ![Home screen](../../../img/home_loyalty.png) | ![User transaction data](../../../img/user_data.png)|
 
 
 | Promotions list | Scan codes screen |
 |------------------|---------------------|
-| ![Promotions list](/img/stamp_list.png)| ![Scan codes](/img/scan.png)|
+| ![Promotions list](../../../img/stamp_list.png)| ![Scan codes](../../../img/scan.png)|
 
 | Redeem codes screen | Transaction result screen |
 |------------------|---------------------|
-| ![Redeem codes screen](/img/purchase_item.png)| ![Transaction result screen](/img/transaction_info.png)|
+| ![Redeem codes screen](../../../img/purchase_item.png)| ![Transaction result screen](../../../img/transaction_info.png)|

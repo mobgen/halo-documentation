@@ -53,7 +53,7 @@ The configuration process is quite simple. Your app will only need to contain a 
 
 This `.plist` file should contain at least the `CLIENT_ID` and `CLIENT_SECRET` key-value pairs, with the right values for your app.
 
-![](/img/ios/plist.png)
+![](../../../img/ios/plist.png)
 
 The full list of available keys for this configuration file is the following:
 
@@ -77,4 +77,4 @@ dyld: Library not loaded: @rpath/libswiftCore.dylib
 
 **A:** Regardless the method you choose to integrate the Halo SDK, you will need to make sure that the `Always Embed Swift Standard Libraries` under the Build Settings in your project is set to `YES` in order to avoid errors related to Swift.
 
-![](/img/ios/embedded.png)
+![](../../../img/ios/embedded.png)

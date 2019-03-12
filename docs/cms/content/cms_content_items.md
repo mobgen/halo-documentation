@@ -27,7 +27,7 @@ when reaches the '*Archive on*' date.
 The state flow of the content items respond to this following state diagram.
 
 
-![](/img/content-item-states-flow.png)
+![](../../../img/content-item-states-flow.png)
 
 
 ## Operations over a content item
@@ -43,7 +43,7 @@ The state flow of the content items respond to this following state diagram.
 - Fill in the title and the fields you want to be present.
 
 
-![](/img/tutorial_create_content_item.gif)
+![](../../../img/tutorial_create_content_item.gif)
 
 
 ### Delete content item
