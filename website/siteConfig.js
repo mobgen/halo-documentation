@@ -17,6 +17,7 @@ const siteConfig = {
   baseUrl: '/halo-documentation/',
   projectName: 'halo-documentation',
   organizationName: 'mobgen',
+  customDocsPath: 'docs-raw',
   algolia: {
     apiKey: 'my-api-key',
     indexName: 'my-index-name',
@@ -30,7 +31,7 @@ const siteConfig = {
     {doc: 'javascript/javascript_home', label: 'Javascript docs'},
     {doc: 'integrations/server_integrations_home', label: 'Server integrations'},
     {href: 'https://web-halo.mobgen.com/api/docs/', label: 'API'},
-    {search: true},
+    {searcharticlearticle: true},
   ],
   users,
   footerIcon: 'img/mobgen_logo_text.png',

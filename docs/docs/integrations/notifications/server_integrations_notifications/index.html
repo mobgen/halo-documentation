@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Notifications API · HALO</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;server-triggered-notifications&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#server-triggered-notifications&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Server triggered notifications&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Notifications API · HALO"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mobgen.github.io/halo-documentation/index.html"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;server-triggered-notifications&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#server-triggered-notifications&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Server triggered notifications&lt;/h2&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/halo-documentation/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/halo-documentation/css/main.css"/><script src="/halo-documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/halo-documentation/"><h2 class="headerTitle">HALO</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/halo-documentation/docs/cms/cms_home" target="_self">CMS docs</a></li><li class=""><a href="/halo-documentation/docs/android/android_home" target="_self">Android docs</a></li><li class=""><a href="/halo-documentation/docs/ios/ios_home" target="_self">iOS docs</a></li><li class=""><a href="/halo-documentation/docs/javascript/javascript_home" target="_self">Javascript docs</a></li><li class="siteNavGroupActive"><a href="/halo-documentation/docs/integrations/server_integrations_home" target="_self">Server integrations</a></li><li class=""><a href="https://web-halo.mobgen.com/api/docs/" target="_self">API</a></li><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search in the docs" title="Search in the docs"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Notification integrations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">API integrations documentation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/integrations/server_integrations_home">Introduction</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/integrations/authentication/server_integrations_authentication">Integrate authentication</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Notification integrations</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/halo-documentation/docs/integrations/notifications/server_integrations_notifications">API Details</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/integrations/notifications/server_integrations_notifications_usecases">Notification use cases</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Notifications API</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="server-triggered-notifications"></a><a href="#server-triggered-notifications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server triggered notifications</h2>
+<p>HALO integrates FCM (Firebase cloud messaging) to create notifications and trigger them to the user based on certain conditions. Although the system HALO provides has many features,
+you can always need some custom behavior in the server to trigger an automatic notification instead of a manual one. This integration will show you how to call the web services
+and the different options you have.</p>
+<p>If you already know how to use the API you can check the different use cases you can implement <a href="./server_integrations_notifications_usecases.html">here</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="notifications-web-service-parameters"></a><a href="#notifications-web-service-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notifications web service parameters</h2>
+<p>The web service used to send push notifications is:</p>
+<pre><code class="hljs css language-sh">POST /api/push/schedule/
+</code></pre>
+<p>The body can contain many parameters to customize your push schedule in a way that works for your application. Here we will describe the
+parameters and after that some possible scenarios that can solve the different needs.</p>
+<p><strong>Body sample</strong></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"appId"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"sendOn"</span>: <span class="hljs-string">"timestamp"</span>,
+  <span class="hljs-attr">"filterTags"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+    }
+  ],
+  <span class="hljs-attr">"aliases"</span>: [
+    <span class="hljs-string">"string"</span>
+  ],
+  <span class="hljs-attr">"payload"</span>: {
+    <span class="hljs-attr">"notification"</span>: {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"body"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"sound"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"badge"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"tag"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"color"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"click_action"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"body_loc_key"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"body_loc_args"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"title_loc_key"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"title-loc-args"</span>: <span class="hljs-string">"string"</span>
+    },
+    <span class="hljs-attr">"data"</span>: {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"content_available"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"extra"</span>: {
+        <span class="hljs-attr">"any object"</span>: <span class="hljs-string">"any object"</span>
+      }
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="schedule-fields"></a><a href="#schedule-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schedule fields</h2>
+<h3><a class="anchor" aria-hidden="true" id="mandatory-fields"></a><a href="#mandatory-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mandatory fields</h3>
+<p>The only mandatory fields are <code>appId</code> and  <code>name</code>. The name is used to identify visually the schedule in the CMS but it is
+has no restrictions if you send the same name multiple times. The most meanfull the name is, the easier will be to locate it in the list.</p>
+<p>The app id is the identifier of the application in HALO and allows you to send push notifications to all the users of the app. This identifier
+can be found in the <code>Apps</code> menu of the CMS. It is a normal integer number.</p>
+<h3><a class="anchor" aria-hidden="true" id="optional-fields"></a><a href="#optional-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optional fields</h3>
+<p>Here we will detail all the possible fields you can fill inside the request based on your needs:</p>
+<p><strong>Root</strong></p>
+<ul>
+<li><code>sendOn (integer, optional)</code>: Timestamp date when push was sent.</li>
+<li><code>filterTags (Array[FilterTag], optional)</code>: Segmentation tags that, when applied to certian application users, only these ones will receive this push.</li>
+<li><code>payload (Payload, optional)</code>: Data that will be sent to the applications. It can be metadata on how to diplay the notification or data related to the action itself.</li>
+<li><code>aliases (Array[string], optional)</code>: Array of application user aliases. These aliases identify a user uniquelly in HALO.</li>
+</ul>
+<p><strong>Filter tags</strong></p>
+<p>For the tag to be filtered you can send two different options:</p>
+<ul>
+<li><code>id</code>: HALO id of the tag that will be filtered.</li>
+<li><code>name and value</code>: The name and the value of the tag that we will search in the system to send the push.</li>
+</ul>
+<p><strong>Payload notification</strong></p>
+<ul>
+<li><code>title (string, optional)</code>: Indicates notification title. This field is not visible on iOS phones and tablets.</li>
+<li><code>icon (string, optional)</code>: Indicates notification icon. On Android: sets value to myicon for drawable resource myicon.png.</li>
+<li><code>body (string, optional)</code>: Indicates notification body text.</li>
+<li><code>sound (string, optional)</code>: Indicates sound to be played. Posible options ['adara', 'alya', 'antimony', 'argon', 'ariel', 'beryllium', 'blip', 'carme', 'castor', 'ceres', 'chime', 'cobalt', 'cyanmessage', 'dontpanic', 'elara', 'element', 'europa', 'f1_missedcall', 'f1_new_sms', 'fluorine', 'hello', 'hojus', 'ivory', 'mira', 'modular', 'moto', 'natural', 'organic', 'ping', 'pixiedust', 'pizzicato', 'proxima', 'radon', 'rhea', 'selenium', 'sirius', 'tada', 'tethys', 'upsilon', 'voila'].</li>
+<li><code>badge (integer, optional)</code>: Indicates the badge on client app home icon(iOS only).
+tag (string, optional)```: Indicates whether each notification message results in a new entry on the notification center on Android. If not set, each request creates a new notification. If set, and a notification with the same tag is already being shown, the new notification replaces the existing one in notification center.</li>
+<li><code>color (string, optional)</code>: Indicates color of the icon, expressed in #rrggbb format. Posible options ['#FFFFFF', '#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#800080', '#A52A2A', '#FF9800']</li>
+<li><code>click_action (string, optional)</code>: The action associated with a user click on the notification. On Android, if this is set, an activity with a matching intent filter is launched when user clicks the notification. For example, if one of your Activities includes the intent filter: (Appendix:1)Set click_action to OPEN_ACTIVITY_1 to open it. If set, corresponds to category in APNS payload.</li>
+<li><code>body_loc_key (string, optional)</code>: Indicates the key to the body string for localization. On iOS, this corresponds to &quot;loc-key&quot; in APNS payload.</li>
+<li><code>body_loc_args (string, optional)</code>: Indicates the string value to replace format specifiers in body string for localization. On iOS, this corresponds to &quot;loc-args&quot; in APNS payload.</li>
+<li><code>title_loc_key (string, optional)</code>: Indicates the key to the title string for localization. On iOS, this corresponds to &quot;title-loc-key&quot; in APNS payload.</li>
+<li><code>title-loc-args (string, optional)</code>: Indicates the string value to replace format specifiers in title string for localization. On iOS, this corresponds to &quot;title-loc-args&quot; in APNS payload.</li>
+</ul>
+<p><strong>Payload data</strong></p>
+<ul>
+<li><code>url (string, optional)</code>: Deeplink to indicates where you want to go in your app/web.</li>
+<li><code>content_available (integer, optional)</code>: On iOS, use this field to represent content-available in the APNS payload. When a notification or message is sent and this is set to true, an inactive client app is awoken. On Android, data messages wake the app by default. On Chrome, currently not supported.</li>
+<li><code>extra (object, optional)</code>: Extra field where you could send extra data to apps.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/halo-documentation/docs/integrations/authentication/server_integrations_authentication"><span class="arrow-prev">← </span><span>Integrate authentication</span></a><a class="docs-next button" href="/halo-documentation/docs/integrations/notifications/server_integrations_notifications_usecases"><span>Notification use cases</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#server-triggered-notifications">Server triggered notifications</a></li><li><a href="#notifications-web-service-parameters">Notifications web service parameters</a></li><li><a href="#schedule-fields">Schedule fields</a><ul class="toc-headings"><li><a href="#mandatory-fields">Mandatory fields</a></li><li><a href="#optional-fields">Optional fields</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/halo-documentation/" class="nav-home"><img src="/halo-documentation/img/mobgen_logo_text.png" alt="HALO" width="80" height="60"/></a><div><h5>User documentation</h5><a href="/halo-documentation/docs/cms/cms_home">CMS Documentation</a></div><div><h5>Technical documentation</h5><a href="/halo-documentation/docs/android/android_home">Getting started with Android</a><a href="/halo-documentation/docs/ios/ios_home">Getting started with iOS</a><a href="/halo-documentation/docs/javascript/javascript_home">Getting started with Javascript</a><a href="/halo-documentation/docs/android/server_integrations_home">Server integrations</a><a target="_blank" href="https://web-halo.mobgen.com/api/docs/">API Reference</a></div><div><h5>More</h5><a href="https://github.com/mobgen" target="_blank">GitHub</a><a class="github-button" href="https://github.com/mobgen/halo-documentation" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star Documentation</a><div></div><a class="github-button" href="https://github.com/mobgen/halo-android" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star Android SDK</a><div></div><a class="github-button" href="https://github.com/mobgen/halo-ios" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star iOS SDK</a><div></div><a class="github-button" href="https://source.digital.accenture.com/projects/MGUNS/repos/halo-sdk-js/browse?at=refs/heads/develop" target="_blank">Star Javascript SDK</a></div></section><a href="https://mobgen.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/halo-documentation/img/mobgen_logo.png" alt="MOBGEN | Accenture Interactive"/></a><section class="copyright">Copyright © 2019 MOBGEN | Accenture Interactive</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
