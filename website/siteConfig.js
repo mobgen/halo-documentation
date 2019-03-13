@@ -17,7 +17,6 @@ const siteConfig = {
   baseUrl: '/halo-documentation/',
   projectName: 'halo-documentation',
   organizationName: 'mobgen',
-  customDocsPath: 'docs-raw',
   algolia: {
     apiKey: 'my-api-key',
     indexName: 'my-index-name',
