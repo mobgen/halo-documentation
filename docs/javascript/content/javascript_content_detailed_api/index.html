@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Detailed APIs · HALO</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Detailed APIs · HALO"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mobgen.github.io/halo-documentation/index.html"/><meta property="og:description" content="&lt;p&gt;Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/halo-documentation/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/halo-documentation/css/main.css"/><script src="/halo-documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/halo-documentation/"><h2 class="headerTitle">HALO</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/halo-documentation/docs/cms/cms_home" target="_self">CMS docs</a></li><li class=""><a href="/halo-documentation/docs/android/android_home" target="_self">Android docs</a></li><li class=""><a href="/halo-documentation/docs/ios/ios_home" target="_self">iOS docs</a></li><li class="siteNavGroupActive"><a href="/halo-documentation/docs/javascript/javascript_home" target="_self">Javascript docs</a></li><li class=""><a href="/halo-documentation/docs/integrations/server_integrations_home" target="_self">Server integrations</a></li><li class=""><a href="https://web-halo.mobgen.com/api/docs/" target="_self">API</a></li><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search in the docs" title="Search in the docs"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Content</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Javascript Documentation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/javascript_home">JavaScript SDK overview</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/global/javascript_getting_started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/global/javascript_supported_features">Supported features</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/global/javascript_support">Team Support</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Content</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/content/javascript_content_overview">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/halo-documentation/docs/javascript/content/javascript_content_detailed_api">Detailed APIs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Notifications</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/notifications/javascript_notifications_detailed_api">Detailed APIs</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/notifications/javascript_notifications_overview">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Segmentation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/segmentation/javascript_segmentation_detailed_api">Detailed APIs</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/segmentation/javascript_segmentation_overview">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Auth</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/auth/javascript_auth_overview">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Changelog</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/javascript/changelog/javascript_release_notes_100">1.0.0</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Detailed APIs</h1></header><article><div><span><p>Here you can find fine grained explanations for every public param of the content SDK. The rest of the library is obfuscated over proguard and only intended methods are public and properly named although the code is (and will be) Open Source.</p>
+<h2><a class="anchor" aria-hidden="true" id="search"></a><a href="#search" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search</h2>
+<p>With the search query you can request some instances from the HALO Backend based on some query parameters. See the Search query section for all the available params.</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { content } <span class="hljs-keyword">from</span> <span class="hljs-string">'halo-sdk'</span>;
+
+<span class="hljs-keyword">await</span> content.search(searchQuery);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="search-query"></a><a href="#search-query" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search Query</h3>
+<p>The <code>searchValues</code> object supports many params to help in the search task. To create a new instance of the <code>searchValues</code> you have to use the <code>Builder</code> pattern by calling <code>new content.QueryBuilder()</code>. The build object is parcelable and so you can send it across activities if needed.</p>
+<p>Here you can find the full list of options you can chain into the <code>searchValues</code>:</p>
+<table>
+<thead>
+<tr><th>Search param</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>moduleName</strong></td><td>requests a module by its name. You must owe it and it must be available for client applications.</td></tr>
+<tr><td><strong>moduleIds</strong></td><td>the list of module ids to request.</td></tr>
+<tr><td><strong>setTags</strong></td><td>segmentation tags to apply to this content. This param is related to the segmentMode one since it selects and segments the content based on those tags.</td></tr>
+<tr><td><strong>setDevice</strong></td><td>applies all the tags from the current device and matches the segment mode to <code>PARTIAL_MATCH</code> if no mode was set. Refer to the segmentMode param.</td></tr>
+<tr><td><strong>setSearchValuesQuery</strong></td><td>syntax declaration to make custom queries inside the content info. For example, if we have instances in halo with two fields, name and amount, we would be able to filter the searched instances based in both values.</td></tr>
+<tr><td><strong>setMetaSearch</strong></td><td>it has the same concept as the search but allows the user to filter based on metadata of the instance, such as the updated time or the instance name.</td></tr>
+<tr><td><strong>setSlowSearch</strong></td><td>to allow to search in more complex fields.</td></tr>
+</tbody>
+</table>
+<p>In the setSearchValuesQuery and setMetaSearch parameters there are many query parameters supported. Here you have an index on how to use them and an example.</p>
+<table>
+<thead>
+<tr><th>Search condition</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>&amp;&amp;</strong></td><td>Adds a condition to make both expression work together with an and condition.</td></tr>
+<tr><td><strong>ll</strong></td><td>Adds a condition to make both expressions work together with an or condition.</td></tr>
+<tr><td><strong>in</strong></td><td>Check if the field has the values provided inside it.</td></tr>
+<tr><td><strong>!in</strong></td><td>Ensures the field has not the values inside.</td></tr>
+<tr><td><strong>=</strong></td><td>Checks fields that are equals to the given value.</td></tr>
+<tr><td><strong>!=</strong></td><td>Checks the fields are not equals to the given value.</td></tr>
+<tr><td><strong>&lt;</strong></td><td>Checks the value is less than the provided value.</td></tr>
+<tr><td><strong>=&lt;</strong></td><td>Checks the value is less than or equals the provided value.</td></tr>
+<tr><td><strong>&gt;</strong></td><td>Checks the value is greater than the provided value.</td></tr>
+<tr><td><strong>=&gt;</strong></td><td>Checks the value is greater than or equals the provided value.</td></tr>
+<tr><td><strong>like</strong></td><td>Search a value that match with the provided value (you must provide at least 3 characters).</td></tr>
+<tr><td><strong>(</strong></td><td>Begins a parenthesis group.</td></tr>
+<tr><td><strong>)</strong></td><td>Ends a parenthesis group.</td></tr>
+</tbody>
+</table>
+<p><strong>Custom search sample</strong></p>
+<pre><code class="hljs css language-java">builder = <span class="hljs-keyword">new</span> content.QueryBuilder();
+
+searchQuery = builder
+    .setSearchValuesQuery(<span class="hljs-string">'name in listOfNames &amp;&amp; (name !in bannedNames &amp;&amp; active = Activated)'</span>)
+    .build()
+</code></pre>
+<blockquote>
+<p>If the expression built for the search is not correct it will throw a Runtime exception.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="data-parsing"></a><a href="#data-parsing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data parsing</h3>
+<p>When you call the <code>content.search</code> method you are making the request, it returns a Promise with the content.</p>
+<h2><a class="anchor" aria-hidden="true" id="sync"></a><a href="#sync" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sync</h2>
+<p>When a given module has so many items that handling them takes too much time or you want to have some content available in the background for the user, synchronization can make that work for you by storing it in one of the three storage options we provide.</p>
+<ul>
+<li><code>memory</code> (default)</li>
+<li><code>session</code></li>
+<li><code>localstorage</code></li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter name</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>moduleName</strong> (Required)</td><td>This field specifies the module you want to synchronize.</td></tr>
+<tr><td><strong>locales</strong> (Optional)</td><td>This field specifies the locales you want to use to synchronize.</td></tr>
+<tr><td><strong>storage</strong> (Optional) <code>['localstorage', 'session', 'memory']</code></td><td>This field specifies what kind of browser storage you want to use to store the data. Defaults to <code>memory</code>.</td></tr>
+<tr><td><strong>refreshFromServer</strong> (Optional)</td><td>This field specifies if you want to get the new data from the server, or use the data from the browser storgage. By default <code>true</code>.</td></tr>
+</tbody>
+</table>
+<p>The process of the synchronization is the following:</p>
+<ul>
+<li>You can request an internal module name to be synced:</li>
+</ul>
+<pre><code class="hljs css language-java">await content.syncModule(<span class="hljs-string">'my module name'</span>, <span class="hljs-string">'en-US'</span>, <span class="hljs-string">'session'</span>, <span class="hljs-keyword">true</span>);
+</code></pre>
+<ul>
+<li>You can then get the instances of the synced module even if you are offline:</li>
+</ul>
+<pre><code class="hljs css language-java">await content.syncModule(<span class="hljs-string">'my module name'</span>, <span class="hljs-string">'en-US'</span>, <span class="hljs-string">'session'</span>, <span class="hljs-keyword">false</span>);
+</code></pre>
+<p>The results from the sync is a Promise within the list of instances.</p>
+<h2><a class="anchor" aria-hidden="true" id="get"></a><a href="#get" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get</h2>
+<p>When you want to request all the content modules, use the <code>getModules</code> function.</p>
+<table>
+<thead>
+<tr><th>Parameter name</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>withFields</strong> (Optional)</td><td>This field specifies if you want to add the module fields.</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-java">await content.getModules(<span class="hljs-keyword">true</span>);
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/halo-documentation/docs/javascript/content/javascript_content_overview"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/halo-documentation/docs/javascript/notifications/javascript_notifications_detailed_api"><span>Detailed APIs</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#search">Search</a><ul class="toc-headings"><li><a href="#search-query">Search Query</a></li><li><a href="#data-parsing">Data parsing</a></li></ul></li><li><a href="#sync">Sync</a></li><li><a href="#get">Get</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/halo-documentation/" class="nav-home"><img src="/halo-documentation/img/mobgen_logo_text.png" alt="HALO" width="80" height="60"/></a><div><h5>User documentation</h5><a href="/halo-documentation/docs/cms/cms_home">CMS Documentation</a></div><div><h5>Technical documentation</h5><a href="/halo-documentation/docs/android/android_home">Getting started with Android</a><a href="/halo-documentation/docs/ios/ios_home">Getting started with iOS</a><a href="/halo-documentation/docs/javascript/javascript_home">Getting started with Javascript</a><a href="/halo-documentation/docs/android/server_integrations_home">Server integrations</a><a target="_blank" href="https://web-halo.mobgen.com/api/docs/">API Reference</a></div><div><h5>More</h5><a href="https://github.com/mobgen" target="_blank">GitHub</a><a class="github-button" href="https://github.com/mobgen/halo-documentation" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star Documentation</a><div></div><a class="github-button" href="https://github.com/mobgen/halo-android" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star Android SDK</a><div></div><a class="github-button" href="https://github.com/mobgen/halo-ios" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star iOS SDK</a><div></div><a class="github-button" href="https://source.digital.accenture.com/projects/MGUNS/repos/halo-sdk-js/browse?at=refs/heads/develop" target="_blank">Star Javascript SDK</a></div></section><a href="https://mobgen.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/halo-documentation/img/mobgen_logo.png" alt="MOBGEN | Accenture Interactive"/></a><section class="copyright">Copyright © 2019 MOBGEN | Accenture Interactive</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

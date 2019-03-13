@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Getting started · HALO</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK ({{ site.ios_latest_sdk }}). In order to offer higher compatibility, the deployment target is set to iOS 8.0.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Getting started · HALO"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mobgen.github.io/halo-documentation/index.html"/><meta property="og:description" content="&lt;p&gt;In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK ({{ site.ios_latest_sdk }}). In order to offer higher compatibility, the deployment target is set to iOS 8.0.&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/halo-documentation/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/halo-documentation/css/main.css"/><script src="/halo-documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/halo-documentation/"><h2 class="headerTitle">HALO</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/halo-documentation/docs/cms/cms_home" target="_self">CMS docs</a></li><li class=""><a href="/halo-documentation/docs/android/android_home" target="_self">Android docs</a></li><li class="siteNavGroupActive"><a href="/halo-documentation/docs/ios/ios_home" target="_self">iOS docs</a></li><li class=""><a href="/halo-documentation/docs/javascript/javascript_home" target="_self">Javascript docs</a></li><li class=""><a href="/halo-documentation/docs/integrations/server_integrations_home" target="_self">Server integrations</a></li><li class=""><a href="https://web-halo.mobgen.com/api/docs/" target="_self">API</a></li><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search in the docs" title="Search in the docs"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>iOS Documentation</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">iOS Documentation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/ios_home">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/halo-documentation/docs/ios/global/ios_getting_started">Getting started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Core SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/core/ios_core_overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/core/ios_ssl_pinning">SSL pinning</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/core/ios_logging_overview">Logging</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Content SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/content/ios_content_overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/content/ios_content_search">Content search</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/content/ios_content_sync">Content sync</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/content/ios_content_edition">Content edition</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Notifications SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/notifications/ios_notifications_overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/notifications/ios_rich_notifications">Rich push notifications</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/notifications/ios_advanced_firebase_usecases">Advanced Firebase use cases</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Auth SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/auth/ios_social_overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/auth/ios_social_facebook">Facebook integration</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/auth/ios_social_google">Google Integration</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/auth/ios_auth_overview">User authentication</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/auth/ios_pocket">User pocket</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Changelog</h3><ul class=""><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_250">2.5.0 - Cambados</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_240">2.4.0 - Balboa</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_234">2.3.4 - Altamira</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_233">2.3.3 - Altamira</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_232">2.3.2 - Altamira</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_231">2.3.1</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_230">2.3.0</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_225">2.2.5</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_224">2.2.4</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_223">2.2.3</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_222">2.2.2</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_221">2.2.1</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_220">2.2.0</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_211">2.1.1</a></li><li class="navListItem"><a class="navItem" href="/halo-documentation/docs/ios/changelog/ios_release_notes_210">2.1.0</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Getting started</h1></header><article><div><span><p>In the sections below the process to integrate the Halo Framework into a new project will be described in depth. The Framework is developed in Swift 3 and compiled against the latest iOS SDK ({{ site.ios_latest_sdk }}). In order to offer higher compatibility, the deployment target is set to iOS 8.0.</p>
+<h2><a class="anchor" aria-hidden="true" id="carthage"></a><a href="#carthage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Carthage</h2>
+<p>One of the easiest ways to integrate the Halo Framework into your project and manage all the dependencies is by using <a href="https://github.com/Carthage/Carthage"><code>Carthage</code></a>.</p>
+<p>In order to do that, we would need to add the following line to our <code>Cartfile</code>:</p>
+<pre><code class="hljs css language-sh">github <span class="hljs-string">"mobgen/halo-ios"</span> <span class="hljs-string">"{{ site.ios_version }}"</span>
+</code></pre>
+<p>After that, and by performing the following command in the terminal</p>
+<pre><code class="hljs css language-sh">carthage update --platform iOS
+
+*** Checking out halo-ios at <span class="hljs-string">"{{ site.ios_version }}"</span>
+*** xcodebuild output can be found <span class="hljs-keyword">in</span> /var/folders/51/r2wsrcnx1t9d991gs_bnwqsr0000gn/T/carthage-xcodebuild.syE1RN.log
+*** Building scheme <span class="hljs-string">"Halo ObjC"</span> <span class="hljs-keyword">in</span> HALO.xcworkspace
+*** Building scheme <span class="hljs-string">"Halo iOS"</span> <span class="hljs-keyword">in</span> HALO.xcworkspace
+</code></pre>
+<p>we will get the compiled frameworks we need in order to make our project work.</p>
+<p><img src="/img/ios/carthage.png" alt=""></p>
+<p>We would then need to add those frameworks as embedded frameworks (iOS 8+). Depending on the language we are using in our project (Swift/Objective-C) we will either need to just add the <code>Halo.framework</code> or also the <code>HaloObjC.framework</code> (as shown in the image).</p>
+<p><img src="/img/ios/carthageProjectSetup.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="cocoapods"></a><a href="#cocoapods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CocoaPods</h2>
+<p>CocoaPods is also supported, so if this is your choice to manage your dependencies, you can add the Halo Framework to your project by adding the following line to your <code>Podfile</code></p>
+<pre><code class="hljs css language-sh">pod <span class="hljs-string">'HaloSDK'</span>, <span class="hljs-string">'{{ site.ios_version }}'</span>
+</code></pre>
+<p>If using Objective-C, the corresponding SDK the line should be</p>
+<pre><code class="hljs css language-sh">pod <span class="hljs-string">'HaloObjCSDK'</span>, <span class="hljs-string">'{{ site.ios_version }}'</span>
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h1>
+<p>The configuration process is quite simple. Your app will only need to contain a <code>.plist</code> file within the main bundle where its credentials are set. By default, the Framework will look for a <code>Halo.plist</code>, but a custom name can also be specified if needed. That will be covered later on in this wiki.</p>
+<p>This <code>.plist</code> file should contain at least the <code>CLIENT_ID</code> and <code>CLIENT_SECRET</code> key-value pairs, with the right values for your app.</p>
+<p><img src="../../../img/ios/plist.png" alt=""></p>
+<p>The full list of available keys for this configuration file is the following:</p>
+<table>
+<thead>
+<tr><th>Key</th><th style="text-align:center">Type</th><th>Description</th><th style="text-align:center">Default value</th></tr>
+</thead>
+<tbody>
+<tr><td><code>CLIENT_ID</code></td><td style="text-align:center">String</td><td>Client id for the authentication as application</td><td style="text-align:center">-</td></tr>
+<tr><td><code>CLIENT_SECRET</code></td><td style="text-align:center">String</td><td>Client secret associated to the account used by the application</td><td style="text-align:center">-</td></tr>
+<tr><td><code>ENVIRONMENT</code></td><td style="text-align:center">String</td><td>The desired Halo environment</td><td style="text-align:center"><code>https://web-halo.mobgen.com</code></td></tr>
+<tr><td><code>DISABLE_SSL_PINNING</code></td><td style="text-align:center">Boolean</td><td>Disable SSL pinning (usually for testing purposes).</td><td style="text-align:center"><code>NO</code></td></tr>
+<tr><td><code>ENABLE_SYSTEM_TAGS</code></td><td style="text-align:center">Boolean</td><td>Enable a set of default system tags added to the user (OS, device, etc).</td><td style="text-align:center"><code>NO</code></td></tr>
+</tbody>
+</table>
+<h1><a class="anchor" aria-hidden="true" id="troubleshooting"></a><a href="#troubleshooting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting</h1>
+<p><strong>Q: I'm getting the following error when trying to run my app including the Halo SDK.</strong></p>
+<pre><code class="hljs css language-sh">dyld: Library not loaded: @rpath/libswiftCore.dylib
+  Referenced from: [...]/Frameworks/Halo.framework/Halo
+  Reason: Incompatible library version: Halo requires version 1.0.0 or later, but libswiftCore.dylib provides version 0.0.0
+</code></pre>
+<p><strong>A:</strong> Regardless the method you choose to integrate the Halo SDK, you will need to make sure that the <code>Always Embed Swift Standard Libraries</code> under the Build Settings in your project is set to <code>YES</code> in order to avoid errors related to Swift.</p>
+<p><img src="../../../img/ios/embedded.png" alt=""></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/halo-documentation/docs/ios/ios_home"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/halo-documentation/docs/ios/core/ios_core_overview"><span>Overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#carthage">Carthage</a></li><li><a href="#cocoapods">CocoaPods</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/halo-documentation/" class="nav-home"><img src="/halo-documentation/img/mobgen_logo_text.png" alt="HALO" width="80" height="60"/></a><div><h5>User documentation</h5><a href="/halo-documentation/docs/cms/cms_home">CMS Documentation</a></div><div><h5>Technical documentation</h5><a href="/halo-documentation/docs/android/android_home">Getting started with Android</a><a href="/halo-documentation/docs/ios/ios_home">Getting started with iOS</a><a href="/halo-documentation/docs/javascript/javascript_home">Getting started with Javascript</a><a href="/halo-documentation/docs/android/server_integrations_home">Server integrations</a><a target="_blank" href="https://web-halo.mobgen.com/api/docs/">API Reference</a></div><div><h5>More</h5><a href="https://github.com/mobgen" target="_blank">GitHub</a><a class="github-button" href="https://github.com/mobgen/halo-documentation" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star Documentation</a><div></div><a class="github-button" href="https://github.com/mobgen/halo-android" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star Android SDK</a><div></div><a class="github-button" href="https://github.com/mobgen/halo-ios" target="_blank" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star iOS SDK</a><div></div><a class="github-button" href="https://source.digital.accenture.com/projects/MGUNS/repos/halo-sdk-js/browse?at=refs/heads/develop" target="_blank">Star Javascript SDK</a></div></section><a href="https://mobgen.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/halo-documentation/img/mobgen_logo.png" alt="MOBGEN | Accenture Interactive"/></a><section class="copyright">Copyright © 2019 MOBGEN | Accenture Interactive</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
