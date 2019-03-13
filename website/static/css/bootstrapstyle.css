@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'Lab Medium';
+  font-family: 'Lab-Medium';
   src: url("../fonts/lab-medium.woff") format('woff');
 }
 
 @font-face {
-  font-family: 'Lab Bold';
+  font-family: 'Lab-Bold';
   src: url("../fonts/lab_bold-webfont.woff2") format('woff2');
 }
 
@@ -7743,7 +7743,7 @@ p {
 
 .lab {
   color: #000;
-  font-family: "Lab Medium", "Montserrat", arial, sans-serif;
+  font-family: "Lab-Medium", "Montserrat", arial, sans-serif;
   font-weight: 700;
 }
 
@@ -8164,7 +8164,7 @@ p {
   font-size: 70px;
   line-height: 50px;
   font-weight: 500;
-  font-family: "Lab Medium";
+  font-family: "Lab-Medium";
 }
 
 @media screen and (max-width: 768px) {
@@ -8224,7 +8224,7 @@ p {
   color: #fff;
   z-index: 10;
   position: relative;
-  font-family: "Lab Medium";
+  font-family: "Lab-Medium";
   padding: 10px 0 0 0;
   margin-left: 10px;
   display: none;
