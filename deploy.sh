@@ -15,3 +15,4 @@ rm -rf build
 git add *
 git commit -m "Auto deployment from current documentation"
 git push
+git checkout master
