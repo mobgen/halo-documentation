@@ -1,5 +1,6 @@
 # Build the page
 cd website
+npm install
 yarn build
 
 # Move to root
