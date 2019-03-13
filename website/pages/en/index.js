@@ -229,7 +229,7 @@ class Index extends React.Component {
                   </div>
 
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="/docs-raw/android/android_home"
+                    <a href="/docs/android/android_home"
                        className="fh5co-feature to-animate">
                       <span className="fh5co-feature-icon"><i className="fa fa-android"/></span>
                       <h3 className="fh5co-feature-lead">Android</h3>
@@ -241,7 +241,7 @@ class Index extends React.Component {
                   <div className="clearfix visible-sm-block"/>
 
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="/docs-raw/ios/ios_home"
+                    <a href="/docs/ios/ios_home"
                        className="fh5co-feature to-animate">
                       <span className="fh5co-feature-icon"><i className="fa fa-apple"/></span>
                       <h3 className="fh5co-feature-lead">iOS</h3>
@@ -250,7 +250,7 @@ class Index extends React.Component {
                   </div>
 
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="/docs-raw/javascript/javascript_home"
+                    <a href="/docs/javascript/javascript_home"
                        className="fh5co-feature to-animate">
                       <span className="fh5co-feature-icon"><i className="fa fa-jsfiddle"/></span>
                       <h3 className="fh5co-feature-lead">Javascript</h3>
@@ -259,7 +259,7 @@ class Index extends React.Component {
                   </div>
 
                   <div className="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
-                    <a href="/docs-raw/cms/cms_home" className="fh5co-feature to-animate">
+                    <a href="/docs/cms/cms_home" className="fh5co-feature to-animate">
                       <span className="fh5co-feature-icon"><i className="fa fa-cubes"/></span>
                       <h3 className="fh5co-feature-lead">CMS</h3>
                       <p className="fh5co-feature-text">Our easy to use CMS platform to manage all your apps
