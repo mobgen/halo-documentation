@@ -91,7 +91,7 @@ class Index extends React.Component {
                         <img src="/halo-documentation/img/landing/iphone_wrapper.png" className="" alt="iPhone frame"
                              id="wines-app-frame"/>
                         <video id="wines-app" loop autoPlay="">
-                          <source src="./videos/enso.mp4"/>
+                          <source src="https://web-halo.mobgen.com/info/videos/enso.mp4"/>
                         </video>
                       </p>
                     </div>
@@ -114,7 +114,7 @@ class Index extends React.Component {
                   </div>
 
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="videos/push-notifications.mp4" className="fh5co-figure to-animate popup-youtube">
+                    <a href="https://web-halo.mobgen.com/info/videos/push-notifications.mp4" className="fh5co-figure to-animate popup-youtube">
                       <figure>
                         <img src="/halo-documentation/img/landing/push-notifications.png" alt="HALO push notifications screenshot"
                              className="img-responsive"/>
@@ -125,7 +125,7 @@ class Index extends React.Component {
                     </a>
                   </div>
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="videos/media-upload.mp4" className="fh5co-figure to-animate popup-youtube">
+                    <a href="https://web-halo.mobgen.com/info/videos/media-upload.mp4" className="fh5co-figure to-animate popup-youtube">
                       <figure>
                         <img src="/halo-documentation/img/landing/media-upload.png" alt="HALO media upload screenshot"
                              className="img-responsive"/>
@@ -137,7 +137,7 @@ class Index extends React.Component {
                   </div>
                   <div className="clearfix visible-sm-block"/>
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="videos/segmentation.mp4" className="fh5co-figure to-animate popup-youtube">
+                    <a href="https://web-halo.mobgen.com/info/videos/segmentation.mp4" className="fh5co-figure to-animate popup-youtube">
                       <figure>
                         <img src="/halo-documentation/img/landing/segmentation.png" alt="HALO segmentation screenshot"
                              className="img-responsive"/>
@@ -147,7 +147,7 @@ class Index extends React.Component {
                     </a>
                   </div>
                   <div className="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                    <a href="videos/cms.mp4" className="fh5co-figure to-animate popup-youtube">
+                    <a href="https://web-halo.mobgen.com/info/videos/cms.mp4" className="fh5co-figure to-animate popup-youtube">
                       <figure>
                         <img src="/halo-documentation/img/landing/cms-mgmt.png" alt="HALO CMS management screenshot"
                              className="img-responsive"/>
