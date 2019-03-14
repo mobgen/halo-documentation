@@ -7,6 +7,7 @@
       $('.fixedHeaderContainer').hide();
       $('#docsNav').hide();
       $('.navPusher').removeClass('navPusher');
+      $('.docs-prevnext').hide();
       $('#footer').hide();
     }
   });
