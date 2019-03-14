@@ -18,8 +18,8 @@ const siteConfig = {
   projectName: 'halo-documentation',
   organizationName: 'mobgen',
   algolia: {
-    apiKey: 'my-api-key',
-    indexName: 'my-index-name',
+    apiKey: '0a2851182f22b93474d986ca029232bb',
+    indexName: 'mobgen_halo',
     algoliaOptions: {}, // Optional, if provided by Algolia,
     placeholder: 'Search in the docs'
   },
