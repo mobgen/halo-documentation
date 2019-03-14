@@ -30,7 +30,7 @@ const siteConfig = {
     {doc: 'javascript/javascript_home', label: 'Javascript docs'},
     {doc: 'integrations/server_integrations_home', label: 'Server integrations'},
     {href: 'https://web-halo.mobgen.com/api/docs/', label: 'API'},
-    {searcharticlearticle: true},
+    {search: true},
   ],
   users,
   footerIcon: 'img/mobgen_logo_text.png',
@@ -45,7 +45,9 @@ const siteConfig = {
     theme: 'default',
   },
   scripts: [
-      'https://buttons.github.io/buttons.js'
+      'https://buttons.github.io/buttons.js',
+      '/halo-documentation/js/jquery.min.js',
+      '/halo-documentation/js/cmsParam.js'
   ],
   stylesheets: [
       'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',

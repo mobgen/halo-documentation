@@ -4,7 +4,6 @@ class Index extends React.Component {
   render() {
     return (
         <div>
-          <script src="/halo-documentation/js/jquery.min.js"/>
           <script src="/halo-documentation/js/jquery.easing.1.3.js"/>
           <script src="/halo-documentation/js/bootstrap.min.js"/>
           <script src="/halo-documentation/js/jquery.waypoints.min.js"/>
