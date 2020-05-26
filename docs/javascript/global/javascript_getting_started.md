@@ -28,7 +28,7 @@ Import config from halo-sdk and apply the basic configuration based on your HALO
 import { config } from 'halo-sdk';
 
 config.setup({
-  entrypoint: 'https://web-halo.mobgen.com/',
+  entrypoint: 'https://halo-db.com/',
   credentials: {
     clientId: 'YOUR_HALO_KEY', // you can obtain this value on the Halo CMS
     clientSecret: 'YOUR_HALO_SECRET', // you can obtain this value on the Halo CMS   
