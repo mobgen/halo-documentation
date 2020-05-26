@@ -25,7 +25,7 @@ npm install --save @mobgen-halo/halo-sdk-js
 Import config from halo-sdk and apply the basic configuration based on your HALO project. Here you have the minimal configuration you will need. 
 
 ```javascript
-import { config } from 'halo-sdk';
+import { config } from 'halo-sdk-js';
 
 config.setup({
   entrypoint: 'https://halo-db.com/',
@@ -40,7 +40,7 @@ config.setup({
 To start using the halo-sdk, you first need to receive a authToken.
 
 ```javascript
-import { auth } from 'halo-sdk';
+import { auth } from 'halo-sdk-js';
 
 const authToken = await auth.getToken();
 ```

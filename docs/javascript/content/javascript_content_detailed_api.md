@@ -9,7 +9,7 @@ Here you can find fine grained explanations for every public param of the conten
 With the search query you can request some instances from the HALO Backend based on some query parameters. See the Search query section for all the available params.
 
 ```javascript
-import { content } from 'halo-sdk';
+import { content } from 'halo-sdk-js';
 
 await content.search(searchQuery);
 ```

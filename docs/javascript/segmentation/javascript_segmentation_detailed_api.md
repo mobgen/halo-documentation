@@ -17,7 +17,7 @@ As you can see there are some parameters that you can provide to configure your 
 | **id** (Optional)      | This field specifies your device id, if you specify this from localstorage you can receive your device again without making a new one. By default this is set to ```null``` |
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 segmentation.setup({
   addDefaultTags: true,
@@ -33,7 +33,7 @@ segmentation.setup({
 Get a new device from HALO
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 const device = await segmentation.getDevice();
 
@@ -45,7 +45,7 @@ const device = await segmentation.getDevice();
 Get synced device from HALO
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 // get id and alias from local storage
 const { id, alias } from 'localstorage'
@@ -68,7 +68,7 @@ const device = await segmentation.getDevice();
 Sync current device with HALO
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 const device = await segmentation.syncDevice();
 
@@ -80,7 +80,7 @@ const device = await segmentation.syncDevice();
 Sync current device with HALO with additional tags
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 const additionalTags = [
   {

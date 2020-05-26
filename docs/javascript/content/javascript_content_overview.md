@@ -9,7 +9,7 @@ title: Overview
 To start using the content API, you just import the content module from the HALO SDK.
 
 ```javascript
-import { content } from 'halo-sdk';
+import { content } from 'halo-sdk-js';
 ```
 
 ## Content API methods

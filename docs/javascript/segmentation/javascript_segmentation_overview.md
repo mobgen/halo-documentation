@@ -7,7 +7,7 @@ title: Overview
 To start using the segmentation, you apply the basic configuration for the segmentation module based on your HALO project.
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 config.setup({
   addDefaultTags: true,
@@ -23,7 +23,7 @@ config.setup({
 Obtain your device by using ```getDevice()```, if the current device is not known in the HALO backend, it will create a new device.
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 const device = await segmentation.getDevice();
 ```
@@ -33,7 +33,7 @@ const device = await segmentation.getDevice();
 Synchronize your device by using ```syncDevice()```, This will synchronize your local device with the device which is stored in the HALO backend.
 
 ```javascript
-import { segmentation } from 'halo-sdk';
+import { segmentation } from 'halo-sdk-js';
 
 const device = await segmentation.syncDevice();
 ```
