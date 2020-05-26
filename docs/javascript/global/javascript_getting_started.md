@@ -15,14 +15,10 @@ title: Getting Started
 This getting started guide will guide you on setting up HALO SDK for JavaScript in a few minutes. We will provide a step by step guide to get everything working with the most basic setup, for more detailed information about specific calls or how a module works check the sidebar.
 
 ## Step 1: Add the HALO SDK 
-Open the package.json of the project root and add the SDK to the dependencies:
+Install the Halo SDK npm dependency:
 
-```json
-{
-  "dependencies": {
-    "halo-sdk": "git+ssh://git@bitbucket.org/mobgen/halo-sdk-js.git#{version}"
-  }
-}
+```
+npm install --save @mobgen-halo/halo-sdk-js
 ```
 
 ## Step 2: Add HALO configuration
@@ -34,8 +30,8 @@ import { config } from 'halo-sdk';
 config.setup({
   entrypoint: 'https://web-halo.mobgen.com/',
   credentials: {
-    clientId: 'YOUR_HALO_KEY',
-    clientSecret: 'YOUR_HALO_SECRET',   
+    clientId: 'YOUR_HALO_KEY', // you can obtain this value on the Halo CMS
+    clientSecret: 'YOUR_HALO_SECRET', // you can obtain this value on the Halo CMS   
   }
 });
 ```
