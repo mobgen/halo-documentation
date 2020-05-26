@@ -18,7 +18,7 @@ This getting started guide will guide you on setting up HALO SDK for JavaScript 
 Install the Halo SDK npm dependency:
 
 ```
-npm install --save @mobgen-halo/halo-sdk-js
+npm install --save halo-sdk-js
 ```
 
 ## Step 2: Add HALO configuration
