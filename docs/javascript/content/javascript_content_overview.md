@@ -29,12 +29,12 @@ The HALO Content SDK allows the user to retrieve instances from the HALO Backend
 If you want to bring certain data based on some criteria or search some of them in the HALO Backed, you have to use the search operation in the API. To do that we provide a class called ```QueryBuilder``` with a simple fluent API that allows you to specify the criterias for the search. Once selected, you can perform the search and it will return a Promise. See the example below:
 
 ```java
-query = new QueryBuilder()
+const query = new content.QueryBuilder()
 	.setModuleName('myModuleName')
         .setSearchValuesQuery('name = Sample')
 	.build();
 
-searchResult = await content.search(query);
+const searchResult = await content.search(query);
 ```
 
 This search will request all the instances for the module name "myModuleName" and which body contains a name with the value "Sample". Check out the rest of the available options in [the detailed documentation](./javascript_content_detailed_api).
