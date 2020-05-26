@@ -1,5 +1,5 @@
 ---
-title: 1.0.0
+title: 1.0.0 beta
 ---
 
 ## Changelog
@@ -18,7 +18,5 @@ No breaking changes.
 
 ## Upcoming features
 
-- Loyalty API
 - Send push notifications by user email or alias
-- Track user location
 

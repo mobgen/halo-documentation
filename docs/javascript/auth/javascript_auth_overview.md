@@ -7,7 +7,7 @@ title: Overview
 In the HALOSDK config, make sure you have set the **ClientID** and **ClientSecret**.
 
 ```javascript
-import { config } from 'halo-sdk';
+import { config } from 'halo-sdk-js';
 
 config.setup({
     credentials: {
@@ -20,7 +20,7 @@ config.setup({
 Now we are ready to request the authToken.
 
 ```javascript
-import { auth } from 'halo-sdk';
+import { auth } from 'halo-sdk-js';
 
 const authToken = await auth.getToken();
 ```

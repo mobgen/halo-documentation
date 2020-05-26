@@ -38,7 +38,7 @@ To enable the notifications inside your app you have to import the Push module. 
 Here you have to provide the firebaseSenderId you can find in the [Firebase Console](https://console.developers.google.com), and set the serviceWorker path, by default it is 'firebase-messaging-sw.js'.
 
 ```javascript
-import { push } from 'halo-sdk';
+import { push } from 'halo-sdk-js';
 
 push.setup({
     firebaseSenderId: 'YOUR_FIREBASE_SENDER_ID',
@@ -90,7 +90,7 @@ To modify something in the notifications, we provide a option to add your own ca
 We are providing a custom implementation of the icon callback:
 
 ```javascript
-import { push } from 'halo-sdk';
+import { push } from 'halo-sdk-js';
 
 push.listenNotifications((notification) => {
     const newNotification = notification;

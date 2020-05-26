@@ -6,7 +6,7 @@ title: Overview
 To start using the notifications, you apply the basic configuration for the Push module based on your HALO project.
 
 ```javascript
-import { push } from 'halo-sdk';
+import { push } from 'halo-sdk-js';
 
 push.setup({
   firebaseSenderId: 'YOUR_FIREBASE_SENDER_ID'
