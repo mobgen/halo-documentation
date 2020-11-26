@@ -60,7 +60,6 @@
       },
       "android/core/android_halo_core",
       "android/core/android_core_manager_api",
-      "android/core/android_core_cloudinary",
       "android/core/android_core_custom_middleware_request",
       "android/core/android_core_offline_support",
       "android/core/android_core_environment",
